@@ -1,7 +1,7 @@
 import Container from '../layout/Container/Container';
 import { HeaderStyles } from './Header.styles';
 import Navigation from '../Navigation/Navigation';
-import { Col, Grid } from '../layout/Grid/Grid.styles';
+import { Col, GridStyles } from '../layout/Grid/Grid.styles';
 import Image from '../layout/Image/Image';
 
 import Logo from 'assets/icons/logo/logo.svg';
@@ -16,25 +16,37 @@ import Language from '../Language/Language';
 
 const Header = () => {
 	return (
-		<HeaderStyles>
-			<Container maxWidth={[null, 'sm', 'sm', 'md', 'lg']}>
-				<Grid size={6} align="center">
+		<HeaderStyles padding={{ p: '1.5rem' }}>
+			<Container maxWidth="xl">
+				<GridStyles gridSize={6} align="center">
 					<Col col={2}>
 						<Link to={PathsEnum.Main}>
 							<Image src={Logo} alt="logo" />
 						</Link>
 					</Col>
 					<Col col={4}>
-						<Flex align="center" justify="space-between">
-							<Navigation my={'2rem'} />
-							<Language />
-							<Image alt="" src={Telegram} />
-							<Image alt="" src={Twitter} />
-							<Image alt="" src={WhatsUp} />
-							<Image alt="" src={Youtube} />
+						<Flex align="center" justify="flex-end">
+							<Navigation />
+							<Language margin={{ mx: '4rem' }} />
+							<Image alt="telegram" src={Telegram} />
+							<Image
+								margin={{ ml: '0.5rem' }}
+								alt="twitter"
+								src={Twitter}
+							/>
+							<Image
+								margin={{ ml: '0.5rem' }}
+								alt="whatsup"
+								src={WhatsUp}
+							/>
+							<Image
+								margin={{ ml: '0.5rem' }}
+								alt="youtube"
+								src={Youtube}
+							/>
 						</Flex>
 					</Col>
-				</Grid>
+				</GridStyles>
 			</Container>
 		</HeaderStyles>
 	);

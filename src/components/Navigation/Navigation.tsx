@@ -3,6 +3,8 @@ import { PathsEnum } from '../../utils/constants/paths';
 import { NavLink } from 'react-router-dom';
 import Flex from '../layout/Flex/Flex';
 import useBreakpointValues from '../../hooks/breakpoints/useBreakpointValues';
+import { BreakpointProps } from '../../types/BreakpointProps';
+import { Margin } from '../../utils/mixins/margin.mixin';
 
 const links = [
 	{ title: 'Главная', path: PathsEnum.Main },
@@ -13,6 +15,10 @@ const links = [
 interface NavigationProps extends NavProps {}
 
 const Navigation = ({ ...props }: NavigationProps) => {
+	// const { variant, ...appliedProps } = useBreakpointValues({
+	// 	...props,
+	// });
+
 	return (
 		<Nav {...props}>
 			<Flex>

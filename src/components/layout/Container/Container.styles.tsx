@@ -4,15 +4,18 @@ import {
 	BreakpointValuesEnum,
 } from 'utils/constants/breakpoints';
 import convertUnits from 'utils/helpers/convertUnits';
+import { Padding, paddingMixin } from '../../../utils/mixins/paddings.mixin';
+import { mq } from 'utils/mixins/mediaQueries';
 
 export interface ContainerStylesProps {
-	maxWidth?: BreakpointNames | undefined;
+	maxWidth?: BreakpointNames;
+	padding?: Padding;
 }
 
 export const ContainerStyles = styled.div<ContainerStylesProps>`
-	max-width: ${({ maxWidth }) =>
-		maxWidth ? convertUnits(BreakpointValuesEnum[maxWidth]) : '100%'};
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 1rem;
+	max-width: ${({ maxWidth }) =>
+		maxWidth ? convertUnits(BreakpointValuesEnum[maxWidth]) : '100%'};
+	${({ padding }) => paddingMixin({ ...padding })}
 `;

@@ -2,17 +2,15 @@ import { ContainerStyles, ContainerStylesProps } from './Container.styles';
 import { FC, ReactNode } from 'react';
 import useBreakpointValues from 'hooks/breakpoints/useBreakpointValues';
 import { BreakpointNames } from 'utils/constants/breakpoints';
+import { BreakpointProps } from '../../../types/BreakpointProps';
 
-interface ContainerProps {
+interface ContainerProps extends ContainerStylesProps {
 	children: ReactNode;
-	maxWidth: (BreakpointNames | null)[];
 }
 
-const Container = ({ children, maxWidth }: ContainerProps) => {
-	const appliedMaxWidth = useBreakpointValues<BreakpointNames>(maxWidth);
-	return (
-		<ContainerStyles maxWidth={appliedMaxWidth}>{children}</ContainerStyles>
-	);
+const Container = ({ children, ...props }: ContainerProps) => {
+	// const appliedProps = useBreakpointValues({ ...props });
+	return <ContainerStyles {...props}>{children}</ContainerStyles>;
 };
 
 export default Container;

@@ -1,24 +1,27 @@
 import styled from 'styled-components';
-import { AlignItems, JustifyContent } from '../../../types/css';
+import { AlignItems, JustifyContent } from '../../../types/Css';
+import { mq } from 'utils/mixins/mediaQueries';
 
-interface GridProps {
-	size: number;
+export interface GridStylesProps {
+	gridSize: number | number[];
 	gap?: number | string;
 	justify?: JustifyContent;
 	align?: AlignItems;
 }
-interface ColProps {
-	col: number;
+export interface ColProps {
+	col: number | number[];
 	row?: number;
 }
 
-export const Grid = styled.div<GridProps>`
+export const GridStyles = styled.div<GridStylesProps>`
 	display: grid;
-	grid-template-columns: repeat(${({ size }) => size}, 1fr);
+	grid-template-columns: repeat(${({ gridSize }) => gridSize}, 1fr);
 	justify-content: ${({ justify }) => justify};
 	align-items: ${({ align }) => align};
+	${({ gridSize }) => mq({ prop: 'grid-template-columns', styles: gridSize })}
 `;
 export const Col = styled.div<ColProps>`
 	grid-row: span ${({ row }) => row};
 	grid-column: span ${({ col }) => col};
+	${({ col }) => mq({ prop: 'grid-column', styles: col })}
 `;

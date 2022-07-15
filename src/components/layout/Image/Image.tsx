@@ -7,9 +7,18 @@ interface ImageProps extends ImgHTMLAttributes<any>, ImageWrapperProps {
 	// children: ReactNode;
 }
 
-const Image = ({ width, children, alt, src, ...props }: ImageProps) => {
+const Image = ({
+	children,
+	alt,
+	src,
+	h,
+	w,
+	margin,
+	padding,
+	...props
+}: ImageProps) => {
 	return (
-		<ImageWrapper h={props.h} w={props.w}>
+		<ImageWrapper h={h} w={w} margin={margin} padding={padding}>
 			<img alt={alt} src={src} {...props} />
 		</ImageWrapper>
 	);

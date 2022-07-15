@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { AlignItems, Direction, JustifyContent } from 'types/css';
+import { AlignItems, Direction, JustifyContent } from 'types/Css';
 
 export interface RowProps {
 	direction?: Direction;
