@@ -1,19 +1,12 @@
 import styled from 'styled-components';
-import { MarginEnum } from 'utils/constants/spacing';
-import convertUnits from 'utils/helpers/convertUnits';
-import { marginMixin, Margin } from 'utils/mixins/margin.mixin';
-import { fontMixin, TypographyVariant } from 'utils/mixins/font.mixin';
-import { BreakpointProps } from '../../types/BreakpointProps';
 
-export interface NavProps extends Margin {
-	variant?: TypographyVariant;
-	margin?: Margin;
-}
+import { fontMixin, TypographyVariant } from 'utils/mixins/font.mixin';
+
+export interface NavProps {}
 
 export const Nav = styled.nav<NavProps>`
+	display: flex;
 	padding: 1rem;
-	${({ theme, variant = 'h4' }) => fontMixin({ theme, variant })};
-	${({ margin }) => marginMixin({ ...margin })};
 `;
 
 export const NavItem = styled.div`
@@ -28,7 +21,7 @@ export const NavItem = styled.div`
 	.active {
 		position: relative;
 		padding-bottom: 1rem;
-		color: ${({ theme }) => theme.palette.active};
+		color: ${({ theme }) => theme.palette.active.normal};
 		transition: 200ms color;
 		&:after {
 			content: '';
@@ -37,12 +30,30 @@ export const NavItem = styled.div`
 			height: 2px;
 			bottom: 0;
 			left: 0;
-			background: ${({ theme }) => theme.palette.active};
+			background: ${({ theme }) => theme.palette.active.normal};
+		}
+		&:hover {
+			color: ${({ theme }) => theme.palette.active.hover};
+			&:after {
+				background: ${({ theme }) => theme.palette.active.hover};
+			}
+		}
+		&:active {
+			color: ${({ theme }) => theme.palette.active.active};
+			&:after {
+				background: ${({ theme }) => theme.palette.active.active};
+			}
 		}
 	}
 
 	& a {
-		color: ${({ theme }) => theme.palette.normal};
+		color: ${({ theme }) => theme.palette.normal.normal};
 		text-decoration: none;
+		&:hover {
+			color: ${({ theme }) => theme.palette.normal.hover};
+		}
+		&:active {
+			color: ${({ theme }) => theme.palette.normal.active};
+		}
 	}
 `;

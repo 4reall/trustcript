@@ -4,13 +4,15 @@ import { theme } from './theme';
 import { Normalize } from 'styled-normalize';
 import Header from './components/Header/Header';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { Background } from './components/layout/Background/Background.styles';
 
 import Bg from 'assets/images/mainBg.jpg';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font-family: 'Inter', 'Roboto', sans-serif;
+	  min-height: 100vh;
+	  background: url(${Bg}) center / cover no-repeat; 
+	  font-family: 'Inter', 'Roboto', sans-serif;
+	  
   }
 `;
 
@@ -20,10 +22,8 @@ const App = () => {
 			<Normalize />
 			<GlobalStyle />
 			<BrowserRouter>
-				<Background url={Bg}>
-					<Header />
-					<Routes />
-				</Background>
+				<Header />
+				<Routes />
 			</BrowserRouter>
 		</ThemeProvider>
 	);

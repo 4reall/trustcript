@@ -2,10 +2,7 @@ import { Nav, NavItem, NavProps } from './Navigation.styles';
 import { PathsEnum } from '../../utils/constants/paths';
 import { NavLink } from 'react-router-dom';
 import Flex from '../layout/Flex/Flex';
-import useBreakpointValues from '../../hooks/breakpoints/useBreakpointValues';
-import { BreakpointProps } from '../../types/BreakpointProps';
-import { Margin } from '../../utils/mixins/margin.mixin';
-
+import { TypographyStyles } from '../layout/Typography.styles';
 const links = [
 	{ title: 'Главная', path: PathsEnum.Main },
 	{ title: 'Блог', path: PathsEnum.Blog },
@@ -15,15 +12,11 @@ const links = [
 interface NavigationProps extends NavProps {}
 
 const Navigation = ({ ...props }: NavigationProps) => {
-	// const { variant, ...appliedProps } = useBreakpointValues({
-	// 	...props,
-	// });
-
 	return (
 		<Nav {...props}>
-			<Flex>
-				{links.map(({ title, path }, i) => (
-					<NavItem key={i}>
+			{links.map(({ title, path }, i) => (
+				<NavItem key={i}>
+					<TypographyStyles variant="h4">
 						<NavLink
 							to={path}
 							className={({ isActive }) =>
@@ -32,9 +25,9 @@ const Navigation = ({ ...props }: NavigationProps) => {
 						>
 							{title}
 						</NavLink>
-					</NavItem>
-				))}
-			</Flex>
+					</TypographyStyles>
+				</NavItem>
+			))}
 		</Nav>
 	);
 };

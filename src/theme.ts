@@ -1,47 +1,52 @@
 export const theme = {
 	palette: {
-		normal: 'rgba(236, 241, 240, 1)',
-		active: 'rgba(15, 174, 150, 1)',
+		normal: {
+			normal: 'rgba(236, 241, 240, 1)',
+			active: 'rgba(223, 223, 223, 1)',
+			hover: 'rgba(249, 249, 249, 1)',
+		},
+		active: {
+			normal: 'rgba(15, 174, 150, 1)',
+			active: 'rgba(2, 116, 99, 1)',
+			hover: 'rgba(5, 143, 123, 1)',
+		},
 		mainBg: {
 			color: 'rgba(17, 1, 30, 0.1)',
 			filter: 'blur(100px)',
 		},
-		white: 'rgba(255,255,255, 0.05)',
+		white: {
+			normal: 'rgba(255,255,255, 0.05)',
+			active: 'rgba(255,255,255, 0.15)',
+			hover: 'rgba(255,255,255, 0.10)',
+		},
 		borderBg:
 			'linear-gradient(109.41deg, #0FAE96 0%, rgba(18, 14, 39, 0) 48.96%, #7DCFE9 100%), rgba(255, 255, 255, 0.05);',
 	},
 	typography: {
 		h1: {
 			fontFamily: 'Inter',
-			fontStyle: 'regular',
-			fontWeight: 700,
 			fontSize: '2.5rem',
 			lineHeight: '3rem',
-			color: '#ECF1F0',
 		},
 		h2: {
 			fontFamily: 'Inter',
-			fontStyle: 'normal',
-			fontWeight: 700,
 			fontSize: '2rem',
 			lineHeight: '2.5rem',
-			color: '#ECF1F0',
 		},
 		h3: {
 			fontFamily: 'Inter',
-			fontStyle: 'bold',
-			fontWeight: 700,
 			fontSize: '1.5rem',
 			lineHeight: '2rem',
-			color: '#ECF1F0',
 		},
 		h4: {
 			fontFamily: 'Inter',
-			fontStyle: 'regular',
-			fontWeight: 700,
 			fontSize: '1rem',
 			lineHeight: '1.25rem',
-			color: '#ECF1F0',
+		},
+		h5: {
+			fontFamily: 'Inter',
+			fontSize: '0.75rem',
+			lineHeight: '1rem',
 		},
 	},
 	spacing: {
