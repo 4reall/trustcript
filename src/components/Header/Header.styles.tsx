@@ -7,20 +7,40 @@ export interface HeaderStylesProps {
 }
 
 export const HeaderStyles = styled.header<HeaderStylesProps>`
-	max-width: 100%;
-	min-height: ${({ theme }) => theme.spacing.headerHeight.xs};
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 4rem;
 	display: flex;
 	align-items: center;
-	background: ${({ theme }) => theme.palette.mainBg.color};
-	backdrop-filter: ${({ theme }) => theme.palette.mainBg.filter};
 	padding: ${({ p }) => convertUnits(p)};
 	user-select: none;
+	//filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.15));
 
-	// ${mediaQueries.up.sm} {
-	// 	min-height: ${({ theme }) => theme.spacing.headerHeight.sm};
-	// }
-	//
-	// ${mediaQueries.up.xl} {
-	// 	min-height: ${({ theme }) => theme.spacing.headerHeight.xl};
-	// }
+	&:before {
+		position: absolute;
+		z-index: -1;
+		content: '';
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: ${({ theme }) => theme.palette.mainBg.color};
+		backdrop-filter: ${({ theme }) => theme.palette.mainBg.filter};
+	}
+
+	${mediaQueries.up.md} {
+		min-height: 5rem;
+	}
+`;
+
+export const SocialLinksContainer = styled.div`
+	display: flex;
+	& a {
+		margin-right: 0.5rem;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
 `;

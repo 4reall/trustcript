@@ -6,10 +6,11 @@ import {
 
 interface DropdownMenuProps extends DropdownMenuStylesProps {
 	children: ReactNode;
+	onClick?: () => void;
 }
 
-const DropdownMenu = ({ children, active }: DropdownMenuProps) => {
-	return <DropdownMenuStyles active={active}>{children}</DropdownMenuStyles>;
+const DropdownMenu = ({ children, ...props }: DropdownMenuProps) => {
+	return <DropdownMenuStyles {...props}>{children}</DropdownMenuStyles>;
 };
 
 export default DropdownMenu;

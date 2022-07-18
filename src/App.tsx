@@ -6,25 +6,40 @@ import Header from './components/Header/Header';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 import Bg from 'assets/images/mainBg.jpg';
+import LanguageProvider from 'context/LanguageContext/Language.provider';
 
 const GlobalStyle = createGlobalStyle`
-  body {
-	  min-height: 100vh;
-	  background: url(${Bg}) center / cover no-repeat; 
-	  font-family: 'Inter', 'Roboto', sans-serif;
-	  
-  }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+        position: relative;
+        min-height: 100vh;
+        background: url(${Bg}) center / cover no-repeat;
+        font-family: 'Inter', 'Roboto', sans-serif;
+
+        li {
+            list-style: none;
+        }
+    }
 `;
 
 const App = () => {
 	return (
 		<ThemeProvider theme={theme}>
-			<Normalize />
-			<GlobalStyle />
-			<BrowserRouter>
-				<Header />
-				<Routes />
-			</BrowserRouter>
+			<LanguageProvider>
+				<GlobalStyle />
+				<Normalize />
+				<BrowserRouter>
+					<Header />
+					<Routes />
+				</BrowserRouter>
+			</LanguageProvider>
 		</ThemeProvider>
 	);
 };

@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { queries } from 'utils/constants/mediaQueries';
 
-// type Query = typeof queries.down;
-
 const useMediaQuery = (query: string): boolean => {
 	const getMatches = (query: string): boolean => {
 		// Prevents SSR issues

@@ -11,7 +11,7 @@ export const theme = {
 			hover: 'rgba(5, 143, 123, 1)',
 		},
 		mainBg: {
-			color: 'rgba(17, 1, 30, 0.1)',
+			color: 'rgba(0, 0, 0, 0.1)',
 			filter: 'blur(100px)',
 		},
 		white: {
@@ -20,7 +20,7 @@ export const theme = {
 			hover: 'rgba(255,255,255, 0.10)',
 		},
 		borderBg:
-			'linear-gradient(109.41deg, #0FAE96 0%, rgba(18, 14, 39, 0) 48.96%, #7DCFE9 100%), rgba(255, 255, 255, 0.05);',
+			'linear-gradient(109.41deg, #0FAE96 0%, rgba(18, 14, 39, 0) 48.96%, #7DCFE9 100%), rgba(255, 255, 255, 0.05)',
 	},
 	typography: {
 		h1: {
@@ -51,9 +51,19 @@ export const theme = {
 	},
 	spacing: {
 		headerHeight: {
-			xs: '3rem',
-			sm: '4rem',
-			xl: '5.5rem',
+			xs: '2rem',
+			sm: '3rem',
+			xl: '4rem',
 		},
+	},
+	zIndex: {
+		mobileStepper: 1000,
+		speedDial: 1050,
+		appBar: 1100,
+		dropdown: 1200,
+		overlay: 1250,
+		modal: 1300,
+		snackbar: 1400,
+		tooltip: 1500,
 	},
 };

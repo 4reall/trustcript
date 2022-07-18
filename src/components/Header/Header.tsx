@@ -1,73 +1,67 @@
-import Logo from 'assets/icons/logo/logo.svg';
-import { Link } from 'react-router-dom';
-import { PathsEnum } from 'utils/constants/paths';
-
 import Twitter from 'assets/icons/networks/twitter.svg';
 import Telegram from 'assets/icons/networks/telegram.svg';
 import WhatsUp from 'assets/icons/networks/whatsup.svg';
 import Youtube from 'assets/icons/networks/youtube.svg';
-import { Col, Grid } from 'components/layout/Grid.styles';
 import { Container } from 'components/layout/Container.styles';
-import { Image } from 'components/layout/Image.styles';
 import { HeaderStyles } from 'components/Header/Header.styles';
-import { Flex } from 'components/layout/Flex.styles';
-import Navigation from 'components/Navigation/Navigation';
-import Language from 'components/Header/components/Language/Language';
-import IconLinksBar, {
-	IconLink,
-} from 'components/Header/components/LinkIconsBar/LinkIconsBar';
+
 import Ru from 'assets/icons/countries/ru.svg';
 import Uk from 'assets/icons/countries/uk.svg';
-import Select from 'components/ui/Select/Select';
-import LanguageSelect from 'components/Header/components/Language/LanguageSelect';
+import { LanguageOption } from 'context/LanguageContext/Language.context';
+import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
+import { queries } from 'utils/constants/mediaQueries';
+import ContentDesktop from 'components/Header/components/ContentDesktop';
+import ContentMobile from 'components/Header/components/ContentMobile';
+import { LanguagesEnum } from 'utils/constants/languages';
+import isMobile from 'is-mobile';
 
-const iconLinks: IconLink[] = [
+export interface SocialLink {
+	href: string;
+	alt: string;
+	thumbnail: string;
+}
+const socials: SocialLink[] = [
 	{
 		href: 'https//google.com',
 		alt: 'twitter icon',
-		image: Twitter,
+		thumbnail: Twitter,
 	},
 	{
 		href: 'https//google.com',
 		alt: 'telegram icon',
-		image: Telegram,
+		thumbnail: Telegram,
 	},
 	{
 		href: 'https//google.com',
 		alt: 'youtube icon',
-		image: Youtube,
+		thumbnail: Youtube,
 	},
 	{
 		href: 'https//google.com',
 		alt: 'whats up icon',
-		image: WhatsUp,
+		thumbnail: WhatsUp,
 	},
 ];
-
-const labels = [
-	{ name: 'ru', alt: 'ru icon', src: Ru },
-	{ name: 'uk', alt: 'ru icon', src: Uk },
+const options: LanguageOption[] = [
+	{ id: 0, language: LanguagesEnum.RU, thumbnail: Ru },
+	{ id: 1, language: LanguagesEnum.UK, thumbnail: Uk },
 ];
 
+export interface ContentProps {
+	options: LanguageOption[];
+	socials: SocialLink[];
+}
+
 const Header = () => {
+	const isMd = useMediaQuery(queries.up.md);
 	return (
-		<HeaderStyles p={'2rem'}>
+		<HeaderStyles p={isMd ? '2rem' : '1rem'}>
 			<Container maxWidth="xl">
-				<Grid gridSize={6} align="center">
-					<Col col={2}>
-						<Link to={PathsEnum.Main}>
-							<Image src={Logo} alt="logo" />
-						</Link>
-					</Col>
-					<Col col={4}>
-						<Flex align="center" justify="flex-end">
-							<Navigation />
-							{/*<Language labels={labels} />*/}
-							<LanguageSelect />
-							<IconLinksBar iconLinks={iconLinks} />
-						</Flex>
-					</Col>
-				</Grid>
+				{isMd ? (
+					<ContentDesktop options={options} socials={socials} />
+				) : (
+					<ContentMobile options={options} socials={socials} />
+				)}
 			</Container>
 		</HeaderStyles>
 	);
