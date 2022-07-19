@@ -11,12 +11,12 @@ export const HeaderStyles = styled.header<HeaderStylesProps>`
 	top: 0;
 	left: 0;
 	width: 100%;
-	min-height: 4rem;
+	height: 5rem;
 	display: flex;
 	align-items: center;
 	padding: ${({ p }) => convertUnits(p)};
 	user-select: none;
-	//filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.15));
+	z-index: ${({ theme }) => theme.zIndex.appBar};
 
 	&:before {
 		position: absolute;
@@ -27,11 +27,10 @@ export const HeaderStyles = styled.header<HeaderStylesProps>`
 		left: 0;
 		right: 0;
 		background: ${({ theme }) => theme.palette.mainBg.color};
-		backdrop-filter: ${({ theme }) => theme.palette.mainBg.filter};
 	}
 
 	${mediaQueries.up.md} {
-		min-height: 5rem;
+		min-height: 6rem;
 	}
 `;
 

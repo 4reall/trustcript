@@ -6,6 +6,7 @@ import { Typography } from '../layout/Typography.styles';
 import { useContext } from 'react';
 import { languageContext } from 'context/LanguageContext/Language.context';
 import { languageData } from 'utils/constants/languageData';
+import { useLanguage } from 'hooks/useLanguage';
 
 interface NavLink {
 	title: keyof typeof languageData.navigation;
@@ -21,7 +22,7 @@ const navLinks: NavLink[] = [
 interface NavigationProps extends NavProps {}
 
 const Navigation = ({ ...props }: NavigationProps) => {
-	const { selectedLanguage } = useContext(languageContext);
+	const { text } = useLanguage('navigation');
 	return (
 		<Nav {...props}>
 			{navLinks.map(({ title, path }, i) => (
@@ -31,11 +32,7 @@ const Navigation = ({ ...props }: NavigationProps) => {
 						className={({ isActive }) => (isActive ? 'active' : '')}
 					>
 						<Typography variant="h4" uppercase>
-							{
-								languageData.navigation[title][
-									selectedLanguage.language
-								]
-							}
+							{text(title)}
 						</Typography>
 					</NavLink>
 				</NavItem>

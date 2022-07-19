@@ -18,8 +18,8 @@ export const DropdownMenuStyles = styled.div<DropdownMenuStylesProps>`
 	transform: scaleY(0);
 	border-radius: 5px;
 	background: ${({ theme }) => theme.palette.mainBg.color};
-	backdrop-filter: ${({ theme }) => theme.palette.mainBg.filter};
 	z-index: ${({ theme }) => theme.zIndex.dropdown};
+	overflow: ${({ full }) => (full ? '' : 'hidden')};
 	${({ active }) =>
 		active &&
 		css`

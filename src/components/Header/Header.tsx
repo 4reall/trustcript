@@ -12,8 +12,7 @@ import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
 import ContentDesktop from 'components/Header/components/ContentDesktop';
 import ContentMobile from 'components/Header/components/ContentMobile';
-import { LanguagesEnum } from 'utils/constants/languages';
-import isMobile from 'is-mobile';
+import { LanguagesEnum } from 'utils/constants/languageData';
 
 export interface SocialLink {
 	href: string;

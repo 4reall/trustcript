@@ -1,4 +1,15 @@
-import { LanguagesEnum } from 'utils/constants/languages';
+import { KeysOfUnion } from 'types/Keys';
+
+export type LanguageDataKeys = keyof typeof languageData;
+
+export type LanguageSectionKeys = KeysOfUnion<
+	typeof languageData[LanguageDataKeys]
+>;
+
+export enum LanguagesEnum {
+	RU = 'ru',
+	UK = 'uk',
+}
 
 export const languageData = {
 	navigation: {
@@ -13,6 +24,23 @@ export const languageData = {
 		products: {
 			[LanguagesEnum.RU]: 'продукты',
 			[LanguagesEnum.UK]: 'products',
+		},
+	},
+	promo: {
+		title: {
+			[LanguagesEnum.RU]:
+				'Передовая кибербезопасность для любой компании',
+			[LanguagesEnum.UK]: 'Advanced cyber security form any company',
+		},
+		text: {
+			[LanguagesEnum.RU]:
+				'Защитите ваш бизнес от всех видов киберугроз с помощью решений мирового класса.',
+			[LanguagesEnum.UK]:
+				'Protect your business from all kinds of cyber threats with world-class solutions.',
+		},
+		button: {
+			[LanguagesEnum.RU]: 'Подробнее',
+			[LanguagesEnum.UK]: 'More',
 		},
 	},
 };

@@ -5,7 +5,7 @@ import {
 	Dispatch,
 	SetStateAction,
 } from 'react';
-import { LanguagesEnum } from 'utils/constants/languages';
+import { LanguagesEnum } from 'utils/constants/languageData';
 
 export interface LanguageOption {
 	id: string | number;

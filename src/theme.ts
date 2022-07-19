@@ -11,13 +11,14 @@ export const theme = {
 			hover: 'rgba(5, 143, 123, 1)',
 		},
 		mainBg: {
-			color: 'rgba(0, 0, 0, 0.1)',
+			color: 'rgba(5, 7, 10, 1)',
 			filter: 'blur(100px)',
 		},
 		white: {
+			border: 'rgba(255,255,255, 0.03)',
 			normal: 'rgba(255,255,255, 0.05)',
-			active: 'rgba(255,255,255, 0.15)',
 			hover: 'rgba(255,255,255, 0.10)',
+			active: 'rgba(255,255,255, 0.15)',
 		},
 		borderBg:
 			'linear-gradient(109.41deg, #0FAE96 0%, rgba(18, 14, 39, 0) 48.96%, #7DCFE9 100%), rgba(255, 255, 255, 0.05)',
@@ -47,6 +48,15 @@ export const theme = {
 			fontFamily: 'Inter',
 			fontSize: '0.75rem',
 			lineHeight: '1rem',
+		},
+		button: {
+			fontFamily: 'Inter',
+			fontSize: {
+				normal: '1rem',
+				small: '0.75rem',
+			},
+			lineHeight: { normal: '1.25rem', small: '1rem' },
+			textTransform: 'uppercase',
 		},
 	},
 	spacing: {

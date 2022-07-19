@@ -1,17 +1,26 @@
-import {useEffect, useLayoutEffect} from "react";
+import { useEffect, useLayoutEffect } from 'react';
+import { RippleContainerProps } from 'components/Ripple/Ripple.styled';
 
-export const useDebouncedRippleCleanUp = (rippleCount: number, duration: number, cleanUpFunction: () => void) => {
-    useEffect(() => {
-        let bounce: ReturnType<typeof setTimeout> | undefined = undefined;
-        if (rippleCount > 0) {
-            clearTimeout(bounce);
+export interface UseDebouncedRippleCleanUpProps extends RippleContainerProps {
+	cleanUpFunction: () => void;
+}
 
-            bounce = setTimeout(() => {
-                cleanUpFunction();
-                clearTimeout(bounce);
-            }, duration);
-        }
+export const useDebouncedRippleCleanUp = (
+	rippleCount: number,
+	duration: number,
+	cleanUpFunction: () => void
+) => {
+	useEffect(() => {
+		let bounce: ReturnType<typeof setTimeout> | undefined = undefined;
+		if (rippleCount > 0) {
+			clearTimeout(bounce);
 
-        return () => clearTimeout(bounce);
-    }, [rippleCount, duration, cleanUpFunction]);
+			bounce = setTimeout(() => {
+				cleanUpFunction();
+				clearTimeout(bounce);
+			}, duration);
+		}
+
+		return () => clearTimeout(bounce);
+	}, [rippleCount, duration, cleanUpFunction]);
 };

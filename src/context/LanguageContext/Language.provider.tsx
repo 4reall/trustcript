@@ -5,7 +5,7 @@ import {
 } from 'context/LanguageContext/Language.context';
 import Ru from 'assets/icons/countries/ru.svg';
 import Uk from 'assets/icons/countries/uk.svg';
-import { LanguagesEnum } from 'utils/constants/languages';
+import { LanguagesEnum } from 'utils/constants/languageData';
 
 const { Provider } = languageContext;
 

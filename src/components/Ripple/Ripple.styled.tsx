@@ -1,5 +1,10 @@
 import styled from 'styled-components';
-import { RippleContainerProps } from './Types';
+import { urlToHttpOptions } from 'url';
+
+export interface RippleContainerProps {
+	duration: number;
+	color: string;
+}
 
 export const RippleContainer = styled.div<RippleContainerProps>`
 	position: absolute;
@@ -7,14 +12,16 @@ export const RippleContainer = styled.div<RippleContainerProps>`
 	right: 0;
 	bottom: 0;
 	left: 0;
+	overflow: hidden;
 
 	span {
 		transform: scale(0);
 		border-radius: 100%;
 		position: absolute;
-		opacity: 0.75;
+		//opacity: 0.75;
 		background-color: ${(props) => props.color};
-		filter: opacity(0.5);
+		//background-color: ${({ theme }) => theme.palette.normal.normal};
+		filter: opacity(0.3);
 		animation-name: ripple;
 		animation-duration: ${(props) => props.duration}ms;
 	}
