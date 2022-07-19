@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/trustcript/static/js/main.1b24fd43.js",
+    "main.js": "/trustcript/static/js/main.fceef845.js",
     "static/media/mainBg.jpg": "/trustcript/static/media/mainBg.6b70f93eebfbe9fd689d.jpg",
     "static/media/logo.svg": "/trustcript/static/media/logo.16c7559d316cff05a700c86f51bfec39.svg",
     "static/media/uk.svg": "/trustcript/static/media/uk.275c83f44bcf96ad785f2cc2c1af75ec.svg",
@@ -11,9 +11,9 @@
     "index.html": "/trustcript/index.html",
     "static/media/youtube.svg": "/trustcript/static/media/youtube.7be3becce90d314f1b9beac5c47f3fbf.svg",
     "static/media/ru.svg": "/trustcript/static/media/ru.22b5fadc72f00479263e09e2335e7766.svg",
-    "main.1b24fd43.js.map": "/trustcript/static/js/main.1b24fd43.js.map"
+    "main.fceef845.js.map": "/trustcript/static/js/main.fceef845.js.map"
   },
   "entrypoints": [
-    "static/js/main.1b24fd43.js"
+    "static/js/main.fceef845.js"
   ]
 }
