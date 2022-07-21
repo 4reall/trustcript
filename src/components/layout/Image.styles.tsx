@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { ImgHTMLAttributes } from 'react';
 import convertUnits from '../../utils/helpers/convertUnits';
 

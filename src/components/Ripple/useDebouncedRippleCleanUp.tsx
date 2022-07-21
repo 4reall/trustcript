@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect } from 'react';
-import { RippleContainerProps } from 'components/Ripple/Ripple.styled';
+import { RippleContainerProps } from 'components/Ripple/Ripple.styles';
 
 export interface UseDebouncedRippleCleanUpProps extends RippleContainerProps {
 	cleanUpFunction: () => void;

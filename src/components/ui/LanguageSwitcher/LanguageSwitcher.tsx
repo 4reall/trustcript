@@ -9,8 +9,8 @@ import {
 	LanguageMenu,
 	Switcher,
 	SwitcherProps,
-} from 'components/LanguageSwitcher/LanguageSwitcher.styles';
-import LanguageLabel from 'components/LanguageSwitcher/LanguageLabel';
+} from 'components/ui/LanguageSwitcher/LanguageSwitcher.styles';
+import LanguageLabel from 'components/ui/LanguageSwitcher/LanguageLabel';
 import {
 	languageContext,
 	LanguageOption,

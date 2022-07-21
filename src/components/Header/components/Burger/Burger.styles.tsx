@@ -1,59 +1,62 @@
 import styled, { css } from 'styled-components';
-import burger from 'components/Header/components/Burger/Burger';
 
-export interface BurgerContainerProps {
+export interface BurgerTestContainerProps {
 	active: boolean;
 }
 
-export const BurgerContainer = styled.button<BurgerContainerProps>`
+export const BurgerContainer = styled.button<BurgerTestContainerProps>`
 	position: relative;
 	display: flex;
+	justify-content: space-between;
 	flex-direction: column;
-	justify-content: center;
-	width: 3rem;
-	height: 1.5rem;
-	padding: 0.5rem;
+	height: 2rem;
+	width: 2rem;
+	background: transparent;
 	border: none;
 	outline: none;
-	background: inherit;
+	cursor: pointer;
 
-	&:before {
-		position: absolute;
-		left: 0.5rem;
-		top: ${({ active }) => (active ? '50%' : 0)};
-		content: '';
-		width: calc(100% - 1rem);
-		height: 2px;
-		border-radius: 2px;
-		background: ${({ theme }) => theme.palette.normal.normal};
-		transition: 250ms all;
-		transform-origin: center;
-		transform: ${({ active }) => active && 'rotate(45deg)'};
-	}
-	&:after {
-		position: absolute;
-		left: 0.5rem;
-		top: ${({ active }) => (active ? '50%' : '100%')};
-		content: '';
-		width: calc(100% - 1rem);
-		height: 2px;
-		border-radius: 2px;
-		background: ${({ theme }) => theme.palette.normal.normal};
-		transition: 250ms all;
-		transform-origin: center;
-		transform: ${({ active }) => active && 'rotate(-45deg)'};
-	}
 	& span {
-		transition: 100ms opacity;
-		opacity: ${({ active }) => (active ? '0' : '1')};
+		&:nth-child(1) {
+			${({ active }) =>
+				active &&
+				css`
+					left: 0;
+					top: 50%;
+					transform: rotate(45deg);
+				`};
+		}
+		&:nth-child(2) {
+			opacity: ${({ active }) => (active ? '0' : '1')};
+		}
+
+		&:nth-child(3) {
+			${({ active }) =>
+				active &&
+				css`
+					left: 0;
+					top: 50%;
+					transform: rotate(-45deg);
+				`};
+		}
 	}
 `;
 
 export const BurgerBar = styled.span`
+	position: absolute;
 	left: 0;
 	display: block;
 	width: 100%;
-	height: 2px;
-	border-radius: 2px;
 	background: ${({ theme }) => theme.palette.normal.normal};
+	height: 2px;
+	transition: 200ms all;
+	&:nth-child(1) {
+		top: 20%;
+	}
+	&:nth-child(2) {
+		top: 50%;
+	}
+	&:nth-child(3) {
+		top: 80%;
+	}
 `;

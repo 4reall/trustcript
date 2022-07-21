@@ -1,25 +1,24 @@
 import { Typography } from 'components/layout/Typography.styles';
 import { Image } from 'components/layout/Image.styles';
 import Glass from 'assets/images/glass.png';
-import {
-	PromoContainer,
-	PromoText,
-} from 'pages/Main/components/Promo/Promo.styles';
-import { useContext } from 'react';
-import { languageContext } from 'context/LanguageContext/Language.context';
+import { PromoContainer } from 'pages/Main/components/Promo/Promo.styles';
 import { useLanguage } from 'hooks/useLanguage';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
 import Button from 'components/ui/Button/Button';
-import Carousel from 'components/Carousel/Carousel';
+import {
+	ScreenContainer,
+	TextContent,
+} from 'pages/Main/components/Share.styles';
 
 const Promo = () => {
 	const { text } = useLanguage('promo');
 	const isLg = useMediaQuery(queries.up.lg);
+	const isMd = useMediaQuery(queries.up.md);
 
 	return (
 		<PromoContainer>
-			<PromoText>
+			<TextContent>
 				<Typography as="h2" variant={isLg ? 'h2' : 'h3'} bold>
 					{text('title')}
 				</Typography>
@@ -31,8 +30,8 @@ const Promo = () => {
 				>
 					{text('text')}
 				</Typography>
-				<Button>{text('button')}</Button>
-			</PromoText>
+				<Button small={!isMd}>{text('button')}</Button>
+			</TextContent>
 			<Image src={Glass} alt={'glass image'} />
 		</PromoContainer>
 	);

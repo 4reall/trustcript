@@ -1,6 +1,6 @@
 import { Container } from 'components/layout/Container.styles';
 import Promo from 'pages/Main/components/Promo/Promo';
-import Slider from 'pages/Main/components/Slider/Slider';
+import Slides from 'pages/Main/components/Slides/Slides';
 import styled from 'styled-components';
 import { mediaQueries } from 'utils/constants/mediaQueries';
 
@@ -15,8 +15,8 @@ const MainPage = () => {
 	return (
 		<section>
 			<Container maxWidth="xl">
-				{/*<Promo />*/}
-				<Slider />
+				<Promo />
+				<Slides />
 			</Container>
 		</section>
 	);

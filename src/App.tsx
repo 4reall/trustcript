@@ -17,19 +17,25 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         -webkit-tap-highlight-color: transparent;
+		
     }
-
+	
 	html, body {
-		height: 100%;
+		min-height: 100%;
 		width: 100%;
+	}
+	
+	html {
+		background: ${({ theme }) => theme.palette.mainBg.color};
 	}
 	
     body {
         position: relative;
         background: url(${Bg}) center / cover no-repeat;
         font-family: 'Inter', 'Roboto', sans-serif;
-		overflow-x: hidden;
 		padding-top: 5rem;
+		-webkit-overflow-scrolling: touch;
+		overflow-y: scroll;
 		${mediaQueries.up.md} {
 			padding-top: 6rem;
 		}

@@ -3,7 +3,7 @@ import { Typography } from 'components/layout/Typography.styles';
 import {
 	LanguageLabelContainer,
 	LanguageLabelContainerProps,
-} from 'components/LanguageSwitcher/LanguageSwitcher.styles';
+} from 'components/ui/LanguageSwitcher/LanguageSwitcher.styles';
 import { LanguageOption } from 'context/LanguageContext/Language.context';
 
 interface LanguageLabelProps

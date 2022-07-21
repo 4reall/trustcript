@@ -1,5 +1,5 @@
 import React, { useState, useLayoutEffect, MouseEvent } from 'react';
-import { RippleContainer } from './Ripple.styled';
+import { RippleContainer } from 'components/Ripple/Ripple.styles';
 import { useDebouncedRippleCleanUp } from './useDebouncedRippleCleanUp';
 
 export interface RippleProps {
@@ -26,8 +26,8 @@ const Ripple = ({ duration, color }: RippleProps) => {
 			rippleContainer.width > rippleContainer.height
 				? rippleContainer.width
 				: rippleContainer.height;
-		const x = event.pageX - rippleContainer.x - size / 2;
-		const y = event.pageY - rippleContainer.y - size / 2;
+		const x = event.clientX - rippleContainer.x - size / 2;
+		const y = event.clientY - rippleContainer.y - size / 2;
 		const newRipple = {
 			x,
 			y,

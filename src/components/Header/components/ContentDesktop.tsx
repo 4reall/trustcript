@@ -5,7 +5,7 @@ import { Image } from 'components/layout/Image.styles';
 import Logo from 'assets/icons/logo/logo.svg';
 import { Flex } from 'components/layout/Flex.styles';
 import Navigation from 'components/Navigation/Navigation';
-import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher';
+import LanguageSwitcher from 'components/ui/LanguageSwitcher/LanguageSwitcher';
 import { SocialLinksContainer } from 'components/Header/Header.styles';
 import { LanguageOption } from 'context/LanguageContext/Language.context';
 import { ContentProps, SocialLink } from 'components/Header/Header';

@@ -2,7 +2,6 @@ import {
 	BurgerBar,
 	BurgerContainer,
 } from 'components/Header/components/Burger/Burger.styles';
-import { useState } from 'react';
 
 interface BurgerProps {
 	active: boolean;
@@ -12,6 +11,8 @@ interface BurgerProps {
 const Burger = ({ active, onClick }: BurgerProps) => {
 	return (
 		<BurgerContainer active={active} onClick={onClick}>
+			<BurgerBar />
+			<BurgerBar />
 			<BurgerBar />
 		</BurgerContainer>
 	);

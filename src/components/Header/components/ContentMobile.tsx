@@ -9,7 +9,7 @@ import { PathsEnum } from 'utils/constants/paths';
 import { Image } from 'components/layout/Image.styles';
 import Logo from 'assets/icons/logo/logo.svg';
 import { Link } from 'react-router-dom';
-import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher';
+import LanguageSwitcher from 'components/ui/LanguageSwitcher/LanguageSwitcher';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
 

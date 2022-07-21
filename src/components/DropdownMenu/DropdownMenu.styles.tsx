@@ -16,7 +16,7 @@ export const DropdownMenuStyles = styled.div<DropdownMenuStylesProps>`
 	transform-origin: top;
 	transition: 300ms all;
 	transform: scaleY(0);
-	border-radius: 5px;
+	border-radius: ${({ full }) => (full ? '0' : '5px')};
 	background: ${({ theme }) => theme.palette.mainBg.color};
 	z-index: ${({ theme }) => theme.zIndex.dropdown};
 	overflow: ${({ full }) => (full ? '' : 'hidden')};

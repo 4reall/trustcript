@@ -11,7 +11,7 @@ export const queries = {
 		lg: `(max-width: ${BreakpointValuesEnum.lg})`,
 		xl: `(max-width: ${BreakpointValuesEnum.xl})`,
 		xxl: `(max-width: ${BreakpointValuesEnum.xxl})`,
-	},
+	} as const,
 	up: {
 		xs: `(min-width: ${BreakpointValuesEnum.xs})`,
 		sm: `(min-width: ${BreakpointValuesEnum.sm})`,
@@ -19,7 +19,7 @@ export const queries = {
 		lg: `(min-width: ${BreakpointValuesEnum.lg})`,
 		xl: `(min-width: ${BreakpointValuesEnum.xl})`,
 		xxl: `(min-width: ${BreakpointValuesEnum.xxl})`,
-	},
+	} as const,
 };
 
 export const mediaQueries = {
@@ -30,7 +30,7 @@ export const mediaQueries = {
 		lg: `@media ${queries.down.lg}`,
 		xl: `@media ${queries.down.xl}`,
 		xxl: `@media ${queries.down.xxl}`,
-	},
+	} as const,
 	up: {
 		xs: `@media ${queries.up.xs}`,
 		sm: `@media ${queries.up.sm}`,
@@ -38,5 +38,5 @@ export const mediaQueries = {
 		lg: `@media ${queries.up.lg}`,
 		xl: `@media ${queries.up.xl}`,
 		xxl: `@media ${queries.up.xxl}`,
-	},
+	} as const,
 };

@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import { queries } from 'utils/constants/mediaQueries';
+import { KeysOfUnion } from 'types/Keys';
+
+type Query = typeof queries[keyof typeof queries];
 
 const useMediaQuery = (query: string): boolean => {
 	const getMatches = (query: string): boolean => {

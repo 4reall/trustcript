@@ -43,4 +43,16 @@ export const languageData = {
 			[LanguagesEnum.UK]: 'More',
 		},
 	},
+	slides: {
+		title: {
+			[LanguagesEnum.RU]: 'Кибербезопасноть нового поколения',
+			[LanguagesEnum.UK]: 'Cybersecurity of new generation',
+		},
+		text: {
+			[LanguagesEnum.RU]:
+				'Масштабируемая защита от самых сложных киберугроз, учитывающая потребности вашего бизнеса.',
+			[LanguagesEnum.UK]:
+				'Scalable protection against the most complex cyber threats, adapted to your business requirements.',
+		},
+	},
 };
