@@ -1,19 +1,22 @@
-import { LanguageOption } from 'context/LanguageContext/Language.context';
-import { ContentProps, SocialLink } from 'components/Header/Header';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+import LanguageSwitcher from 'components/ui/LanguageSwitcher/LanguageSwitcher';
 import { Flex } from 'components/layout/Flex.styles';
 import DropdownMenu from 'components/DropdownMenu/DropdownMenu';
-import { useState } from 'react';
 import Burger from 'components/Header/components/Burger/Burger';
 import Navigation from 'components/Navigation/Navigation';
-import { PathsEnum } from 'utils/constants/paths';
 import { Image } from 'components/layout/Image.styles';
-import Logo from 'assets/icons/logo/logo.svg';
-import { Link } from 'react-router-dom';
-import LanguageSwitcher from 'components/ui/LanguageSwitcher/LanguageSwitcher';
+
+import { ContentProps } from 'components/Header/Header';
+import { PathsEnum } from 'utils/constants/paths';
+
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
 
-const ContentMobile = ({ options, socials }: ContentProps) => {
+import Logo from 'assets/icons/logo/logo.svg';
+
+const ContentMobile = ({ options }: ContentProps) => {
 	const isXs = useMediaQuery(queries.down.sm);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 

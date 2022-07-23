@@ -1,16 +1,19 @@
-import { Col, Grid } from 'components/layout/Grid.styles';
 import { Link } from 'react-router-dom';
-import { PathsEnum } from 'utils/constants/paths';
+
+import { Col, Grid } from 'components/layout/Grid.styles';
 import { Image } from 'components/layout/Image.styles';
-import Logo from 'assets/icons/logo/logo.svg';
 import { Flex } from 'components/layout/Flex.styles';
 import Navigation from 'components/Navigation/Navigation';
 import LanguageSwitcher from 'components/ui/LanguageSwitcher/LanguageSwitcher';
 import { SocialLinksContainer } from 'components/Header/Header.styles';
-import { LanguageOption } from 'context/LanguageContext/Language.context';
-import { ContentProps, SocialLink } from 'components/Header/Header';
+
+import { PathsEnum } from 'utils/constants/paths';
+import { ContentProps } from 'components/Header/Header';
+
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
+
+import Logo from 'assets/icons/logo/logo.svg';
 
 const ContentDesktop = ({ options, socials }: ContentProps) => {
 	const isLg = useMediaQuery(queries.up.lg);
@@ -34,6 +37,7 @@ const ContentDesktop = ({ options, socials }: ContentProps) => {
 								key={social.alt}
 								target="_blank"
 								href={social.href}
+								rel="noreferrer"
 							>
 								<Image
 									alt={social.alt}

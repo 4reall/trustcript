@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { urlToHttpOptions } from 'url';
 
 export interface RippleContainerProps {
 	duration: number;

@@ -55,4 +55,88 @@ export const languageData = {
 				'Scalable protection against the most complex cyber threats, adapted to your business requirements.',
 		},
 	},
+	tools: {
+		title: {
+			[LanguagesEnum.RU]: 'Инструменты',
+			[LanguagesEnum.UK]: 'Tools',
+		},
+		text: {
+			[LanguagesEnum.RU]:
+				'Тестирование на проникновение позволяет ответить на вопрос, как кто-то со злым умыслом может вмешаться в вашу сеть.',
+			[LanguagesEnum.UK]:
+				'Penetration testing allows you to answer the question of how someone with malicious intent can interfere with your network.',
+		},
+	},
+	benefits: {
+		title: {
+			[LanguagesEnum.RU]:
+				'Наши продукты направлены на вашу безопасность.',
+			[LanguagesEnum.UK]:
+				'Our products are designed to help you stay safe.',
+		},
+		text: {
+			[LanguagesEnum.RU]:
+				'Мы придерживаемся в своей работе простого принципа: детектировать и блокировать любую вредоносную атаку.',
+			[LanguagesEnum.UK]:
+				'We follow a simple principle in our work: to detect and block any malicious attack.',
+		},
+		card1: {
+			[LanguagesEnum.RU]: 'Анонимность',
+			[LanguagesEnum.UK]: 'Anonymity',
+		},
+		card2: {
+			[LanguagesEnum.RU]: 'Проверка на наличие угроз',
+			[LanguagesEnum.UK]: 'Threat check',
+		},
+		card3: {
+			[LanguagesEnum.RU]: 'Обнаружение и предотвращение атак',
+			[LanguagesEnum.UK]: 'Detect and prevent attack',
+		},
+	},
+	form: {
+		name: {
+			[LanguagesEnum.RU]: 'Как к Вам обращаться?',
+			[LanguagesEnum.UK]: 'What would you like to be called?',
+		},
+		company: {
+			[LanguagesEnum.RU]: 'Какую компанию Вы представляете?',
+			[LanguagesEnum.UK]: 'What company do you represent?',
+		},
+		email: {
+			[LanguagesEnum.RU]: 'Адрес электронной почты',
+			[LanguagesEnum.UK]: 'Your e-mail address',
+		},
+		message: {
+			[LanguagesEnum.RU]: 'Введите ваше сообщение',
+			[LanguagesEnum.UK]: 'Enter your message',
+		},
+		personal: {
+			[LanguagesEnum.RU]: 'Я согласен на обработку персональных данных',
+			[LanguagesEnum.UK]: 'I accept the handling of personal data',
+		},
+		button: {
+			[LanguagesEnum.RU]: 'Отправить данные',
+			[LanguagesEnum.UK]: 'Submit',
+		},
+	},
+
+	contacts: {
+		title: {
+			[LanguagesEnum.RU]:
+				'Вы можете связаться с нами удобным для Вас способом.',
+			[LanguagesEnum.UK]: 'You can contact us in a convenient way.',
+		},
+		address: {
+			[LanguagesEnum.RU]: 'Ленинградский пр-т., 27, к2',
+			[LanguagesEnum.UK]: 'Leningradskiy Avenue, 27с2',
+		},
+		tel: {
+			[LanguagesEnum.RU]: '+7 (495) 000 - 00 - 00',
+			[LanguagesEnum.UK]: '+7 (495) 000 - 00 - 00',
+		},
+		email: {
+			[LanguagesEnum.RU]: 'admin@trustcrypt.com',
+			[LanguagesEnum.UK]: 'admin@trustcrypt.com',
+		},
+	},
 };

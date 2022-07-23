@@ -1,5 +1,4 @@
 import useBreakpoints from './useBreakpoints';
-import UseBreakpoints from './useBreakpoints';
 
 const findNearestLowerBreakpoint = (breakpoints: any[], currIndex: any) => {
 	let iterator = currIndex - 1;

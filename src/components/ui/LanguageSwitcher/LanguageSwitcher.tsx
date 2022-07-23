@@ -1,20 +1,20 @@
 import { useContext, useRef, useState } from 'react';
-import { Flex } from 'components/layout/Flex.styles';
+
 import { Image } from 'components/layout/Image.styles';
-import { Typography } from 'components/layout/Typography.styles';
 import DropdownMenu from 'components/DropdownMenu/DropdownMenu';
-import Arrow from 'assets/icons/labels/Vector.svg';
-import { useClickOutside } from 'hooks/useClickOutside';
 import {
 	LanguageMenu,
 	Switcher,
-	SwitcherProps,
 } from 'components/ui/LanguageSwitcher/LanguageSwitcher.styles';
 import LanguageLabel from 'components/ui/LanguageSwitcher/LanguageLabel';
-import {
-	languageContext,
-	LanguageOption,
-} from 'context/LanguageContext/Language.context';
+
+import { SwitcherProps } from 'components/ui/LanguageSwitcher/LanguageSwitcher.styles';
+import { LanguageOption } from 'context/LanguageContext/Language.context';
+
+import { languageContext } from 'context/LanguageContext/Language.context';
+import { useClickOutside } from 'hooks/useClickOutside';
+
+import Arrow from 'assets/icons/labels/Vector.svg';
 
 interface LanguageSwitcherProps extends SwitcherProps {
 	options: LanguageOption[];

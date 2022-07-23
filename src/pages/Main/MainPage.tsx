@@ -1,15 +1,9 @@
 import { Container } from 'components/layout/Container.styles';
-import Promo from 'pages/Main/components/Promo/Promo';
-import Slides from 'pages/Main/components/Slides/Slides';
-import styled from 'styled-components';
-import { mediaQueries } from 'utils/constants/mediaQueries';
-
-const MainPageStyles = styled.section`
-	margin-top: 5rem;
-	${mediaQueries.up.md} {
-		margin-top: 6rem;
-	}
-`;
+import Promo from 'pages/Main/screens/Promo/Promo';
+import Slides from 'pages/Main/screens/Slides/Slides';
+import Tools from 'pages/Main/screens/Tools/Tools';
+import Benefits from 'pages/Main/screens/Benefits/Benefits';
+import Contacts from 'pages/Main/screens/Contacts/Contacts';
 
 const MainPage = () => {
 	return (
@@ -17,6 +11,9 @@ const MainPage = () => {
 			<Container maxWidth="xl">
 				<Promo />
 				<Slides />
+				<Tools />
+				<Benefits />
+				<Contacts />
 			</Container>
 		</section>
 	);

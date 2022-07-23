@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect, MouseEvent } from 'react';
+import React, { useState, MouseEvent } from 'react';
 import { RippleContainer } from 'components/Ripple/Ripple.styles';
 import { useDebouncedRippleCleanUp } from './useDebouncedRippleCleanUp';
 

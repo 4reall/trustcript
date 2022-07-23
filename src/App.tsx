@@ -1,21 +1,23 @@
-import Routes from 'components/routes/Routes';
-import { BrowserRouter } from 'react-router-dom';
-import { theme } from './theme';
 import { Normalize } from 'styled-normalize';
-import Header from './components/Header/Header';
+import { YMaps } from '@pbe/react-yandex-maps';
+import { BrowserRouter } from 'react-router-dom';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
-import Bg from 'assets/images/mainBg.jpg';
+import Header from './components/Header/Header';
+import Routes from 'components/routes/Routes';
 import LanguageProvider from 'context/LanguageContext/Language.provider';
 import Footer from 'components/Footer/Footer';
+
+import { theme } from 'theme';
 import { mediaQueries } from 'utils/constants/mediaQueries';
+
+import Bg from 'assets/images/mainBg.jpg';
 
 const GlobalStyle = createGlobalStyle`
     * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         -webkit-tap-highlight-color: transparent;
 		
     }
@@ -36,6 +38,7 @@ const GlobalStyle = createGlobalStyle`
 		padding-top: 5rem;
 		-webkit-overflow-scrolling: touch;
 		overflow-y: scroll;
+		overflow-x: hidden;
 		${mediaQueries.up.md} {
 			padding-top: 6rem;
 		}
@@ -60,15 +63,17 @@ const App = () => {
 	return (
 		<ThemeProvider theme={theme}>
 			<LanguageProvider>
-				<GlobalStyle />
-				<Normalize />
-				<BrowserRouter>
-					<Header />
-					<main>
-						<Routes />
-					</main>
-					<Footer />
-				</BrowserRouter>
+				<YMaps>
+					<GlobalStyle />
+					<Normalize />
+					<BrowserRouter>
+						<Header />
+						<main>
+							<Routes />
+						</main>
+						<Footer />
+					</BrowserRouter>
+				</YMaps>
 			</LanguageProvider>
 		</ThemeProvider>
 	);

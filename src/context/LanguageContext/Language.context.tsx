@@ -1,10 +1,4 @@
-import {
-	Context,
-	ContextType,
-	createContext,
-	Dispatch,
-	SetStateAction,
-} from 'react';
+import { createContext, Dispatch, SetStateAction } from 'react';
 import { LanguagesEnum } from 'utils/constants/languageData';
 
 export interface LanguageOption {
@@ -24,5 +18,5 @@ export const languageContext = createContext<LanguageContext>({
 		language: LanguagesEnum.RU,
 		thumbnail: '',
 	},
-	setSelectedLanguage: (index) => {},
+	setSelectedLanguage: () => {},
 });

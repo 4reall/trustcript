@@ -43,7 +43,7 @@ export const ControlsBtn = styled.button<ControlsBtnProps>`
 		height: 100%;
 		content: '';
 		background: ${({ theme, active }) =>
-			active ? theme.palette.active.normal : theme.palette.white.normal};
+			active ? theme.palette.active.normal : theme.palette.white.light};
 	}
 
 	${mediaQueries.up.md} {

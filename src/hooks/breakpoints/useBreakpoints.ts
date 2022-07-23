@@ -1,9 +1,6 @@
 import { queries } from 'utils/constants/mediaQueries';
 import useMediaQuery from './useMediaQuery';
-import {
-	BreakpointNamesEnum,
-	BreakpointValuesEnum,
-} from 'utils/constants/breakpoints';
+import { BreakpointNamesEnum } from 'utils/constants/breakpoints';
 
 const useBreakpoints = (queryVariant: 'up' | 'down' = 'up') => {
 	const breakpoints = {

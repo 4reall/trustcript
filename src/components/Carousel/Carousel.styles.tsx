@@ -1,19 +1,16 @@
 import styled from 'styled-components';
 
-export interface WrapperProps {}
-
 export interface InnerProps {
-	slideWidth: number | string;
 	transition: boolean;
-	slidesNumber: number;
-	offset?: number;
+	transitionDuration: number;
 }
 
 export interface SlideProps {
 	slideWidth?: number | string;
 }
 
-export const Window = styled.div<WrapperProps>`
+export const Window = styled.div`
+	position: relative;
 	width: 100%;
 	margin: 0 auto;
 	overflow: hidden;
@@ -23,7 +20,8 @@ export const Window = styled.div<WrapperProps>`
 
 export const SlideTruck = styled.div<InnerProps>`
 	display: flex;
-	transition: ${({ transition }) => transition && '500ms all'};
+	transition: ${({ transition, transitionDuration }) =>
+		transition && transitionDuration + 'ms all'};
 `;
 
 export const Slide = styled.div<SlideProps>`
@@ -33,4 +31,11 @@ export const Slide = styled.div<SlideProps>`
 		height: 100%;
 		pointer-events: none;
 	}
+`;
+
+export const BtnContainer = styled.div<{ variant: 'left' | 'right' }>`
+	position: absolute;
+	${({ variant }) => variant}: 1%;
+	top: 50%;
+	transform: translateY(-50%);
 `;

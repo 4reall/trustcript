@@ -1,15 +1,12 @@
 import { Typography } from 'components/layout/Typography.styles';
 import { Image } from 'components/layout/Image.styles';
 import Glass from 'assets/images/glass.png';
-import { PromoContainer } from 'pages/Main/components/Promo/Promo.styles';
+import { PromoContainer } from 'pages/Main/screens/Promo/Promo.styles';
 import { useLanguage } from 'hooks/useLanguage';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
 import Button from 'components/ui/Button/Button';
-import {
-	ScreenContainer,
-	TextContent,
-} from 'pages/Main/components/Share.styles';
+import { TextContent } from 'pages/Main/screens/Share.styles';
 
 const Promo = () => {
 	const { text } = useLanguage('promo');
@@ -30,7 +27,9 @@ const Promo = () => {
 				>
 					{text('text')}
 				</Typography>
-				<Button small={!isMd}>{text('button')}</Button>
+				<Button onClick={() => {}} small={!isMd}>
+					{text('button')}
+				</Button>
 			</TextContent>
 			<Image src={Glass} alt={'glass image'} />
 		</PromoContainer>

@@ -1,10 +1,12 @@
+import { Route, Routes as RoutesDOM } from 'react-router-dom';
+
 import BlogPage from 'pages/Blog/BlogPage';
 import ArticlePage from 'pages/Article/ArticlePage';
 import ProductsPage from 'pages/Products/ProductsPage';
 import ProductPage from 'pages/Product/ProductPage';
-import { Route, Routes as RoutesDOM } from 'react-router-dom';
-import { PathsEnum } from 'utils/constants/paths';
 import MainPage from 'pages/Main/MainPage';
+
+import { PathsEnum } from 'utils/constants/paths';
 
 const routes = [
 	{ path: PathsEnum.Main, element: <MainPage /> },

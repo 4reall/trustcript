@@ -1,18 +1,19 @@
-import Twitter from 'assets/icons/networks/twitter.svg';
-import Telegram from 'assets/icons/networks/telegram.svg';
-import WhatsUp from 'assets/icons/networks/whatsup.svg';
-import Youtube from 'assets/icons/networks/youtube.svg';
 import { Container } from 'components/layout/Container.styles';
 import { HeaderStyles } from 'components/Header/Header.styles';
+import { LanguageOption } from 'context/LanguageContext/Language.context';
+import ContentMobile from 'components/Header/components/ContentMobile';
+import ContentDesktop from 'components/Header/components/ContentDesktop';
+import { LanguagesEnum } from 'utils/constants/languageData';
+
+import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
+import { queries } from 'utils/constants/mediaQueries';
 
 import Ru from 'assets/icons/countries/ru.svg';
 import Uk from 'assets/icons/countries/uk.svg';
-import { LanguageOption } from 'context/LanguageContext/Language.context';
-import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
-import { queries } from 'utils/constants/mediaQueries';
-import ContentDesktop from 'components/Header/components/ContentDesktop';
-import ContentMobile from 'components/Header/components/ContentMobile';
-import { LanguagesEnum } from 'utils/constants/languageData';
+import Telegram from 'assets/icons/networks/telegram.svg';
+import Twitter from 'assets/icons/networks/twitter.svg';
+import WhatsUp from 'assets/icons/networks/whatsup.svg';
+import Youtube from 'assets/icons/networks/youtube.svg';
 
 export interface SocialLink {
 	href: string;

@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-import {
-	ScreenContainer,
-	TextContent,
-} from 'pages/Main/components/Share.styles';
+import { ScreenContainer, TextContent } from 'pages/Main/screens/Share.styles';
 import { mediaQueries } from 'utils/constants/mediaQueries';
 
 export const SlidesContainer = styled(ScreenContainer)`

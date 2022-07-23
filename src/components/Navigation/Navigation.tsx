@@ -1,19 +1,20 @@
-import { Nav, NavItem, NavProps } from './Navigation.styles';
-import { PathsEnum } from '../../utils/constants/paths';
 import { NavLink } from 'react-router-dom';
-import Flex from '../layout/Flex/Flex';
+
+import { Nav, NavItem } from './Navigation.styles';
 import { Typography } from '../layout/Typography.styles';
-import { useContext } from 'react';
-import { languageContext } from 'context/LanguageContext/Language.context';
+
+import { NavProps } from './Navigation.styles';
+import { PathsEnum } from 'utils/constants/paths';
+
 import { languageData } from 'utils/constants/languageData';
 import { useLanguage } from 'hooks/useLanguage';
 
-interface NavLink {
+interface INavLink {
 	title: keyof typeof languageData.navigation;
 	path: PathsEnum;
 }
 
-const navLinks: NavLink[] = [
+const navLinks: INavLink[] = [
 	{ title: 'home', path: PathsEnum.Main },
 	{ title: 'blog', path: PathsEnum.Blog },
 	{ title: 'products', path: PathsEnum.Products },

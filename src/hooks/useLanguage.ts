@@ -5,7 +5,6 @@ import {
 	LanguageDataKeys,
 	LanguageSectionKeys,
 } from 'utils/constants/languageData';
-import { KeysOfUnion } from 'types/Keys';
 
 export const useLanguage = (section: LanguageDataKeys) => {
 	const { selectedLanguage, setSelectedLanguage } =

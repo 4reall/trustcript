@@ -1,18 +1,13 @@
 import { PropsWithChildren, useState } from 'react';
-import {
-	languageContext,
-	LanguageOption,
-} from 'context/LanguageContext/Language.context';
-import Ru from 'assets/icons/countries/ru.svg';
-import Uk from 'assets/icons/countries/uk.svg';
+
+import { languageContext } from 'context/LanguageContext/Language.context';
+
+import { LanguageOption } from 'context/LanguageContext/Language.context';
 import { LanguagesEnum } from 'utils/constants/languageData';
 
-const { Provider } = languageContext;
+import Ru from 'assets/icons/countries/ru.svg';
 
-const options = [
-	{ language: LanguagesEnum.RU, thumbnail: Ru },
-	{ language: LanguagesEnum.UK, thumbnail: Uk },
-];
+const { Provider } = languageContext;
 
 const LanguageContextProvider = ({ children }: PropsWithChildren<{}>) => {
 	const [selectedLanguage, setSelectedLanguage] = useState<LanguageOption>({

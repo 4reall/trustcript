@@ -1,7 +1,4 @@
-import {
-	BreakpointNamesEnum,
-	BreakpointValuesEnum,
-} from 'utils/constants/breakpoints';
+import { BreakpointValuesEnum } from 'utils/constants/breakpoints';
 
 export const queries = {
 	down: {

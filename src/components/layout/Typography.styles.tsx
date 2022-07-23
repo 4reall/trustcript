@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { theme } from 'theme';
 import convertUnits from 'utils/helpers/convertUnits';
 
@@ -12,18 +12,30 @@ export interface TypographyProps {
 	color?: string;
 	uppercase?: boolean;
 	underline?: boolean;
+	align?: 'left' | 'right' | 'center';
 }
 
 export const Typography = styled.span<TypographyProps>`
-	margin-top: ${({ mt }) => convertUnits(mt)};
-	margin-bottom: ${({ mb }) => convertUnits(mb)};
-	font-size: ${({ theme, variant }) => theme.typography[variant].fontSize};
-	font-family: ${({ theme, variant }) =>
-		theme.typography[variant].fontFamily};
-	font-weight: ${({ bold }) => (bold ? 700 : 500)};
-	line-height: ${({ theme, variant }) =>
-		theme.typography[variant].lineHeight};
-	text-transform: ${({ uppercase }) => uppercase && 'uppercase'};
-	text-decoration: ${({ underline }) => underline && 'underline'};
-	color: ${({ theme, color }) => color || theme.palette.normal.normal};
+	${({
+		mt,
+		mb,
+		theme,
+		align,
+		uppercase,
+		color,
+		bold,
+		variant,
+		underline,
+	}) => css`
+		margin-top: ${convertUnits(mt)};
+		margin-bottom: ${convertUnits(mb)};
+		font-size: ${theme.typography[variant].fontSize};
+		font-family: ${theme.typography[variant].fontFamily};
+		font-weight: ${bold ? 700 : 500};
+		line-height: ${theme.typography[variant].lineHeight};
+		text-transform: ${uppercase && 'uppercase'};
+		text-decoration: ${underline && 'underline'};
+		text-align: ${align};
+		color: ${color || theme.palette.normal.normal};
+	`}
 `;

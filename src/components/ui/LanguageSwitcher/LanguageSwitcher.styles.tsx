@@ -24,7 +24,7 @@ export const LanguageMenu = styled.ul`
 	margin-block: 0;
 	padding: 0;
 	border-radius: 5px;
-	background: ${({ theme }) => theme.palette.white.normal};
+	background: ${({ theme }) => theme.palette.white.light};
 	z-index: ${({ theme }) => theme.zIndex.modal};
 `;
 
@@ -46,10 +46,10 @@ export const LanguageLabelContainer = styled.li<LanguageLabelContainerProps>`
 			padding: 0.75rem;
 
 			&:hover {
-				background: ${({ theme }) => theme.palette.white.hover};
+				background: ${({ theme }) => theme.palette.white.normal};
 			}
 			&:active {
-				background: ${({ theme }) => theme.palette.white.active};
+				background: ${({ theme }) => theme.palette.white.dark};
 			}
 		`}
 `;

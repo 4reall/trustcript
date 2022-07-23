@@ -8,12 +8,7 @@ interface MediaQueriesProps {
 	variant?: 'up' | 'down';
 }
 
-export const mq = ({
-	// theme,
-	prop,
-	styles,
-	variant = 'up',
-}: MediaQueriesProps) => {
+export const mq = ({ prop, styles, variant = 'up' }: MediaQueriesProps) => {
 	if (!Array.isArray(styles)) return styles;
 	css`
 		& ${mediaQueries[variant].xs} {

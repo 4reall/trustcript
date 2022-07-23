@@ -15,13 +15,13 @@ export const theme = {
 			filter: 'blur(100px)',
 		},
 		white: {
-			border: 'rgba(255,255,255, 0.03)',
-			normal: 'rgba(255,255,255, 0.05)',
-			hover: 'rgba(255,255,255, 0.10)',
-			active: 'rgba(255,255,255, 0.15)',
+			extraLight: 'rgba(255,255,255, 0.03)',
+			light: 'rgba(255,255,255, 0.05)',
+			normal: 'rgba(255,255,255, 0.10)',
+			dark: 'rgba(255,255,255, 0.15)',
 		},
 		borderBg:
-			'linear-gradient(109.41deg, #0FAE96 0%, rgba(18, 14, 39, 0) 48.96%, #7DCFE9 100%), rgba(255, 255, 255, 0.05)',
+			'linear-gradient(109.41deg, #0FAE96 0%, rgba(18, 14, 39, 0) 48.96%, #7DCFE9 100%)',
 	},
 	typography: {
 		h1: {
