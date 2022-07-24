@@ -22,7 +22,7 @@ const Slides = () => {
 	const isLg = useMediaQuery(queries.up.lg);
 	return (
 		<SlidesContainer>
-			<Carousel infinite>
+			<Carousel>
 				{images.map(({ src, alt }, i) => (
 					<Image key={i} src={src} alt={alt} />
 				))}

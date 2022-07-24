@@ -3,30 +3,20 @@ import {
 	cloneElement,
 	isValidElement,
 	ReactNode,
+	useCallback,
 	useEffect,
 	useLayoutEffect,
 	useRef,
 	useState,
 } from 'react';
-import { useSwipe } from 'hooks/carousel/useSwipe';
+import { useResize } from 'hooks/useResize';
 
 export interface UseCarouselProps {
 	transitionDuration: number;
-	threshold?: number;
-	autoplay?: boolean;
-	interval?: number;
-	infinite?: boolean;
 	children: ReactNode[];
 }
 
-const useCarousel = ({
-	threshold = 0.2,
-	autoplay,
-	interval = 5000,
-	infinite,
-	transitionDuration,
-	children,
-}: UseCarouselProps) => {
+const useCarousel = ({ transitionDuration, children }: UseCarouselProps) => {
 	const [offset, setOffset] = useState(0);
 	const [containerWidth, setContainerWidth] = useState(450);
 	const [isTransition, setIsTransition] = useState(true);
@@ -34,9 +24,18 @@ const useCarousel = ({
 	const [clonesCount, setClonesCount] = useState({ head: 0, tail: 0 });
 	const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
-	const autoplayIntervalRef = useRef<NodeJS.Timer>();
 	const timeoutRef = useRef<NodeJS.Timer>();
-	const containerRef = useRef<HTMLDivElement>(null);
+
+	const containerRef = useResize(
+		useCallback(
+			(width) => {
+				if (timeoutRef.current) clearTimeout(timeoutRef.current);
+				setContainerWidth(width);
+				setOffset(clonesCount.head * containerWidth);
+			},
+			[clonesCount, containerWidth]
+		)
+	);
 
 	const setSlide = (slideIndex: number) => {
 		setOffset(containerWidth * (slideIndex + clonesCount.head));
@@ -45,14 +44,6 @@ const useCarousel = ({
 	const moveToLeft = () => setOffset((offset) => offset - containerWidth);
 
 	const moveToRight = () => setOffset((offset) => offset + containerWidth);
-
-	const { swipeShift, handleTouchStart, handleTouchMove, handleTouchEnd } =
-		useSwipe({
-			threshold,
-			containerWidth: containerWidth,
-			leftSwipeCallback: moveToLeft,
-			rightSwipeCallback: moveToRight,
-		});
 
 	useEffect(() => {
 		const firstChild = children[0];
@@ -70,26 +61,7 @@ const useCarousel = ({
 
 		setClonesCount({ head: 1, tail: 1 });
 		return;
-	}, [children, infinite]);
-
-	useEffect(() => {
-		const resizeHandler = () => {
-			if (timeoutRef.current) clearTimeout(timeoutRef.current);
-
-			const width = containerRef.current?.offsetWidth;
-
-			if (!width) return;
-
-			setContainerWidth(width);
-			setOffset(clonesCount.head * containerWidth);
-		};
-
-		resizeHandler();
-
-		window.addEventListener('resize', resizeHandler);
-
-		return () => window.removeEventListener('resize', resizeHandler);
-	}, [clonesCount, containerWidth]);
+	}, [children]);
 
 	useEffect(() => {
 		if (!isTransition) {
@@ -119,35 +91,19 @@ const useCarousel = ({
 			return;
 		}
 		setCurrentSlideIndex(offset / containerWidth - clonesCount.head);
-	}, [infinite, offset, slides, containerWidth, clonesCount]);
-
-	useEffect(() => {
-		if (autoplay) {
-			autoplayIntervalRef.current = setInterval(
-				() => setOffset((offset) => offset + containerWidth),
-				interval
-			);
-		}
-		return () => {
-			if (autoplayIntervalRef.current)
-				clearInterval(autoplayIntervalRef.current);
-		};
-	}, [offset]);
+	}, [offset, slides, containerWidth, clonesCount]);
 
 	return {
 		containerRef,
-		handleTouchStart,
-		handleTouchMove,
-		handleTouchEnd,
 		moveToLeft,
 		moveToRight,
 		isTransition,
 		containerWidth,
-		offset: offset + swipeShift,
+		offset: offset,
 		slides,
 		setSlide,
 		controlsCount: slides.length - clonesCount.head - clonesCount.tail,
-		activeControl: Math.max(currentSlideIndex, 0),
+		activeControl: currentSlideIndex,
 	};
 };
 

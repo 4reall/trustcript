@@ -14,30 +14,24 @@ import useCarousel, { UseCarouselProps } from 'hooks/carousel/useCarousel';
 
 import ChevronLeft from 'assets/icons/arrows/chevron-left-solid.svg';
 import ChevronRight from 'assets/icons/arrows/chevron-right-solid.svg';
+import { useSwipe } from 'hooks/useSwipe';
 
 interface CarouselProps {
 	children: ReactNode[];
 	transitionDuration?: number;
 	threshold?: number;
-	autoplay?: boolean;
-	interval?: number;
-	infinite?: boolean;
 }
 
 const Carousel = ({
 	children,
 	threshold = 0.2,
 	transitionDuration = 200,
-	...props
 }: CarouselProps) => {
 	const {
 		containerRef,
 		setSlide,
 		moveToRight,
 		moveToLeft,
-		handleTouchMove,
-		handleTouchEnd,
-		handleTouchStart,
 		isTransition,
 		containerWidth,
 		offset,
@@ -46,10 +40,17 @@ const Carousel = ({
 		activeControl,
 	} = useCarousel({
 		children,
-		threshold,
 		transitionDuration,
-		...props,
 	});
+
+	const { swipeShift, handleTouchStart, handleTouchMove, handleTouchEnd } =
+		useSwipe({
+			threshold,
+			containerWidth: containerWidth,
+			leftSwipeCallback: moveToLeft,
+			rightSwipeCallback: moveToRight,
+		});
+
 	const slidesList = slides.map((slide, i) => (
 		<Slide key={i} style={{ width: containerWidth }}>
 			{slide}
@@ -67,7 +68,7 @@ const Carousel = ({
 				transitionDuration={transitionDuration}
 				transition={isTransition}
 				style={{
-					transform: `translateX(-${offset}px)`,
+					transform: `translateX(-${offset + swipeShift}px)`,
 				}}
 			>
 				{slidesList}

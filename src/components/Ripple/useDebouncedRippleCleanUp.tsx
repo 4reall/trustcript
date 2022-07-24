@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect } from 'react';
+import { useEffect } from 'react';
 import { RippleContainerProps } from 'components/Ripple/Ripple.styles';
 
 export interface UseDebouncedRippleCleanUpProps extends RippleContainerProps {
@@ -11,7 +11,7 @@ export const useDebouncedRippleCleanUp = (
 	cleanUpFunction: () => void
 ) => {
 	useEffect(() => {
-		let bounce: ReturnType<typeof setTimeout> | undefined = undefined;
+		let bounce: ReturnType<typeof setTimeout> | undefined;
 		if (rippleCount > 0) {
 			clearTimeout(bounce);
 
