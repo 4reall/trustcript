@@ -14,7 +14,7 @@ import { LanguageOption } from 'context/LanguageContext/Language.context';
 import { languageContext } from 'context/LanguageContext/Language.context';
 import { useClickOutside } from 'hooks/useClickOutside';
 
-import Arrow from 'assets/icons/labels/Vector.svg';
+import Arrow from 'assets/icons/arrows/Vector.svg';
 
 interface LanguageSwitcherProps extends SwitcherProps {
 	options: LanguageOption[];

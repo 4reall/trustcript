@@ -5,10 +5,13 @@ export interface ButtonStylesProps {
 	full?: boolean;
 	small?: boolean;
 	center?: boolean;
+	disabled?: boolean;
+	hide?: boolean;
 }
 
 export const ButtonBase = styled.button<ButtonStylesProps>`
-	${({ theme, center, full, small }) => css`
+	${({ theme, center, full, small, disabled, hide }) => css`
+		display: ${hide && 'none'};
 		position: relative;
 		padding: 0.75rem 2rem;
 		margin: ${center && '0 auto'};
@@ -16,7 +19,7 @@ export const ButtonBase = styled.button<ButtonStylesProps>`
 		min-width: 8rem;
 		border-radius: 4px;
 		border: none;
-		background: ${theme.palette.active.normal};
+		background: ${theme.palette.active.normal}
 		color: ${theme.palette.normal.normal};
 		transition: 200ms all;
 		text-transform: uppercase;
@@ -30,13 +33,15 @@ export const ButtonBase = styled.button<ButtonStylesProps>`
 			color: ${theme.palette.normal.hover};
 		}
 
-		${small &&
-		css`
-			min-width: 6rem;
-			padding: 0.75rem;
-			font-size: ${theme.typography.h5.fontSize};
-			line-height: ${theme.typography.h5.lineHeight};
-		`};
+		${
+			small &&
+			css`
+				min-width: 6rem;
+				padding: 0.75rem;
+				font-size: ${theme.typography.h5.fontSize};
+				line-height: ${theme.typography.h5.lineHeight};
+			`
+		};
 
 		${mediaQueries.down.md} {
 			font-size: ${theme.typography.h5.fontSize};
@@ -46,6 +51,15 @@ export const ButtonBase = styled.button<ButtonStylesProps>`
 				color: ${theme.palette.normal.normal};
 			}
 		}
+		
+		${
+			disabled &&
+			css`
+				cursor: default !important;
+				pointer-events: none;
+			`
+		}
+	}
 	`}
 `;
 

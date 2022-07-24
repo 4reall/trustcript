@@ -30,7 +30,7 @@ const useCarousel = ({
 	const [offset, setOffset] = useState(0);
 	const [containerWidth, setContainerWidth] = useState(450);
 	const [isTransition, setIsTransition] = useState(true);
-	const [slides, setSlides] = useState<ReactNode[]>([]);
+	const [slides, setSlides] = useState<ReactNode[]>(children);
 	const [clonesCount, setClonesCount] = useState({ head: 0, tail: 0 });
 	const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
@@ -55,24 +55,21 @@ const useCarousel = ({
 		});
 
 	useEffect(() => {
-		if (infinite) {
-			const firstChild = children[0];
-			const lastChild = children[Children.count(children) - 1];
+		const firstChild = children[0];
+		const lastChild = children[Children.count(children) - 1];
 
-			if (!isValidElement(firstChild) || !isValidElement(lastChild)) {
-				return;
-			}
-
-			setSlides([
-				cloneElement(lastChild),
-				...children,
-				cloneElement(firstChild),
-			]);
-
-			setClonesCount({ head: 1, tail: 1 });
+		if (!isValidElement(firstChild) || !isValidElement(lastChild)) {
 			return;
 		}
-		setSlides(children);
+
+		setSlides([
+			cloneElement(lastChild),
+			...children,
+			cloneElement(firstChild),
+		]);
+
+		setClonesCount({ head: 1, tail: 1 });
+		return;
 	}, [children, infinite]);
 
 	useEffect(() => {
@@ -101,8 +98,6 @@ const useCarousel = ({
 	}, [isTransition]);
 
 	useLayoutEffect(() => {
-		if (!infinite) return;
-
 		if (offset === 0) {
 			timeoutRef.current = setTimeout(() => {
 				setIsTransition(false);

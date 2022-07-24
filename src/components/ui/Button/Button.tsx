@@ -26,7 +26,9 @@ const Button = ({ children, dark, outlined, icon, ...props }: ButtonProps) => {
 		return (
 			<DarkBtn {...props}>
 				{children}
-				<Ripple duration={1000} color={palette.normal.normal} />
+				{!props.disabled && (
+					<Ripple duration={1000} color={palette.normal.normal} />
+				)}
 			</DarkBtn>
 		);
 
@@ -34,7 +36,9 @@ const Button = ({ children, dark, outlined, icon, ...props }: ButtonProps) => {
 		return (
 			<OutlinedBtn {...props}>
 				{children}
-				<Ripple duration={1000} color={palette.normal.normal} />
+				{!props.disabled && (
+					<Ripple duration={1000} color={palette.normal.normal} />
+				)}
 			</OutlinedBtn>
 		);
 
@@ -42,14 +46,18 @@ const Button = ({ children, dark, outlined, icon, ...props }: ButtonProps) => {
 		return (
 			<IconBtn {...props}>
 				{children}
-				<Ripple duration={1000} color={palette.normal.normal} />
+				{!props.disabled && (
+					<Ripple duration={1000} color={palette.normal.normal} />
+				)}
 			</IconBtn>
 		);
 
 	return (
 		<ButtonBase {...props}>
 			{children}
-			<Ripple duration={1000} color={palette.normal.normal} />
+			{!props.disabled && (
+				<Ripple duration={1000} color={palette.normal.normal} />
+			)}
 		</ButtonBase>
 	);
 };

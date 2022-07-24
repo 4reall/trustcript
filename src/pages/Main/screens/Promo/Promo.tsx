@@ -6,7 +6,7 @@ import { useLanguage } from 'hooks/useLanguage';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
 import Button from 'components/ui/Button/Button';
-import { TextContent } from 'pages/Main/screens/Share.styles';
+import { TextContent } from 'pages/Share.styles';
 
 const Promo = () => {
 	const { text } = useLanguage('promo');

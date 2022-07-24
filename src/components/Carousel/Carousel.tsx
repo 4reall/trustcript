@@ -12,16 +12,21 @@ import { Image } from 'components/layout/Image.styles';
 
 import useCarousel, { UseCarouselProps } from 'hooks/carousel/useCarousel';
 
-import ChevronLeft from 'assets/icons/labels/chevron-left-solid.svg';
-import ChevronRight from 'assets/icons/labels/chevron-right-solid.svg';
+import ChevronLeft from 'assets/icons/arrows/chevron-left-solid.svg';
+import ChevronRight from 'assets/icons/arrows/chevron-right-solid.svg';
 
-interface CarouselProps extends Omit<UseCarouselProps, 'transitionDuration'> {
+interface CarouselProps {
 	children: ReactNode[];
 	transitionDuration?: number;
+	threshold?: number;
+	autoplay?: boolean;
+	interval?: number;
+	infinite?: boolean;
 }
 
 const Carousel = ({
 	children,
+	threshold = 0.2,
 	transitionDuration = 200,
 	...props
 }: CarouselProps) => {
@@ -41,6 +46,7 @@ const Carousel = ({
 		activeControl,
 	} = useCarousel({
 		children,
+		threshold,
 		transitionDuration,
 		...props,
 	});

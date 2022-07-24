@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
     }
 	
 	html, body {
-		min-height: 100%;
+		height: 100vh;
 		width: 100%;
 	}
 	
@@ -33,7 +33,6 @@ const GlobalStyle = createGlobalStyle`
 	
     body {
         position: relative;
-        background: url(${Bg}) center / cover no-repeat;
         font-family: 'Inter', 'Roboto', sans-serif;
 		padding-top: 5rem;
 		-webkit-overflow-scrolling: touch;
@@ -45,9 +44,10 @@ const GlobalStyle = createGlobalStyle`
     }
 
 	#root {
-		height: 100%;
+		min-height: 100%;
 		display: flex;
 		flex-direction: column;
+		background: url(${Bg}) center / cover no-repeat;
 	}
 
 	main {

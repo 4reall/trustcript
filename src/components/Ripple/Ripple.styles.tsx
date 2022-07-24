@@ -12,6 +12,7 @@ export const RippleContainer = styled.div<RippleContainerProps>`
 	bottom: 0;
 	left: 0;
 	overflow: hidden;
+	z-index: 1;
 
 	span {
 		transform: scale(0);
