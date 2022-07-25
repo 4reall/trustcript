@@ -7,6 +7,7 @@ export interface ButtonStylesProps {
 	center?: boolean;
 	disabled?: boolean;
 	hide?: boolean;
+	active?: boolean;
 }
 
 export const ButtonBase = styled.button<ButtonStylesProps>`
@@ -23,7 +24,9 @@ export const ButtonBase = styled.button<ButtonStylesProps>`
 		color: ${theme.palette.normal.normal};
 		transition: 200ms all;
 		text-transform: uppercase;
-
+		white-space: nowrap;
+		flex-shrink: 0;
+		
 		font-family: ${theme.typography.h4.fontFamily};
 		font-size: ${theme.typography.h4.fontSize};
 		line-height: ${theme.typography.h4.lineHeight};
@@ -64,9 +67,10 @@ export const ButtonBase = styled.button<ButtonStylesProps>`
 `;
 
 export const DarkBtn = styled(ButtonBase)`
-	${({ theme }) => css`
+	${({ theme, active }) => css`
 		border: 2px solid ${theme.palette.white.extraLight};
 		background: ${theme.palette.white.light};
+		color: ${({ theme }) => theme.palette.normal.normal};
 		&:hover {
 			border-color: ${theme.palette.white.light};
 			background: ${({ theme }) => theme.palette.white.normal};
@@ -77,6 +81,11 @@ export const DarkBtn = styled(ButtonBase)`
 				background: transparent;
 			}
 		}
+		${active &&
+		css`
+			background: #fff;
+			color: #000;
+		`}
 	`}
 	}
 `;

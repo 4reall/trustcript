@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { mediaQueries } from 'utils/constants/mediaQueries';
-import { ScreenContainer, TextContent } from 'pages/Share.styles';
+import { ScreenContainer, TextContent } from 'pages/Main/screens/Share.styles';
 
 export const PromoContainer = styled(ScreenContainer)`
 	img {

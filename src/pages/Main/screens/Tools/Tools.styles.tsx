@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ScreenContainer } from 'pages/Share.styles';
+import { ScreenContainer } from 'pages/Main/screens/Share.styles';
 import { mediaQueries } from 'utils/constants/mediaQueries';
 
 export const ToolsContainer = styled(ScreenContainer)`

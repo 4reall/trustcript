@@ -5,28 +5,37 @@ import {
 } from 'components/Card/Card.styles';
 import Carousel from 'components/Carousel/Carousel';
 
-import Thumbnail from 'assets/images/product_thumbnail.png';
 import { Image } from 'components/layout/Image.styles';
 import { Typography } from 'components/layout/Typography.styles';
+import { Link } from 'react-router-dom';
 
-const Card = () => {
+export interface ICard {
+	images: { src: string; alt: string }[];
+	title: string;
+	description: string;
+	link: {
+		title: string;
+		path: string;
+	};
+}
+
+const Card = ({ images, title, description, link }: ICard) => {
 	return (
 		<CardContainer>
 			<ContentContainer>
 				<Carousel>
-					<Image src={Thumbnail} />
-					<Image src={Thumbnail} />
-					<Image src={Thumbnail} />
+					{images.map((image, i) => (
+						<Image key={i} {...image} />
+					))}
 				</Carousel>
 				<TextContainer>
 					<Typography as="h3" variant="h3" bold>
-						Название продукта
+						{title}
 					</Typography>
-					<Typography variant="h4">
-						Lorem ipsum dolor sit amet, consectetur adipisicing
-						elit. Aut, quasi.
-					</Typography>
-					<Typography variant="h4">Подробнее</Typography>
+					<Typography variant="h4">{description}</Typography>
+					<Link to={link.path}>
+						<Typography variant="h4">{link.title}</Typography>
+					</Link>
 				</TextContainer>
 			</ContentContainer>
 		</CardContainer>

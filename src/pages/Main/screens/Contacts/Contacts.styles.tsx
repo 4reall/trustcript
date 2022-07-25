@@ -1,4 +1,4 @@
-import { ScreenContainer } from 'pages/Share.styles';
+import { ScreenContainer } from 'pages/Main/screens/Share.styles';
 import styled from 'styled-components';
 import { mediaQueries } from 'utils/constants/mediaQueries';
 

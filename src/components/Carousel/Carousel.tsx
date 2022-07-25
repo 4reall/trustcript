@@ -52,10 +52,13 @@ const Carousel = ({
 		});
 
 	const slidesList = slides.map((slide, i) => (
-		<Slide key={i} style={{ width: containerWidth }}>
+		<Slide style={{ width: containerWidth }} key={i}>
 			{slide}
 		</Slide>
 	));
+
+	// style={{ width: containerWidth }}
+	console.log(containerWidth);
 
 	return (
 		<Window
@@ -80,12 +83,12 @@ const Carousel = ({
 				totalControls={controlsCount}
 			/>
 			<BtnContainer variant="left">
-				<Button onClick={moveToLeft} icon>
+				<Button disabled={!isTransition} onClick={moveToLeft} icon>
 					<Image src={ChevronLeft} />
 				</Button>
 			</BtnContainer>
 			<BtnContainer variant="right">
-				<Button onClick={moveToRight} icon>
+				<Button disabled={!isTransition} onClick={moveToRight} icon>
 					<Image src={ChevronRight} />
 				</Button>
 			</BtnContainer>

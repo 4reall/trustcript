@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
 	
 	html, body {
 		height: 100vh;
-		width: 100%;
+		//width: 100vw;
 	}
 	
 	html {
@@ -45,6 +45,7 @@ const GlobalStyle = createGlobalStyle`
 
 	#root {
 		min-height: 100%;
+		//min-width: 100%;
 		display: flex;
 		flex-direction: column;
 		background: url(${Bg}) center / cover no-repeat;

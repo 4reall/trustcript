@@ -1,10 +1,10 @@
-import { TouchEvent, useRef, useState } from 'react';
+import { TouchEvent, MouseEvent, useRef, useState } from 'react';
 
 interface UseSwipeProps {
 	containerWidth: number;
 	threshold: number;
-	leftSwipeCallback?: () => void;
-	rightSwipeCallback?: () => void;
+	leftSwipeCallback?: (swipeShit?: number) => void;
+	rightSwipeCallback?: (swipeShit?: number) => void;
 }
 
 export const useSwipe = ({
@@ -22,12 +22,12 @@ export const useSwipe = ({
 	};
 
 	const leftSwipe = () => {
-		leftSwipeCallback();
+		leftSwipeCallback(swipeShift);
 		setSwipeShift(0);
 	};
 
 	const rightSwipe = () => {
-		rightSwipeCallback();
+		rightSwipeCallback(swipeShift);
 		setSwipeShift(0);
 	};
 

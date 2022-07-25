@@ -4,6 +4,7 @@ import {
 	BreakpointValuesEnum,
 } from 'utils/constants/breakpoints';
 import convertUnits from 'utils/helpers/convertUnits';
+import { mediaQueries } from 'utils/constants/mediaQueries';
 
 export interface ContainerProps {
 	maxWidth?: BreakpointNames;
@@ -13,8 +14,11 @@ export interface ContainerProps {
 
 export const Container = styled.div<ContainerProps>`
 	width: 100%;
-	margin: 0 auto;
 	max-width: ${({ maxWidth }) =>
 		maxWidth ? convertUnits(BreakpointValuesEnum[maxWidth]) : '100%'};
+	margin: 0 auto;
 	padding: ${({ p }) => p};
+	${mediaQueries.up.md} {
+		width: 90%;
+	}
 `;

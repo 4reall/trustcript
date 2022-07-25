@@ -5,7 +5,7 @@ import Rook from 'assets/images/rook.png';
 import Pawn from 'assets/images/pawn.png';
 
 import { Typography } from 'components/layout/Typography.styles';
-import { TextContent } from 'pages/Share.styles';
+import { TextContent } from 'pages/Main/screens/Share.styles';
 import { useLanguage } from 'hooks/useLanguage';
 import { SlidesContainer } from 'pages/Main/screens/Slides/Slides.styles';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';

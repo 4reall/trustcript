@@ -91,7 +91,7 @@ const useCarousel = ({ transitionDuration, children }: UseCarouselProps) => {
 			return;
 		}
 		setCurrentSlideIndex(offset / containerWidth - clonesCount.head);
-	}, [offset, slides, containerWidth, clonesCount]);
+	}, [offset, slides, containerWidth, clonesCount, transitionDuration]);
 
 	return {
 		containerRef,
