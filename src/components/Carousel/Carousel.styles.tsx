@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { ButtonBase } from 'components/ui/Button/Button.styles';
 
 export interface InnerProps {
 	transition: boolean;

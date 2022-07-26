@@ -29,5 +29,3 @@ export const SlideTest = styled.div<{ bg: string }>`
 	height: 300px;
 	background: ${({ bg }) => bg};
 `;
-
-export const SlidesText = styled.div``;

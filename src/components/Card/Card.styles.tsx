@@ -3,7 +3,6 @@ import { ButtonBase } from 'components/ui/Button/Button.styles';
 import { mediaQueries } from 'utils/constants/mediaQueries';
 
 export const CardContainer = styled.div`
-	//max-width: 25rem;
 	padding: 1rem;
 	background: ${({ theme }) => theme.palette.white.light};
 	border-radius: 20px;

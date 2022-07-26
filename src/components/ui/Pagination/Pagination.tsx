@@ -9,7 +9,7 @@ import { Typography } from 'components/layout/Typography.styles';
 import { Image } from 'components/layout/Image.styles';
 import Button from 'components/ui/Button/Button';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect } from 'react';
 
 import UpDbArrow from 'assets/icons/arrows/UpDbArrow.svg';
 import BottomDbArrow from 'assets/icons/arrows/BottomDbArrow.svg';
@@ -34,8 +34,15 @@ const Pagination = ({
 	vertical,
 	setActivePage,
 }: PaginationProps) => {
-	const { offset, increasePage, decreasePage, setPage, activePage, btnList } =
-		usePagination(pageCount, shownPageCount);
+	const {
+		offset,
+		increasePage,
+		decreasePage,
+		setPage,
+		activePage,
+		btnList,
+		reset,
+	} = usePagination(pageCount, shownPageCount);
 
 	const btns = btnList.map((page, i) => (
 		<PaginationButton
@@ -49,7 +56,11 @@ const Pagination = ({
 
 	useEffect(() => {
 		setActivePage(activePage);
-	}, [activePage]);
+	}, [activePage, pageCount]);
+
+	useEffect(() => {
+		reset();
+	}, [setActivePage]);
 
 	return (
 		<PaginationContainer vertical={vertical}>

@@ -20,7 +20,7 @@ const Tabs = ({ cards, filters }: TabsProps) => {
 		<TabsContainer>
 			<Cards>
 				{cards.map((card, i) => (
-					<Card {...card} />
+					<Card key={i} {...card} />
 				))}
 			</Cards>
 		</TabsContainer>

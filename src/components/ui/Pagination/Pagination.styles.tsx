@@ -30,7 +30,7 @@ export const PaginationContainer = styled.div<PaginationContainerProps>`
 			${PaginationBtnTruck} {
 				flex-direction: column;
 				align-items: center;
-				justify-content: space-between;
+				//justify-content: space-between;
 			}
 			${PaginationButton} {
 				height: 25%;

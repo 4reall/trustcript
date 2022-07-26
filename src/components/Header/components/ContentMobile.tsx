@@ -16,7 +16,7 @@ import { queries } from 'utils/constants/mediaQueries';
 
 import Logo from 'assets/icons/logo/logo.svg';
 
-const ContentMobile = ({ options }: ContentProps) => {
+const ContentMobile = ({ options, navLinks }: ContentProps) => {
 	const isXs = useMediaQuery(queries.down.sm);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -38,7 +38,7 @@ const ContentMobile = ({ options }: ContentProps) => {
 				<Burger onClick={handleClick} active={isMenuOpen} />
 			</Flex>
 			<DropdownMenu onClick={handleClick} full active={isMenuOpen}>
-				<Navigation isMobile />
+				<Navigation navLinks={navLinks} isMobile />
 			</DropdownMenu>
 		</Flex>
 	);

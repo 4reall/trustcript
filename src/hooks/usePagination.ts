@@ -11,6 +11,13 @@ export const usePagination = (pageCount: number, shownPagesCount: number) => {
 		[pageCount]
 	);
 
+	const reset = useCallback(() => {
+		setOffset(0);
+		setStartShownIndex(0);
+		setEndShownIndex(shownPagesCount - 1);
+		setActivePage(0);
+	}, []);
+
 	const increasePage = useCallback(() => {
 		if (activePage === pageCount) return;
 
@@ -58,5 +65,13 @@ export const usePagination = (pageCount: number, shownPagesCount: number) => {
 		[shownPagesCount, pageCount]
 	);
 
-	return { offset, increasePage, decreasePage, setPage, activePage, btnList };
+	return {
+		offset,
+		increasePage,
+		decreasePage,
+		setPage,
+		activePage,
+		btnList,
+		reset,
+	};
 };

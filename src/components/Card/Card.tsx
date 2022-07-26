@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 
 export interface ICard {
 	images: { src: string; alt: string }[];
+	category: string;
 	title: string;
 	description: string;
 	link: {

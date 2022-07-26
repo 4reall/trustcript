@@ -36,6 +36,7 @@ export const HeaderStyles = styled.header<HeaderStylesProps>`
 
 export const SocialLinksContainer = styled.div`
 	display: flex;
+	padding: 1rem;
 	& a {
 		margin-right: 0.5rem;
 		&:last-child {

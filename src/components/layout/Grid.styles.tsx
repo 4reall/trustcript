@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { AlignItems, JustifyContent } from 'types/Css';
 import { mq } from 'utils/helpers/mediaQueries';
 
@@ -14,10 +14,12 @@ export interface ColProps {
 }
 
 export const Grid = styled.div<GridProps>`
-	display: grid;
-	grid-template-columns: repeat(${({ gridSize }) => gridSize}, 1fr);
-	justify-content: ${({ justify }) => justify};
-	align-items: ${({ align }) => align};
+	${({ gridSize, justify, align }) => css`
+		display: grid;
+		grid-template-columns: repeat(${gridSize}, 1fr);
+		justify-content: ${justify};
+		align-items: ${align};
+	`}
 
 	${({ gridSize }) => mq({ prop: 'grid-template-columns', styles: gridSize })}
 `;

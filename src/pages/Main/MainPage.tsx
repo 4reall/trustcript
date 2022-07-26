@@ -4,10 +4,11 @@ import Slides from 'pages/Main/screens/Slides/Slides';
 import Tools from 'pages/Main/screens/Tools/Tools';
 import Benefits from 'pages/Main/screens/Benefits/Benefits';
 import Contacts from 'pages/Main/screens/Contacts/Contacts';
+import { Page } from 'pages/Share.styles';
 
 const MainPage = () => {
 	return (
-		<section>
+		<Page>
 			<Container maxWidth="xl">
 				<Promo />
 				<Slides />
@@ -15,7 +16,7 @@ const MainPage = () => {
 				<Benefits />
 				<Contacts />
 			</Container>
-		</section>
+		</Page>
 	);
 };
 

@@ -10,13 +10,13 @@ import { Typography } from 'components/layout/Typography.styles';
 import Mask from 'assets/icons/cards/Mask.svg';
 import Bug from 'assets/icons/cards/Bug.svg';
 import Scan from 'assets/icons/cards/Scan.svg';
-import Card from 'pages/Main/screens/Benefits/Card';
+import BenefitsCard from 'pages/Main/screens/Benefits/BenefitsCard';
 import { LanguageSectionKeys } from 'utils/constants/languageData';
 
 const cards = [
-	{ src: Mask, alt: 'anonymity image' },
-	{ src: Bug, alt: 'bug image' },
-	{ src: Scan, alt: 'scan image' },
+	{ src: Mask, alt: 'anonymity image', text: 'card1' },
+	{ src: Bug, alt: 'bug image', text: 'card2' },
+	{ src: Scan, alt: 'scan image', text: 'card3' },
 ];
 
 const Benefits = () => {
@@ -35,10 +35,10 @@ const Benefits = () => {
 			</Typography>
 			<CardsContainer>
 				{cards.map((card, i) => (
-					<Card
+					<BenefitsCard
 						{...card}
 						key={i}
-						text={text(`card${i + 1}` as LanguageSectionKeys)}
+						text={text(card.text as LanguageSectionKeys)}
 					/>
 				))}
 			</CardsContainer>

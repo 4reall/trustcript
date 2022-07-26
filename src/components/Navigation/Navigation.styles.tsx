@@ -46,53 +46,55 @@ export const Nav = styled.nav<NavProps>`
 `;
 
 export const NavItem = styled.li`
-	padding-right: 1rem;
-	text-align: center;
+	${({ theme }) => css`
+		padding-right: 1rem;
+		text-align: center;
 
-	&:last-child {
-		padding-right: 0;
-	}
-
-	& span {
-		color: inherit;
-	}
-
-	.active {
-		position: relative;
-		color: ${({ theme }) => theme.palette.active.normal};
-		transition: 200ms color;
-		&:after {
-			content: '';
-			position: absolute;
-			width: 100%;
-			height: 2px;
-			bottom: 0;
-			left: 0;
-			background: ${({ theme }) => theme.palette.active.normal};
+		&:last-child {
+			padding-right: 0;
 		}
-		&:hover {
-			color: ${({ theme }) => theme.palette.active.hover};
+
+		& span {
+			color: inherit;
+		}
+
+		.active {
+			position: relative;
+			color: ${theme.palette.active.normal};
+			transition: 200ms color;
 			&:after {
-				background: ${({ theme }) => theme.palette.active.hover};
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				bottom: 0;
+				left: 0;
+				background: ${theme.palette.active.normal};
+			}
+			&:hover {
+				color: ${theme.palette.active.hover};
+				&:after {
+					background: ${theme.palette.active.hover};
+				}
+			}
+			&:active {
+				color: ${theme.palette.active.active};
+				&:after {
+					background: ${theme.palette.active.active};
+				}
 			}
 		}
-		&:active {
-			color: ${({ theme }) => theme.palette.active.active};
-			&:after {
-				background: ${({ theme }) => theme.palette.active.active};
+
+		& a {
+			padding-bottom: 1rem;
+			color: ${theme.palette.normal.normal};
+			text-decoration: none;
+			&:hover {
+				color: ${theme.palette.normal.hover};
+			}
+			&:active {
+				color: ${theme.palette.normal.active};
 			}
 		}
-	}
-
-	& a {
-		padding-bottom: 1rem;
-		color: ${({ theme }) => theme.palette.normal.normal};
-		text-decoration: none;
-		&:hover {
-			color: ${({ theme }) => theme.palette.normal.hover};
-		}
-		&:active {
-			color: ${({ theme }) => theme.palette.normal.active};
-		}
-	}
+	`}
 `;

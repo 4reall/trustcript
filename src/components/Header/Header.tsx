@@ -14,6 +14,8 @@ import Telegram from 'assets/icons/networks/telegram.svg';
 import Twitter from 'assets/icons/networks/twitter.svg';
 import WhatsUp from 'assets/icons/networks/whatsup.svg';
 import Youtube from 'assets/icons/networks/youtube.svg';
+import { INavLink } from 'components/Navigation/Navigation';
+import { PathsEnum } from 'utils/constants/paths';
 
 export interface SocialLink {
 	href: string;
@@ -42,6 +44,13 @@ const socials: SocialLink[] = [
 		thumbnail: WhatsUp,
 	},
 ];
+
+const navLinks: INavLink[] = [
+	{ title: 'home', path: PathsEnum.Main },
+	{ title: 'blog', path: PathsEnum.Blog },
+	{ title: 'products', path: PathsEnum.Products },
+];
+
 const options: LanguageOption[] = [
 	{ id: 0, language: LanguagesEnum.RU, thumbnail: Ru },
 	{ id: 1, language: LanguagesEnum.UK, thumbnail: Uk },
@@ -50,6 +59,7 @@ const options: LanguageOption[] = [
 export interface ContentProps {
 	options: LanguageOption[];
 	socials: SocialLink[];
+	navLinks: INavLink[];
 }
 
 const Header = () => {
@@ -58,9 +68,17 @@ const Header = () => {
 		<HeaderStyles p={isMd ? '2rem' : '1rem'}>
 			<Container maxWidth="xl">
 				{isMd ? (
-					<ContentDesktop options={options} socials={socials} />
+					<ContentDesktop
+						navLinks={navLinks}
+						options={options}
+						socials={socials}
+					/>
 				) : (
-					<ContentMobile options={options} socials={socials} />
+					<ContentMobile
+						navLinks={navLinks}
+						options={options}
+						socials={socials}
+					/>
 				)}
 			</Container>
 		</HeaderStyles>

@@ -83,8 +83,8 @@ export const DarkBtn = styled(ButtonBase)`
 		}
 		${active &&
 		css`
-			background: #fff;
-			color: #000;
+			background: #fff !important;
+			color: #000 !important;
 		`}
 	`}
 	}

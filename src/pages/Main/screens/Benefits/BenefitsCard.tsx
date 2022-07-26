@@ -13,7 +13,7 @@ interface CardProps {
 	text: string;
 }
 
-const Card = ({ text, ...props }: CardProps) => {
+const BenefitsCard = ({ text, ...props }: CardProps) => {
 	const isMd = useMediaQuery(queries.up.md);
 	return (
 		<CardContainer>
@@ -27,4 +27,4 @@ const Card = ({ text, ...props }: CardProps) => {
 	);
 };
 
-export default Card;
+export default BenefitsCard;

@@ -57,9 +57,6 @@ const Carousel = ({
 		</Slide>
 	));
 
-	// style={{ width: containerWidth }}
-	console.log(containerWidth);
-
 	return (
 		<Window
 			ref={containerRef}

@@ -139,4 +139,15 @@ export const languageData = {
 			[LanguagesEnum.UK]: 'admin@trustcrypt.com',
 		},
 	},
+	products: {
+		title: {
+			[LanguagesEnum.RU]: 'Наши продукты',
+			[LanguagesEnum.UK]: 'Our products',
+		},
+		text: {
+			[LanguagesEnum.RU]:
+				'Мы придерживаемся в своей работе простого принципа: детектировать и блокировать любую вредоносную атаку.',
+			[LanguagesEnum.UK]: 'You can contact us in a convenient way.',
+		},
+	},
 };

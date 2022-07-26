@@ -8,19 +8,18 @@ import {
 } from 'components/ui/LanguageSwitcher/LanguageSwitcher.styles';
 import LanguageLabel from 'components/ui/LanguageSwitcher/LanguageLabel';
 
-import { SwitcherProps } from 'components/ui/LanguageSwitcher/LanguageSwitcher.styles';
 import { LanguageOption } from 'context/LanguageContext/Language.context';
 
 import { languageContext } from 'context/LanguageContext/Language.context';
 import { useClickOutside } from 'hooks/useClickOutside';
 
-import Arrow from 'assets/icons/arrows/Vector.svg';
+import BottomArrow from 'assets/icons/arrows/BottomArrow.svg';
 
-interface LanguageSwitcherProps extends SwitcherProps {
+interface LanguageSwitcherProps {
 	options: LanguageOption[];
 }
 
-const LanguageSwitcher = ({ options, mx }: LanguageSwitcherProps) => {
+const LanguageSwitcher = ({ options }: LanguageSwitcherProps) => {
 	const { selectedLanguage, setSelectedLanguage } =
 		useContext(languageContext);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,9 +36,9 @@ const LanguageSwitcher = ({ options, mx }: LanguageSwitcherProps) => {
 	useClickOutside(containerRef, () => setIsMenuOpen(false));
 
 	return (
-		<Switcher mx={mx} ref={containerRef} onClick={handleClick}>
+		<Switcher ref={containerRef} onClick={handleClick}>
 			<LanguageLabel {...selectedLanguage} />
-			<Image src={Arrow} alt="dropdown menu arrow" />
+			<Image src={BottomArrow} alt="dropdown menu arrow" />
 			<DropdownMenu active={isMenuOpen}>
 				<LanguageMenu>
 					{options.map((option, i) => (

@@ -9,21 +9,18 @@ import { PathsEnum } from 'utils/constants/paths';
 import { languageData } from 'utils/constants/languageData';
 import { useLanguage } from 'hooks/useLanguage';
 
-interface INavLink {
+export interface INavLink {
 	title: keyof typeof languageData.navigation;
 	path: PathsEnum;
 }
 
-const navLinks: INavLink[] = [
-	{ title: 'home', path: PathsEnum.Main },
-	{ title: 'blog', path: PathsEnum.Blog },
-	{ title: 'products', path: PathsEnum.Products },
-];
+interface NavigationProps extends NavProps {
+	navLinks: INavLink[];
+}
 
-interface NavigationProps extends NavProps {}
-
-const Navigation = ({ ...props }: NavigationProps) => {
+const Navigation = ({ navLinks, ...props }: NavigationProps) => {
 	const { text } = useLanguage('navigation');
+
 	return (
 		<Nav {...props}>
 			{navLinks.map(({ title, path }, i) => (
