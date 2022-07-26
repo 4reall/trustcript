@@ -1,20 +1,28 @@
 {
   "files": {
-    "main.js": "/trustcript/static/js/main.1f870b81.js",
+    "main.js": "/trustcript/static/js/main.054a5b2f.js",
     "static/media/glass.png": "/trustcript/static/media/glass.92464638cd80398ca2fc.png",
     "static/media/knight.png": "/trustcript/static/media/knight.047fe30cb0c372d38497.png",
     "static/media/rook.png": "/trustcript/static/media/rook.dea32034f1a94db62fdc.png",
     "static/media/pawn.png": "/trustcript/static/media/pawn.53c63e2b9d463b3819a8.png",
     "static/media/mainBg.jpg": "/trustcript/static/media/mainBg.cc94e136a52430b0bff6.jpg",
+    "static/media/product_thumbnail.png": "/trustcript/static/media/product_thumbnail.589df29afc3e52fe036f.png",
     "static/media/logo.svg": "/trustcript/static/media/logo.16c7559d316cff05a700c86f51bfec39.svg",
     "static/media/metasploit.svg": "/trustcript/static/media/metasploit.60e0215d20200997e5607be867d062db.svg",
     "static/media/uk.svg": "/trustcript/static/media/uk.275c83f44bcf96ad785f2cc2c1af75ec.svg",
     "static/media/whatsup.svg": "/trustcript/static/media/whatsup.31420ace75137d132e5903bdb2d2b0cf.svg",
+    "static/media/BottomDbArrow.svg": "/trustcript/static/media/BottomDbArrow.cf659f7963bd39c875736b59eb999101.svg",
+    "static/media/LeftDbArrow.svg": "/trustcript/static/media/LeftDbArrow.0dcd61d4f9c828eb1ee85d3c5517f390.svg",
+    "static/media/RightDbArrow.svg": "/trustcript/static/media/RightDbArrow.75f2047e6a63e516587bad0d46bb220b.svg",
+    "static/media/UpDbArrow.svg": "/trustcript/static/media/UpDbArrow.bd48748ba9c40fcfa46dc31cbcd46b09.svg",
     "static/media/twitter.svg": "/trustcript/static/media/twitter.7df3285cc6ef1b9f8624d7464d6c4d8b.svg",
     "static/media/Call.svg": "/trustcript/static/media/Call.1325b32b33f514cbb9570285388fd787.svg",
+    "static/media/LeftArrow.svg": "/trustcript/static/media/LeftArrow.0d9251ebe9f8c9181b35b3d52b3a6fbd.svg",
+    "static/media/RightArrow.svg": "/trustcript/static/media/RightArrow.66fb56f83efcbc6d39c7c44379105e0a.svg",
     "static/media/Mask.svg": "/trustcript/static/media/Mask.86a1f2d9bbf0f6cd5c5e25f1d7eec157.svg",
     "static/media/Scan.svg": "/trustcript/static/media/Scan.6e8a25c9785b266282cc1077e9576319.svg",
-    "static/media/Vector.svg": "/trustcript/static/media/Vector.1f94e58b63b215c775b4d8941576ed77.svg",
+    "static/media/UpArrow.svg": "/trustcript/static/media/UpArrow.794e80f2a55b60fa96156f2f049f1f48.svg",
+    "static/media/BottomArrow.svg": "/trustcript/static/media/BottomArrow.844be39a5a818315efe0810eb93c5023.svg",
     "static/media/Bug.svg": "/trustcript/static/media/Bug.e0a1fccc89a7ac606c586e9d73ede292.svg",
     "static/media/telegram.svg": "/trustcript/static/media/telegram.b9a37232b0251dc1b266bfac6dcbe805.svg",
     "static/media/Geoposition.svg": "/trustcript/static/media/Geoposition.2bf4f74b56d2d39d1de7995ee301f086.svg",
@@ -25,9 +33,9 @@
     "static/media/chevron-right-solid.svg": "/trustcript/static/media/chevron-right-solid.b3b934ad5c9812eae54e34e640a18689.svg",
     "static/media/Mail.svg": "/trustcript/static/media/Mail.82124da668a149cc00420379fef7d9c3.svg",
     "static/media/Bubble.svg": "/trustcript/static/media/Bubble.adf3874a48fcfad31ed71b9c3dd7fdb9.svg",
-    "main.1f870b81.js.map": "/trustcript/static/js/main.1f870b81.js.map"
+    "main.054a5b2f.js.map": "/trustcript/static/js/main.054a5b2f.js.map"
   },
   "entrypoints": [
-    "static/js/main.1f870b81.js"
+    "static/js/main.054a5b2f.js"
   ]
 }
