@@ -1,8 +1,11 @@
 import styled, { css } from 'styled-components';
 
-export const InputStyles = styled.input<{ textarea?: boolean }>`
+export const InputContainer = styled.div`
+	position: relative;
+`;
+
+export const InputBase = styled.input<{ textarea?: boolean }>`
 	${({ theme, textarea }) => css`
-		position: relative;
 		padding: 0.5rem;
 		width: 100%;
 		border-radius: 5px;

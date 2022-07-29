@@ -4,11 +4,16 @@ import Tabs from 'components/Tabs/Tabs';
 import Pagination from 'components/ui/Pagination/Pagination';
 import { useCallback, useEffect, useState } from 'react';
 import { FiltersEnum } from 'utils/constants/filters';
+import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
+import { queries } from 'utils/constants/mediaQueries';
+import { ContentContainer } from 'pages/Products/screens/Content/Content.styles';
 
 const Content = () => {
 	const [filteredCard, setFilteredCards] = useState(cards);
 	const [page, setPage] = useState(0);
 	const [filter, setFilter] = useState(FiltersEnum.ALL);
+
+	const isXl = useMediaQuery(queries.up.xl);
 
 	const handleChangeActivePage = useCallback(
 		(page: number) => {
@@ -31,7 +36,7 @@ const Content = () => {
 	}, [filter, page]);
 
 	return (
-		<>
+		<ContentContainer>
 			<Filters
 				activeFilter={filter}
 				onClick={handleFilterChange}
@@ -43,11 +48,11 @@ const Content = () => {
 			/>
 			<Pagination
 				setActivePage={handleChangeActivePage}
-				vertical
+				vertical={isXl}
 				shownPageCount={4}
 				pageCount={Math.ceil(filteredCard.length / 6)}
 			/>
-		</>
+		</ContentContainer>
 	);
 };
 

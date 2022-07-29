@@ -58,6 +58,13 @@ export const theme = {
 			lineHeight: { normal: '1.25rem', small: '1rem' },
 			textTransform: 'uppercase',
 		},
+		error: {
+			fontFamily: 'Inter',
+			fontSize: { small: '0.75rem', normal: '1rem' },
+			lineHeight: { small: '1rem', normal: '1.25rem' },
+			textTransform: 'uppercase',
+			color: 'red',
+		},
 	},
 	spacing: {
 		headerHeight: {

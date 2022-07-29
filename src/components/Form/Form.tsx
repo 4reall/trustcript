@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useMemo, useEffect } from 'react';
 
 import { CheckboxContainer, FormStyles } from 'components/Form/Form.styles';
 import Checkbox from 'components/ui/Checkbox/Checkbox';
@@ -9,63 +9,107 @@ import { Typography } from 'components/layout/Typography.styles';
 import { useLanguage } from 'hooks/useLanguage';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
+import { SubmitHandler, useForm, UseFormReturn } from 'react-hook-form';
+import * as Yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { ErrorMessage } from 'components/layout/ErrorMessage.styles';
+
+export interface IFormValues {
+	name: string;
+	company: string;
+	email: string;
+	message: string;
+	personal: boolean;
+}
 
 const Form = () => {
-	const { text } = useLanguage('form');
+	const { text: formText } = useLanguage('form');
+	const { text: errorText } = useLanguage('errors');
 
-	const [name, setName] = useState('');
-	const [company, setCompany] = useState('');
-	const [email, setEmail] = useState('');
-	const [message, setMessage] = useState('');
-	const [privacy, setPrivacy] = useState(false);
+	const validationSchema = useMemo(
+		() =>
+			Yup.object({
+				name: Yup.string()
+					.min(2, errorText('nameMin'))
+					.max(20, errorText('nameMax'))
+					.required(errorText('required')),
+				company: Yup.string()
+					.min(2, errorText('companyMin'))
+					.max(40, errorText('companyMax'))
+					.required(errorText('required')),
+				email: Yup.string()
+					.email(errorText('email'))
+					.required(errorText('email')),
+				message: Yup.string()
+					.min(10, errorText('messageMin'))
+					.max(300, errorText('messageMax'))
+					.required(errorText('required')),
+				personal: Yup.boolean()
+					.oneOf([true], errorText('personal'))
+					.required(errorText('required')),
+			}),
+		[errorText]
+	);
+
+	const {
+		register,
+		handleSubmit,
+		control,
+		reset,
+		formState: { errors },
+	} = useForm<IFormValues>({
+		resolver: yupResolver(validationSchema),
+		mode: 'onTouched',
+	});
+
+	useEffect(() => {
+		reset();
+	}, [formText, errorText]);
 
 	const isMd = useMediaQuery(queries.up.md);
 
-	const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-		e.preventDefault();
-		console.log({
-			name,
-			company,
-			email,
-			message,
-			privacy,
-		});
+	const onSubmit: SubmitHandler<IFormValues> = (data) => {
+		alert(JSON.stringify(data, null, ' '));
+		reset();
 	};
 
 	return (
-		<FormStyles onSubmit={handleSubmit}>
+		<FormStyles onSubmit={handleSubmit(onSubmit)}>
 			<Input
-				value={name}
-				setValue={(e) => setName(e.target.value)}
-				placeholder={text('name')}
+				label="name"
+				register={register}
+				error={errors.name}
+				placeholder={formText('name')}
 			/>
 			<Input
-				value={company}
-				setValue={(e) => setCompany(e.target.value)}
-				placeholder={text('company')}
+				label="company"
+				register={register}
+				error={errors.company}
+				placeholder={formText('company')}
 			/>
 			<Input
 				type="email"
-				value={email}
-				setValue={(e) => setEmail(e.target.value)}
-				placeholder={text('email')}
+				label="email"
+				register={register}
+				error={errors.email}
+				placeholder={formText('email')}
 			/>
 			<Input
-				value={message}
-				setValue={(e) => setMessage(e.target.value)}
+				label="message"
+				register={register}
 				textarea
-				placeholder={text('message')}
+				error={errors.message}
+				placeholder={formText('message')}
 			/>
+
 			<CheckboxContainer>
-				<Checkbox
-					value={privacy}
-					setValue={() => setPrivacy(!privacy)}
-				/>
+				<Checkbox name="personal" control={control} />
 				<Typography variant={isMd ? 'h4' : 'h5'}>
-					{text('personal')}
+					{formText('personal')}
 				</Typography>
 			</CheckboxContainer>
-			<Button onClick={() => {}}>{text('button')}</Button>
+			<ErrorMessage>{errors.personal?.message}</ErrorMessage>
+			<Button onClick={() => {}}>{formText('button')}</Button>
 		</FormStyles>
 	);
 };

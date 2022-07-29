@@ -20,7 +20,7 @@ export const ButtonBase = styled.button<ButtonStylesProps>`
 		min-width: 8rem;
 		border-radius: 4px;
 		border: none;
-		background: ${theme.palette.active.normal}
+		background: ${theme.palette.active.normal};
 		color: ${theme.palette.normal.normal};
 		transition: 200ms all;
 		text-transform: uppercase;

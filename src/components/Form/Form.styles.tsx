@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const FormStyles = styled.form`
 	& > * {
-		margin-top: 1rem;
+		margin-top: 0.75rem;
 		&:first-child {
 			margin-top: 0;
 		}
@@ -11,7 +11,6 @@ export const FormStyles = styled.form`
 
 export const CheckboxContainer = styled.div`
 	display: flex;
-	align-items: center;
 	& > span {
 		margin-left: 0.5rem;
 	}

@@ -1,134 +1,17 @@
 import { ICard } from 'components/Card/Card';
-import Thumbnail from 'assets/images/product_thumbnail.png';
 import { PathsEnum } from 'utils/constants/paths';
 import { IFilter } from 'components/Filters/Filters';
 import { FiltersEnum } from 'utils/constants/filters';
 
+import Thumbnail from 'assets/images/product_thumbnail.png';
+import Thumbnail1 from 'assets/images/knight.png';
+import Thumbnail2 from 'assets/images/rook.png';
+
 export const cards: ICard[] = [
 	{
 		images: [
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-		],
-		category: '1',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
-	},
-	{
-		images: [
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-		],
-		category: '2',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
-	},
-	{
-		images: [
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-		],
-		category: '3',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
-	},
-	{
-		images: [
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-		],
-		category: '2',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
-	},
-	{
-		images: [
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-		],
-		category: '2',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
-	},
-	{
-		images: [
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-		],
-		category: '3',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
-	},
-	{
-		images: [
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-		],
-		category: '3',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
-	},
-	{
-		images: [
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-		],
-		category: '3',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
-	},
-	{
-		images: [
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-		],
-		category: '3',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
-	},
-	{
-		images: [
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-		],
-		category: '2',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
-	},
-	{
-		images: [
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '1',
@@ -140,10 +23,10 @@ export const cards: ICard[] = [
 	{
 		images: [
 			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
-		category: '1',
+		category: '2',
 		link: { title: 'подробнеe', path: PathsEnum.Main },
 		title: 'Название продукта',
 		description:
@@ -152,7 +35,31 @@ export const cards: ICard[] = [
 	{
 		images: [
 			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
+		],
+		category: '3',
+		link: { title: 'подробнеe', path: PathsEnum.Main },
+		title: 'Название продукта',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+	},
+	{
+		images: [
+			{ src: Thumbnail1, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
+		],
+		category: '2',
+		link: { title: 'подробнеe', path: PathsEnum.Main },
+		title: 'Название продукта',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+	},
+	{
+		images: [
+			{ src: Thumbnail2, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '2',
@@ -164,7 +71,19 @@ export const cards: ICard[] = [
 	{
 		images: [
 			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
+		],
+		category: '3',
+		link: { title: 'подробнеe', path: PathsEnum.Main },
+		title: 'Название продукта',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+	},
+	{
+		images: [
+			{ src: Thumbnail1, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '3',
@@ -176,7 +95,43 @@ export const cards: ICard[] = [
 	{
 		images: [
 			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
+		],
+		category: '3',
+		link: { title: 'подробнеe', path: PathsEnum.Main },
+		title: 'Название продукта',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+	},
+	{
+		images: [
+			{ src: Thumbnail1, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
+		],
+		category: '3',
+		link: { title: 'подробнеe', path: PathsEnum.Main },
+		title: 'Название продукта',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+	},
+	{
+		images: [
+			{ src: Thumbnail2, alt: 'thumbnail' },
+			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
+		],
+		category: '2',
+		link: { title: 'подробнеe', path: PathsEnum.Main },
+		title: 'Название продукта',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+	},
+	{
+		images: [
+			{ src: Thumbnail1, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '1',
@@ -188,7 +143,31 @@ export const cards: ICard[] = [
 	{
 		images: [
 			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
+		],
+		category: '1',
+		link: { title: 'подробнеe', path: PathsEnum.Main },
+		title: 'Название продукта',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+	},
+	{
+		images: [
 			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
+		],
+		category: '2',
+		link: { title: 'подробнеe', path: PathsEnum.Main },
+		title: 'Название продукта',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+	},
+	{
+		images: [
+			{ src: Thumbnail1, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '3',
@@ -200,7 +179,31 @@ export const cards: ICard[] = [
 	{
 		images: [
 			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
+		],
+		category: '1',
+		link: { title: 'подробнеe', path: PathsEnum.Main },
+		title: 'Название продукта',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+	},
+	{
+		images: [
+			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
+		],
+		category: '3',
+		link: { title: 'подробнеe', path: PathsEnum.Main },
+		title: 'Название продукта',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+	},
+	{
+		images: [
+			{ src: Thumbnail1, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '2',
@@ -211,9 +214,21 @@ export const cards: ICard[] = [
 	},
 	{
 		images: [
+			{ src: Thumbnail1, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
+		],
+		category: '2',
+		link: { title: 'подробнеe', path: PathsEnum.Main },
+		title: 'Название продукта',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+	},
+	{
+		images: [
+			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: '2',
 		link: { title: 'подробнеe', path: PathsEnum.Main },
@@ -224,8 +239,8 @@ export const cards: ICard[] = [
 	{
 		images: [
 			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: '2',
 		link: { title: 'подробнеe', path: PathsEnum.Main },
@@ -236,8 +251,8 @@ export const cards: ICard[] = [
 	{
 		images: [
 			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
 		],
 		category: '2',
 		link: { title: 'подробнеe', path: PathsEnum.Main },
@@ -247,20 +262,8 @@ export const cards: ICard[] = [
 	},
 	{
 		images: [
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-		],
-		category: '2',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
-	},
-	{
-		images: [
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '1',
@@ -271,8 +274,8 @@ export const cards: ICard[] = [
 	},
 	{
 		images: [
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '1',
@@ -283,9 +286,9 @@ export const cards: ICard[] = [
 	},
 	{
 		images: [
+			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: '2',
 		link: { title: 'подробнеe', path: PathsEnum.Main },
@@ -296,8 +299,8 @@ export const cards: ICard[] = [
 
 	{
 		images: [
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '1',
@@ -309,8 +312,8 @@ export const cards: ICard[] = [
 	{
 		images: [
 			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: '2',
 		link: { title: 'подробнеe', path: PathsEnum.Main },
@@ -320,9 +323,9 @@ export const cards: ICard[] = [
 	},
 	{
 		images: [
+			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: '2',
 		link: { title: 'подробнеe', path: PathsEnum.Main },
@@ -332,8 +335,8 @@ export const cards: ICard[] = [
 	},
 	{
 		images: [
-			{ src: Thumbnail, alt: 'thumbnail' },
-			{ src: Thumbnail, alt: 'thumbnail' },
+			{ src: Thumbnail1, alt: 'thumbnail' },
+			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '2',

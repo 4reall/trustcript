@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { mediaQueries } from 'utils/constants/mediaQueries';
 
 export const ScreenContainer = styled.article`
-	padding: 2rem;
+	padding: 2rem 0;
 	display: flex;
 	flex-direction: column-reverse;
 	${mediaQueries.up.md} {

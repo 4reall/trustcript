@@ -150,4 +150,44 @@ export const languageData = {
 			[LanguagesEnum.UK]: 'You can contact us in a convenient way.',
 		},
 	},
+	errors: {
+		nameMin: {
+			[LanguagesEnum.RU]: 'Минимальная длина 2 символа',
+			[LanguagesEnum.UK]: 'Minimal length is 2 characters',
+		},
+		nameMax: {
+			[LanguagesEnum.RU]: 'Максимальная длина 20 символов',
+			[LanguagesEnum.UK]: 'Maximal length is 20 characters',
+		},
+		companyMin: {
+			[LanguagesEnum.RU]: 'Минимальная длина 2 символа',
+			[LanguagesEnum.UK]: 'Minimal length is 2 characters',
+		},
+		companyMax: {
+			[LanguagesEnum.RU]: 'Максимальная длина 40 символов',
+			[LanguagesEnum.UK]: 'Maximal length is 40 characters',
+		},
+		email: {
+			[LanguagesEnum.RU]: 'Введите корректный адресс электронной почты',
+			[LanguagesEnum.UK]: 'Enter the correct e-mail address',
+		},
+		messageMin: {
+			[LanguagesEnum.RU]: 'Минимальная длина 2 символа',
+			[LanguagesEnum.UK]: 'Minimal length is 10 characters',
+		},
+		messageMax: {
+			[LanguagesEnum.RU]: 'Максимальная длина 300 символов',
+			[LanguagesEnum.UK]: 'Maximal length is 300 characters',
+		},
+		personal: {
+			[LanguagesEnum.RU]:
+				'Необходимо разрешщение на обработку персональных данных',
+			[LanguagesEnum.UK]:
+				'You should accept the handling of personal data',
+		},
+		required: {
+			[LanguagesEnum.RU]: 'Обязательное поле',
+			[LanguagesEnum.UK]: 'Required',
+		},
+	},
 };

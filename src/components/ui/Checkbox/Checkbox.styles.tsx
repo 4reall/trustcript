@@ -5,6 +5,11 @@ export interface CheckboxLabelProps {
 	active: boolean;
 }
 
+export const CheckboxContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+`;
+
 export const CheckboxLabel = styled.label<CheckboxLabelProps>`
 	${({ theme, active, focus }) => css`
 		display: block;

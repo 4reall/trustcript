@@ -38,12 +38,6 @@ export const MapContainer = styled.div`
 	flex-direction: column;
 	justify-content: space-between;
 	margin: 1rem 0 0 0;
-	& div {
-		&:nth-child(2) {
-			margin-top: 1rem;
-			flex: 1;
-		}
-	}
 
 	${mediaQueries.up.md} {
 		margin: 0 0 0 1rem;
