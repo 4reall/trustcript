@@ -1,7 +1,10 @@
 import { FiltersContainer } from 'components/Filters/Filters.styles';
 import Button from 'components/ui/Button/Button';
+
 import { FiltersEnum } from 'utils/constants/filters';
-import { useState } from 'react';
+
+import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
+import { queries } from 'utils/constants/mediaQueries';
 
 export interface IFilter {
 	title: string;
@@ -18,6 +21,7 @@ const Filters = ({ filters, onClick, activeFilter }: FiltersProps) => {
 	const handleClick = (filter: FiltersEnum) => {
 		return () => onClick(filter);
 	};
+	const isMd = useMediaQuery(queries.up.md);
 
 	return (
 		<FiltersContainer>
@@ -26,6 +30,7 @@ const Filters = ({ filters, onClick, activeFilter }: FiltersProps) => {
 					active={filter === activeFilter}
 					key={title}
 					full
+					small={!isMd}
 					onClick={handleClick(filter)}
 					dark
 				>

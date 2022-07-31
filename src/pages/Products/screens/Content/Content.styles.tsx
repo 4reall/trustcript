@@ -7,20 +7,10 @@ export const ContentContainer = styled.div`
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	height: 100%;
+	flex: 1;
 
 	${PaginationContainer} {
 		margin: 2rem auto 0 auto;
-	}
-	${mediaQueries.up.xl} {
-		padding: 0 1rem;
-
-		${PaginationContainer} {
-			position: absolute;
-			right: -3.5rem;
-			top: 50%;
-			transform: translateY(-50%);
-		}
 	}
 	${FiltersContainer} {
 		grid-template-columns: repeat(2, 1fr);

@@ -1,5 +1,5 @@
 import { createContext, Dispatch, SetStateAction } from 'react';
-import { LanguagesEnum } from 'utils/constants/languageData';
+import { LanguagesEnum } from 'utils/mock/languageData';
 
 export interface LanguageOption {
 	id: string | number;

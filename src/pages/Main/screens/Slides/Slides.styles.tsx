@@ -13,7 +13,6 @@ export const SlidesContainer = styled(ScreenContainer)`
 	}
 	${mediaQueries.up.md} {
 		flex-direction: row;
-		padding-left: 1rem;
 		& > div {
 			width: 50%;
 		}

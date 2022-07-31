@@ -1,14 +1,12 @@
 import styled, { css } from 'styled-components';
-import Button from 'components/ui/Button/Button';
 import { ButtonBase } from 'components/ui/Button/Button.styles';
-import { mediaQueries } from 'utils/constants/mediaQueries';
 
 export interface PaginationContainerProps {
 	vertical?: boolean;
 }
 
 export const PaginationContainer = styled.div<PaginationContainerProps>`
-	${({ theme, vertical }) => css`
+	${({ vertical }) => css`
 		display: flex;
 		align-items: center;
 
@@ -30,7 +28,6 @@ export const PaginationContainer = styled.div<PaginationContainerProps>`
 			${PaginationBtnTruck} {
 				flex-direction: column;
 				align-items: center;
-				//justify-content: space-between;
 			}
 			${PaginationButton} {
 				height: 25%;
@@ -75,6 +72,7 @@ export const PaginationButton = styled.button<PaginationButtonProps>`
 		background: transparent;
 		border-radius: 8px;
 		transition: 200ms all;
+		cursor: pointer;
 
 		&:hover {
 			background: ${theme.palette.white.light};

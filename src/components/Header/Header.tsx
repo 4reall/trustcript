@@ -3,7 +3,7 @@ import { HeaderStyles } from 'components/Header/Header.styles';
 import { LanguageOption } from 'context/LanguageContext/Language.context';
 import ContentMobile from 'components/Header/components/ContentMobile';
 import ContentDesktop from 'components/Header/components/ContentDesktop';
-import { LanguagesEnum } from 'utils/constants/languageData';
+import { LanguagesEnum } from 'utils/mock/languageData';
 
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';

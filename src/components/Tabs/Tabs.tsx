@@ -1,27 +1,42 @@
+import { useNavigate } from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
 import { Cards, TabsContainer } from 'components/Tabs/Tabs.styles';
-import Card, { ICard } from 'components/Card/Card';
-import Filters, { IFilter } from 'components/Filters/Filters';
-import Carousel from 'components/Carousel/Carousel';
-import { Image } from 'components/layout/Image.styles';
-import Knight from 'assets/images/knight.png';
-import Rook from 'assets/images/rook.png';
-import Pawn from 'assets/images/pawn.png';
-import { useState } from 'react';
+import Card from 'components/Card/Card';
+
+import { ICard } from 'types/Card';
 
 interface TabsProps {
 	cards: ICard[];
-	filters: IFilter[];
 }
 
-const Tabs = ({ cards, filters }: TabsProps) => {
-	const [page, setPage] = useState(1);
+const Tabs = ({ cards }: TabsProps) => {
+	const navigate = useNavigate();
+
+	const handleClick = (id: number) => {
+		return () => {
+			console.log(id);
+			navigate(`${id}`);
+		};
+	};
 
 	return (
 		<TabsContainer>
 			<Cards>
-				{cards.map((card, i) => (
-					<Card key={i} {...card} />
-				))}
+				<TransitionGroup appear exit={false} component={null}>
+					{cards.map((card) => (
+						<CSSTransition
+							timeout={{
+								appear: 1000,
+								enter: 500,
+							}}
+							classNames="card"
+							key={card.id}
+						>
+							<Card {...card} onClick={handleClick(card.id)} />
+						</CSSTransition>
+					))}
+				</TransitionGroup>
 			</Cards>
 		</TabsContainer>
 	);

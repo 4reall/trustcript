@@ -11,7 +11,6 @@ export const HeaderStyles = styled.header<HeaderStylesProps>`
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 5rem;
 	display: flex;
 	align-items: center;
 	padding: ${({ p }) => convertUnits(p)};

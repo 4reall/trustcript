@@ -6,7 +6,7 @@ import { Typography } from '../layout/Typography.styles';
 import { NavProps } from './Navigation.styles';
 import { PathsEnum } from 'utils/constants/paths';
 
-import { languageData } from 'utils/constants/languageData';
+import { languageData } from 'utils/mock/languageData';
 import { useLanguage } from 'hooks/useLanguage';
 
 export interface INavLink {

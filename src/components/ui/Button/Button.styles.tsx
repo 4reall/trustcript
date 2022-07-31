@@ -26,6 +26,7 @@ export const ButtonBase = styled.button<ButtonStylesProps>`
 		text-transform: uppercase;
 		white-space: nowrap;
 		flex-shrink: 0;
+		cursor: pointer;
 		
 		font-family: ${theme.typography.h4.fontFamily};
 		font-size: ${theme.typography.h4.fontSize};

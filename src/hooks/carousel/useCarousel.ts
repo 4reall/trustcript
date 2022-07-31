@@ -25,6 +25,7 @@ const useCarousel = ({ transitionDuration, children }: UseCarouselProps) => {
 	const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
 	const timeoutRef = useRef<NodeJS.Timer>();
+	const firstRender = useRef(true);
 
 	const containerRef = useResize(
 		useCallback(
@@ -60,6 +61,7 @@ const useCarousel = ({ transitionDuration, children }: UseCarouselProps) => {
 		]);
 
 		setClonesCount({ head: 1, tail: 1 });
+		if (firstRender.current) firstRender.current = false;
 		return;
 	}, [children]);
 
@@ -70,6 +72,7 @@ const useCarousel = ({ transitionDuration, children }: UseCarouselProps) => {
 	}, [isTransition]);
 
 	useLayoutEffect(() => {
+		if (firstRender.current) return;
 		if (offset === 0) {
 			timeoutRef.current = setTimeout(() => {
 				setIsTransition(false);

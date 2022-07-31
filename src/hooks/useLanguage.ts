@@ -4,7 +4,7 @@ import {
 	languageData,
 	LanguageDataKeys,
 	LanguageSectionKeys,
-} from 'utils/constants/languageData';
+} from 'utils/mock/languageData';
 
 export const useLanguage = (section: LanguageDataKeys) => {
 	const { selectedLanguage, setSelectedLanguage } =

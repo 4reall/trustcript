@@ -3,7 +3,7 @@ import { PropsWithChildren, useState } from 'react';
 import { languageContext } from 'context/LanguageContext/Language.context';
 
 import { LanguageOption } from 'context/LanguageContext/Language.context';
-import { LanguagesEnum } from 'utils/constants/languageData';
+import { LanguagesEnum } from 'utils/mock/languageData';
 
 import Ru from 'assets/icons/countries/ru.svg';
 

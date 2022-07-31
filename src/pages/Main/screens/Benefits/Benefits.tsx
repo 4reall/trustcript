@@ -11,7 +11,7 @@ import Mask from 'assets/icons/cards/Mask.svg';
 import Bug from 'assets/icons/cards/Bug.svg';
 import Scan from 'assets/icons/cards/Scan.svg';
 import BenefitsCard from 'pages/Main/screens/Benefits/BenefitsCard';
-import { LanguageSectionKeys } from 'utils/constants/languageData';
+import { LanguageSectionKeys } from 'utils/mock/languageData';
 
 const cards = [
 	{ src: Mask, alt: 'anonymity image', text: 'card1' },

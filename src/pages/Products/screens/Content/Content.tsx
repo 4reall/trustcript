@@ -1,5 +1,5 @@
 import Filters from 'components/Filters/Filters';
-import { cards, filters } from 'pages/Products/screens/Content/mock';
+import { cards, filters } from 'utils/mock/products';
 import Tabs from 'components/Tabs/Tabs';
 import Pagination from 'components/ui/Pagination/Pagination';
 import { useCallback, useEffect, useState } from 'react';
@@ -12,8 +12,6 @@ const Content = () => {
 	const [filteredCard, setFilteredCards] = useState(cards);
 	const [page, setPage] = useState(0);
 	const [filter, setFilter] = useState(FiltersEnum.ALL);
-
-	const isXl = useMediaQuery(queries.up.xl);
 
 	const handleChangeActivePage = useCallback(
 		(page: number) => {
@@ -42,13 +40,10 @@ const Content = () => {
 				onClick={handleFilterChange}
 				filters={filters}
 			/>
-			<Tabs
-				filters={filters}
-				cards={filteredCard.slice(page * 6, page * 6 + 6)}
-			/>
+			<Tabs cards={filteredCard.slice(page * 6, page * 6 + 6)} />
 			<Pagination
 				setActivePage={handleChangeActivePage}
-				vertical={isXl}
+				// vertical={isXl}
 				shownPageCount={4}
 				pageCount={Math.ceil(filteredCard.length / 6)}
 			/>

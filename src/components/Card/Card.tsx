@@ -4,25 +4,25 @@ import {
 	TextContainer,
 } from 'components/Card/Card.styles';
 import Carousel from 'components/Carousel/Carousel';
-
 import { Image } from 'components/layout/Image.styles';
 import { Typography } from 'components/layout/Typography.styles';
 import { Link } from 'react-router-dom';
 
-export interface ICard {
-	images: { src: string; alt: string }[];
-	category: string;
-	title: string;
-	description: string;
-	link: {
-		title: string;
-		path: string;
-	};
+import { ICard } from 'types/Card';
+
+interface CardProps {
+	onClick?: () => void;
 }
 
-const Card = ({ images, title, description, link }: ICard) => {
+const Card = ({
+	images,
+	title,
+	description,
+	link,
+	onClick,
+}: ICard & CardProps) => {
 	return (
-		<CardContainer>
+		<CardContainer onClick={onClick}>
 			<ContentContainer>
 				<Carousel>
 					{images.map((image, i) => (

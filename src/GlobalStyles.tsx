@@ -22,20 +22,19 @@ export const GlobalStyle = createGlobalStyle`
 	}
 	
     body {
-        position: relative;
         font-family: 'Inter', 'Roboto', sans-serif;
-		padding-top: 5rem;
+        position: relative;
+		padding-top: 6rem;
 		-webkit-overflow-scrolling: touch;
 		overflow-y: scroll;
 		overflow-x: hidden;
 		${mediaQueries.up.md} {
-			padding-top: 6rem;
+			padding-top: 7.5rem;
 		}
     }
 
 	#root {
 		min-height: 100%;
-		//min-width: 100%;
 		display: flex;
 		flex-direction: column;
 		background: url(${Bg}) center / cover no-repeat;

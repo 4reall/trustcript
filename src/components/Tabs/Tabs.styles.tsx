@@ -23,20 +23,28 @@ export const Cards = styled.div`
 
 	${mediaQueries.up.sm} {
 		grid-template-columns: repeat(2, calc(100% / 2 - 0.5rem));
-
-		${CardContainer} {
-		}
 	}
 
 	${mediaQueries.up.lg} {
 		grid-template-columns: repeat(3, calc(100% / 3 - 0.5rem));
-
-		${CardContainer} {
-		}
 	}
 	& > div {
 		width: 100%;
 		height: 100%;
 		//background: red;
+	}
+
+	.card-appear {
+		display: none;
+	}
+	.card-appear-done {
+		display: block;
+	}
+	.card-enter {
+		opacity: 0;
+	}
+	.card-enter-active {
+		opacity: 1;
+		transition: opacity 500ms ease-in;
 	}
 `;

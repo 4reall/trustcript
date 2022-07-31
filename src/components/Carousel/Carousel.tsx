@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, SyntheticEvent } from 'react';
 
 import {
 	SlideTruck,
@@ -10,7 +10,7 @@ import Controls from 'components/ui/Controls/Controls';
 import Button from 'components/ui/Button/Button';
 import { Image } from 'components/layout/Image.styles';
 
-import useCarousel, { UseCarouselProps } from 'hooks/carousel/useCarousel';
+import useCarousel from 'hooks/carousel/useCarousel';
 
 import ChevronLeft from 'assets/icons/arrows/chevron-left-solid.svg';
 import ChevronRight from 'assets/icons/arrows/chevron-right-solid.svg';
@@ -63,6 +63,7 @@ const Carousel = ({
 			onTouchStart={handleTouchStart}
 			onTouchEnd={handleTouchEnd}
 			onTouchMove={handleTouchMove}
+			onClick={(e: SyntheticEvent) => e.stopPropagation()}
 		>
 			<SlideTruck
 				transitionDuration={transitionDuration}
