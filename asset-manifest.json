@@ -1,12 +1,16 @@
 {
   "files": {
-    "main.js": "/trustcript/static/js/main.88aabaec.js",
-    "static/media/glass.png": "/trustcript/static/media/glass.92464638cd80398ca2fc.png",
-    "static/media/knight.png": "/trustcript/static/media/knight.047fe30cb0c372d38497.png",
-    "static/media/rook.png": "/trustcript/static/media/rook.dea32034f1a94db62fdc.png",
-    "static/media/pawn.png": "/trustcript/static/media/pawn.53c63e2b9d463b3819a8.png",
-    "static/media/mainBg.jpg": "/trustcript/static/media/mainBg.cc94e136a52430b0bff6.jpg",
-    "static/media/product_thumbnail.png": "/trustcript/static/media/product_thumbnail.589df29afc3e52fe036f.png",
+    "main.js": "/trustcript/static/js/main.496ea1bd.js",
+    "static/media/notebook-right-big.png": "/trustcript/static/media/notebook-right-big.c3041dbfcbc70fc7a11e.png",
+    "static/media/notebook-left-big.png": "/trustcript/static/media/notebook-left-big.2b51d9315f24e29e86bc.png",
+    "static/media/notebook-front-big.png": "/trustcript/static/media/notebook-front-big.93f82a26adb4adccea6d.png",
+    "static/media/notebook-back-big.png": "/trustcript/static/media/notebook-back-big.f1944dfa2e0c5ad6c0d3.png",
+    "static/media/mainBg.webp": "/trustcript/static/media/mainBg.ab6374a0bba92b6250c2.webp",
+    "static/media/glass.webp": "/trustcript/static/media/glass.7cc2e4f79877c52ec39b.webp",
+    "static/media/knight.webp": "/trustcript/static/media/knight.9c0b38a3434d432efa1c.webp",
+    "static/media/rook.webp": "/trustcript/static/media/rook.f2ae0d66acd9344d5959.webp",
+    "static/media/pawn.webp": "/trustcript/static/media/pawn.f94e38fda712d38af405.webp",
+    "static/media/product_thumbnail.webp": "/trustcript/static/media/product_thumbnail.1e79bf0af5c3fd33f367.webp",
     "static/media/logo.svg": "/trustcript/static/media/logo.16c7559d316cff05a700c86f51bfec39.svg",
     "static/media/metasploit.svg": "/trustcript/static/media/metasploit.60e0215d20200997e5607be867d062db.svg",
     "static/media/uk.svg": "/trustcript/static/media/uk.275c83f44bcf96ad785f2cc2c1af75ec.svg",
@@ -33,9 +37,9 @@
     "static/media/chevron-right-solid.svg": "/trustcript/static/media/chevron-right-solid.b3b934ad5c9812eae54e34e640a18689.svg",
     "static/media/Mail.svg": "/trustcript/static/media/Mail.82124da668a149cc00420379fef7d9c3.svg",
     "static/media/Bubble.svg": "/trustcript/static/media/Bubble.adf3874a48fcfad31ed71b9c3dd7fdb9.svg",
-    "main.88aabaec.js.map": "/trustcript/static/js/main.88aabaec.js.map"
+    "main.496ea1bd.js.map": "/trustcript/static/js/main.496ea1bd.js.map"
   },
   "entrypoints": [
-    "static/js/main.88aabaec.js"
+    "static/js/main.496ea1bd.js"
   ]
 }
