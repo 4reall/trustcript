@@ -1,5 +1,5 @@
 const convertUnits = (unit?: string | number) => {
-	if (!unit) return;
+	if (unit === undefined) return;
 	if (unit === 'auto') return unit;
 	if (typeof unit === 'string') {
 		const matched =

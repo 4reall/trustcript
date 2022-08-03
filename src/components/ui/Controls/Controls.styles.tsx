@@ -22,7 +22,7 @@ export const ControlsContainer = styled.div<ControlsContainerProps>`
 
 export const ControlsBtn = styled.button<ControlsBtnProps>`
 	position: relative;
-	padding: 0.7rem 0 0.7rem 0;
+	padding: 0.6rem 0 0.6rem 0;
 	margin-right: 0.5rem;
 	flex: 1;
 	display: flex;

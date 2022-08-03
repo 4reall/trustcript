@@ -1,10 +1,9 @@
 import { PathsEnum } from 'utils/constants/paths';
-import { IFilter } from 'components/Filters/Filters';
-import { FiltersEnum } from 'utils/constants/filters';
+import { ProductFiltersEnum } from 'utils/constants/filters';
 
-import Thumbnail from 'assets/images/product_thumbnail.webp';
-import Thumbnail1 from 'assets/images/knight.webp';
-import Thumbnail2 from 'assets/images/rook.webp';
+import Thumbnail from 'assets/images/thumbnails/product_thumbnail.webp';
+import Thumbnail1 from 'assets/images/thumbnails/knight.webp';
+import Thumbnail2 from 'assets/images/thumbnails/rook.webp';
 import { IProduct } from 'types/Product';
 
 export const products: IProduct[] = [
@@ -15,7 +14,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
-		category: '1',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 1',
 		description:
@@ -28,7 +27,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
-		category: '2',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 2',
 		description:
@@ -41,7 +40,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 			{ src: Thumbnail2, alt: 'thumbnail' },
 		],
-		category: '3',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 3',
 		description:
@@ -54,7 +53,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
-		category: '2',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 4',
 		description:
@@ -67,7 +66,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
-		category: '2',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 5',
 		description:
@@ -80,7 +79,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
-		category: '3',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 6',
 		description:
@@ -93,7 +92,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
-		category: '3',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 7',
 		description:
@@ -106,7 +105,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
-		category: '3',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 8',
 		description:
@@ -119,7 +118,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 			{ src: Thumbnail2, alt: 'thumbnail' },
 		],
-		category: '3',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 9',
 		description:
@@ -132,7 +131,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
-		category: '2',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 10',
 		description:
@@ -145,7 +144,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
-		category: '1',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 11',
 		description:
@@ -158,7 +157,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
-		category: '1',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 12',
 		description:
@@ -171,7 +170,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 			{ src: Thumbnail2, alt: 'thumbnail' },
 		],
-		category: '2',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 13',
 		description:
@@ -184,7 +183,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
-		category: '3',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 14',
 		description:
@@ -197,7 +196,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
-		category: '1',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 15',
 		description:
@@ -210,7 +209,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
-		category: '3',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 16',
 		description:
@@ -223,7 +222,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
-		category: '2',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 17',
 		description:
@@ -236,7 +235,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 			{ src: Thumbnail2, alt: 'thumbnail' },
 		],
-		category: '2',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 18',
 		description:
@@ -249,7 +248,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
-		category: '2',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 19',
 		description:
@@ -262,7 +261,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
-		category: '2',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 20',
 		description:
@@ -275,7 +274,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 			{ src: Thumbnail2, alt: 'thumbnail' },
 		],
-		category: '2',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 21',
 		description:
@@ -288,7 +287,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
-		category: '1',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 22',
 		description:
@@ -301,7 +300,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
-		category: '1',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe 23', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта',
 		description:
@@ -314,7 +313,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
-		category: '2',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 24',
 		description:
@@ -328,7 +327,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
-		category: '1',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 25',
 		description:
@@ -341,7 +340,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
-		category: '2',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 26',
 		description:
@@ -354,7 +353,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
-		category: '2',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 27',
 		description:
@@ -367,31 +366,11 @@ export const products: IProduct[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
-		category: '2',
+		category: ProductFiltersEnum.FIRST,
 		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта 28',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
-	},
-];
-
-export const filters: IFilter[] = [
-	{
-		title: 'Все продукты',
-		filter: FiltersEnum.ALL,
-	},
-	{
-		title: '1 категория',
-		filter: FiltersEnum.FIRST,
-	},
-
-	{
-		title: '2 категория',
-		filter: FiltersEnum.SECOND,
-	},
-	{
-		title: '3 категория',
-		filter: FiltersEnum.THIRD,
 	},
 ];
 

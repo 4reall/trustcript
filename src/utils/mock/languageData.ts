@@ -190,4 +190,10 @@ export const languageData = {
 			[LanguagesEnum.UK]: 'Required',
 		},
 	},
+	share: {
+		moreBtn: {
+			[LanguagesEnum.RU]: 'подробнее',
+			[LanguagesEnum.UK]: 'more',
+		},
+	},
 };

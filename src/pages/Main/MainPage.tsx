@@ -3,7 +3,7 @@ import Slides from 'pages/Main/screens/Slides/Slides';
 import Tools from 'pages/Main/screens/Tools/Tools';
 import Benefits from 'pages/Main/screens/Benefits/Benefits';
 import Contacts from 'pages/Main/screens/Contacts/Contacts';
-import { Page } from 'pages/Share.styles';
+import { Page } from 'pages/share/Page.styles';
 
 const MainPage = () => {
 	return (

@@ -13,8 +13,9 @@ export const TabsContainer = styled.div`
 
 export const Cards = styled.div`
 	display: grid;
-	gap: 0.5rem;
+	gap: 1rem;
 	grid-template-columns: 100%;
+
 	justify-content: space-between;
 
 	${CardContainer} {

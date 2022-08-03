@@ -1,16 +1,16 @@
 import { useParams } from 'react-router-dom';
 
-import { Page } from 'pages/Share.styles';
+import { Page } from 'pages/share/Page.styles';
 import { Typography } from 'components/layout/Typography.styles';
 import Product from 'pages/Product/screens/Product/Product';
 import Similar from 'pages/Product/screens/Similar/Similar';
 
 import { getProductById, getRandomProducts } from 'utils/mock/products';
 
-import backBig from 'assets/images/notebook-back-big.png';
-import frontBig from 'assets/images/notebook-front-big.png';
-import leftBig from 'assets/images/notebook-left-big.png';
-import rightBig from 'assets/images/notebook-right-big.png';
+import backBig from 'assets/images/notebook/notebook-back-big.png';
+import frontBig from 'assets/images/notebook/notebook-front-big.png';
+import leftBig from 'assets/images/notebook/notebook-left-big.png';
+import rightBig from 'assets/images/notebook/notebook-right-big.png';
 
 const images = [
 	{ src: backBig, alt: 'thumbnail' },

@@ -11,9 +11,9 @@ import { useLanguage } from 'hooks/useLanguage';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
 
-import Knight from 'assets/images/knight.webp';
-import Rook from 'assets/images/rook.webp';
-import Pawn from 'assets/images/pawn.webp';
+import Knight from 'assets/images/thumbnails/knight.webp';
+import Rook from 'assets/images/thumbnails/rook.webp';
+import Pawn from 'assets/images/thumbnails/pawn.webp';
 
 const images = [
 	{ src: Knight, alt: 'knight images' },

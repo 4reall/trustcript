@@ -9,5 +9,7 @@ export const FiltersContainer = styled.div`
 
 	${ButtonBase} {
 		width: 100%;
+		min-width: 4rem;
+		padding: 0.5rem;
 	}
 `;

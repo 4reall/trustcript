@@ -2,15 +2,14 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { v4 as uuid } from 'uuid';
 
 import { Cards, TabsContainer } from 'components/Tabs/Tabs.styles';
-import Card from 'components/Card/Card';
+import ProductCard from 'components/Card/ProductCard';
 
-import { IProduct } from 'types/Product';
-
-interface TabsProps {
-	cards: IProduct[];
+interface TabsProps<T> {
+	cards: T[];
+	render: (props: T) => JSX.Element;
 }
 
-const Tabs = ({ cards }: TabsProps) => {
+const Tabs = <T,>({ cards, render }: TabsProps<T>) => {
 	return (
 		<TabsContainer>
 			<Cards>
@@ -19,9 +18,10 @@ const Tabs = ({ cards }: TabsProps) => {
 						<CSSTransition
 							timeout={500}
 							classNames="card"
-							key={card.id + uuid()}
+							key={uuid()}
 						>
-							<Card {...card} />
+							{/*<ProductCard {...card} />*/}
+							{render(card)}
 						</CSSTransition>
 					))}
 				</TransitionGroup>

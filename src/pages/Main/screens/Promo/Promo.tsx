@@ -7,7 +7,7 @@ import { queries } from 'utils/constants/mediaQueries';
 import Button from 'components/ui/Button/Button';
 import { TextContent } from 'pages/Main/screens/Share.styles';
 
-import Glass from 'assets/images/glass.webp';
+import Glass from 'assets/images/thumbnails/glass.webp';
 import { useNavigate } from 'react-router-dom';
 import { PathsEnum } from 'utils/constants/paths';
 

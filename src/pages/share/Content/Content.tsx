@@ -1,19 +1,40 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import { ContentContainer } from 'pages/Products/screens/Products/Products.styles';
+import { ContentContainer } from 'pages/share/Content/Content.styles';
 import Filters from 'components/Filters/Filters';
 import Tabs from 'components/Tabs/Tabs';
 import Pagination from 'components/ui/Pagination/Pagination';
 import Spinner from 'components/Spinner/Spinner';
 
-import { FiltersEnum } from 'utils/constants/filters';
+import {
+	ProductFiltersEnum,
+	IFilters,
+	ArticleFiltersEnum,
+} from 'utils/constants/filters';
+import { IFilter } from 'types/Filter';
+import { ICard } from 'types/Card';
 
-import { products, filters } from 'utils/mock/products';
+interface ContentProps<TCard> {
+	cards: TCard[];
+	filters: IFilter<IFilters>[];
+	render: (card: TCard) => JSX.Element;
+	filterType: 'theme' | 'category';
+}
 
-const Products = () => {
-	const [filteredCard, setFilteredCards] = useState(products);
+const filtersMap = {
+	category: ProductFiltersEnum,
+	theme: ArticleFiltersEnum,
+};
+
+const Content = <TCard extends ICard<IFilters>>({
+	cards,
+	filters,
+	render,
+	filterType,
+}: ContentProps<TCard>) => {
+	const [filteredCard, setFilteredCards] = useState(cards);
 	const [page, setPage] = useState(0);
-	const [filter, setFilter] = useState(FiltersEnum.ALL);
+	const [filter, setFilter] = useState(filtersMap[filterType].ALL);
 	const [loading, setLoading] = useState(false);
 
 	const handleChangeActivePage = useCallback(
@@ -24,7 +45,7 @@ const Products = () => {
 		[filter]
 	);
 
-	const handleFilterChange = (filter: FiltersEnum) => {
+	const handleFilterChange = (filter: IFilters) => {
 		setPage(0);
 		setFilter(filter);
 	};
@@ -35,8 +56,10 @@ const Products = () => {
 			setTimeout(() => setLoading(false), 500);
 		}
 		setFilteredCards(
-			products.filter(
-				(card) => card.category === filter || filter === FiltersEnum.ALL
+			cards.filter(
+				(card) =>
+					card.category === filter ||
+					filter === ProductFiltersEnum.ALL
 			)
 		);
 		// eslint-disable-next-line
@@ -44,7 +67,10 @@ const Products = () => {
 
 	const spinner = loading ? <Spinner /> : null;
 	const tabs = !loading ? (
-		<Tabs cards={filteredCard.slice(page * 6, page * 6 + 6)} />
+		<Tabs<TCard>
+			cards={filteredCard.slice(page * 6, page * 6 + 6)}
+			render={render}
+		/>
 	) : null;
 
 	return (
@@ -65,4 +91,4 @@ const Products = () => {
 	);
 };
 
-export default Products;
+export default Content;

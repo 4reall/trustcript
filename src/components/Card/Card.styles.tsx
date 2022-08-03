@@ -1,12 +1,17 @@
 import styled from 'styled-components';
 import { ButtonBase } from 'components/ui/Button/Button.styles';
 import { mediaQueries } from 'utils/constants/mediaQueries';
+import Label from 'components/Label/Label';
+import { LabelContainer } from 'components/Label/Label.styles';
 
 export const CardContainer = styled.div`
 	padding: 1rem;
 	background: ${({ theme }) => theme.palette.white.light};
 	border-radius: 20px;
 	border: 1px solid ${({ theme }) => theme.palette.white.normal};
+	& a {
+		text-decoration: none;
+	}
 `;
 
 export const ContentContainer = styled.div`
@@ -32,5 +37,13 @@ export const TextContainer = styled.div`
 		&:last-child {
 			margin-bottom: 0;
 		}
+	}
+`;
+
+export const LabelsContainer = styled.div`
+	position: relative;
+	& > img {
+		width: 100%;
+		//height: 20rem;
 	}
 `;

@@ -12,18 +12,19 @@ import { Link } from 'react-router-dom';
 import { CarouselControls } from 'components/Carousel/Carousel';
 import { IProduct } from 'types/Product';
 import { cutStr } from 'utils/helpers/cutStr';
+import { useLanguage } from 'hooks/useLanguage';
 
 interface CardProps {
 	onClick?: () => void;
 }
 
-const Card = ({
+const ProductCard = ({
 	images,
 	title,
 	description,
 	link,
-}: // onClick,
-IProduct & CardProps) => {
+}: IProduct & CardProps) => {
+	const { text } = useLanguage('share');
 	return (
 		<CardContainer>
 			<ContentContainer>
@@ -46,7 +47,7 @@ IProduct & CardProps) => {
 					</Typography>
 					<Link to={link.path}>
 						<Typography variant="h4" underline bold uppercase>
-							{link.title}
+							{text('moreBtn')}
 						</Typography>
 					</Link>
 				</TextContainer>
@@ -55,4 +56,4 @@ IProduct & CardProps) => {
 	);
 };
 
-export default Card;
+export default ProductCard;

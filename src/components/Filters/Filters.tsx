@@ -1,24 +1,19 @@
 import { FiltersContainer } from 'components/Filters/Filters.styles';
 import Button from 'components/ui/Button/Button';
 
-import { FiltersEnum } from 'utils/constants/filters';
-
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
-
-export interface IFilter {
-	title: string;
-	filter: FiltersEnum;
-}
+import { IFilter } from 'types/Filter';
+import { IFilters } from 'utils/constants/filters';
 
 interface FiltersProps {
-	activeFilter: FiltersEnum;
-	filters: IFilter[];
-	onClick: (filter: FiltersEnum) => void;
+	activeFilter: IFilters;
+	filters: IFilter<IFilters>[];
+	onClick: (filter: IFilters) => void;
 }
 
 const Filters = ({ filters, onClick, activeFilter }: FiltersProps) => {
-	const handleClick = (filter: FiltersEnum) => {
+	const handleClick = (filter: IFilters) => {
 		return () => onClick(filter);
 	};
 	const isMd = useMediaQuery(queries.up.md);
