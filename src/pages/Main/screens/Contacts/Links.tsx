@@ -3,7 +3,7 @@ import {
 	LinksContainer,
 } from 'pages/Main/screens/Contacts/Contacts.styles';
 import { Typography } from 'components/layout/Typography.styles';
-import { Image } from 'components/layout/Image.styles';
+import { Img } from 'components/layout/Img.styles';
 
 export interface ILink {
 	href: string;
@@ -20,7 +20,7 @@ const Links = ({ links }: LinksProps) => {
 		<LinksContainer>
 			{links.map(({ text, src, href }, i) => (
 				<Link target="_blank" key={i} href={href} rel="noreferrer">
-					<Image src={src} alt={'link ' + text} />
+					<Img src={src} alt={'link ' + text} />
 					<Typography variant="h4"> {text}</Typography>
 				</Link>
 			))}

@@ -2,12 +2,12 @@ import { PathsEnum } from 'utils/constants/paths';
 import { IFilter } from 'components/Filters/Filters';
 import { FiltersEnum } from 'utils/constants/filters';
 
-import Thumbnail from 'assets/images/product_thumbnail.png';
-import Thumbnail1 from 'assets/images/knight.png';
-import Thumbnail2 from 'assets/images/rook.png';
-import { ICard } from 'types/Card';
+import Thumbnail from 'assets/images/product_thumbnail.webp';
+import Thumbnail1 from 'assets/images/knight.webp';
+import Thumbnail2 from 'assets/images/rook.webp';
+import { IProduct } from 'types/Product';
 
-export const cards: ICard[] = [
+export const products: IProduct[] = [
 	{
 		id: 1,
 		images: [
@@ -16,10 +16,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '1',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 1',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 2,
@@ -29,10 +29,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: '2',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 2',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 3,
@@ -42,10 +42,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 		],
 		category: '3',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 3',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 4,
@@ -55,10 +55,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '2',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 4',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 5,
@@ -68,10 +68,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '2',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 5',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 6,
@@ -81,10 +81,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: '3',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 6',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 7,
@@ -94,10 +94,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '3',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 7',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 8,
@@ -107,10 +107,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: '3',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 8',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 9,
@@ -120,10 +120,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 		],
 		category: '3',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 9',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 10,
@@ -133,10 +133,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: '2',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 10',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 11,
@@ -146,10 +146,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '1',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 11',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 12,
@@ -159,10 +159,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: '1',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 12',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 13,
@@ -172,10 +172,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 		],
 		category: '2',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 13',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 14,
@@ -185,10 +185,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '3',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 14',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 15,
@@ -198,10 +198,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: '1',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 15',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 16,
@@ -211,10 +211,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: '3',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 16',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 17,
@@ -224,10 +224,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '2',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 17',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 18,
@@ -237,10 +237,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 		],
 		category: '2',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 18',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 19,
@@ -250,10 +250,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: '2',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 19',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 20,
@@ -263,10 +263,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: '2',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 20',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 21,
@@ -276,10 +276,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 		],
 		category: '2',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 21',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 22,
@@ -289,10 +289,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '1',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 22',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 23,
@@ -302,10 +302,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '1',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
+		link: { title: 'подробнеe 23', path: PathsEnum.Products + '/1' },
 		title: 'Название продукта',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 24,
@@ -315,10 +315,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: '2',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 24',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 
 	{
@@ -329,10 +329,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '1',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 25',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 26,
@@ -342,10 +342,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: '2',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 26',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 27,
@@ -355,10 +355,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: '2',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 27',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 	{
 		id: 28,
@@ -368,10 +368,10 @@ export const cards: ICard[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: '2',
-		link: { title: 'подробнеe', path: PathsEnum.Main },
-		title: 'Название продукта',
+		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		title: 'Название продукта 28',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, exercitationem.',
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
 	},
 ];
 
@@ -394,3 +394,22 @@ export const filters: IFilter[] = [
 		filter: FiltersEnum.THIRD,
 	},
 ];
+
+export const getProductById = (id: number | string) => {
+	const product = products.find((product) => product.id === +id);
+	return product ? product : products[0];
+};
+
+export const getRandomProducts = (count: number) => {
+	const map = new Map();
+	for (let i = 0; i < count; i++) {
+		const randomProduct =
+			products[Math.floor(Math.random() * products.length)];
+		if (map.get(randomProduct.id)) {
+			i--;
+		} else {
+			map.set(randomProduct.id, randomProduct);
+		}
+	}
+	return Array.from(map.values());
+};

@@ -8,40 +8,41 @@ import { LanguagesEnum } from 'utils/mock/languageData';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
 
-import Ru from 'assets/icons/countries/ru.svg';
-import Uk from 'assets/icons/countries/uk.svg';
-import Telegram from 'assets/icons/networks/telegram.svg';
-import Twitter from 'assets/icons/networks/twitter.svg';
-import WhatsUp from 'assets/icons/networks/whatsup.svg';
-import Youtube from 'assets/icons/networks/youtube.svg';
+import { ReactComponent as Ru } from 'assets/icons/countries/ru.svg';
+import { ReactComponent as Uk } from 'assets/icons/countries/uk.svg';
+import { ReactComponent as Telegram } from 'assets/icons/networks/telegram.svg';
+import { ReactComponent as Twitter } from 'assets/icons/networks/twitter.svg';
+import { ReactComponent as WhatsUp } from 'assets/icons/networks/whatsup.svg';
+import { ReactComponent as Youtube } from 'assets/icons/networks/youtube.svg';
 import { INavLink } from 'components/Navigation/Navigation';
 import { PathsEnum } from 'utils/constants/paths';
+import { ReactNode } from 'react';
 
 export interface SocialLink {
 	href: string;
 	alt: string;
-	thumbnail: string;
+	thumbnail: ReactNode;
 }
 const socials: SocialLink[] = [
 	{
 		href: 'https//google.com',
 		alt: 'twitter icon',
-		thumbnail: Twitter,
+		thumbnail: <Twitter alt={'twitter icon'} />,
 	},
 	{
 		href: 'https//google.com',
 		alt: 'telegram icon',
-		thumbnail: Telegram,
+		thumbnail: <Telegram alt={'telegram icon'} />,
 	},
 	{
 		href: 'https//google.com',
 		alt: 'youtube icon',
-		thumbnail: Youtube,
+		thumbnail: <Youtube alt={'youtube icon'} />,
 	},
 	{
 		href: 'https//google.com',
 		alt: 'whats up icon',
-		thumbnail: WhatsUp,
+		thumbnail: <WhatsUp alt={'whats up icon'} />,
 	},
 ];
 
@@ -52,8 +53,8 @@ const navLinks: INavLink[] = [
 ];
 
 const options: LanguageOption[] = [
-	{ id: 0, language: LanguagesEnum.RU, thumbnail: Ru },
-	{ id: 1, language: LanguagesEnum.UK, thumbnail: Uk },
+	{ id: 0, language: LanguagesEnum.RU, thumbnail: <Ru alt={'ru icon'} /> },
+	{ id: 1, language: LanguagesEnum.UK, thumbnail: <Uk alt={'ru icon'} /> },
 ];
 
 export interface ContentProps {

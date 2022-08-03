@@ -3,17 +3,18 @@ import {
 	ToolsContainer,
 	ToolsLogosContainer,
 } from 'pages/Main/screens/Tools/Tools.styles';
-import { Image } from 'components/layout/Image.styles';
-import Metasploit from 'assets/icons/logo/metasploit.svg';
+
 import { useLanguage } from 'hooks/useLanguage';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
 
+import { ReactComponent as Metasploit } from 'assets/icons/logo/metasploit.svg';
+
 const toolsLogos = [
-	{ src: Metasploit, alt: 'metasploit logo' },
-	{ src: Metasploit, alt: 'metasploit logo' },
-	{ src: Metasploit, alt: 'metasploit logo' },
-	{ src: Metasploit, alt: 'metasploit logo' },
+	{ thumbnail: <Metasploit key={1} alt="metasploit logo" /> },
+	{ thumbnail: <Metasploit key={2} alt="metasploit logo" /> },
+	{ thumbnail: <Metasploit key={3} alt="metasploit logo" /> },
+	{ thumbnail: <Metasploit key={4} alt="metasploit logo" /> },
 ];
 
 const Tools = () => {
@@ -31,8 +32,8 @@ const Tools = () => {
 				{text('text')}
 			</Typography>
 			<ToolsLogosContainer>
-				{toolsLogos.map((logo, i) => (
-					<Image key={i} {...logo} />
+				{toolsLogos.map((logo) => (
+					<>{logo.thumbnail}</>
 				))}
 			</ToolsLogosContainer>
 		</ToolsContainer>

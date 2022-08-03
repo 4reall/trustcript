@@ -7,7 +7,6 @@ export const ContentContainer = styled.div`
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	flex: 1;
 
 	${PaginationContainer} {
 		margin: 2rem auto 0 auto;
@@ -15,6 +14,7 @@ export const ContentContainer = styled.div`
 	${FiltersContainer} {
 		grid-template-columns: repeat(2, 1fr);
 		margin-bottom: 2rem;
+		flex-grow: 0;
 	}
 	${mediaQueries.up.lg} {
 		${FiltersContainer} {

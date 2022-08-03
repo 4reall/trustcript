@@ -1,9 +1,7 @@
-import { Image } from 'components/layout/Image.styles';
 import { Typography } from 'components/layout/Typography.styles';
-import {
-	LanguageLabelContainer,
-	LanguageLabelContainerProps,
-} from 'components/ui/LanguageSwitcher/LanguageSwitcher.styles';
+import { LanguageLabelContainer } from 'components/ui/LanguageSwitcher/LanguageSwitcher.styles';
+
+import { LanguageLabelContainerProps } from 'components/ui/LanguageSwitcher/LanguageSwitcher.styles';
 import { LanguageOption } from 'context/LanguageContext/Language.context';
 
 interface LanguageLabelProps
@@ -24,7 +22,7 @@ const LanguageLabel = ({
 			onClick={onLanguageSelect}
 			isMenuItem={isMenuItem}
 		>
-			<Image src={thumbnail} alt={language + 'language icon'} />
+			{thumbnail}
 			<Typography variant="h4">{language}</Typography>
 		</LanguageLabelContainer>
 	);

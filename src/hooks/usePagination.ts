@@ -1,5 +1,7 @@
 import { useCallback, useMemo, useState } from 'react';
 
+const buffPages = 2;
+
 export const usePagination = (pageCount: number, shownPagesCount: number) => {
 	const [offset, setOffset] = useState(0);
 	const [startShownIndex, setStartShownIndex] = useState(0);
@@ -16,12 +18,16 @@ export const usePagination = (pageCount: number, shownPagesCount: number) => {
 		setStartShownIndex(0);
 		setEndShownIndex(shownPagesCount - 1);
 		setActivePage(0);
-	}, []);
+	}, [shownPagesCount]);
 
 	const increasePage = useCallback(() => {
 		if (activePage === pageCount) return;
 
-		if (activePage === endShownIndex && activePage + 1 !== pageCount) {
+		// активная страница и 1 страницы буффера && -2 из-за индексации страниц с нуля
+		if (
+			activePage === endShownIndex - buffPages &&
+			activePage !== pageCount - buffPages - 1
+		) {
 			setEndShownIndex((state) => state + 1);
 			setStartShownIndex((state) => state + 1);
 			setOffset((state) => state + 1);
@@ -33,7 +39,10 @@ export const usePagination = (pageCount: number, shownPagesCount: number) => {
 	const decreasePage = useCallback(() => {
 		if (activePage === 0) return;
 
-		if (activePage === startShownIndex) {
+		if (
+			activePage === startShownIndex + buffPages &&
+			activePage !== buffPages
+		) {
 			setStartShownIndex((state) => state - 1);
 			setEndShownIndex((state) => state - 1);
 			setOffset((state) => state - 1);
@@ -42,27 +51,54 @@ export const usePagination = (pageCount: number, shownPagesCount: number) => {
 		if (activePage > 0) setActivePage((state) => state - 1);
 	}, [activePage, startShownIndex]);
 
+	const setStart = useCallback(() => {
+		setOffset(0);
+		setEndShownIndex(shownPagesCount - 1);
+		setStartShownIndex(0);
+		setActivePage(0);
+		return;
+
+		// eslint-disable-next-line
+	}, [
+		shownPagesCount,
+		pageCount,
+		startShownIndex,
+		endShownIndex,
+		activePage,
+	]);
+
+	const setEnd = useCallback(() => {
+		setOffset(pageCount - shownPagesCount);
+		setEndShownIndex(pageCount - 1);
+		setStartShownIndex(pageCount - shownPagesCount);
+		setActivePage(pageCount - 1);
+		// eslint-disable-next-line
+	}, [
+		shownPagesCount,
+		pageCount,
+		startShownIndex,
+		endShownIndex,
+		activePage,
+	]);
+
 	const setPage = useCallback(
-		(index: number | 'start' | 'end') => {
+		(index: number) => {
 			return () => {
-				if (index === 'start') {
-					setOffset(0);
-					setEndShownIndex(shownPagesCount - 1);
-					setStartShownIndex(0);
-					setActivePage(0);
-					return;
+				if (index === endShownIndex && index !== pageCount - 1) {
+					setEndShownIndex((state) => state + buffPages);
+					setStartShownIndex((state) => state + buffPages);
+					setOffset((state) => state + buffPages);
 				}
-				if (index === 'end') {
-					setOffset(pageCount - shownPagesCount);
-					setEndShownIndex(pageCount - 1);
-					setStartShownIndex(pageCount - shownPagesCount);
-					setActivePage(pageCount - 1);
-					return;
+				if (index === startShownIndex && index !== 0) {
+					setEndShownIndex((state) => state - buffPages);
+					setStartShownIndex((state) => state - buffPages);
+					setOffset((state) => state - buffPages);
 				}
 				setActivePage(index);
 			};
 		},
-		[shownPagesCount, pageCount]
+		// eslint-disable-next-line
+		[shownPagesCount, pageCount, startShownIndex, endShownIndex, activePage]
 	);
 
 	return {
@@ -70,6 +106,8 @@ export const usePagination = (pageCount: number, shownPagesCount: number) => {
 		increasePage,
 		decreasePage,
 		setPage,
+		setEnd,
+		setStart,
 		activePage,
 		btnList,
 		reset,

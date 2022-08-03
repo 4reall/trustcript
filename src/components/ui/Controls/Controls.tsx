@@ -2,13 +2,10 @@ import {
 	ControlsBtn,
 	ControlsContainer,
 	ControlsContainerProps,
-} from 'components/ui/Controls/Controls.styled';
+} from 'components/ui/Controls/Controls.styles';
+import { CarouselControls } from 'components/Carousel/Carousel';
 
-interface ControlsProps extends ControlsContainerProps {
-	totalControls: number;
-	activeControl: number;
-	onClick: (index: number) => void;
-}
+type ControlsProps = CarouselControls & ControlsContainerProps;
 
 const Controls = ({
 	totalControls,

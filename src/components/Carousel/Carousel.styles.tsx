@@ -19,9 +19,13 @@ export const Window = styled.div`
 `;
 
 export const SlideTruck = styled.div<InnerProps>`
+	min-height: 10rem;
 	display: flex;
 	transition: ${({ transition, transitionDuration }) =>
 		transition && transitionDuration + 'ms all'};
+	//& + {
+	//	margin-top: 1rem;
+	//}
 `;
 
 export const Slide = styled.div<SlideProps>`
@@ -33,8 +37,14 @@ export const Slide = styled.div<SlideProps>`
 	}
 `;
 
-export const BtnContainer = styled.div<{ variant: 'left' | 'right' }>`
+interface BtnContainerProps {
+	variant: 'left' | 'right';
+	show?: boolean;
+}
+
+export const BtnContainer = styled.div<BtnContainerProps>`
 	position: absolute;
+	display: ${({ show }) => (show ? 'block' : 'none')};
 	${({ variant }) => variant}: 1%;
 	top: 50%;
 	transform: translateY(-50%);

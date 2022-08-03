@@ -11,7 +11,7 @@ export interface ButtonStylesProps {
 }
 
 export const ButtonBase = styled.button<ButtonStylesProps>`
-	${({ theme, center, full, small, disabled, hide }) => css`
+	${({ theme, center, full, small, hide }) => css`
 		display: ${hide && 'none'};
 		position: relative;
 		padding: 0.75rem 2rem;
@@ -54,14 +54,6 @@ export const ButtonBase = styled.button<ButtonStylesProps>`
 				background: ${theme.palette.active.normal};
 				color: ${theme.palette.normal.normal};
 			}
-		}
-		
-		${
-			disabled &&
-			css`
-				cursor: default !important;
-				pointer-events: none;
-			`
 		}
 	}
 	`}
@@ -108,7 +100,10 @@ export const OutlinedBtn = styled(ButtonBase)`
 	`}
 `;
 export const IconBtn = styled(ButtonBase)`
-	${({ theme }) => css`
+	${({ theme, small }) => css`
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		min-width: unset;
 		width: 3rem;
 		height: 3rem;
@@ -116,14 +111,22 @@ export const IconBtn = styled(ButtonBase)`
 		border-radius: 50%;
 		overflow: hidden;
 		background: transparent;
-		& img {
-			width: 100%;
-			height: 100%;
+		cursor: pointer !important;
+
+		& svg,
+		img {
+			width: 70%;
+			height: 70%;
 		}
 		&:hover {
 			background: ${theme.palette.white.dark};
 			// color: ${theme.palette.normal.hover};
 		}
+		${small &&
+		css`
+			width: 2rem;
+			height: 2rem;
+			padding: 0.3rem;
+		`}
 	`}
 `;
-// export const DarkBtn = styled()``

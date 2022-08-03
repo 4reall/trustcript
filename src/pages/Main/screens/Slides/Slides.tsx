@@ -1,15 +1,19 @@
 import Carousel from 'components/Carousel/Carousel';
-import { Image } from 'components/layout/Image.styles';
-import Knight from 'assets/images/knight.png';
-import Rook from 'assets/images/rook.png';
-import Pawn from 'assets/images/pawn.png';
-
+import Controls from 'components/ui/Controls/Controls';
+import { Img } from 'components/layout/Img.styles';
 import { Typography } from 'components/layout/Typography.styles';
 import { TextContent } from 'pages/Main/screens/Share.styles';
-import { useLanguage } from 'hooks/useLanguage';
 import { SlidesContainer } from 'pages/Main/screens/Slides/Slides.styles';
+
+import { CarouselControls } from 'components/Carousel/Carousel';
+
+import { useLanguage } from 'hooks/useLanguage';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
+
+import Knight from 'assets/images/knight.webp';
+import Rook from 'assets/images/rook.webp';
+import Pawn from 'assets/images/pawn.webp';
 
 const images = [
 	{ src: Knight, alt: 'knight images' },
@@ -22,9 +26,14 @@ const Slides = () => {
 	const isLg = useMediaQuery(queries.up.lg);
 	return (
 		<SlidesContainer>
-			<Carousel>
-				{images.map(({ src, alt }, i) => (
-					<Image key={i} src={src} alt={alt} />
+			<Carousel
+				sideControls
+				controls={(props: CarouselControls) => (
+					<Controls mt={'1rem'} {...props} />
+				)}
+			>
+				{images.map((image, i) => (
+					<Img key={i} {...image} />
 				))}
 			</Carousel>
 			<TextContent>

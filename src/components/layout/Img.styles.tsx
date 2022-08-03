@@ -13,7 +13,7 @@ export interface ImageProps extends ImgHTMLAttributes<any> {
 	bordered?: boolean;
 }
 
-export const Image = styled.img<ImageProps>`
+export const Img = styled.img<ImageProps>`
 	width: ${({ w }) => convertUnits(w)};
 	height: ${({ h }) => convertUnits(h)};
 	user-select: none;

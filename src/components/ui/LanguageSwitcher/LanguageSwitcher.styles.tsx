@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import convertUnits from 'utils/helpers/convertUnits';
 
 export const Switcher = styled.div`
 	position: relative;
@@ -9,6 +8,7 @@ export const Switcher = styled.div`
 	padding: 0.75rem;
 	text-transform: uppercase;
 	cursor: pointer;
+	flex-grow: 0;
 	& > *:first-child {
 		margin-right: 0.5rem;
 	}

@@ -13,6 +13,7 @@ export interface TypographyProps {
 	uppercase?: boolean;
 	underline?: boolean;
 	align?: 'left' | 'right' | 'center';
+	display?: 'block' | 'inline-block' | 'inline';
 }
 
 export const Typography = styled.span<TypographyProps>`
@@ -26,7 +27,9 @@ export const Typography = styled.span<TypographyProps>`
 		bold,
 		variant,
 		underline,
+		display,
 	}) => css`
+		display: ${display};
 		margin-top: ${convertUnits(mt)};
 		margin-bottom: ${convertUnits(mb)};
 		font-size: ${theme.typography[variant].fontSize};

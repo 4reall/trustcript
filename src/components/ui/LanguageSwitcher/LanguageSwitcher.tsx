@@ -1,6 +1,6 @@
 import { useContext, useRef, useState } from 'react';
 
-import { Image } from 'components/layout/Image.styles';
+import { Img } from 'components/layout/Img.styles';
 import DropdownMenu from 'components/DropdownMenu/DropdownMenu';
 import {
 	LanguageMenu,
@@ -38,7 +38,7 @@ const LanguageSwitcher = ({ options }: LanguageSwitcherProps) => {
 	return (
 		<Switcher ref={containerRef} onClick={handleClick}>
 			<LanguageLabel {...selectedLanguage} />
-			<Image src={BottomArrow} alt="dropdown menu arrow" />
+			<Img src={BottomArrow} alt="dropdown menu arrow" />
 			<DropdownMenu active={isMenuOpen}>
 				<LanguageMenu>
 					{options.map((option, i) => (

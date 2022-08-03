@@ -1,6 +1,5 @@
 import { Typography } from 'components/layout/Typography.styles';
-import { Image } from 'components/layout/Image.styles';
-import Glass from 'assets/images/glass.png';
+import { Img } from 'components/layout/Img.styles';
 import { PromoContainer } from 'pages/Main/screens/Promo/Promo.styles';
 import { useLanguage } from 'hooks/useLanguage';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
@@ -8,10 +7,19 @@ import { queries } from 'utils/constants/mediaQueries';
 import Button from 'components/ui/Button/Button';
 import { TextContent } from 'pages/Main/screens/Share.styles';
 
+import Glass from 'assets/images/glass.webp';
+import { useNavigate } from 'react-router-dom';
+import { PathsEnum } from 'utils/constants/paths';
+
 const Promo = () => {
 	const { text } = useLanguage('promo');
 	const isLg = useMediaQuery(queries.up.lg);
 	const isMd = useMediaQuery(queries.up.md);
+	const navigate = useNavigate();
+
+	const goToProducts = () => {
+		navigate(PathsEnum.Products);
+	};
 
 	return (
 		<PromoContainer>
@@ -27,11 +35,11 @@ const Promo = () => {
 				>
 					{text('text')}
 				</Typography>
-				<Button onClick={() => {}} small={!isMd}>
+				<Button onClick={goToProducts} small={!isMd}>
 					{text('button')}
 				</Button>
 			</TextContent>
-			<Image src={Glass} alt={'glass image'} />
+			<Img src={Glass} alt={'glass image'} />
 		</PromoContainer>
 	);
 };

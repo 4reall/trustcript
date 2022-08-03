@@ -34,17 +34,15 @@ export const Cards = styled.div`
 		//background: red;
 	}
 
-	.card-appear {
-		display: none;
-	}
-	.card-appear-done {
-		display: block;
-	}
 	.card-enter {
 		opacity: 0;
+		//display: none;
 	}
 	.card-enter-active {
 		opacity: 1;
 		transition: opacity 500ms ease-in;
+	}
+	.card-enter-done {
+		//display: block;
 	}
 `;

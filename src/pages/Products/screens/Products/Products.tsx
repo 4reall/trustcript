@@ -1,22 +1,26 @@
+import { useCallback, useEffect, useState } from 'react';
+
+import { ContentContainer } from 'pages/Products/screens/Products/Products.styles';
 import Filters from 'components/Filters/Filters';
-import { cards, filters } from 'utils/mock/products';
 import Tabs from 'components/Tabs/Tabs';
 import Pagination from 'components/ui/Pagination/Pagination';
-import { useCallback, useEffect, useState } from 'react';
-import { FiltersEnum } from 'utils/constants/filters';
-import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
-import { queries } from 'utils/constants/mediaQueries';
-import { ContentContainer } from 'pages/Products/screens/Content/Content.styles';
+import Spinner from 'components/Spinner/Spinner';
 
-const Content = () => {
-	const [filteredCard, setFilteredCards] = useState(cards);
+import { FiltersEnum } from 'utils/constants/filters';
+
+import { products, filters } from 'utils/mock/products';
+
+const Products = () => {
+	const [filteredCard, setFilteredCards] = useState(products);
 	const [page, setPage] = useState(0);
 	const [filter, setFilter] = useState(FiltersEnum.ALL);
+	const [loading, setLoading] = useState(false);
 
 	const handleChangeActivePage = useCallback(
 		(page: number) => {
 			setPage(page);
 		},
+		// eslint-disable-next-line
 		[filter]
 	);
 
@@ -26,12 +30,22 @@ const Content = () => {
 	};
 
 	useEffect(() => {
+		if (!loading) {
+			setLoading(true);
+			setTimeout(() => setLoading(false), 500);
+		}
 		setFilteredCards(
-			cards.filter(
+			products.filter(
 				(card) => card.category === filter || filter === FiltersEnum.ALL
 			)
 		);
+		// eslint-disable-next-line
 	}, [filter, page]);
+
+	const spinner = loading ? <Spinner /> : null;
+	const tabs = !loading ? (
+		<Tabs cards={filteredCard.slice(page * 6, page * 6 + 6)} />
+	) : null;
 
 	return (
 		<ContentContainer>
@@ -40,10 +54,10 @@ const Content = () => {
 				onClick={handleFilterChange}
 				filters={filters}
 			/>
-			<Tabs cards={filteredCard.slice(page * 6, page * 6 + 6)} />
+			{spinner}
+			{tabs}
 			<Pagination
 				setActivePage={handleChangeActivePage}
-				// vertical={isXl}
 				shownPageCount={4}
 				pageCount={Math.ceil(filteredCard.length / 6)}
 			/>
@@ -51,4 +65,4 @@ const Content = () => {
 	);
 };
 
-export default Content;
+export default Products;

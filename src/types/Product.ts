@@ -1,6 +1,8 @@
-export interface ICard {
+import { IImage } from 'types/Image';
+
+export interface IProduct {
 	id: number;
-	images: { src: string; alt: string }[];
+	images: IImage[];
 	category: string;
 	title: string;
 	description: string;

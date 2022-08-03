@@ -19,14 +19,15 @@ interface ButtonProps extends PropsWithChildren<ButtonStylesProps> {
 	onClick: () => void;
 }
 
-const Button = ({ children, dark, outlined, icon, ...props }: ButtonProps) => {
+const Button = ({ children, dark, outlined, icon, ...rest }: ButtonProps) => {
 	const { palette } = useTheme();
+	const { disabled, onClick, ...props } = rest;
 
 	if (dark)
 		return (
-			<DarkBtn {...props}>
+			<DarkBtn {...props} onClick={disabled ? () => {} : onClick}>
 				{children}
-				{!props.disabled && (
+				{!disabled && (
 					<Ripple duration={1000} color={palette.normal.normal} />
 				)}
 			</DarkBtn>
@@ -34,9 +35,9 @@ const Button = ({ children, dark, outlined, icon, ...props }: ButtonProps) => {
 
 	if (outlined)
 		return (
-			<OutlinedBtn {...props}>
+			<OutlinedBtn {...props} onClick={disabled ? () => {} : onClick}>
 				{children}
-				{!props.disabled && (
+				{!disabled && (
 					<Ripple duration={1000} color={palette.normal.normal} />
 				)}
 			</OutlinedBtn>
@@ -44,18 +45,18 @@ const Button = ({ children, dark, outlined, icon, ...props }: ButtonProps) => {
 
 	if (icon)
 		return (
-			<IconBtn {...props}>
+			<IconBtn {...props} onClick={disabled ? () => {} : onClick}>
 				{children}
-				{!props.disabled && (
+				{!disabled && (
 					<Ripple duration={1000} color={palette.normal.normal} />
 				)}
 			</IconBtn>
 		);
 
 	return (
-		<ButtonBase {...props}>
+		<ButtonBase {...props} onClick={disabled ? () => {} : onClick}>
 			{children}
-			{!props.disabled && (
+			{!disabled && (
 				<Ripple duration={1000} color={palette.normal.normal} />
 			)}
 		</ButtonBase>

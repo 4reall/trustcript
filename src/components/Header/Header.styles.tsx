@@ -11,6 +11,7 @@ export const HeaderStyles = styled.header<HeaderStylesProps>`
 	top: 0;
 	left: 0;
 	width: 100%;
+	height: 5rem;
 	display: flex;
 	align-items: center;
 	padding: ${({ p }) => convertUnits(p)};
@@ -29,7 +30,7 @@ export const HeaderStyles = styled.header<HeaderStylesProps>`
 	}
 
 	${mediaQueries.up.md} {
-		min-height: 6rem;
+		height: 7.5rem;
 	}
 `;
 
@@ -41,5 +42,15 @@ export const SocialLinksContainer = styled.div`
 		&:last-child {
 			margin-right: 0;
 		}
+	}
+`;
+
+export const ContentContainer = styled.div`
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	& .header__link {
+		display: flex;
+		align-items: center;
 	}
 `;

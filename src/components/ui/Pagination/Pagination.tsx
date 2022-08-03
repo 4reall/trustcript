@@ -6,7 +6,7 @@ import {
 	PaginationContainerProps,
 } from 'components/ui/Pagination/Pagination.styles';
 import { Typography } from 'components/layout/Typography.styles';
-import { Image } from 'components/layout/Image.styles';
+import { Img } from 'components/layout/Img.styles';
 import Button from 'components/ui/Button/Button';
 
 import { useEffect } from 'react';
@@ -39,6 +39,8 @@ const Pagination = ({
 		increasePage,
 		decreasePage,
 		setPage,
+		setStart,
+		setEnd,
 		activePage,
 		btnList,
 		reset,
@@ -56,21 +58,22 @@ const Pagination = ({
 
 	useEffect(() => {
 		setActivePage(activePage);
+		// eslint-disable-next-line
 	}, [activePage, pageCount]);
 
 	useEffect(() => {
 		reset();
-	}, [setActivePage]);
+	}, [setActivePage, reset]);
 
 	return (
 		<PaginationContainer vertical={vertical}>
 			<Button
 				hide={pageCount <= shownPageCount}
 				disabled={activePage === 0}
-				onClick={setPage('start')}
+				onClick={setStart}
 				icon
 			>
-				<Image src={vertical ? UpDbArrow : LeftDbArrow} />
+				<Img src={vertical ? UpDbArrow : LeftDbArrow} />
 			</Button>
 			<Button
 				hide={pageCount <= shownPageCount}
@@ -78,7 +81,7 @@ const Pagination = ({
 				onClick={decreasePage}
 				icon
 			>
-				<Image src={vertical ? UpArrow : LeftArrow} />
+				<Img src={vertical ? UpArrow : LeftArrow} />
 			</Button>
 			<PaginationBtnContainer>
 				<PaginationBtnTruck
@@ -97,15 +100,15 @@ const Pagination = ({
 				onClick={increasePage}
 				icon
 			>
-				<Image src={vertical ? BottomArrow : RightArrow} />
+				<Img src={vertical ? BottomArrow : RightArrow} />
 			</Button>
 			<Button
 				hide={pageCount <= shownPageCount}
 				disabled={activePage === pageCount - 1}
-				onClick={setPage('end')}
+				onClick={setEnd}
 				icon
 			>
-				<Image src={vertical ? BottomDbArrow : RightDbArrow} />
+				<Img src={vertical ? BottomDbArrow : RightDbArrow} />
 			</Button>
 		</PaginationContainer>
 	);

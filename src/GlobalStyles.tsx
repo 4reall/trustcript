@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import { mediaQueries } from 'utils/constants/mediaQueries';
 
-import Bg from 'assets/images/mainBg.jpg';
+import Bg from 'assets/images/mainBg.webp';
 
 export const GlobalStyle = createGlobalStyle`
     * {
@@ -24,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Inter', 'Roboto', sans-serif;
         position: relative;
-		padding-top: 6rem;
+		padding-top: 5rem;
 		-webkit-overflow-scrolling: touch;
 		overflow-y: scroll;
 		overflow-x: hidden;

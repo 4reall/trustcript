@@ -5,7 +5,6 @@ import {
 	ReactNode,
 	useCallback,
 	useEffect,
-	useLayoutEffect,
 	useRef,
 	useState,
 } from 'react';
@@ -18,22 +17,23 @@ export interface UseCarouselProps {
 
 const useCarousel = ({ transitionDuration, children }: UseCarouselProps) => {
 	const [offset, setOffset] = useState(0);
-	const [containerWidth, setContainerWidth] = useState(450);
-	const [isTransition, setIsTransition] = useState(true);
+	const [containerWidth, setContainerWidth] = useState(0);
+	const [isTransition, setIsTransition] = useState(false);
 	const [slides, setSlides] = useState<ReactNode[]>(children);
-	const [clonesCount, setClonesCount] = useState({ head: 0, tail: 0 });
+	const [clonesCount, setClonesCount] = useState({ head: 1, tail: 1 });
 	const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
 	const timeoutRef = useRef<NodeJS.Timer>();
-	const firstRender = useRef(true);
 
 	const containerRef = useResize(
 		useCallback(
 			(width) => {
 				if (timeoutRef.current) clearTimeout(timeoutRef.current);
 				setContainerWidth(width);
-				setOffset(clonesCount.head * containerWidth);
+
+				setOffset(clonesCount.head * width);
 			},
+			// eslint-disable-next-line
 			[clonesCount, containerWidth]
 		)
 	);
@@ -59,20 +59,15 @@ const useCarousel = ({ transitionDuration, children }: UseCarouselProps) => {
 			...children,
 			cloneElement(firstChild),
 		]);
-
-		setClonesCount({ head: 1, tail: 1 });
-		if (firstRender.current) firstRender.current = false;
-		return;
 	}, [children]);
 
 	useEffect(() => {
 		if (!isTransition) {
 			setTimeout(() => setIsTransition(true), transitionDuration);
 		}
-	}, [isTransition]);
+	}, [isTransition, transitionDuration]);
 
-	useLayoutEffect(() => {
-		if (firstRender.current) return;
+	useEffect(() => {
 		if (offset === 0) {
 			timeoutRef.current = setTimeout(() => {
 				setIsTransition(false);
@@ -105,8 +100,11 @@ const useCarousel = ({ transitionDuration, children }: UseCarouselProps) => {
 		offset: offset,
 		slides,
 		setSlide,
-		controlsCount: slides.length - clonesCount.head - clonesCount.tail,
-		activeControl: currentSlideIndex,
+		controlsCount: Math.max(
+			slides.length - clonesCount.head - clonesCount.tail,
+			children.length
+		),
+		activeControl: Math.max(currentSlideIndex, 0),
 	};
 };
 
