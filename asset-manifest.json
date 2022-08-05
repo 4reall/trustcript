@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.js": "/trustcript/static/js/main.ab2d076a.js",
+    "main.js": "/trustcript/static/js/main.46924f12.js",
     "static/media/notebook-right-big.png": "/trustcript/static/media/notebook-right-big.c3041dbfcbc70fc7a11e.png",
     "static/media/notebook-left-big.png": "/trustcript/static/media/notebook-left-big.2b51d9315f24e29e86bc.png",
     "static/media/notebook-front-big.png": "/trustcript/static/media/notebook-front-big.93f82a26adb4adccea6d.png",
     "static/media/notebook-back-big.png": "/trustcript/static/media/notebook-back-big.f1944dfa2e0c5ad6c0d3.png",
+    "static/media/code.png": "/trustcript/static/media/code.8b55d006d8841cb290cc.png",
     "static/media/tips.png": "/trustcript/static/media/tips.05fb6fdb4c1f840ff9cd.png",
     "static/media/mainBg.webp": "/trustcript/static/media/mainBg.ab6374a0bba92b6250c2.webp",
     "static/media/methods.png": "/trustcript/static/media/methods.63680f389ebdff2fc6c8.png",
@@ -25,8 +26,11 @@
     "static/media/gaming.svg": "/trustcript/static/media/gaming.0d6c21fd9a4bead247c73e6327bd8be3.svg",
     "static/media/BottomDbArrow.svg": "/trustcript/static/media/BottomDbArrow.cf659f7963bd39c875736b59eb999101.svg",
     "static/media/LeftDbArrow.svg": "/trustcript/static/media/LeftDbArrow.0dcd61d4f9c828eb1ee85d3c5517f390.svg",
+    "static/media/Copy.svg": "/trustcript/static/media/Copy.98aced8e3c3f4b6658c43e322a3a975d.svg",
     "static/media/RightDbArrow.svg": "/trustcript/static/media/RightDbArrow.75f2047e6a63e516587bad0d46bb220b.svg",
     "static/media/UpDbArrow.svg": "/trustcript/static/media/UpDbArrow.bd48748ba9c40fcfa46dc31cbcd46b09.svg",
+    "static/media/Share.svg": "/trustcript/static/media/Share.cede54b5b895d142c2f66fbe3bf2b551.svg",
+    "static/media/Tw.svg": "/trustcript/static/media/Tw.ca5a8f4f4c0bd0e7d49eb18aae74c359.svg",
     "static/media/twitter.svg": "/trustcript/static/media/twitter.7df3285cc6ef1b9f8624d7464d6c4d8b.svg",
     "static/media/tips.svg": "/trustcript/static/media/tips.bb70d5aaef08c8ea32f37d4aebafc5a8.svg",
     "static/media/Call.svg": "/trustcript/static/media/Call.1325b32b33f514cbb9570285388fd787.svg",
@@ -48,12 +52,13 @@
     "static/media/chevron-left-solid.svg": "/trustcript/static/media/chevron-left-solid.7cd15870db65491256205512b4a99e05.svg",
     "static/media/chevron-right-solid.svg": "/trustcript/static/media/chevron-right-solid.b3b934ad5c9812eae54e34e640a18689.svg",
     "static/media/date.svg": "/trustcript/static/media/date.aba21db7bf2f6ddd36c42bb4e92f6df9.svg",
+    "static/media/Fb.svg": "/trustcript/static/media/Fb.f2cdaaafbd00d703709bd3708434c688.svg",
     "static/media/Mail.svg": "/trustcript/static/media/Mail.82124da668a149cc00420379fef7d9c3.svg",
     "static/media/security.svg": "/trustcript/static/media/security.2ae88e92c3d3bd38ebb620d7197bc917.svg",
     "static/media/Bubble.svg": "/trustcript/static/media/Bubble.adf3874a48fcfad31ed71b9c3dd7fdb9.svg",
-    "main.ab2d076a.js.map": "/trustcript/static/js/main.ab2d076a.js.map"
+    "main.46924f12.js.map": "/trustcript/static/js/main.46924f12.js.map"
   },
   "entrypoints": [
-    "static/js/main.ab2d076a.js"
+    "static/js/main.46924f12.js"
   ]
 }
