@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { mediaQueries } from 'utils/constants/mediaQueries';
-import { CardContainer } from 'components/Card/Card.styles';
+import { CardContainer } from 'components/cards/Card/Card.styles';
 
 export const TabsContainer = styled.div`
 	height: 100%;
@@ -33,6 +33,15 @@ export const Cards = styled.div`
 		width: 100%;
 		height: 100%;
 		//background: red;
+	}
+
+	.card-appear {
+		opacity: 0;
+		//display: none;
+	}
+	.card-appear-active {
+		opacity: 1;
+		transition: opacity 500ms ease-in;
 	}
 
 	.card-enter {

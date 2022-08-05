@@ -2,14 +2,14 @@ import { Typography } from 'components/layout/Typography.styles';
 import Content from 'pages/share/Content/Content';
 import { IProduct } from 'types/Product';
 import { products } from 'utils/mock/products';
-import { ArticleFilters } from 'utils/mock/filters';
-import ProductCard from 'components/Card/ProductCard';
+import { articleFilters } from 'utils/mock/filters';
+import ProductCard from 'components/cards/Card/ProductCard';
 import { useLanguage } from 'hooks/useLanguage';
 import { Page } from 'pages/share/Page.styles';
 import Labels from 'components/Label/Labels';
 import { articles } from 'utils/mock/articles';
 import { IArticle } from 'types/Article';
-import ArticleCard from 'components/Card/ArticleCard';
+import ArticleCard from 'components/cards/Card/ArticleCard';
 
 const BlogPage = () => {
 	const { text } = useLanguage('products');
@@ -23,7 +23,7 @@ const BlogPage = () => {
 			</Typography>
 			<Content<IArticle>
 				cards={articles}
-				filters={ArticleFilters}
+				filters={articleFilters}
 				render={(card) => <ArticleCard {...card} />}
 				filterType="theme"
 			/>

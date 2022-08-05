@@ -44,6 +44,6 @@ export const LabelsContainer = styled.div`
 	position: relative;
 	& > img {
 		width: 100%;
-		//height: 20rem;
+		min-height: 10rem;
 	}
 `;

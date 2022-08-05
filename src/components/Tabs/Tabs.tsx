@@ -2,7 +2,6 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { v4 as uuid } from 'uuid';
 
 import { Cards, TabsContainer } from 'components/Tabs/Tabs.styles';
-import ProductCard from 'components/Card/ProductCard';
 
 interface TabsProps<T> {
 	cards: T[];
@@ -20,7 +19,6 @@ const Tabs = <T,>({ cards, render }: TabsProps<T>) => {
 							classNames="card"
 							key={uuid()}
 						>
-							{/*<ProductCard {...card} />*/}
 							{render(card)}
 						</CSSTransition>
 					))}

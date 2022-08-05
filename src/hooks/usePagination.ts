@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState } from 'react';
 
-const buffPages = 2;
+const buffPages = 1;
 
 export const usePagination = (pageCount: number, shownPagesCount: number) => {
 	const [offset, setOffset] = useState(0);

@@ -1,13 +1,13 @@
-import {
-	CardContainer,
-	ImgContainer,
-	TextContainer,
-} from 'pages/Product/screens/Similar/Similar.styles';
 import { IImage } from 'types/Image';
 import { Typography } from 'components/layout/Typography.styles';
 import Button from 'components/ui/Button/Button';
 import { Img } from 'components/layout/Img.styles';
 import { cutStr } from 'utils/helpers/cutStr';
+import {
+	CardContainer,
+	ImgContainer,
+	TextContainer,
+} from 'components/cards/BtnCard/BtnCard.styles';
 
 export interface SimilarCardProps {
 	image: IImage;
@@ -18,7 +18,7 @@ export interface SimilarCardProps {
 	small?: boolean;
 }
 
-const SimilarCard = ({
+const BtnCard = ({
 	image,
 	buttonText,
 	description,
@@ -33,7 +33,7 @@ const SimilarCard = ({
 			</ImgContainer>
 			<TextContainer>
 				<Typography as="h3" variant={small ? 'h4' : 'h3'} bold>
-					{cutStr(title, 20)}
+					{title}
 				</Typography>
 				<Typography
 					mt="1rem"
@@ -51,4 +51,4 @@ const SimilarCard = ({
 	);
 };
 
-export default SimilarCard;
+export default BtnCard;

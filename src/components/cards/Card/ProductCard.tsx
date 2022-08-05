@@ -4,7 +4,7 @@ import {
 	CardContainer,
 	ContentContainer,
 	TextContainer,
-} from 'components/Card/Card.styles';
+} from 'components/cards/Card/Card.styles';
 import { Img } from 'components/layout/Img.styles';
 import { Typography } from 'components/layout/Typography.styles';
 import { Link } from 'react-router-dom';

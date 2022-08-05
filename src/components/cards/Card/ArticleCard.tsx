@@ -3,7 +3,7 @@ import {
 	ContentContainer,
 	LabelsContainer,
 	TextContainer,
-} from 'components/Card/Card.styles';
+} from 'components/cards/Card/Card.styles';
 import Label from 'components/Label/Label';
 import { IArticle } from 'types/Article';
 
@@ -16,11 +16,7 @@ import { Typography } from 'components/layout/Typography.styles';
 import { cutStr } from 'utils/helpers/cutStr';
 import { Link } from 'react-router-dom';
 import { PathsEnum } from 'utils/constants/paths';
-
-const convertViews = (views: number) => {
-	if (views > 1000) return views / 1000 + 'K';
-	else return views;
-};
+import { convertViews } from 'utils/helpers/converViews';
 
 const ArticleCard = ({
 	categoryIcon,

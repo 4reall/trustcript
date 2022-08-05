@@ -6,14 +6,18 @@ import { queries } from 'utils/constants/mediaQueries';
 import { IFilter } from 'types/Filter';
 import { IFilters } from 'utils/constants/filters';
 
-interface FiltersProps {
-	activeFilter: IFilters;
-	filters: IFilter<IFilters>[];
-	onClick: (filter: IFilters) => void;
+interface FiltersProps<TFilter> {
+	activeFilter: TFilter;
+	filters: IFilter<TFilter>[];
+	onClick: (filter: TFilter) => void;
 }
 
-const Filters = ({ filters, onClick, activeFilter }: FiltersProps) => {
-	const handleClick = (filter: IFilters) => {
+const Filters = <TFilter,>({
+	filters,
+	onClick,
+	activeFilter,
+}: FiltersProps<TFilter>) => {
+	const handleClick = (filter: TFilter) => {
 		return () => onClick(filter);
 	};
 	const isMd = useMediaQuery(queries.up.md);
