@@ -17,6 +17,10 @@ export const Circle = styled.div`
 		border-radius: 50%;
 		transition: 200ms all;
 		pointer-events: none;
+		${mediaQueries.up.md} {
+			width: 3rem;
+			height: 3rem;
+		}
 	`}
 `;
 
@@ -32,18 +36,30 @@ export const Rectangle = styled.div`
 		transition: 200ms all;
 		transform-origin: left;
 		pointer-events: none;
+		${mediaQueries.up.md} {
+			width: 1px;
+			height: 3rem;
+		}
 	`}
 `;
 export const LinksContainer = styled.div`
 	position: absolute;
-	width: 6rem;
-	left: 2rem;
+	width: 0;
+	left: 0.75rem;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 	transition: 150ms all;
 	visibility: hidden;
 	opacity: 0;
+	overflow: hidden;
+	z-index: 3;
+
+	& > * {
+		margin: 0 0.5rem 0 0;
+		&:last-child {
+			margin: 0;
+		}
+	}
 
 	& svg {
 		width: 1.5rem;
@@ -55,6 +71,20 @@ export const LinksContainer = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+
+	${mediaQueries.up.md} {
+		width: 0;
+		& svg {
+			width: 2rem;
+			height: 2rem;
+		}
+		& > * {
+			margin: 0 0.5rem 0 0;
+			&:last-child {
+				margin: 0;
+			}
+		}
 	}
 `;
 
@@ -70,26 +100,34 @@ export const Btn = styled.button`
 		border: none;
 		cursor: pointer;
 		transition: 200ms all;
-		z-index: 100;
+		z-index: 1;
+		opacity: 1;
 		& > svg {
 			pointer-events: none;
-			z-index: 2;
+		}
+		${mediaQueries.up.md} {
+			width: 3rem;
+			height: 3rem;
 		}
 	`}
 `;
 
 export const CopiedText = styled.div`
 	position: absolute;
-	left: 3.5rem;
+	left: 0;
 	width: 7rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	visibility: hidden;
+	z-index: 3;
+	${mediaQueries.up.md} {
+		width: 9rem;
+	}
 `;
 
 export const ShareBtnContainer = styled.div<ShareBtnContainerProps>`
-	${({ theme, active, vertical, copied }) => css`
+	${({ active, vertical, copied }) => css`
 		position: relative;
 		width: 2.5rem;
 		height: 2.5rem;
@@ -97,15 +135,6 @@ export const ShareBtnContainer = styled.div<ShareBtnContainerProps>`
 		align-items: center;
 		justify-content: center;
 		z-index: 100;
-		// background: ${theme.palette.active.normal};
-		// border-radius: 50%;
-		// border: none;
-		// cursor: pointer;
-		// transition: 200ms all;
-		// & > svg {
-		// 	pointer-events: none;
-		// 	z-index: 2;
-		// }
 
 		${copied &&
 		css`
@@ -126,67 +155,77 @@ export const ShareBtnContainer = styled.div<ShareBtnContainerProps>`
 			}
 			${LinksContainer} {
 				left: 0;
-				top: 2rem;
+				top: 0.75rem;
 				width: 2.5rem;
-				height: 6rem;
+				height: 0;
 				flex-direction: column;
+				& > * {
+					margin: 0 0 0.5rem 0;
+					&:last-child {
+						margin: 0;
+					}
+				}
+			}
+			${CopiedText} {
+				top: 0;
+				width: 2.5rem;
+				height: 7rem;
+				writing-mode: vertical-rl;
+				text-orientation: mixed;
 			}
 		`}
-
-		${active &&
-		!vertical &&
-		css`
-			${Circle} {
-				transform: translateX(7rem);
-			}
-			${Rectangle} {
-				transform: scaleX(112);
-			}
-			${LinksContainer} {
-				visibility: visible;
-				opacity: 1;
-				left: 2.5rem;
-			}
-		`}
-		
 		${active &&
 		vertical &&
 		css`
 			${Circle} {
-				transform: translateY(7rem);
+				transform: translateY(4.5rem);
 			}
 			${Rectangle} {
-				transform: scaleY(112);
+				transform: scaleY(72);
+			}
+			${LinksContainer} {
+				height: 6rem;
+				visibility: visible;
+				opacity: 1;
+				left: 0;
+				top: 0.75rem;
+			}
+			${Btn} {
+				& svg {
+					opacity: 0;
+				}
+			}
+		`}
+
+		
+		${active &&
+		!vertical &&
+		css`
+			${Circle} {
+				transform: translateX(4.5rem);
+			}
+			${Rectangle} {
+				transform: scaleX(72);
 			}
 			${LinksContainer} {
 				visibility: visible;
 				opacity: 1;
-				left: 0;
-				top: 2.5rem;
+				left: 0.75rem;
+				width: 6rem;
 			}
-		`} 
+			${Btn} {
+				& svg {
+					opacity: 0;
+				}
+			}
+		`}
+
+
 
 		${mediaQueries.up.md} {
 			width: 3rem;
 			height: 3rem;
-			${Btn} {
-				width: 3rem;
-				height: 3rem;
-			}
-			${Circle} {
-				width: 3rem;
-				height: 3rem;
-			}
-			${Rectangle} {
-				width: 1px;
-				height: 3rem;
-			}
-			${LinksContainer} {
-				& svg {
-					width: 2rem;
-					height: 2rem;
-				}
-			}
+
 			${vertical &&
 			css`
 				${Rectangle} {
@@ -196,26 +235,45 @@ export const ShareBtnContainer = styled.div<ShareBtnContainerProps>`
 				}
 				${LinksContainer} {
 					left: 0;
-					top: 3.5rem;
+					top: 1rem;
 					width: 3rem;
-					height: 7rem;
+					height: 0;
 					flex-direction: column;
+					& > * {
+						margin: 0 0 0.5rem 0;
+						&:last-child {
+							margin: 0;
+						}
+					}
+				}
+				${CopiedText} {
+					top: 0;
+					width: 3rem;
+					height: 9rem;
+					writing-mode: vertical-rl;
+					text-orientation: mixed;
 				}
 			`}
 			${active &&
 			!vertical &&
 			css`
 				${Circle} {
-					transform: translateX(9rem);
+					transform: translateX(6rem);
 				}
 				${Rectangle} {
-					transform: scaleX(144);
+					transform: scaleX(96);
 				}
 				${LinksContainer} {
 					visibility: visible;
 					width: 7rem;
 					opacity: 1;
-					left: 3.5rem;
+					z-index: 1;
+					left: 1rem;
+				}
+				${Btn} {
+					& svg {
+						display: none;
+					}
 				}
 			`}
 
@@ -223,16 +281,23 @@ export const ShareBtnContainer = styled.div<ShareBtnContainerProps>`
 			vertical &&
 			css`
 				${Circle} {
-					transform: translateY(9rem);
+					transform: translateY(6rem);
 				}
 				${Rectangle} {
-					transform: scaleY(144);
+					transform: scaleY(96);
 				}
 				${LinksContainer} {
 					visibility: visible;
 					opacity: 1;
 					left: 0;
-					top: 3.5rem;
+					height: 7rem;
+					z-index: 1;
+					top: 1rem;
+				}
+				${Btn} {
+					& svg {
+						display: none;
+					}
 				}
 			`}
 		}

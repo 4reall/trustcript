@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { Slide, SlideTruck } from 'components/Carousel/Carousel.styles';
 import { mediaQueries } from 'utils/constants/mediaQueries';
 
-export const ProductContainer = styled.div`
+export const ProductContainer = styled.article`
 	display: flex;
 	flex-direction: column;
 	${mediaQueries.up.md} {

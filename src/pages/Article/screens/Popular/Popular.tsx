@@ -1,4 +1,7 @@
-import { PopularContainer } from 'pages/Article/screens/Popular/Popular.styles';
+import {
+	BtnCardContainer,
+	PopularContainer,
+} from 'pages/Article/screens/Popular/Popular.styles';
 import { Typography } from 'components/layout/Typography.styles';
 import Filters from 'components/Filters/Filters';
 import { DateFiltersEnum } from 'utils/constants/filters';
@@ -16,7 +19,7 @@ interface PopularProps {
 }
 
 const Popular = ({ articles }: PopularProps) => {
-	const { text } = useLanguage('share');
+	const { text } = useLanguage('article');
 	const navigate = useNavigate();
 	const [activeFilter, setActiveFilter] = useState(DateFiltersEnum.DAY);
 	const [filteredArticles, setFilteredArticles] = useState(articles);
@@ -37,25 +40,48 @@ const Popular = ({ articles }: PopularProps) => {
 
 	return (
 		<PopularContainer>
-			<Typography variant="h2"></Typography>
+			<Typography as="h3" mb="2rem" variant="h2">
+				{text('popular')}
+			</Typography>
 			<Filters<DateFiltersEnum>
 				activeFilter={activeFilter}
 				filters={dateFilters}
 				onClick={handleFilterChange}
 			/>
-			<TransitionGroup appear exit={false} component={null}>
-				{filteredArticles.map(({ image, title, description, id }) => (
-					<CSSTransition timeout={500} classNames="popular" key={id}>
-						<BtnCard
-							image={image}
-							title={title}
-							description={description}
-							buttonText={text('moreBtn')}
-							onClick={handleLinkClick(id)}
-						/>
-					</CSSTransition>
-				))}
-			</TransitionGroup>
+			<BtnCardContainer>
+				<TransitionGroup appear exit={false} component={null}>
+					{filteredArticles.map(
+						({
+							image,
+							title,
+							description,
+							id,
+							category,
+							categoryIcon,
+							views,
+						}) => (
+							<CSSTransition
+								timeout={500}
+								classNames="popular"
+								key={id}
+							>
+								<BtnCard
+									image={image}
+									title={title}
+									description={description}
+									buttonText={text('btn')}
+									onClick={handleLinkClick(id)}
+									labels={{
+										category,
+										categoryIcon,
+										views,
+									}}
+								/>
+							</CSSTransition>
+						)
+					)}
+				</TransitionGroup>
+			</BtnCardContainer>
 		</PopularContainer>
 	);
 };

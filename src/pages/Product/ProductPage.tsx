@@ -29,7 +29,7 @@ const ProductPage = () => {
 		<Page>
 			<Product title={title} description={description} images={images} />
 			<Typography mt="2rem" mb="2rem" variant="h3" bold display="block">
-				Похожие продкуты
+				Похожие продукты
 			</Typography>
 			<Similar images={images} products={getRandomProducts(4)} />
 		</Page>

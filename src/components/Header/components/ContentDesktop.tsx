@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 
-import { Flex } from 'components/layout/Flex.styles';
 import Navigation from 'components/Navigation/Navigation';
 import LanguageSwitcher from 'components/ui/LanguageSwitcher/LanguageSwitcher';
 import {
 	ContentContainer,
+	DesktopControls,
 	SocialLinksContainer,
 } from 'components/Header/Header.styles';
 
@@ -19,7 +19,7 @@ const ContentDesktop = ({ options, socials, navLinks }: ContentProps) => {
 			<Link to={PathsEnum.Main} className="header__link">
 				<Logo alt="logo" />
 			</Link>
-			<Flex align="center" justify="flex-end">
+			<DesktopControls>
 				<Navigation navLinks={navLinks} />
 				<LanguageSwitcher options={options} />
 				<SocialLinksContainer>
@@ -34,7 +34,7 @@ const ContentDesktop = ({ options, socials, navLinks }: ContentProps) => {
 						</a>
 					))}
 				</SocialLinksContainer>
-			</Flex>
+			</DesktopControls>
 		</ContentContainer>
 	);
 };

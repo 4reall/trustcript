@@ -54,3 +54,20 @@ export const ContentContainer = styled.div`
 		align-items: center;
 	}
 `;
+
+export const DesktopControls = styled.div`
+	display: flex;
+	justify-content: end;
+	align-items: center;
+`;
+
+export const MobileControls = styled.div`
+	display: flex;
+	width: 66.66%;
+	justify-content: end;
+	align-items: center;
+	${mediaQueries.up.sm} {
+		justify-content: space-between;
+		width: 25%;
+	}
+`;

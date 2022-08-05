@@ -190,6 +190,16 @@ export const languageData = {
 			[LanguagesEnum.UK]: 'Required',
 		},
 	},
+	article: {
+		popular: {
+			[LanguagesEnum.RU]: 'Популярные статьи',
+			[LanguagesEnum.UK]: 'Popular articles',
+		},
+		btn: {
+			[LanguagesEnum.RU]: 'подробнее',
+			[LanguagesEnum.UK]: 'more',
+		},
+	},
 	share: {
 		moreBtn: {
 			[LanguagesEnum.RU]: 'подробнее',

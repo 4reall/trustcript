@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { ContentContainer } from 'components/Header/Header.styles';
-import { Flex } from 'components/layout/Flex.styles';
+import {
+	ContentContainer,
+	MobileControls,
+} from 'components/Header/Header.styles';
 import LanguageSwitcher from 'components/ui/LanguageSwitcher/LanguageSwitcher';
 import DropdownMenu from 'components/DropdownMenu/DropdownMenu';
 import Burger from 'components/Header/components/Burger/Burger';
@@ -29,14 +31,10 @@ const ContentMobile = ({ options, navLinks }: ContentProps) => {
 			<Link to={PathsEnum.Main} className="header__link">
 				<Logo width={isXs ? '75%' : '100%'} alt="logo" />
 			</Link>
-			<Flex
-				w={isXs ? 2 / 3 : 1 / 4}
-				align="center"
-				justify={isXs ? 'flex-end' : 'space-between'}
-			>
+			<MobileControls>
 				<LanguageSwitcher options={options} />
 				<Burger onClick={handleClick} active={isMenuOpen} />
-			</Flex>
+			</MobileControls>
 			<DropdownMenu onClick={handleClick} full active={isMenuOpen}>
 				<Navigation navLinks={navLinks} isMobile />
 			</DropdownMenu>

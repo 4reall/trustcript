@@ -18,13 +18,11 @@ export const ContentContainer = styled.div`
 	}
 	${mediaQueries.up.lg} {
 		${FiltersContainer} {
-			//width: 70%;
 			grid-template-columns: repeat(5, 1fr);
 		}
 	}
 	${mediaQueries.up.xl} {
 		${FiltersContainer} {
-			//width: 70%;
 			grid-template-columns: repeat(7, 1fr);
 		}
 	}

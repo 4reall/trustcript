@@ -19,7 +19,7 @@ export const LabelsContainer = styled.div`
 	& > *:last-child {
 		justify-self: end;
 	}
-	${mediaQueries.up.lg} {
+	${mediaQueries.up.md} {
 		& > *:last-child {
 			justify-self: stretch;
 		}

@@ -25,6 +25,7 @@ const Article = ({ articleHeaders, article }: ArticleProps) => {
 	const { title, views, date, category, categoryIcon, image } =
 		articleHeaders;
 	const isLg = useMediaQuery(queries.up.lg);
+	const isMd = useMediaQuery(queries.up.md);
 
 	const renderArticle = (data: typeof article) => {
 		return data.map((section) => {
@@ -71,7 +72,7 @@ const Article = ({ articleHeaders, article }: ArticleProps) => {
 					small={!isLg}
 				/>
 				<Label icon={<DateIcon />} text={date} dark small={!isLg} />
-				<ShareBtn link="1" vertical={!isLg} />
+				<ShareBtn link="1" vertical={!isMd} />
 			</LabelsContainer>
 			<ImageContainer>
 				<Img {...image} />

@@ -13,6 +13,8 @@ import { ReactComponent as Copy } from 'assets/icons/shareBtn/Copy.svg';
 import { useState, MouseEvent, useRef, useEffect } from 'react';
 import { useClickOutside } from 'hooks/useClickOutside';
 import { Typography } from 'components/layout/Typography.styles';
+import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
+import { queries } from 'utils/constants/mediaQueries';
 
 interface ShareBtnProps {
 	link: string;
@@ -23,10 +25,9 @@ const ShareBtn = ({ link, vertical }: ShareBtnProps) => {
 	const [active, setActive] = useState(false);
 	const [copied, setCopied] = useState(false);
 	const containerRef = useRef(null);
+	const isMd = useMediaQuery(queries.up.md);
 
-	const handleClick = (e: MouseEvent) => {
-		// e.preventDefault();
-		// if (e.target === e.currentTarget) setActive(!active);
+	const handleClick = () => {
 		setActive(!active);
 	};
 
@@ -35,10 +36,15 @@ const ShareBtn = ({ link, vertical }: ShareBtnProps) => {
 	};
 
 	useEffect(() => {
-		if (copied) setTimeout(() => setCopied(false), 1500);
+		if (copied)
+			setTimeout(() => {
+				setActive(false);
+				setCopied(false);
+			}, 1500);
 	}, [copied]);
 
 	useClickOutside(containerRef, () => {
+		if (copied) setCopied(false);
 		if (active) setActive(false);
 	});
 
@@ -72,7 +78,7 @@ const ShareBtn = ({ link, vertical }: ShareBtnProps) => {
 				<Copy onClick={handleCopy} />
 			</LinksContainer>
 			<CopiedText>
-				<Typography variant="h5" uppercase display="block">
+				<Typography variant={isMd ? 'h4' : 'h5'} display="block">
 					Скопировано!
 				</Typography>
 			</CopiedText>

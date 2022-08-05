@@ -23,7 +23,6 @@ export const usePagination = (pageCount: number, shownPagesCount: number) => {
 	const increasePage = useCallback(() => {
 		if (activePage === pageCount) return;
 
-		// активная страница и 1 страницы буффера && -2 из-за индексации страниц с нуля
 		if (
 			activePage === endShownIndex - buffPages &&
 			activePage !== pageCount - buffPages - 1
