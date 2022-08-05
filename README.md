@@ -28,8 +28,11 @@
       1. Хук получился перегруженным и у меня так и не получилось до конца его декомпозировать
       2. Блокирует вертикальный свайп
    3. Примеры:
-      1. https://user-images.githubusercontent.com/73058421/183143253-bc3cd351-a46e-41dd-af71-7906f90faac0.mov
-      2. https://user-images.githubusercontent.com/73058421/183143261-1143ef81-48e4-41b9-be1d-5458c0e5d8a4.mov
+
+      https://user-images.githubusercontent.com/73058421/183143253-bc3cd351-a46e-41dd-af71-7906f90faac0.mov
+      
+      https://user-images.githubusercontent.com/73058421/183143261-1143ef81-48e4-41b9-be1d-5458c0e5d8a4.mov
+      
 2. Пагинация
    1. Функции
       1. Переключение страниц по одной
@@ -37,14 +40,23 @@
       3. Анимация переключения страницы
       4. Логика так же вынесена в отдельный хук, который можно переиспользовать
    2. Пример: 
-      1. https://user-images.githubusercontent.com/73058421/183143456-f6c5fb4e-ab36-4c45-831e-6a256c7e486c.mov
+  
+      https://user-images.githubusercontent.com/73058421/183143456-f6c5fb4e-ab36-4c45-831e-6a256c7e486c.mov
+      
 3. Переключатель языка
+
 https://user-images.githubusercontent.com/73058421/183143561-fa725399-2045-4d8a-bc03-2fb31a4e5390.mov
+
 4. Кастомный checkbox
+
 https://user-images.githubusercontent.com/73058421/183143591-8b685588-2ca4-489c-97a4-e624bb9d444b.mov
+
 5. Кнопка с возможностью поделиться ссылкой
+
 https://user-images.githubusercontent.com/73058421/183143682-61140a57-09a1-482c-9885-d36c4c6113ac.mov
+
 6. Компонент яндекс карты с кастомными зумом и меткой
+
 https://user-images.githubusercontent.com/73058421/183143754-72768ea5-5e20-42f8-a4a3-eac5455da347.mov
 
 
