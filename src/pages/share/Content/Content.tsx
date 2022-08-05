@@ -8,15 +8,16 @@ import Spinner from 'components/Spinner/Spinner';
 
 import {
 	ProductFiltersEnum,
-	IFilters,
 	ArticleFiltersEnum,
 } from 'utils/constants/filters';
-import { IFilter } from 'types/Filter';
 import { ICard } from 'types/Card';
+import { IFilter } from 'types/Filter';
+
+type ContentFilters = ProductFiltersEnum | ArticleFiltersEnum;
 
 interface ContentProps<TCard> {
 	cards: TCard[];
-	filters: IFilter<IFilters>[];
+	filters: IFilter<ContentFilters>[];
 	render: (card: TCard) => JSX.Element;
 	filterType: 'theme' | 'category';
 }
@@ -26,7 +27,7 @@ const filtersMap = {
 	theme: ArticleFiltersEnum,
 };
 
-const Content = <TCard extends ICard<IFilters>>({
+const Content = <TCard extends ICard<ContentFilters>>({
 	cards,
 	filters,
 	render,
@@ -45,7 +46,7 @@ const Content = <TCard extends ICard<IFilters>>({
 		[filter]
 	);
 
-	const handleFilterChange = (filter: IFilters) => {
+	const handleFilterChange = (filter: ContentFilters) => {
 		setPage(0);
 		setFilter(filter);
 	};
@@ -75,7 +76,7 @@ const Content = <TCard extends ICard<IFilters>>({
 
 	return (
 		<ContentContainer>
-			<Filters
+			<Filters<ContentFilters>
 				activeFilter={filter}
 				onClick={handleFilterChange}
 				filters={filters}

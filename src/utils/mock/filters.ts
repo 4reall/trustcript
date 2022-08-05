@@ -1,10 +1,11 @@
 import {
 	ProductFiltersEnum,
 	ArticleFiltersEnum,
+	DateFiltersEnum,
 } from 'utils/constants/filters';
 import { IFilter } from 'types/Filter';
 
-export const ProductFilters: IFilter<ProductFiltersEnum>[] = [
+export const productFilters: IFilter<ProductFiltersEnum>[] = [
 	{
 		title: 'Все продукты',
 		filter: ProductFiltersEnum.ALL,
@@ -24,7 +25,7 @@ export const ProductFilters: IFilter<ProductFiltersEnum>[] = [
 	},
 ];
 
-export const ArticleFilters: IFilter<ArticleFiltersEnum>[] = [
+export const articleFilters: IFilter<ArticleFiltersEnum>[] = [
 	{
 		title: 'Вcе продукты',
 		filter: ArticleFiltersEnum.ALL,
@@ -54,5 +55,21 @@ export const ArticleFilters: IFilter<ArticleFiltersEnum>[] = [
 	{
 		title: 'Безопасность',
 		filter: ArticleFiltersEnum.SECURITY,
+	},
+];
+
+export const dateFilters: IFilter<DateFiltersEnum>[] = [
+	{
+		title: 'За день',
+		filter: DateFiltersEnum.DAY,
+	},
+	{
+		title: 'За неделю',
+		filter: DateFiltersEnum.WEEK,
+	},
+
+	{
+		title: 'За месяц',
+		filter: DateFiltersEnum.MONTH,
 	},
 ];

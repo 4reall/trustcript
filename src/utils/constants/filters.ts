@@ -14,5 +14,13 @@ export enum ArticleFiltersEnum {
 	SECURITY = 'security',
 	DEVELOPMENT = 'development',
 }
+export enum DateFiltersEnum {
+	DAY = 'day',
+	WEEK = 'week',
+	MONTH = 'month',
+}
 
-export type IFilters = ArticleFiltersEnum | ProductFiltersEnum;
+export type IFilters =
+	| ArticleFiltersEnum
+	| ProductFiltersEnum
+	| DateFiltersEnum;

@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { Slide, SlideTruck } from 'components/Carousel/Carousel.styles';
 import { mediaQueries } from 'utils/constants/mediaQueries';
 
-export const ProductContainer = styled.div`
+export const ProductContainer = styled.article`
 	display: flex;
 	flex-direction: column;
 	${mediaQueries.up.md} {
@@ -33,7 +33,7 @@ export const CarouselContainer = styled.div`
 		}
 
 		${mediaQueries.up.md} {
-			width: 30%;
+			width: 50%;
 			${Slide} {
 				& img {
 					width: 70%;
@@ -41,13 +41,19 @@ export const CarouselContainer = styled.div`
 				}
 			}
 		}
+		${mediaQueries.up.lg} {
+			width: 40%;
+		}
 	`}
 `;
 
 export const TextContainer = styled.div`
 	margin-top: 1rem;
 	${mediaQueries.up.md} {
-		width: 60%;
+		width: 50%;
 		margin-left: 2rem;
+	}
+	${mediaQueries.up.lg} {
+		width: 60%;
 	}
 `;

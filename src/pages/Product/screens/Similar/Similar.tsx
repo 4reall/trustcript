@@ -1,4 +1,3 @@
-import SimilarCard from 'pages/Product/screens/Similar/SimilarCard';
 import { SimilarContainer } from 'pages/Product/screens/Similar/Similar.styles';
 
 import { IProduct } from 'types/Product';
@@ -8,6 +7,7 @@ import { PathsEnum } from 'utils/constants/paths';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
 import { useNavigate } from 'react-router-dom';
+import BtnCard from 'components/cards/BtnCard/BtnCard';
 
 interface SimilarProps {
 	images: IImage[];
@@ -25,7 +25,7 @@ const Similar = ({ products, images }: SimilarProps) => {
 	return (
 		<SimilarContainer>
 			{products.map(({ title, description, id }) => (
-				<SimilarCard
+				<BtnCard
 					key={id}
 					image={images[Math.floor(Math.random() * images.length)]}
 					title={title}

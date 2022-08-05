@@ -6,7 +6,6 @@ export const ToolsContainer = styled(ScreenContainer)`
 	position: relative;
 	flex-direction: column !important;
 	align-items: center;
-	//justify-content: space-between;
 	text-align: center;
 `;
 
@@ -16,13 +15,14 @@ export const ToolsLogosContainer = styled.div`
 	justify-content: space-between;
 	padding: 1rem;
 	margin-top: 3rem;
-	& img {
-		max-width: 23%;
+	& svg {
+		margin-left: 0.5rem;
+		max-width: 25%;
 	}
 	${mediaQueries.down.md} {
 		margin-top: 0;
 		flex-direction: column;
-		& img {
+		& svg {
 			display: block;
 			margin: 0.5rem auto auto;
 			max-width: unset;

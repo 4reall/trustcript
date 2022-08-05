@@ -3,11 +3,11 @@ import Content from 'pages/share/Content/Content';
 import { useLanguage } from 'hooks/useLanguage';
 import { Page } from 'pages/share/Page.styles';
 import { products } from 'utils/mock/products';
-import { ProductFilters } from 'utils/mock/filters';
+import { productFilters } from 'utils/mock/filters';
 
 import { IProduct } from 'types/Product';
 
-import ProductCard from 'components/Card/ProductCard';
+import ProductCard from 'components/cards/Card/ProductCard';
 
 const ProductsPage = () => {
 	const { text } = useLanguage('products');
@@ -21,7 +21,7 @@ const ProductsPage = () => {
 			</Typography>
 			<Content<IProduct>
 				cards={products}
-				filters={ProductFilters}
+				filters={productFilters}
 				render={(card) => <ProductCard {...card} />}
 				filterType="category"
 			/>

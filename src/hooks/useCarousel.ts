@@ -97,7 +97,7 @@ const useCarousel = ({ transitionDuration, children }: UseCarouselProps) => {
 		moveToRight,
 		isTransition,
 		containerWidth,
-		offset: offset,
+		offset,
 		slides,
 		setSlide,
 		controlsCount: Math.max(
