@@ -4,7 +4,7 @@ import {
 	MapContainer,
 } from 'pages/Main/screens/Contacts/Contacts.styles';
 import Form from 'components/Form/Form';
-import { Typography } from 'components/layout/Typography.styles';
+import { Typography } from 'components/_layout/Typography.styles';
 import Map from 'components/Map/Map';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';

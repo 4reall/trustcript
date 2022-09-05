@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import Navigation from 'components/Navigation/Navigation';
-import LanguageSwitcher from 'components/ui/LanguageSwitcher/LanguageSwitcher';
+import LanguageSwitcher from 'components/_ui/LanguageSwitcher/LanguageSwitcher';
 import {
 	ContentContainer,
 	DesktopControls,

@@ -1,7 +1,7 @@
 import Carousel from 'components/Carousel/Carousel';
-import Controls from 'components/ui/Controls/Controls';
-import { Img } from 'components/layout/Img.styles';
-import { Typography } from 'components/layout/Typography.styles';
+import Controls from 'components/_ui/Controls/Controls';
+import { Img } from 'components/_layout/Img.styles';
+import { Typography } from 'components/_layout/Typography.styles';
 import { TextContent } from 'pages/Main/screens/Share.styles';
 import { SlidesContainer } from 'pages/Main/screens/Slides/Slides.styles';
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { PaginationContainer } from 'components/ui/Pagination/Pagination.styles';
+import { PaginationContainer } from 'components/_ui/Pagination/Pagination.styles';
 import { mediaQueries } from 'utils/constants/mediaQueries';
 import { FiltersContainer } from 'components/Filters/Filters.styles';
 

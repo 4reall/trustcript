@@ -4,10 +4,10 @@ import {
 	TextContainer,
 } from 'pages/Product/screens/Product/Product.styles';
 import Carousel, { CarouselControls } from 'components/Carousel/Carousel';
-import IconControls from 'components/ui/IconControls/IconControls';
-import { Img } from 'components/layout/Img.styles';
+import IconControls from 'components/_ui/IconControls/IconControls';
+import { Img } from 'components/_layout/Img.styles';
 import { IImage } from 'types/Image';
-import { Typography } from 'components/layout/Typography.styles';
+import { Typography } from 'components/_layout/Typography.styles';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
 

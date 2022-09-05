@@ -6,7 +6,7 @@ import {
 	Window,
 	BtnContainer,
 } from 'components/Carousel/Carousel.styles';
-import Button from 'components/ui/Button/Button';
+import Button from 'components/_ui/Button/Button';
 
 import useCarousel from 'hooks/useCarousel';
 import { useSwipe } from 'hooks/useSwipe';

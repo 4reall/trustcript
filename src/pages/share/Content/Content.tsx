@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { ContentContainer } from 'pages/share/Content/Content.styles';
 import Filters from 'components/Filters/Filters';
 import Tabs from 'components/Tabs/Tabs';
-import Pagination from 'components/ui/Pagination/Pagination';
+import Pagination from 'components/_ui/Pagination/Pagination';
 import Spinner from 'components/Spinner/Spinner';
 
 import {

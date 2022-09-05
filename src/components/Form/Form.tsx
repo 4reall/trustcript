@@ -1,18 +1,16 @@
-import { useState, FormEvent, useMemo, useEffect } from 'react';
+import { useMemo, useEffect } from 'react';
 
-import { CheckboxContainer, FormStyles } from 'components/Form/Form.styles';
-import Checkbox from 'components/ui/Checkbox/Checkbox';
-import Input from 'components/ui/Input/Input';
-import Button from 'components/ui/Button/Button';
-import { Typography } from 'components/layout/Typography.styles';
+import { FormStyles } from 'components/Form/Form.styles';
+import Button from 'components/_ui/Button/Button';
 
 import { useLanguage } from 'hooks/useLanguage';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
-import { SubmitHandler, useForm, UseFormReturn } from 'react-hook-form';
+import { SubmitHandler, useForm, FormProvider } from 'react-hook-form';
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { ErrorMessage } from 'components/layout/ErrorMessage.styles';
+import InputField from 'components/Form/InputField';
+import CheckboxField from 'components/Form/CheckboxField';
 
 export interface IFormValues {
 	name: string;
@@ -21,6 +19,14 @@ export interface IFormValues {
 	message: string;
 	personal: boolean;
 }
+
+const defaultValues: IFormValues = {
+	name: '',
+	company: '',
+	email: '',
+	message: '',
+	personal: false,
+};
 
 const Form = () => {
 	const { text: formText } = useLanguage('form');
@@ -51,66 +57,49 @@ const Form = () => {
 		[errorText]
 	);
 
-	const {
-		register,
-		handleSubmit,
-		control,
-		reset,
-		formState: { errors },
-	} = useForm<IFormValues>({
+	const methods = useForm<IFormValues>({
+		defaultValues,
 		resolver: yupResolver(validationSchema),
 		mode: 'onTouched',
 	});
-
-	useEffect(() => {
-		reset();
-	}, [formText, errorText]);
 
 	const isMd = useMediaQuery(queries.up.md);
 
 	const onSubmit: SubmitHandler<IFormValues> = (data) => {
 		alert(JSON.stringify(data, null, ' '));
-		reset();
+		methods.reset();
 	};
 
 	return (
-		<FormStyles onSubmit={handleSubmit(onSubmit)}>
-			<Input
-				label="name"
-				register={register}
-				error={errors.name}
-				placeholder={formText('name')}
-			/>
-			<Input
-				label="company"
-				register={register}
-				error={errors.company}
-				placeholder={formText('company')}
-			/>
-			<Input
-				type="email"
-				label="email"
-				register={register}
-				error={errors.email}
-				placeholder={formText('email')}
-			/>
-			<Input
-				label="message"
-				register={register}
-				textarea
-				error={errors.message}
-				placeholder={formText('message')}
-			/>
+		<FormProvider {...methods}>
+			<FormStyles onSubmit={methods.handleSubmit(onSubmit)}>
+				<InputField<IFormValues>
+					name="name"
+					placeholder={formText('name')}
+				/>
+				<InputField<IFormValues>
+					name="company"
+					placeholder={formText('company')}
+				/>
+				<InputField<IFormValues>
+					type="email"
+					name="email"
+					placeholder={formText('email')}
+				/>
+				<InputField<IFormValues>
+					name="message"
+					textarea
+					placeholder={formText('message')}
+				/>
 
-			<CheckboxContainer>
-				<Checkbox name="personal" control={control} />
-				<Typography variant={isMd ? 'h4' : 'h5'}>
-					{formText('personal')}
-				</Typography>
-			</CheckboxContainer>
-			<ErrorMessage>{errors.personal?.message}</ErrorMessage>
-			<Button onClick={() => {}}>{formText('button')}</Button>
-		</FormStyles>
+				<CheckboxField<IFormValues>
+					name="personal"
+					label={formText('personal')}
+					variant={isMd ? 'h4' : 'h5'}
+				/>
+				<Button type="submit">{formText('button')}</Button>
+			</FormStyles>
+		</FormProvider>
 	);
 };
 

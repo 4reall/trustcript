@@ -181,7 +181,7 @@ export const languageData = {
 		},
 		personal: {
 			[LanguagesEnum.RU]:
-				'Необходимо разрешщение на обработку персональных данных',
+				'Необходимо разрешение на обработку персональных данных',
 			[LanguagesEnum.UK]:
 				'You should accept the handling of personal data',
 		},

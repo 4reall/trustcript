@@ -1,10 +1,10 @@
-import { Typography } from 'components/layout/Typography.styles';
-import { Img } from 'components/layout/Img.styles';
+import { Typography } from 'components/_layout/Typography.styles';
+import { Img } from 'components/_layout/Img.styles';
 import { PromoContainer } from 'pages/Main/screens/Promo/Promo.styles';
 import { useLanguage } from 'hooks/useLanguage';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
-import Button from 'components/ui/Button/Button';
+import Button from 'components/_ui/Button/Button';
 import { TextContent } from 'pages/Main/screens/Share.styles';
 
 import Glass from 'assets/images/thumbnails/glass.webp';

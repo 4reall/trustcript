@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import { Map as MapAPI, Placemark } from '@pbe/react-yandex-maps';
 
 import { MapContainer } from 'components/Map/Map.styles';
-import ZoomControls from 'components/ui/ZoomControls/ZoomControls';
+import ZoomControls from 'components/_ui/ZoomControls/ZoomControls';
 
 import Bubble from 'assets/icons/labels/Bubble.svg';
 

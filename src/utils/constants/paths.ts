@@ -1,7 +1,9 @@
 export enum PathsEnum {
-	Main = '/trustcript/',
-	Blog = '/trustcript/blog',
-	Article = '/trustcript/blog/:articleId',
-	Products = '/trustcript/products',
-	Product = '/trustcript/products/:productId',
+	Base = '/',
+	Main = '/trustcript',
+	Blog = 'blog',
+	Article = ':articleId',
+	Products = 'products',
+	Product = ':productId',
+	NotFound = '*',
 }

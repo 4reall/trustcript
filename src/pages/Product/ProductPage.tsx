@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 
 import { Page } from 'pages/share/Page.styles';
-import { Typography } from 'components/layout/Typography.styles';
+import { Typography } from 'components/_layout/Typography.styles';
 import Product from 'pages/Product/screens/Product/Product';
 import Similar from 'pages/Product/screens/Similar/Similar';
 
@@ -21,6 +21,7 @@ const images = [
 
 const ProductPage = () => {
 	const { productId } = useParams();
+
 	if (!productId) return <></>;
 
 	const { description, title } = getProductById(productId);

@@ -19,11 +19,7 @@ const App = () => {
 					<GlobalStyle />
 					<Normalize />
 					<BrowserRouter>
-						<Header />
-						<main>
-							<Routes />
-						</main>
-						<Footer />
+						<Routes />
 					</BrowserRouter>
 				</YMaps>
 			</LanguageProvider>

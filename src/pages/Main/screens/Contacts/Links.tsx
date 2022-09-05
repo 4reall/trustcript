@@ -2,8 +2,8 @@ import {
 	Link,
 	LinksContainer,
 } from 'pages/Main/screens/Contacts/Contacts.styles';
-import { Typography } from 'components/layout/Typography.styles';
-import { Img } from 'components/layout/Img.styles';
+import { Typography } from 'components/_layout/Typography.styles';
+import { Img } from 'components/_layout/Img.styles';
 
 export interface ILink {
 	href: string;

@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import { mediaQueries } from 'utils/constants/mediaQueries';
-import { Container } from 'components/layout/Container.styles';
+import { Container } from 'components/_layout/Container.styles';
 import { PropsWithChildren } from 'react';
 import { useScrollToTop } from 'hooks/useScrollToTop';
 
-export const PageStyles = styled.section`
+export const PageStyles = styled.main`
 	height: 100%;
 	padding: 1rem;
 	${mediaQueries.up.md} {

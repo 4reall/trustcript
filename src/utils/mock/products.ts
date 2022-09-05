@@ -15,7 +15,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.FIRST,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '1' },
 		title: 'Название продукта 1',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -28,7 +28,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.SECOND,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '2' },
 		title: 'Название продукта 2',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -41,7 +41,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.SECOND,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '2' },
 		title: 'Название продукта 3',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -54,7 +54,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.FIRST,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '1' },
 		title: 'Название продукта 4',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -67,7 +67,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.THIRD,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '3' },
 		title: 'Название продукта 5',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -80,7 +80,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.THIRD,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '3' },
 		title: 'Название продукта 6',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -93,7 +93,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.FIRST,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '1' },
 		title: 'Название продукта 7',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -106,7 +106,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.THIRD,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '3' },
 		title: 'Название продукта 8',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -119,7 +119,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.SECOND,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '2' },
 		title: 'Название продукта 9',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -132,7 +132,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.SECOND,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '2' },
 		title: 'Название продукта 10',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -145,7 +145,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.FIRST,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '1' },
 		title: 'Название продукта 11',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -158,7 +158,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.FIRST,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '1' },
 		title: 'Название продукта 12',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -171,7 +171,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.SECOND,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '2' },
 		title: 'Название продукта 13',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -184,7 +184,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.SECOND,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '2' },
 		title: 'Название продукта 14',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -197,7 +197,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.THIRD,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '3' },
 		title: 'Название продукта 15',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -210,7 +210,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.THIRD,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '3' },
 		title: 'Название продукта 16',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -223,7 +223,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.THIRD,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '3' },
 		title: 'Название продукта 17',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -236,7 +236,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.FIRST,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '1' },
 		title: 'Название продукта 18',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -249,7 +249,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.FIRST,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '1' },
 		title: 'Название продукта 19',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -262,7 +262,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.SECOND,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '2' },
 		title: 'Название продукта 20',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -275,7 +275,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail2, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.THIRD,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '3' },
 		title: 'Название продукта 21',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -288,7 +288,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.SECOND,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '2' },
 		title: 'Название продукта 22',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -301,7 +301,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.FIRST,
-		link: { title: 'подробнеe 23', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe 23', path: '1' },
 		title: 'Название продукта',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -314,7 +314,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.SECOND,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '2' },
 		title: 'Название продукта 24',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -328,7 +328,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.THIRD,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '3' },
 		title: 'Название продукта 25',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -341,7 +341,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.THIRD,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '3' },
 		title: 'Название продукта 26',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -354,7 +354,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail1, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.SECOND,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '2' },
 		title: 'Название продукта 27',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',
@@ -367,7 +367,7 @@ export const products: IProduct[] = [
 			{ src: Thumbnail, alt: 'thumbnail' },
 		],
 		category: ProductFiltersEnum.FIRST,
-		link: { title: 'подробнеe', path: PathsEnum.Products + '/1' },
+		link: { title: 'подробнеe', path: '1' },
 		title: 'Название продукта 28',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi delectus et excepturi fugiat ipsum iste itaque iusto nam necessitatibus nesciunt pariatur perferendis, porro possimus provident recusandae sunt temporibus voluptas voluptatem? Cupiditate eius facere ipsum, libero magni maxime molestiae nam necessitatibus officiis temporibus. Architecto aut cum earum fuga in!',

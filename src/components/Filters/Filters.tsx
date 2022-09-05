@@ -1,5 +1,5 @@
 import { FiltersContainer } from 'components/Filters/Filters.styles';
-import Button from 'components/ui/Button/Button';
+import Button from 'components/_ui/Button/Button';
 
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';

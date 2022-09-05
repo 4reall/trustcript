@@ -1,12 +1,3 @@
-export enum BreakpointNamesEnum {
-	xs,
-	sm,
-	md,
-	lg,
-	xl,
-	xxl,
-}
-
 export enum BreakpointValuesEnum {
 	xs = '20em',
 	sm = '35em',
@@ -15,5 +6,3 @@ export enum BreakpointValuesEnum {
 	xl = '75em',
 	xxl = '120em',
 }
-
-export type BreakpointNames = keyof typeof BreakpointNamesEnum;

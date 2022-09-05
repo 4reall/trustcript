@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 
 import { Nav, NavItem } from './Navigation.styles';
-import { Typography } from '../layout/Typography.styles';
+import { Typography } from '../_layout/Typography.styles';
 
 import { NavProps } from './Navigation.styles';
 import { PathsEnum } from 'utils/constants/paths';
@@ -26,6 +26,7 @@ const Navigation = ({ navLinks, ...props }: NavigationProps) => {
 			{navLinks.map(({ title, path }, i) => (
 				<NavItem key={i}>
 					<NavLink
+						end
 						to={path}
 						className={({ isActive }) => (isActive ? 'active' : '')}
 					>

@@ -1,4 +1,4 @@
-import { Typography } from 'components/layout/Typography.styles';
+import { Typography } from 'components/_layout/Typography.styles';
 import {
 	ToolsContainer,
 	ToolsLogosContainer,

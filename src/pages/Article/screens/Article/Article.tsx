@@ -5,16 +5,16 @@ import {
 	LabelsContainer,
 } from 'pages/Article/screens/Article/Article.styles';
 import { IArticle } from 'types/Article';
-import { Typography } from 'components/layout/Typography.styles';
+import { Typography } from 'components/_layout/Typography.styles';
 import Label from 'components/Label/Label';
 import { ReactComponent as ViewsIcon } from 'assets/icons/labels/views.svg';
 import { ReactComponent as DateIcon } from 'assets/icons/labels/date.svg';
-import { Img } from 'components/layout/Img.styles';
+import { Img } from 'components/_layout/Img.styles';
 import { article } from 'utils/mock/articles';
 import { convertViews } from 'utils/helpers/converViews';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
-import ShareBtn from 'components/ui/ShareBtn/ShareBtn';
+import ShareBtn from 'components/_ui/ShareBtn/ShareBtn';
 
 interface ArticleProps {
 	articleHeaders: IArticle;

@@ -1,4 +1,4 @@
-import { Typography } from 'components/layout/Typography.styles';
+import { Typography } from 'components/_layout/Typography.styles';
 import Content from 'pages/share/Content/Content';
 import { useLanguage } from 'hooks/useLanguage';
 import { Page } from 'pages/share/Page.styles';
@@ -7,7 +7,7 @@ import { productFilters } from 'utils/mock/filters';
 
 import { IProduct } from 'types/Product';
 
-import ProductCard from 'components/cards/Card/ProductCard';
+import ProductCard from 'components/_cards/Card/ProductCard';
 
 const ProductsPage = () => {
 	const { text } = useLanguage('products');

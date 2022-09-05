@@ -4,7 +4,7 @@ import {
 	CardContainer,
 	ImgContainer,
 	TextContainer,
-} from 'components/cards/BtnCard/BtnCard.styles';
+} from 'components/_cards/BtnCard/BtnCard.styles';
 
 export const SimilarContainer = styled.article`
 	display: grid;

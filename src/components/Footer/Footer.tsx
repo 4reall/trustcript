@@ -1,5 +1,5 @@
 import { FooterContainer } from 'components/Footer/Footer.styles';
-import { Typography } from 'components/layout/Typography.styles';
+import { Typography } from 'components/_layout/Typography.styles';
 
 const Footer = () => {
 	return (

@@ -5,7 +5,7 @@ import {
 	CardContainer,
 	ImgContainer,
 	TextContainer,
-} from 'components/cards/BtnCard/BtnCard.styles';
+} from 'components/_cards/BtnCard/BtnCard.styles';
 
 export const PopularContainer = styled.div`
 	margin-top: 2rem;

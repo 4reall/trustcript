@@ -1,4 +1,4 @@
-import { Container } from 'components/layout/Container.styles';
+import { Container } from 'components/_layout/Container.styles';
 import { HeaderStyles } from 'components/Header/Header.styles';
 import { LanguageOption } from 'context/LanguageContext/Language.context';
 import ContentMobile from 'components/Header/components/ContentMobile';

@@ -1,4 +1,4 @@
-import { Route, Routes as RoutesDOM } from 'react-router-dom';
+import { Navigate, Route, Routes as RoutesDOM } from 'react-router-dom';
 
 import BlogPage from 'pages/Blog/BlogPage';
 import ArticlePage from 'pages/Article/ArticlePage';
@@ -7,6 +7,9 @@ import ProductPage from 'pages/Product/ProductPage';
 import MainPage from 'pages/Main/MainPage';
 
 import { PathsEnum } from 'utils/constants/paths';
+import Header from 'components/Header/Header';
+import Footer from 'components/Footer/Footer';
+import Layout from 'components/_layout/Layout';
 
 const routes = [
 	{ path: PathsEnum.Main, element: <MainPage /> },
@@ -19,9 +22,25 @@ const routes = [
 const Routes = () => {
 	return (
 		<RoutesDOM>
-			{routes.map(({ path, element }, i) => (
-				<Route path={path} element={element} key={i} />
-			))}
+			<Route path={PathsEnum.Base}>
+				<Route index element={<Navigate to={PathsEnum.Main} />} />
+				<Route
+					path={PathsEnum.NotFound}
+					element={<Navigate to={PathsEnum.Main} />}
+				/>
+			</Route>
+
+			<Route path={PathsEnum.Main} element={<Layout />}>
+				<Route index element={<MainPage />} />
+				<Route path={PathsEnum.Blog}>
+					<Route index element={<BlogPage />} />
+					<Route path={PathsEnum.Article} element={<ArticlePage />} />
+				</Route>
+				<Route path={PathsEnum.Products}>
+					<Route index element={<ProductsPage />} />
+					<Route path={PathsEnum.Product} element={<ProductPage />} />
+				</Route>
+			</Route>
 		</RoutesDOM>
 	);
 };

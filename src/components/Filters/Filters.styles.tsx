@@ -1,4 +1,4 @@
-import { ButtonBase } from 'components/ui/Button/Button.styles';
+import { ButtonBase } from 'components/_ui/Button/Button.styles';
 import styled from 'styled-components';
 
 export const FiltersContainer = styled.div`

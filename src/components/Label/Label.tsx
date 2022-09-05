@@ -3,7 +3,7 @@ import {
 	LabelContainerProps,
 } from 'components/Label/Label.styles';
 import { ILabel } from 'types/Label';
-import { Typography } from 'components/layout/Typography.styles';
+import { Typography } from 'components/_layout/Typography.styles';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
 

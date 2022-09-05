@@ -7,7 +7,7 @@ import { PathsEnum } from 'utils/constants/paths';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
 import { useNavigate } from 'react-router-dom';
-import BtnCard from 'components/cards/BtnCard/BtnCard';
+import BtnCard from 'components/_cards/BtnCard/BtnCard';
 
 interface SimilarProps {
 	images: IImage[];
@@ -19,7 +19,7 @@ const Similar = ({ products, images }: SimilarProps) => {
 	const navigate = useNavigate();
 
 	const handleClick = (id: number) => {
-		return () => navigate(`${PathsEnum.Products}/${id}`);
+		return () => navigate(`../${id}`);
 	};
 
 	return (

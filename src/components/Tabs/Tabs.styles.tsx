@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { mediaQueries } from 'utils/constants/mediaQueries';
-import { CardContainer } from 'components/cards/Card/Card.styles';
+import { CardContainer } from 'components/_cards/Card/Card.styles';
 
 export const TabsContainer = styled.div`
 	height: 100%;

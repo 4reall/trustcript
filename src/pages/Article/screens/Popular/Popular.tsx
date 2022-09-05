@@ -2,13 +2,13 @@ import {
 	BtnCardContainer,
 	PopularContainer,
 } from 'pages/Article/screens/Popular/Popular.styles';
-import { Typography } from 'components/layout/Typography.styles';
+import { Typography } from 'components/_layout/Typography.styles';
 import Filters from 'components/Filters/Filters';
 import { DateFiltersEnum } from 'utils/constants/filters';
 import { useEffect, useState } from 'react';
 import { dateFilters } from 'utils/mock/filters';
 import { IArticle } from 'types/Article';
-import BtnCard from 'components/cards/BtnCard/BtnCard';
+import BtnCard from 'components/_cards/BtnCard/BtnCard';
 import { useLanguage } from 'hooks/useLanguage';
 import { useNavigate } from 'react-router-dom';
 import { PathsEnum } from 'utils/constants/paths';
@@ -29,7 +29,7 @@ const Popular = ({ articles }: PopularProps) => {
 	};
 
 	const handleLinkClick = (id: string | number) => {
-		return () => navigate(`${PathsEnum.Blog}/${id}`);
+		return () => navigate(`../${id}`);
 	};
 
 	useEffect(() => {

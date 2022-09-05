@@ -4,7 +4,7 @@ import {
 	CardContainer,
 	ImgContainer,
 } from 'pages/Main/screens/Benefits/Benefits.styles';
-import { Typography } from 'components/layout/Typography.styles';
+import { Typography } from 'components/_layout/Typography.styles';
 
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';

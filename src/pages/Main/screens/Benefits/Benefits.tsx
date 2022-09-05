@@ -5,7 +5,7 @@ import {
 import { useLanguage } from 'hooks/useLanguage';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
-import { Typography } from 'components/layout/Typography.styles';
+import { Typography } from 'components/_layout/Typography.styles';
 
 import { ReactComponent as Mask } from 'assets/icons/cards/Mask.svg';
 import { ReactComponent as Bug } from 'assets/icons/cards/Bug.svg';
