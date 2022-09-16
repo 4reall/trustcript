@@ -1,6 +1,6 @@
-import { Page } from 'pages/share/Page.styles';
-import Article from 'pages/Article/screens/Article/Article';
-import Popular from 'pages/Article/screens/Popular/Popular';
+import { Page } from 'components/_layout/Page.styles';
+import Article from 'pages/Article/components/Article/Article';
+import Popular from 'pages/Article/components/Popular/Popular';
 import { ArticlePageContainer } from 'pages/Article/ArticlePage.styles';
 import { useParams } from 'react-router-dom';
 import { article, articles, getArticleById } from 'utils/mock/articles';

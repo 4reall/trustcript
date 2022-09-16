@@ -93,13 +93,15 @@ const useCarousel = ({ transitionDuration, children }: UseCarouselProps) => {
 
 	return {
 		containerRef,
-		moveToLeft,
-		moveToRight,
 		isTransition,
 		containerWidth,
 		offset,
 		slides,
-		setSlide,
+		methods: {
+			moveToLeft,
+			moveToRight,
+			setSlide,
+		},
 		controlsCount: Math.max(
 			slides.length - clonesCount.head - clonesCount.tail,
 			children.length

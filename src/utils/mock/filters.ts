@@ -7,69 +7,69 @@ import { IFilter } from 'types/Filter';
 
 export const productFilters: IFilter<ProductFiltersEnum>[] = [
 	{
-		title: 'Все продукты',
+		label: 'Все продукты',
 		filter: ProductFiltersEnum.ALL,
 	},
 	{
-		title: '1 категория',
+		label: '1 категория',
 		filter: ProductFiltersEnum.FIRST,
 	},
 
 	{
-		title: '2 категория',
+		label: '2 категория',
 		filter: ProductFiltersEnum.SECOND,
 	},
 	{
-		title: '3 категория',
+		label: '3 категория',
 		filter: ProductFiltersEnum.THIRD,
 	},
 ];
 
 export const articleFilters: IFilter<ArticleFiltersEnum>[] = [
 	{
-		title: 'Вcе продукты',
+		label: 'Вcе продукты',
 		filter: ArticleFiltersEnum.ALL,
 	},
 	{
-		title: 'Фишинг',
+		label: 'Фишинг',
 		filter: ArticleFiltersEnum.FISHING,
 	},
 
 	{
-		title: 'Советы',
+		label: 'Советы',
 		filter: ArticleFiltersEnum.TIPS,
 	},
 	{
-		title: 'Способы',
+		label: 'Способы',
 		filter: ArticleFiltersEnum.METHODS,
 	},
 	{
-		title: 'Разработка',
+		label: 'Разработка',
 		filter: ArticleFiltersEnum.DEVELOPMENT,
 	},
 
 	{
-		title: 'Игры',
+		label: 'Игры',
 		filter: ArticleFiltersEnum.GAMING,
 	},
 	{
-		title: 'Безопасность',
+		label: 'Безопасность',
 		filter: ArticleFiltersEnum.SECURITY,
 	},
 ];
 
 export const dateFilters: IFilter<DateFiltersEnum>[] = [
 	{
-		title: 'За день',
+		label: 'За день',
 		filter: DateFiltersEnum.DAY,
 	},
 	{
-		title: 'За неделю',
+		label: 'За неделю',
 		filter: DateFiltersEnum.WEEK,
 	},
 
 	{
-		title: 'За месяц',
+		label: 'За месяц',
 		filter: DateFiltersEnum.MONTH,
 	},
 ];

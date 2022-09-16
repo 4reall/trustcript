@@ -1,13 +1,7 @@
 import { Typography } from 'components/_layout/Typography.styles';
-import Content from 'pages/share/Content/Content';
 import { useLanguage } from 'hooks/useLanguage';
-import { Page } from 'pages/share/Page.styles';
-import { products } from 'utils/mock/products';
-import { productFilters } from 'utils/mock/filters';
-
-import { IProduct } from 'types/Product';
-
-import ProductCard from 'components/_cards/Card/ProductCard';
+import { Page } from 'components/_layout/Page.styles';
+import Products from 'pages/Products/component/Products';
 
 const ProductsPage = () => {
 	const { text } = useLanguage('products');
@@ -19,12 +13,7 @@ const ProductsPage = () => {
 			<Typography mt="2rem" mb="2rem" as="p" variant="h4">
 				{text('text')}
 			</Typography>
-			<Content<IProduct>
-				cards={products}
-				filters={productFilters}
-				render={(card) => <ProductCard {...card} />}
-				filterType="category"
-			/>
+			<Products />
 		</Page>
 	);
 };

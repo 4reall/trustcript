@@ -42,9 +42,7 @@ const Carousel = ({
 }: CarouselProps) => {
 	const {
 		containerRef,
-		setSlide,
-		moveToRight,
-		moveToLeft,
+		methods,
 		isTransition,
 		containerWidth,
 		offset,
@@ -60,8 +58,8 @@ const Carousel = ({
 		useSwipe({
 			threshold,
 			containerWidth: containerWidth,
-			leftSwipeCallback: moveToLeft,
-			rightSwipeCallback: moveToRight,
+			leftSwipeCallback: methods.moveToLeft,
+			rightSwipeCallback: methods.moveToRight,
 		});
 
 	const slidesList = slides.map((slide, i) => (
@@ -92,19 +90,27 @@ const Carousel = ({
 			</SlideTruck>
 			{controls({
 				disabled: !isTransition,
-				onClick: setSlide,
+				onClick: methods.setSlide,
 				activeControl: activeControl,
 				totalControls: controlsCount,
-				moveToLeft,
-				moveToRight,
+				moveToLeft: methods.moveToLeft,
+				moveToRight: methods.moveToRight,
 			})}
 			<BtnContainer show={sideControls} variant="left">
-				<Button disabled={!isTransition} onClick={moveToLeft} icon>
+				<Button
+					disabled={!isTransition}
+					onClick={methods.moveToLeft}
+					icon
+				>
 					<ChevronLeft alt={'move to left icon'} />
 				</Button>
 			</BtnContainer>
 			<BtnContainer show={sideControls} variant="right">
-				<Button disabled={!isTransition} onClick={moveToRight} icon>
+				<Button
+					disabled={!isTransition}
+					onClick={methods.moveToRight}
+					icon
+				>
 					<ChevronRight alt={'move to right icon'} />
 				</Button>
 			</BtnContainer>

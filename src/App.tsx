@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import Header from './components/Header/Header';
 import Routes from 'components/routes/Routes';
 import LanguageProvider from 'context/LanguageContext/Language.provider';
-import Footer from 'components/Footer/Footer';
+import Footer from 'components/_layout/Footer/Footer';
 import { GlobalStyle } from 'GlobalStyles';
 
 import { theme } from 'theme';

@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
 
-import { Page } from 'pages/share/Page.styles';
+import { Page } from 'components/_layout/Page.styles';
 import { Typography } from 'components/_layout/Typography.styles';
-import Product from 'pages/Product/screens/Product/Product';
-import Similar from 'pages/Product/screens/Similar/Similar';
+import Product from 'pages/Product/components/Product/Product';
+import Similar from 'pages/Product/components/Similar/Similar';
 
 import { getProductById, getRandomProducts } from 'utils/mock/products';
 

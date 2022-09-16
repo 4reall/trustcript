@@ -1,4 +1,4 @@
 export interface IFilter<TFilters> {
-	title: string;
+	label: string;
 	filter: TFilters;
 }

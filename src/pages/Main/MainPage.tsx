@@ -1,9 +1,9 @@
-import Promo from 'pages/Main/screens/Promo/Promo';
-import Slides from 'pages/Main/screens/Slides/Slides';
-import Tools from 'pages/Main/screens/Tools/Tools';
-import Benefits from 'pages/Main/screens/Benefits/Benefits';
-import Contacts from 'pages/Main/screens/Contacts/Contacts';
-import { Page } from 'pages/share/Page.styles';
+import Promo from 'pages/Main/components/Promo/Promo';
+import Slides from 'pages/Main/components/Slides/Slides';
+import Tools from 'pages/Main/components/Tools/Tools';
+import Benefits from 'pages/Main/components/Benefits/Benefits';
+import Contacts from 'pages/Main/components/Contacts/Contacts';
+import { Page } from 'components/_layout/Page.styles';
 
 const MainPage = () => {
 	return (

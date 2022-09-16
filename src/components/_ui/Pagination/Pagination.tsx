@@ -26,6 +26,7 @@ interface PaginationProps extends PaginationContainerProps {
 	shownPageCount: number;
 	pageCount: number;
 	setActivePage: (page: number) => void;
+	activePage: number;
 }
 
 const Pagination = ({
@@ -33,23 +34,19 @@ const Pagination = ({
 	pageCount,
 	vertical,
 	setActivePage,
+	activePage,
 }: PaginationProps) => {
-	const {
-		offset,
-		increasePage,
-		decreasePage,
-		setPage,
-		setStart,
-		setEnd,
+	const { offset, methods, btnList } = usePagination({
+		pageCount,
+		shownPageCount,
 		activePage,
-		btnList,
-		reset,
-	} = usePagination(pageCount, shownPageCount);
+		setActivePage,
+	});
 
 	const btns = btnList.map((page, i) => (
 		<PaginationButton
 			key={i}
-			onClick={setPage(i)}
+			onClick={methods.setPage(i)}
 			active={i === activePage}
 		>
 			<Typography variant="button">{i + 1}</Typography>
@@ -61,16 +58,12 @@ const Pagination = ({
 		// eslint-disable-next-line
 	}, [activePage, pageCount]);
 
-	useEffect(() => {
-		reset();
-	}, [setActivePage, reset]);
-
 	return (
 		<PaginationContainer vertical={vertical}>
 			<Button
 				hide={pageCount <= shownPageCount}
 				disabled={activePage === 0}
-				onClick={setStart}
+				onClick={methods.setStart}
 				icon
 			>
 				<Img src={vertical ? UpDbArrow : LeftDbArrow} />
@@ -78,7 +71,7 @@ const Pagination = ({
 			<Button
 				hide={pageCount <= shownPageCount}
 				disabled={activePage === 0}
-				onClick={decreasePage}
+				onClick={methods.decreasePage}
 				icon
 			>
 				<Img src={vertical ? UpArrow : LeftArrow} />
@@ -97,7 +90,7 @@ const Pagination = ({
 			<Button
 				hide={pageCount <= shownPageCount}
 				disabled={activePage === pageCount - 1}
-				onClick={increasePage}
+				onClick={methods.increasePage}
 				icon
 			>
 				<Img src={vertical ? BottomArrow : RightArrow} />
@@ -105,7 +98,7 @@ const Pagination = ({
 			<Button
 				hide={pageCount <= shownPageCount}
 				disabled={activePage === pageCount - 1}
-				onClick={setEnd}
+				onClick={methods.setEnd}
 				icon
 			>
 				<Img src={vertical ? BottomDbArrow : RightDbArrow} />

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { PageStyles } from 'pages/share/Page.styles';
+import { PageStyles } from 'components/_layout/Page.styles';
 import { Container } from 'components/_layout/Container.styles';
 
 export const ProductsContainer = styled(PageStyles)`

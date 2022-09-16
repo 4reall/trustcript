@@ -7,8 +7,6 @@ import ProductPage from 'pages/Product/ProductPage';
 import MainPage from 'pages/Main/MainPage';
 
 import { PathsEnum } from 'utils/constants/paths';
-import Header from 'components/Header/Header';
-import Footer from 'components/Footer/Footer';
 import Layout from 'components/_layout/Layout';
 
 const routes = [
