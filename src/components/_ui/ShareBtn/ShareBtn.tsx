@@ -1,87 +1,103 @@
 import {
-	Btn,
 	Circle,
 	CopiedText,
-	LinksContainer,
+	CopyBtn,
+	Link,
 	Rectangle,
+	Btn,
 	ShareBtnContainer,
+	Sizes,
 } from 'components/_ui/ShareBtn/ShareBtn.styles';
 import { ReactComponent as Share } from 'assets/icons/shareBtn/Share.svg';
-import { ReactComponent as Fb } from 'assets/icons/shareBtn/Fb.svg';
-import { ReactComponent as Tw } from 'assets/icons/shareBtn/Tw.svg';
+import { ReactNode, useEffect, useRef, useState } from 'react';
 import { ReactComponent as Copy } from 'assets/icons/shareBtn/Copy.svg';
-import { useState, MouseEvent, useRef, useEffect } from 'react';
 import { useClickOutside } from 'hooks/useClickOutside';
+import { useLocation } from 'react-router-dom';
 import { Typography } from 'components/_layout/Typography.styles';
-import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
-import { queries } from 'utils/constants/mediaQueries';
 
-interface ShareBtnProps {
-	link: string;
-	vertical?: boolean;
+export interface IIconLink {
+	icon: ReactNode;
+	href: string;
 }
 
-const ShareBtn = ({ link, vertical }: ShareBtnProps) => {
-	const [active, setActive] = useState(false);
-	const [copied, setCopied] = useState(false);
-	const containerRef = useRef(null);
-	const isMd = useMediaQuery(queries.up.md);
+interface ShareBtnProps {
+	transition: number;
+	links: IIconLink[];
+	vertical: boolean;
+	size?: Sizes;
+}
 
-	const handleClick = () => {
-		setActive(!active);
-	};
+const ShareBtn = ({
+	transition,
+	links,
+	vertical,
+	size = 'md',
+}: ShareBtnProps) => {
+	const location = useLocation();
+	const [isOpen, setIsOpen] = useState(false);
+	const [copied, setCopied] = useState(false);
+	const [isClose, setIsClose] = useState(false);
+	const [isOpening, setIsOpening] = useState(false);
+	const containerRef = useRef<HTMLDivElement>(null);
 
 	const handleCopy = () => {
-		navigator.clipboard.writeText(link).then(() => setCopied(true));
+		navigator.clipboard
+			.writeText(location.pathname)
+			.then(() => setCopied(true));
 	};
 
 	useEffect(() => {
-		if (copied)
-			setTimeout(() => {
-				setActive(false);
-				setCopied(false);
-			}, 1500);
+		setIsOpening(true);
+		setTimeout(() => setIsOpening(false), transition);
+
+		if (isOpen) {
+			setIsClose(false);
+		} else {
+			setTimeout(() => setIsClose(true), transition);
+		}
+	}, [isOpen]);
+
+	useEffect(() => {
+		if (copied) setTimeout(() => setCopied(false), 1500);
 	}, [copied]);
 
-	useClickOutside(containerRef, () => {
-		if (copied) setCopied(false);
-		if (active) setActive(false);
-	});
+	const handleOpen = () => {
+		if (!isOpening) setIsOpen(!isOpen);
+	};
+
+	useClickOutside(containerRef, () => isOpen && setIsOpen(false));
 
 	return (
 		<ShareBtnContainer
 			ref={containerRef}
-			active={active}
-			vertical={vertical}
+			isOpen={isOpen}
+			isClose={isClose}
+			size={size}
+			iconCount={links.length + 1}
+			transition={transition}
 			copied={copied}
+			vertical={vertical}
 		>
-			<Btn onClick={handleClick}>
+			<Btn onClick={handleOpen}>
 				<Share />
 			</Btn>
 			<Circle />
-			<Rectangle />
-			<LinksContainer>
-				<a
-					target={'_blank'}
-					rel="noreferrer"
-					href={`https://www.facebook.com/sharer/sharer.php?u=${link}`}
+			<Rectangle>
+				{links.map(({ href, icon }) => (
+					<Link href={href} target={'_blank'}>
+						{icon}
+					</Link>
+				))}
+				<CopyBtn onClick={handleCopy}>
+					<Copy />
+				</CopyBtn>
+				<Typography
+					variant={size === 'sm' ? 'h5' : 'h4'}
+					display="block"
 				>
-					<Fb />
-				</a>
-				<a
-					target={'_blank'}
-					rel="noreferrer"
-					href={`https://twitter.com/intent/tweet?url=${link}&text=`}
-				>
-					<Tw />
-				</a>
-				<Copy onClick={handleCopy} />
-			</LinksContainer>
-			<CopiedText>
-				<Typography variant={isMd ? 'h4' : 'h5'} display="block">
 					Скопировано!
 				</Typography>
-			</CopiedText>
+			</Rectangle>
 		</ShareBtnContainer>
 	);
 };

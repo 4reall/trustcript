@@ -14,12 +14,19 @@ import { article } from 'utils/mock/articles';
 import { convertViews } from 'utils/helpers/converViews';
 import useMediaQuery from 'hooks/breakpoints/useMediaQuery';
 import { queries } from 'utils/constants/mediaQueries';
-import ShareBtn from 'components/_ui/ShareBtn/ShareBtn';
+import { ReactComponent as Fb } from 'assets/icons/shareBtn/Fb.svg';
+import { ReactComponent as Tw } from 'assets/icons/shareBtn/Tw.svg';
+import ShareBtn, { IIconLink } from 'components/_ui/ShareBtn/ShareBtn';
 
 interface ArticleProps {
 	articleHeaders: IArticle;
 	article: typeof article;
 }
+
+const links: IIconLink[] = [
+	{ href: `https://www.facebook.com/sharer/sharer.php?u=1`, icon: <Fb /> },
+	{ href: `https://twitter.com/intent/tweet?url=1&text=`, icon: <Tw /> },
+];
 
 const Article = ({ articleHeaders, article }: ArticleProps) => {
 	const { title, views, date, category, categoryIcon, image } =
@@ -72,7 +79,12 @@ const Article = ({ articleHeaders, article }: ArticleProps) => {
 					small={!isLg}
 				/>
 				<Label icon={<DateIcon />} text={date} dark small={!isLg} />
-				<ShareBtn link="1" vertical={!isMd} />
+				<ShareBtn
+					links={links}
+					transition={100}
+					vertical={!isMd}
+					size={isMd ? 'md' : 'sm'}
+				/>
 			</LabelsContainer>
 			<ImageContainer>
 				<Img {...image} />

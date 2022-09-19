@@ -8,6 +8,7 @@ import MainPage from 'pages/Main/MainPage';
 
 import { PathsEnum } from 'utils/constants/paths';
 import Layout from 'components/_layout/Layout';
+import Page404 from 'pages/Page404/Page404';
 
 const routes = [
 	{ path: PathsEnum.Main, element: <MainPage /> },
@@ -38,6 +39,7 @@ const Routes = () => {
 					<Route index element={<ProductsPage />} />
 					<Route path={PathsEnum.Product} element={<ProductPage />} />
 				</Route>
+				<Route path={PathsEnum.NotFound} element={<Page404 />} />
 			</Route>
 		</RoutesDOM>
 	);

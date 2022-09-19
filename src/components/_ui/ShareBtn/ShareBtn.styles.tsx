@@ -1,305 +1,196 @@
 import styled, { css } from 'styled-components';
-import { mediaQueries } from 'utils/constants/mediaQueries';
+import { Typography } from 'components/_layout/Typography.styles';
 
-export interface ShareBtnContainerProps {
-	active?: boolean;
+const sizeMap = {
+	sm: 2.5,
+	md: 3,
+};
+
+export type Sizes = keyof typeof sizeMap;
+
+interface ShareBtnContainerProps {
+	isOpen: boolean;
+	size: Sizes;
+	iconCount: number;
+	isClose: boolean;
+	copied: boolean;
+	transition?: number;
 	vertical?: boolean;
-	copied?: boolean;
 }
 
-export const Circle = styled.div`
-	${({ theme }) => css`
-		position: absolute;
-		left: 0;
-		width: 2.5rem;
-		height: 2.5rem;
-		background: ${theme.palette.active.normal};
-		border-radius: 50%;
-		transition: 200ms all;
-		pointer-events: none;
-		${mediaQueries.up.md} {
-			width: 3rem;
-			height: 3rem;
-		}
-	`}
-`;
-
-export const Rectangle = styled.div`
-	${({ theme }) => css`
-		position: absolute;
-		display: flex;
-		align-items: center;
-		justify-content: end;
-		background: ${theme.palette.active.normal};
-		height: 2.5rem;
-		width: 1px;
-		transition: 200ms all;
-		transform-origin: left;
-		pointer-events: none;
-		${mediaQueries.up.md} {
-			width: 1px;
-			height: 3rem;
-		}
-	`}
-`;
-export const LinksContainer = styled.div`
-	position: absolute;
-	width: 0;
-	left: 0.75rem;
-	display: flex;
-	align-items: center;
-	transition: 150ms all;
-	visibility: hidden;
-	opacity: 0;
-	overflow: hidden;
-	z-index: 3;
-
-	& > * {
-		margin: 0 0.5rem 0 0;
-		&:last-child {
-			margin: 0;
-		}
-	}
-
-	& svg {
-		width: 1.5rem;
-		height: 1.5rem;
-		cursor: pointer;
-	}
-
-	& a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	${mediaQueries.up.md} {
-		width: 0;
-		& svg {
-			width: 2rem;
-			height: 2rem;
-		}
-		& > * {
-			margin: 0 0.5rem 0 0;
-			&:last-child {
-				margin: 0;
-			}
-		}
-	}
-`;
-
 export const Btn = styled.button`
-	${({ theme }) => css`
-		width: 2.5rem;
-		height: 2.5rem;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: ${theme.palette.active.normal};
-		border-radius: 50%;
-		border: none;
-		cursor: pointer;
-		transition: 200ms all;
-		z-index: 1;
-		opacity: 1;
-		& > svg {
-			pointer-events: none;
-		}
-		${mediaQueries.up.md} {
-			width: 3rem;
-			height: 3rem;
-		}
-	`}
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	border: none;
+	background: ${({ theme }) => theme.palette.active.normal};
+	z-index: 1;
+	svg {
+		opacity: 0;
+	}
 `;
 
-export const CopiedText = styled.div`
+export const Rectangle = styled.span`
 	position: absolute;
-	left: 0;
-	width: 7rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	visibility: hidden;
+	flex-shrink: 0;
+	background: ${({ theme }) => theme.palette.active.normal};
+	overflow: hidden;
 	z-index: 3;
-	${mediaQueries.up.md} {
-		width: 9rem;
-	}
+`;
+
+export const Circle = styled.span`
+	position: absolute;
+	left: 0;
+	display: block;
+	border-radius: 50%;
+	background: ${({ theme }) => theme.palette.active.normal};
+	z-index: 1;
+`;
+
+export const Link = styled.a`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`;
+
+export const CopyBtn = styled.button`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	border-radius: 50%;
+	background: none;
+	cursor: pointer;
+`;
+
+export const CopiedText = styled.span`
+	display: none;
 `;
 
 export const ShareBtnContainer = styled.div<ShareBtnContainerProps>`
-	${({ active, vertical, copied }) => css`
+	${({
+		isOpen,
+		size,
+		iconCount,
+		transition,
+		isClose,
+		copied,
+		vertical,
+	}) => css`
 		position: relative;
-		width: 2.5rem;
-		height: 2.5rem;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		z-index: 100;
+		width: ${sizeMap[size]}rem;
+		height: ${sizeMap[size]}rem;
 
-		${copied &&
-		css`
-			${CopiedText} {
-				visibility: visible;
-			}
-			${LinksContainer} {
-				display: none;
-			}
-		`}
-
-		${vertical &&
-		css`
-			${Rectangle} {
-				width: 2.5rem;
-				height: 1px;
-				transform-origin: top;
-			}
-			${LinksContainer} {
-				left: 0;
-				top: 0.75rem;
-				width: 2.5rem;
-				height: 0;
-				flex-direction: column;
-				& > * {
-					margin: 0 0 0.5rem 0;
-					&:last-child {
-						margin: 0;
-					}
-				}
-			}
-			${CopiedText} {
-				top: 0;
-				width: 2.5rem;
-				height: 7rem;
-				writing-mode: vertical-rl;
-				text-orientation: mixed;
-			}
-		`}
-		${active &&
-		vertical &&
-		css`
-			${Circle} {
-				transform: translateY(4.5rem);
-			}
-			${Rectangle} {
-				transform: scaleY(72);
-			}
-			${LinksContainer} {
-				height: 6rem;
-				visibility: visible;
-				opacity: 1;
-				left: 0;
-				top: 0.75rem;
-			}
-			${Btn} {
-				& svg {
-					opacity: 0;
-				}
-			}
-		`}
-
-		
-		${active &&
-		!vertical &&
-		css`
-			${Circle} {
-				transform: translateX(4.5rem);
-			}
-			${Rectangle} {
-				transform: scaleX(72);
-			}
-			${LinksContainer} {
-				visibility: visible;
-				opacity: 1;
-				left: 0.75rem;
-				width: 6rem;
-			}
-			${Btn} {
-				& svg {
-					opacity: 0;
-				}
-			}
-		`}
-
-
-
-		${mediaQueries.up.md} {
-			width: 3rem;
-			height: 3rem;
-
-			${vertical &&
-			css`
-				${Rectangle} {
-					width: 3rem;
-					height: 1px;
-					transform-origin: top;
-				}
-				${LinksContainer} {
-					left: 0;
-					top: 1rem;
-					width: 3rem;
-					height: 0;
-					flex-direction: column;
-					& > * {
-						margin: 0 0 0.5rem 0;
-						&:last-child {
+		${Rectangle} {
+			${vertical
+				? css`
+						width: ${sizeMap[size]}rem;
+						top: 50%;
+						height: 0;
+						flex-direction: column;
+						& > * {
+							margin-top: 0.5rem;
+							opacity: 0;
+							&:first-child {
+								margin-top: 0;
+							}
+						}
+						${Typography} {
+							writing-mode: vertical-rl;
+							text-orientation: mixed;
+							display: none;
 							margin: 0;
 						}
-					}
-				}
-				${CopiedText} {
-					top: 0;
-					width: 3rem;
-					height: 9rem;
-					writing-mode: vertical-rl;
-					text-orientation: mixed;
-				}
-			`}
-			${active &&
-			!vertical &&
-			css`
-				${Circle} {
-					transform: translateX(6rem);
-				}
-				${Rectangle} {
-					transform: scaleX(96);
-				}
-				${LinksContainer} {
-					visibility: visible;
-					width: 7rem;
-					opacity: 1;
-					z-index: 1;
-					left: 1rem;
-				}
-				${Btn} {
-					& svg {
-						display: none;
-					}
-				}
-			`}
+				  `
+				: css`
+						width: 0;
+						left: 50%;
+						height: 100%;
+						& > * {
+							margin-left: 0.5rem;
+							opacity: 0;
+							&:first-child {
+								margin-left: 0;
+							}
+						}
+						${Typography} {
+							display: none;
+							margin: 0;
+						}
+				  `}
+			transition: ${transition}ms;
 
-			${active &&
-			vertical &&
-			css`
-				${Circle} {
-					transform: translateY(6rem);
-				}
-				${Rectangle} {
-					transform: scaleY(96);
-				}
-				${LinksContainer} {
-					visibility: visible;
+			svg {
+				flex-shrink: 0;
+				width: ${sizeMap[size] / 1.5}rem;
+				height: ${sizeMap[size] / 1.5}rem;
+			}
+		}
+		${Circle} {
+			transition: ${transition}ms;
+			width: ${sizeMap[size]}rem;
+			height: ${sizeMap[size]}rem;
+			bottom: 0;
+		}
+		${Btn} {
+			width: ${sizeMap[size]}rem;
+			height: ${sizeMap[size]}rem;
+		}
+
+		${isOpen &&
+		css`
+			${Rectangle} {
+				${vertical
+					? css`
+							width: ${sizeMap[size]}rem;
+							height: ${sizeMap[size] * 0.85 * iconCount}rem;
+					  `
+					: css`
+							width: ${sizeMap[size] * 0.85 * iconCount}rem;
+					  `}
+
+				& > * {
+					transition: ${transition}ms;
 					opacity: 1;
-					left: 0;
-					height: 7rem;
-					z-index: 1;
-					top: 1rem;
 				}
-				${Btn} {
-					& svg {
-						display: none;
+			}
+			${Circle} {
+				${vertical
+					? css`
+							bottom: -${sizeMap[size] * 0.85 * iconCount}rem;
+					  `
+					: css`
+							left: ${sizeMap[size] * 0.85 * iconCount}rem;
+					  `}
+			}
+		`}
+
+		${isClose &&
+		css`
+			${Btn} {
+				z-index: 2;
+				svg {
+					opacity: 1;
+				}
+			}
+		`}
+		
+		${copied &&
+		css`
+			${Rectangle} {
+				& > * {
+					display: none;
+					&:last-child {
+						margin-left: 0;
+						display: block;
 					}
 				}
-			`}
-		}
+			}
+		`}
 	`}
 `;
