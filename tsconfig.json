@@ -18,10 +18,56 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "baseUrl": "src",
+    "types": ["@emotion/core"],
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@/components/*": [
+        "src/common/components/*"
+      ],
+      "@/assets/*": [
+        "public/assets/*"
+      ],
+      "@/context/*": [
+        "src/common/context/*"
+      ],
+      "@/hooks/*": [
+        "src/common/hooks/*"
+      ],
+      "@/modules/*": [
+        "src/modules/*"
+      ],
+      "@/types/*": [
+        "src/common/types/*"
+      ],
+      "@/utils/*": [
+        "src/common/utils/*"
+      ],
+      "@/mock/*": [
+        "src/common/mock/*"
+      ],
+      "@/layout/*": [
+        "src/common/layout/*"
+      ],
+      "@/styles/*": [
+        "src/common/layout/*"
+      ]
+    },
+    "incremental": true
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
+
+
+//"baseUrl": "src",
+//"paths": {
+//"@/assets/*": ["../public/assets/*"],
+//},common/
