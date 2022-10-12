@@ -12,6 +12,7 @@ export default {
 		small: false,
 		disabled: false,
 		hide: false,
+		full: false,
 	},
 } as ComponentMeta<typeof Button>;
 

@@ -1,13 +1,13 @@
 import Image from 'next/image';
 
-import Link from '@/components/Link/Link';
+import Link from '@/layout/Link/Link';
 import {
 	ContentContainer,
 	DesktopControls,
 	SocialLinksContainer,
 } from '@/components/Header/Header.styles';
 import Navigation from '@/components/Navigation/Navigation';
-import LanguageSwitcher from '@/components/_ui/LanguageSwitcher/LanguageSwitcher';
+import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher';
 
 import { PathsEnum } from '@/utils/constants/paths';
 import { ContentProps } from '@/components/Header/Header';

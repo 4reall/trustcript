@@ -207,3 +207,5 @@ export const languageData = {
 		},
 	},
 };
+
+const a = {};

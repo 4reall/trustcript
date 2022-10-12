@@ -3,7 +3,6 @@ import Link, { LinkProps } from 'next/link';
 import { PropsWithChildren } from 'react';
 
 interface NavLinkBaseProps {
-	// eslint-disable-next-line no-unused-vars
 	className?: (isActive: boolean) => string;
 }
 

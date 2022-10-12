@@ -9,7 +9,7 @@ import { IProduct } from '@/types/Product';
 import { cutStr } from '@/utils/helpers/cutStr';
 import { useLanguage } from '@/hooks/useLanguage';
 import Image from 'next/image';
-import Link from '@/components/Link/Link';
+import Link from '@/layout/Link/Link';
 import { PathsEnum } from '@/utils/constants/paths';
 import Carousel from '@/components/Carousel/Carousel';
 

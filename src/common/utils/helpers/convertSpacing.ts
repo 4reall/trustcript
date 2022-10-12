@@ -2,7 +2,9 @@ import convertUnits from '@/utils/helpers/convertUnits';
 
 export type SpacingArray = Array<string | number>;
 
-export const convertSpacing = (array: SpacingArray): string => {
+export const convertSpacing = (array?: SpacingArray): string | undefined => {
+	if (!array) return;
+
 	const convertedArr: SpacingArray = [];
 
 	array.forEach((value) => {

@@ -1,12 +1,11 @@
-import { ReactNode } from 'react';
+import Image from 'next/image';
 
 import { Typography } from '@/layout/Typography.styles';
+import { CardContainer, ImageContainer } from './Benefits.styles';
+import { IImage } from '@/types/Image';
 
 import useMediaQuery from '@/hooks/breakpoints/useMediaQuery';
 import { queries } from '@/utils/constants/mediaQueries';
-import { CardContainer, ImageContainer } from './Benefits.styles';
-import { IImage } from '@/types/Image';
-import Image from 'next/image';
 
 interface CardProps {
 	image: IImage;
@@ -20,7 +19,7 @@ const Card = ({ text, image }: CardProps) => {
 			<ImageContainer>
 				<Image src={image.src} alt={image.alt} />
 			</ImageContainer>
-			<Typography mt={isMd ? '1rem' : ''} variant="h4">
+			<Typography m={[isMd ? '1rem' : '0', 0, 0, 0]} variant="h4">
 				{text}
 			</Typography>
 		</CardContainer>

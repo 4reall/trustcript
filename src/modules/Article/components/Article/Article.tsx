@@ -15,7 +15,9 @@ import useMediaQuery from '@/hooks/breakpoints/useMediaQuery';
 import { queries } from '@/utils/constants/mediaQueries';
 import Fb from '@/public/assets/icons/shareBtn/Fb.svg';
 import Tw from '@/public/assets/icons/shareBtn/Tw.svg';
-import ShareBtn, { IIconLink } from '@/components/_ui/ShareBtn/ShareBtn';
+import ShareButton, {
+	IIconLink,
+} from '@/components/_ui/ShareButton/ShareButton';
 import Image from 'next/image';
 
 interface ArticleProps {
@@ -24,8 +26,8 @@ interface ArticleProps {
 }
 
 const links: IIconLink[] = [
-	{ href: `https://www.facebook.com/sharer/sharer.php?u=1`, icon: <Fb /> },
-	{ href: `https://twitter.com/intent/tweet?url=1&text=`, icon: <Tw /> },
+	{ href: `https://www.facebook.com/sharer/sharer.php?u=1`, icon: Fb },
+	{ href: `https://twitter.com/intent/tweet?url=1&text=`, icon: Tw },
 ];
 
 const Article = ({ articleHeaders, article }: ArticleProps) => {
@@ -89,7 +91,7 @@ const Article = ({ articleHeaders, article }: ArticleProps) => {
 					dark
 					small={!isLg}
 				/>
-				<ShareBtn
+				<ShareButton
 					links={links}
 					transition={100}
 					vertical={!isMd}

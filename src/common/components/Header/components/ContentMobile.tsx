@@ -5,10 +5,10 @@ import {
 	ContentContainer,
 	MobileControls,
 } from '@/components/Header/Header.styles';
-import LanguageSwitcher from '@/components/_ui/LanguageSwitcher/LanguageSwitcher';
+import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher';
 import DropdownMenu from '@/components/DropdownMenu/DropdownMenu';
 import Burger from '@/components/Header/components/Burger/Burger';
-import Link from '@/components/Link/Link';
+import Link from '@/layout/Link/Link';
 import Navigation from '@/components/Navigation/Navigation';
 
 import { ContentProps } from '@/components/Header/Header';

@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import { mediaQueries } from '@/utils/constants/mediaQueries';
-import { ScreenContainer } from '@/layout/ScreenContainer.styles';
+import { Section } from '@/layout/Section.styles';
 
-export const BenefitsContainer = styled(ScreenContainer)`
+export const BenefitsContainer = styled(Section)`
 	position: relative;
 	display: flex;
 	flex-direction: column;

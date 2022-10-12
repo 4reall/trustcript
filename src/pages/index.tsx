@@ -1,19 +1,31 @@
-import Promo from '@/modules/Home/components/Promo/Promo';
-import Slides from '@/modules/Home/components/Slides/Slides';
-import Tools from '@/modules/Home/components/Tools/Tools';
-import Benefits from '@/modules/Home/components/Benefits/Benefits';
-import Contacts from '@/modules/Contacts/components/Contacts/Contacts';
+import { GetStaticPropsContext } from 'next';
+import path from 'path';
+import * as fs from 'fs';
+import { ITypographyData } from '@/modules/Home';
+import Home from '@/modules/Home/components/Home';
 
-const HomePage = () => {
-	return (
-		<>
-			<Promo />
-			<Slides />
-			<Tools />
-			<Benefits />
-			<Contacts />
-		</>
-	);
+interface HomePageProps {
+	typography: ITypographyData;
+}
+
+const HomePage = ({ typography }: HomePageProps) => {
+	return <Home typography={typography} />;
 };
+
+export async function getStaticProps(context: GetStaticPropsContext) {
+	const typographyPath = path.join(
+		process.cwd(),
+		`public/data/home/typography.${context.locale}.json`
+	);
+	const typography = fs.readFileSync(typographyPath, 'utf8');
+	// console.log(context.locale);
+	// console.log(typography);
+
+	return {
+		props: {
+			typography: JSON.parse(typography) as ITypographyData,
+		},
+	};
+}
 
 export default HomePage;

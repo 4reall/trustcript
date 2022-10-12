@@ -9,7 +9,6 @@ import {
 } from '@/components/BtnCard/BtnCard.styles';
 import { ReactComponent as ViewsIcon } from '@/assets/icons/labels/views.svg';
 import { convertViews } from '@/utils/helpers/converViews';
-import { ReactNode } from 'react';
 import { ArticleFiltersEnum } from '@/utils/constants/filters';
 import useMediaQuery from '@/hooks/breakpoints/useMediaQuery';
 import { queries } from '@/utils/constants/mediaQueries';
@@ -64,7 +63,7 @@ const BtnCard = ({
 						/>
 					</>
 				)}
-				<Image {...image} />
+				<Image {...image} height={200} width={460} />
 			</ImgContainer>
 			<TextContainer>
 				<Typography as="h3" variant={small ? 'h4' : 'h3'} bold>

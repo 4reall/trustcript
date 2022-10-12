@@ -3,11 +3,13 @@ import {
 	CarouselProps as CarouselBaseProps,
 } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 import IconButton from '@/components/_ui/IconButton/IconButton';
 import Image from 'next/image';
 import ChevronRight from '@/assets/icons/chevron-right-solid.svg';
 import ChevronLeft from '@/assets/icons/chevron-left-solid.svg';
 import {
+	Btn,
 	BtnContainer,
 	CarouselContainer,
 	ControlButton,
@@ -56,10 +58,12 @@ const Carousel = ({ children, showArrows, ...props }: CarouselProps) => {
 						onClick={clickHandler}
 						active={isSelected}
 					/>
+					// <Btn />
 				)}
 				infiniteLoop
 				swipeable
 				showStatus={false}
+				showThumbs={false}
 				{...props}
 			>
 				{children}

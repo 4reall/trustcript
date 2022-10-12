@@ -14,8 +14,9 @@ import { queries } from '@/utils/constants/mediaQueries';
 import { Typography } from '@/layout/Typography.styles';
 import { cutStr } from '@/utils/helpers/cutStr';
 import { convertViews } from '@/utils/helpers/converViews';
-import Link from '@/components/Link/Link';
 import Image from 'next/image';
+import Link from 'next/link';
+import { PathsEnum } from '@/utils/constants/paths';
 
 const ArticleCard = ({
 	categoryIcon,
@@ -31,7 +32,7 @@ const ArticleCard = ({
 
 	return (
 		<CardContainer>
-			<Link href={`${id}`}>
+			<Link href={`${PathsEnum.Blog}/${id}`}>
 				<ContentContainer>
 					<LabelsContainer>
 						<Label

@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 
 export const InputBase = styled.input<{ textarea?: boolean }>`
 	${({ theme, textarea }) => css`
+		font-family: 'Inter', 'Roboto', sans-serif;
 		padding: 0.5rem;
 		width: 100%;
 		border-radius: 5px;

@@ -1,7 +1,7 @@
 import { Container } from '@/modules/Products/Products.styles';
 import Filters from '@/components/Filters/Filters';
 import Cards from '@/components/Cards/Cards';
-import Pagination from '@/components/_ui/Pagination/Pagination';
+import Pagination from '@/components/Pagination/Pagination';
 import { useEffect, useState } from 'react';
 import { ProductFiltersEnum } from '@/utils/constants/filters';
 import ProductCard from '@/components/Card/ProductCard';
@@ -55,7 +55,7 @@ const Products = () => {
 			<Pagination
 				activePage={page}
 				setActivePage={handleChangeActivePage}
-				shownPageCount={4}
+				pageDisplayed={4}
 				pageCount={Math.ceil(filteredCard.length / 6)}
 			/>
 		</Container>

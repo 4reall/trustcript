@@ -1,5 +1,7 @@
+import Article from '@/modules/Article/components/Article/Article';
+
 const ArticlePage = () => {
-	return <div></div>;
+	return <div>{/*<Article articleHeaders={} article={} />*/}</div>;
 };
 
 export default ArticlePage;

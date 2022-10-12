@@ -38,7 +38,6 @@ export interface ControlButtonProps {
 }
 
 export const ControlButton = styled.li<ControlButtonProps>`
-	//position: relative;
 	width: 100%;
 	padding: 0.6rem 0 0.6rem 0;
 	margin-right: 0.5rem;
@@ -66,8 +65,16 @@ export const ControlButton = styled.li<ControlButtonProps>`
 
 	${mediaQueries.up.md} {
 		padding: 0.85rem 0 0.85rem 0;
+
 		&:before {
 			height: 0.35rem;
 		}
 	}
+`;
+
+export const Btn = styled.button`
+	background: red;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
 `;

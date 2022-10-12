@@ -26,8 +26,8 @@ const Product = ({ title, description, images }: ProductProps) => {
 		<ProductContainer>
 			<CarouselContainer>
 				<Carousel
+					showThumbs={true}
 					renderThumbs={() => imagesList}
-					showArrows={false}
 					showIndicators={false}
 				>
 					{imagesList}
