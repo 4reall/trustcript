@@ -1,5 +1,3 @@
-import { Container } from '@/layout/Container.styles';
-import { Page } from '@/layout/Page.styles';
 import { MessageContainer } from '@/modules/Page404/Page404.styles';
 import { Typography } from '@/layout/Typography.styles';
 import { useTheme } from '@emotion/react';

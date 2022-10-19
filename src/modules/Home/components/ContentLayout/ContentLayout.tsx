@@ -20,7 +20,6 @@ const ContentLayout = ({
 	direction = 'row',
 	...props
 }: ContentLayoutProps) => {
-	console.log(direction);
 	return (
 		<Section direction={direction} {...props}>
 			<Container

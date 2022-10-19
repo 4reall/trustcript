@@ -1,11 +1,11 @@
 import { ProductFiltersEnum } from '@/utils/constants/filters';
 
 import Thumbnail from '@/assets/images/thumbnails/product_thumbnail.webp';
-import Thumbnail1 from '@/assets/images/knight.webp';
-import Thumbnail2 from '@/assets/images/rook.webp';
-import { IProduct } from '@/types/Product';
+import Thumbnail1 from '@/assets/images/thumbnails/knight.webp';
+import Thumbnail2 from '@/assets/images/thumbnails/rook.webp';
+import { IBaseProduct } from '@/types/Product';
 
-export const products: IProduct[] = [
+export const products: IBaseProduct[] = [
 	{
 		id: 1,
 		images: [

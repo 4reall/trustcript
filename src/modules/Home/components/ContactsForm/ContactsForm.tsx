@@ -12,6 +12,7 @@ import { useLanguage } from '@/hooks/useLanguage';
 import useMediaQuery from '@/hooks/breakpoints/useMediaQuery';
 import { queries } from '@/utils/constants/mediaQueries';
 import { ITypographyData } from '@/modules/Home';
+import { useTranslations } from 'next-intl';
 
 export interface IFormValues {
 	name: string;
@@ -29,33 +30,31 @@ const defaultValues: IFormValues = {
 	personal: false,
 };
 
-interface ContactsFormProps {
-	validationMessages: ITypographyData['validationMessages'];
-	formText: ITypographyData['form'];
-}
+const ContactsForm = () => {
+	const tvalidation = useTranslations('validationMessages');
+	const tform = useTranslations('form');
 
-const ContactsForm = ({ validationMessages, formText }: ContactsFormProps) => {
 	const validationSchema = useMemo(
 		() =>
 			Yup.object({
 				name: Yup.string()
-					.min(2, validationMessages.nameMin)
-					.max(20, validationMessages.nameMax)
-					.required(validationMessages.required),
+					.min(2, tvalidation('nameMin'))
+					.max(20, tvalidation('nameMax'))
+					.required(tvalidation('required')),
 				company: Yup.string()
-					.min(2, validationMessages.companyMin)
-					.max(40, validationMessages.companyMax)
-					.required(validationMessages.required),
+					.min(2, tvalidation('companyMin'))
+					.max(40, tvalidation('companyMax'))
+					.required(tvalidation('required')),
 				email: Yup.string()
-					.email(validationMessages.email)
-					.required(validationMessages.email),
+					.email(tvalidation('email'))
+					.required(tvalidation('required')),
 				message: Yup.string()
-					.min(10, validationMessages.messageMin)
-					.max(300, validationMessages.messageMax)
-					.required(validationMessages.required),
+					.min(10, tvalidation('messageMin'))
+					.max(300, tvalidation('messageMax'))
+					.required(tvalidation('required')),
 				personal: Yup.boolean()
-					.oneOf([true], validationMessages.personal)
-					.required(validationMessages.required),
+					.oneOf([true], tvalidation('personal'))
+					.required(tvalidation('required')),
 			}),
 		[]
 	);
@@ -78,29 +77,29 @@ const ContactsForm = ({ validationMessages, formText }: ContactsFormProps) => {
 			<ContactsFormStyles onSubmit={methods.handleSubmit(onSubmit)}>
 				<InputField<IFormValues>
 					name="name"
-					placeholder={formText.name}
+					placeholder={tform('name')}
 				/>
 				<InputField<IFormValues>
 					name="company"
-					placeholder={formText.company}
+					placeholder={tform('company')}
 				/>
 				<InputField<IFormValues>
 					type="email"
 					name="email"
-					placeholder={formText.email}
+					placeholder={tform('email')}
 				/>
 				<InputField<IFormValues>
 					name="message"
 					textarea
-					placeholder={formText.message}
+					placeholder={tform('message')}
 				/>
 
 				<CheckboxField<IFormValues>
 					name="personal"
-					label={validationMessages.personal}
+					label={tform('personal')}
 					variant={isMd ? 'h4' : 'h5'}
 				/>
-				<Button type="submit">{formText.button}</Button>
+				<Button type="submit">{tform('button')}</Button>
 			</ContactsFormStyles>
 		</FormProvider>
 	);

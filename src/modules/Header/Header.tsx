@@ -1,14 +1,12 @@
 import Image from 'next/image';
 import { ReactNode } from 'react';
 
-import ContentMobile from '@/components/Header/components/ContentMobile';
-import ContentDesktop from '@/components/Header/components/ContentDesktop';
+import ContentMobile from 'src/modules/Header/components/ContentMobile';
+import ContentDesktop from 'src/modules/Header/components/ContentDesktop';
 import { Container } from '@/layout/Container.styles';
-import { HeaderStyles } from '@/components/Header/Header.styles';
+import { HeaderStyles } from 'src/modules/Header/Header.styles';
 
-import { LanguagesEnum } from '@/mock/languageData';
-import { LanguageOption } from '@/context/LanguageContext/Language.context';
-import { INavLink } from '@/components/Navigation/Navigation';
+import { INavLink } from '@/modules/Header/components/Navigation/Navigation';
 import { PathsEnum } from '@/utils/constants/paths';
 import { queries } from '@/utils/constants/mediaQueries';
 import useMediaQuery from '@/hooks/breakpoints/useMediaQuery';
@@ -19,12 +17,10 @@ import Telegram from '@/assets/icons/networks/telegram.svg';
 import Twitter from '@/assets/icons/networks/twitter.svg';
 import Youtube from '@/assets/icons/networks/youtube.svg';
 import WhatsUp from '@/assets/icons/networks/whatsup.svg';
+import { ILanguageOption } from '@/components/LanguageSwitcher/LanguageSwitcher';
+import { Locales } from '@/utils/constants/Locales';
+import { SocialLink } from 'src/modules/Header/types/SocialLink';
 
-export interface SocialLink {
-	href: string;
-	alt: string;
-	thumbnail: ReactNode;
-}
 const socials: SocialLink[] = [
 	{
 		href: 'https//google.com',
@@ -54,21 +50,21 @@ const navLinks: INavLink[] = [
 	{ title: 'products', path: PathsEnum.Products },
 ];
 
-const options: LanguageOption[] = [
+const options: ILanguageOption[] = [
 	{
-		id: 0,
-		language: LanguagesEnum.RU,
-		thumbnail: <Image src={Ru} alt={'ru icon'} />,
+		locale: Locales.RU,
+		label: 'ru',
+		image: { src: Ru, alt: 'ru icon' },
 	},
 	{
-		id: 1,
-		language: LanguagesEnum.UK,
-		thumbnail: <Image src={Uk} alt={'ru icon'} />,
+		locale: Locales.EN,
+		label: 'en',
+		image: { src: Uk, alt: 'uk icon' },
 	},
 ];
 
 export interface ContentProps {
-	options: LanguageOption[];
+	languageOptions: ILanguageOption[];
 	socials: SocialLink[];
 	navLinks: INavLink[];
 }
@@ -80,13 +76,13 @@ const Header = () => {
 				{isMd ? (
 					<ContentDesktop
 						navLinks={navLinks}
-						options={options}
+						languageOptions={options}
 						socials={socials}
 					/>
 				) : (
 					<ContentMobile
 						navLinks={navLinks}
-						options={options}
+						languageOptions={options}
 						socials={socials}
 					/>
 				)}

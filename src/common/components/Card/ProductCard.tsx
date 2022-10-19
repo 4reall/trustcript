@@ -5,7 +5,7 @@ import {
 } from '@/components/Card/Card.styles';
 import { Typography } from '@/layout/Typography.styles';
 
-import { IProduct } from '@/types/Product';
+import { IBaseProduct, IProduct } from '@/types/Product';
 import { cutStr } from '@/utils/helpers/cutStr';
 import { useLanguage } from '@/hooks/useLanguage';
 import Image from 'next/image';
@@ -13,23 +13,26 @@ import Link from '@/layout/Link/Link';
 import { PathsEnum } from '@/utils/constants/paths';
 import Carousel from '@/components/Carousel/Carousel';
 
-interface ProductCardProps {
-	onClick?: () => void;
+interface ProductCardOwnProps {
+	// onClick?: () => void;
 }
 
-const ProductCard = ({
-	images,
-	title,
-	description,
-	link,
-}: IProduct & ProductCardProps) => {
+type ProductCardProps = IProduct;
+
+const ProductCard = ({ images, title, description, id }: ProductCardProps) => {
 	const { text } = useLanguage('share');
 	return (
 		<CardContainer>
 			<ContentContainer>
 				<Carousel showThumbs={false}>
 					{images.map((image, i) => (
-						<Image key={i} src={image.src} alt={image.alt} />
+						<Image
+							key={i}
+							src={image.src}
+							alt={image.alt}
+							height={300}
+							width={400}
+						/>
 					))}
 				</Carousel>
 				<TextContainer>
@@ -39,7 +42,7 @@ const ProductCard = ({
 					<Typography variant="h4">
 						{cutStr(description, 200)}
 					</Typography>
-					<Link href={PathsEnum.Products + '/' + link.path}>
+					<Link href={PathsEnum.Products + '/' + id}>
 						<Typography variant="h4" underline bold uppercase>
 							{text('moreBtn')}
 						</Typography>

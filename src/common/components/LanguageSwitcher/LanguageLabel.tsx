@@ -2,30 +2,37 @@ import { Typography } from '@/layout/Typography.styles';
 import { LanguageLabelContainer } from '@/components/LanguageSwitcher/LanguageSwitcher.styles';
 
 import { LanguageLabelContainerProps } from '@/components/LanguageSwitcher/LanguageSwitcher.styles';
-import { LanguageOption } from '@/context/LanguageContext/Language.context';
+import { ComponentProps, ElementType } from 'react';
+import { ILanguageOption } from 'src/common/components/LanguageSwitcher/LanguageSwitcher';
+import Image from 'next/image';
 
-interface LanguageLabelBaseProps {
-	onLanguageSelect?: () => void;
+interface LanguageLabelOwnProps<TTag extends ElementType = ElementType> {
+	languageOption: ILanguageOption;
+	onClick?: ComponentProps<TTag>['onClick'];
+	as?: TTag;
 }
 
-type LanguageLabelProps = LanguageOption &
-	LanguageLabelContainerProps &
-	LanguageLabelBaseProps;
+type LanguageLabelProps<TTag extends ElementType> =
+	LanguageLabelOwnProps<TTag> & LanguageLabelContainerProps;
 
-const LanguageLabel = ({
-	language,
-	thumbnail,
-	onLanguageSelect,
+const defaultElement = 'div';
+
+const LanguageLabel = <TTag extends ElementType = typeof defaultElement>({
 	isMenuItem,
-}: LanguageLabelProps) => {
+	onClick,
+	languageOption,
+	as,
+}: LanguageLabelProps<TTag>) => {
 	return (
 		<LanguageLabelContainer
-			as={isMenuItem ? 'li' : 'div'}
-			onClick={onLanguageSelect}
+			onClick={onClick}
 			isMenuItem={isMenuItem}
+			as={as}
 		>
-			<div>{thumbnail}</div>
-			<Typography variant="h4">{language}</Typography>
+			<Image src={languageOption.image.src} />
+			<Typography m={[0, 0, 0, '0.25rem']} variant="h4">
+				{languageOption.label}
+			</Typography>
 		</LanguageLabelContainer>
 	);
 };

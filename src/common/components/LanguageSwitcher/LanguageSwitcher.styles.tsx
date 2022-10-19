@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
-export const Switcher = styled.div`
+export const Select = styled.div`
 	position: relative;
 	display: flex;
 	align-items: center;

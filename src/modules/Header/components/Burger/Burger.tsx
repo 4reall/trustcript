@@ -1,7 +1,7 @@
 import {
 	BurgerBar,
 	BurgerContainer,
-} from '@/components/Header/components/Burger/Burger.styles';
+} from 'src/modules/Header/components/Burger/Burger.styles';
 
 interface BurgerProps {
 	active: boolean;

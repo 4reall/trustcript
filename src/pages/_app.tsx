@@ -5,12 +5,16 @@ import Layout from '@/layout/Layout/Layout';
 import { Page } from '@/layout/Page.styles';
 
 import { GlobalStyle } from '@/common/styles/GlobalStyles';
-import LanguageProvider from '@/context/LanguageContext/Language.provider';
 import { theme } from '@/common/styles/theme';
 import Head from 'next/head';
 import { Global, ThemeProvider } from '@emotion/react';
+import { AbstractIntlMessages, NextIntlProvider } from 'next-intl';
 
-export default function App({ Component, pageProps }: AppProps) {
+interface CommonProps {
+	messages: AbstractIntlMessages;
+}
+
+const App = ({ Component, pageProps }: AppProps<CommonProps>) => {
 	return (
 		<>
 			<Head>
@@ -24,7 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
 			</Head>
 
 			<ThemeProvider theme={theme}>
-				<LanguageProvider>
+				<NextIntlProvider messages={pageProps.messages}>
 					<YMaps>
 						<Global styles={GlobalStyle} />
 						<Layout>
@@ -33,8 +37,10 @@ export default function App({ Component, pageProps }: AppProps) {
 							</Page>
 						</Layout>
 					</YMaps>
-				</LanguageProvider>
+				</NextIntlProvider>
 			</ThemeProvider>
 		</>
 	);
-}
+};
+
+export default App;

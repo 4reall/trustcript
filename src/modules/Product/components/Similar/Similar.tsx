@@ -1,6 +1,6 @@
 import { SimilarContainer } from '@/modules/Product/components/Similar/Similar.styles';
 
-import { IProduct } from '@/types/Product';
+import { IBaseProduct } from '@/types/Product';
 import { IImage } from '@/types/Image';
 
 import useMediaQuery from '@/hooks/breakpoints/useMediaQuery';
@@ -10,7 +10,7 @@ import { useRouter } from 'next/router';
 
 interface SimilarProps {
 	images: IImage[];
-	products: IProduct[];
+	products: IBaseProduct[];
 }
 
 const Similar = ({ products, images }: SimilarProps) => {

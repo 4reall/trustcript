@@ -66,8 +66,3 @@
   ]
 }
 
-
-//"baseUrl": "src",
-//"paths": {
-//"@/assets/*": ["../public/assets/*"],
-//},common/

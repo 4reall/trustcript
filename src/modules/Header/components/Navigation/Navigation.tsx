@@ -1,7 +1,10 @@
-import { Nav, NavItem } from '@/components/Navigation/Navigation.styles';
+import {
+	Nav,
+	NavItem,
+} from 'src/modules/Header/components/Navigation/Navigation.styles';
 import { Typography } from '@/layout/Typography.styles';
 
-import { NavProps } from '@/components/Navigation/Navigation.styles';
+import { NavProps } from 'src/modules/Header/components/Navigation/Navigation.styles';
 import { PathsEnum } from '@/utils/constants/paths';
 
 import { languageData } from '@/mock/languageData';

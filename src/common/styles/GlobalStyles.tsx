@@ -1,5 +1,5 @@
 import { mediaQueries } from '@/utils/constants/mediaQueries';
-import Bg from '@/assets/images/mainBg.webp';
+import Bg from '@/assets/images/thumbnails/mainBg.webp';
 import { css } from '@emotion/react';
 
 export const GlobalStyle = css`

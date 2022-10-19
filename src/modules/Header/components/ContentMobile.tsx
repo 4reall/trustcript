@@ -4,19 +4,19 @@ import { useState } from 'react';
 import {
 	ContentContainer,
 	MobileControls,
-} from '@/components/Header/Header.styles';
+} from 'src/modules/Header/Header.styles';
 import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher';
 import DropdownMenu from '@/components/DropdownMenu/DropdownMenu';
-import Burger from '@/components/Header/components/Burger/Burger';
+import Burger from 'src/modules/Header/components/Burger/Burger';
 import Link from '@/layout/Link/Link';
 import Navigation from '@/components/Navigation/Navigation';
 
-import { ContentProps } from '@/components/Header/Header';
+import { ContentProps } from 'src/modules/Header/Header';
 import { PathsEnum } from '@/utils/constants/paths';
 
 import Logo from '@/assets/icons/logo/logo.svg';
 
-const ContentMobile = ({ options, navLinks }: ContentProps) => {
+const ContentMobile = ({ languageOptions, navLinks }: ContentProps) => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const handleClick = () => {
@@ -29,7 +29,7 @@ const ContentMobile = ({ options, navLinks }: ContentProps) => {
 				<Image src={Logo} alt="logo" />
 			</Link>
 			<MobileControls>
-				<LanguageSwitcher options={options} />
+				<LanguageSwitcher languageOptions={languageOptions} />
 				<Burger onClick={handleClick} active={isMenuOpen} />
 			</MobileControls>
 			<DropdownMenu onClick={handleClick} full active={isMenuOpen}>

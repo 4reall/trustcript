@@ -3,9 +3,10 @@ import Image from 'next/image';
 import Carousel from '@/components/Carousel/Carousel';
 import ContentLayout from './ContentLayout/ContentLayout';
 
-import Knight from '@/assets/images/knight.webp';
-import Pawn from '@/assets/images/pawn.webp';
-import Rook from '@/assets/images/rook.webp';
+import Knight from '@/assets/images/thumbnails/knight.webp';
+import Pawn from '@/assets/images/thumbnails/pawn.webp';
+import Rook from '@/assets/images/thumbnails/rook.webp';
+import { useTranslations } from 'next-intl';
 
 const images = [
 	{ src: Knight, alt: 'knight images' },
@@ -18,16 +19,15 @@ const images = [
 ];
 
 interface SlidesProps {
-	title: string;
-	text: string;
 	big: boolean;
 }
 
-const Slides = ({ title, text, big }: SlidesProps) => {
+const Slides = ({ big }: SlidesProps) => {
+	const t = useTranslations('slides');
 	return (
 		<ContentLayout
-			title={title}
-			text={text}
+			title={t('title')}
+			text={t('text')}
 			big={big}
 			content={
 				<Carousel

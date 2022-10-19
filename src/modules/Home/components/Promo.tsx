@@ -5,17 +5,16 @@ import Button from '@/components/_ui/Button/Button';
 import ContentLayout from '@/modules/Home/components/ContentLayout/ContentLayout';
 
 import { PathsEnum } from '@/utils/constants/paths';
-import Glass from '@/assets/images/glass.webp';
+import Glass from '@/assets/images/thumbnails/glass.webp';
+import { useTranslations } from 'next-intl';
 
 interface PromoProps {
-	title: string;
-	text: string;
-	buttonText: string;
 	big: boolean;
 }
 
-const Promo = ({ title, big, text, buttonText }: PromoProps) => {
+const Promo = ({ big }: PromoProps) => {
 	const { push } = useRouter();
+	const t = useTranslations('promo');
 
 	const goToProducts = () => {
 		push(PathsEnum.Products);
@@ -23,11 +22,11 @@ const Promo = ({ title, big, text, buttonText }: PromoProps) => {
 
 	return (
 		<ContentLayout
-			title={title}
-			text={text}
+			title={t('title')}
+			text={t('text')}
 			button={
 				<Button onClick={goToProducts} small={!big}>
-					{buttonText}
+					{t('button')}
 				</Button>
 			}
 			big={big}

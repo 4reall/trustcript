@@ -5,16 +5,20 @@ import {
 	ContentContainer,
 	DesktopControls,
 	SocialLinksContainer,
-} from '@/components/Header/Header.styles';
-import Navigation from '@/components/Navigation/Navigation';
+} from 'src/modules/Header/Header.styles';
 import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher';
 
 import { PathsEnum } from '@/utils/constants/paths';
-import { ContentProps } from '@/components/Header/Header';
+import { ContentProps } from 'src/modules/Header/Header';
 
 import Logo from '@/assets/icons/logo/logo.svg';
+import Navigation from 'src/modules/Header/components/Navigation/Navigation';
 
-const ContentDesktop = ({ options, socials, navLinks }: ContentProps) => {
+const ContentDesktop = ({
+	languageOptions,
+	socials,
+	navLinks,
+}: ContentProps) => {
 	return (
 		<ContentContainer>
 			<Link href={PathsEnum.Main}>
@@ -22,7 +26,7 @@ const ContentDesktop = ({ options, socials, navLinks }: ContentProps) => {
 			</Link>
 			<DesktopControls>
 				<Navigation navLinks={navLinks} />
-				<LanguageSwitcher options={options} />
+				<LanguageSwitcher languageOptions={languageOptions} />
 				<SocialLinksContainer>
 					{socials.map((social) => (
 						<a
