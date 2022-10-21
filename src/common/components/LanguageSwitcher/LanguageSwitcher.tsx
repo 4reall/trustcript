@@ -1,18 +1,18 @@
 import Image from 'next/image';
 import { useContext, useRef, useState } from 'react';
 
-import DropdownMenu from '@/components/DropdownMenu/DropdownMenu';
+import DropdownMenu from '@/common/components/_ui/DropdownMenu/DropdownMenu';
 import {
 	LanguageMenu,
 	Select,
-} from '@/components/LanguageSwitcher/LanguageSwitcher.styles';
-import LanguageLabel from '@/components/LanguageSwitcher/LanguageLabel';
-import { useClickOutside } from '@/hooks/useClickOutside';
+} from '@/common/components/LanguageSwitcher/LanguageSwitcher.styles';
+import LanguageLabel from '@/common/components/LanguageSwitcher/LanguageLabel';
+import { useClickOutside } from '@/common/hooks/useClickOutside';
 
 import BottomArrow from '@/assets/icons/arrows/BottomArrow.svg';
-import { IImage } from '@/types/Image';
+import { IImage } from '@/common/types/Image';
 import { useRouter } from 'next/router';
-import { Locales } from '@/utils/constants/Locales';
+import { Locales } from '@/common/utils/constants/Locales';
 
 export interface ILanguageOption {
 	label: string;

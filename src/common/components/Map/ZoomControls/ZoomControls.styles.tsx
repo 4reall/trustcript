@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import convertUnits from '@/utils/helpers/convertUnits';
+import convertUnits from '@/common/utils/helpers/convertUnits';
 import { css } from '@emotion/react';
 
 export interface ZoomControlsContainerProps {

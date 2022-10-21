@@ -1,6 +1,6 @@
-import { IImage } from '@/types/Image';
-import { ICard } from '@/types/Card';
-import { ProductFiltersEnum } from '@/utils/constants/filters';
+import { IImage } from '@/common/types/Image';
+import { ICard } from '@/common/types/Card';
+import { ProductFiltersEnum } from '@/common/utils/constants/filters';
 
 export type Categories = 'first' | 'second' | 'third';
 

@@ -22,39 +22,18 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
+      "@/lib/*": [
+        "src/lib/*"
       ],
-      "@/components/*": [
-        "src/common/components/*"
+      "@/common/*": [
+        "src/common/*"
       ],
       "@/assets/*": [
         "public/assets/*"
       ],
-      "@/context/*": [
-        "src/common/context/*"
-      ],
-      "@/hooks/*": [
-        "src/common/hooks/*"
-      ],
       "@/modules/*": [
         "src/modules/*"
       ],
-      "@/types/*": [
-        "src/common/types/*"
-      ],
-      "@/utils/*": [
-        "src/common/utils/*"
-      ],
-      "@/mock/*": [
-        "src/common/mock/*"
-      ],
-      "@/layout/*": [
-        "src/common/layout/*"
-      ],
-      "@/styles/*": [
-        "src/common/layout/*"
-      ]
     },
     "incremental": true
   },

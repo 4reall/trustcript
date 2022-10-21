@@ -7,12 +7,12 @@ import {
 	Btn,
 	ShareBtnContainer,
 	Sizes,
-} from '@/components/_ui/ShareButton/ShareButton.styles';
+} from '@/common/components/_ui/ShareButton/ShareButton.styles';
 import { ReactNode, useEffect, useRef, useState } from 'react';
 import Share from '@/assets/icons/shareBtn/Share.svg';
 import Copy from '@/assets/icons/shareBtn/Copy.svg';
-import { useClickOutside } from '@/hooks/useClickOutside';
-import { Typography } from '@/layout/Typography.styles';
+import { useClickOutside } from '@/common/hooks/useClickOutside';
+import { Typography } from '@/common/layout/Typography.styles';
 import Image from 'next/image';
 
 export interface IIconLink {

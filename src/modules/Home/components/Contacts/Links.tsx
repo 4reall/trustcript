@@ -3,8 +3,13 @@ import {
 	Link,
 	LinksContainer,
 } from '@/modules/Home/components/Contacts/Contacts.styles';
-import { Typography } from '@/layout/Typography.styles';
-import { ILink } from '@/modules/Home/types/Link';
+import { Typography } from '@/common/layout/Typography.styles';
+
+export interface ILink {
+	href: string;
+	src: string;
+	text: string;
+}
 
 interface LinksProps {
 	links: ILink[];

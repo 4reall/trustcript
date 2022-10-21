@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Typography } from '@/layout/Typography.styles';
+import { Typography } from '@/common/layout/Typography.styles';
 import { css } from '@emotion/react';
 
 const sizeMap = {
@@ -104,7 +104,7 @@ export const ShareBtnContainer = styled.div<ShareBtnContainerProps>`
 						& > * {
 							margin-top: 0.5rem;
 							opacity: 0;
-							&:first-child {
+							&:first-of-type {
 								margin-top: 0;
 							}
 						}
@@ -122,7 +122,7 @@ export const ShareBtnContainer = styled.div<ShareBtnContainerProps>`
 						& > * {
 							margin-left: 0.5rem;
 							opacity: 0;
-							&:first-child {
+							&:first-of-type {
 								margin-left: 0;
 							}
 						}

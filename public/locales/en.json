@@ -1,48 +1,61 @@
 {
-    "promo": {
-        "title": "Advanced cyber security form any company",
-        "text": "Protect your business from all kinds of cyber threats with world-class solutions.",
-        "button": "More"
-    },
-    "slides": {
-        "title": "Cybersecurity of new generation",
-        "text": "Scalable protection against the most complex cyber threats, adapted to your business requirements."
-    },
-    "tools": {
-        "title": "Tools",
-        "text": "Penetration testing allows you to answer the question of how someone with malicious intent can interfere with your network."
-    },
-    "benefits": {
-        "title": "Our products are designed to help you stay safe.",
-        "text": "We follow a simple principle in our work: to detect and block any malicious attack.",
-        "card1": "Anonymity",
-        "card2": "Threat check",
-        "card3": "Detect and prevent attack"
-    },
-    "form": {
-        "name": "What would you like to be called?",
-        "company": "What company do you represent?",
-        "email": "Your e-mail address",
-        "message": "Enter your message",
-        "personal": "I accept the handling of personal data",
-        "button": "Submit"
-    },
-    "contacts": {
-        "title": "You can contact us in a convenient way.",
-        "address": "Leningradskiy Avenue, 27с2",
-        "tel": "+7 (495) 000 - 00 - 00",
-        "email": "admin@trustcrypt.com"
-    },
-    "validationMessages": {
-        "nameMin": "Minimal length is 2 characters",
-        "nameMax": "Maximal length is 20 characters",
-        "companyMin": "Minimal length is 2 characters",
-        "companyMax": "Maximal length is 40 characters",
-        "email": "Enter the correct e-mail address",
-        "messageMin": "Minimal length is 10 characters",
-        "messageMax": "Maximal length is 300 characters",
-        "personal": "You should accept the handling of personal data",
-        "required": "Required"
-    }
-
+	"promo": {
+		"title": "Advanced cyber security form any company",
+		"text": "Protect your business from all kinds of cyber threats with world-class solutions.",
+		"button": "More"
+	},
+	"slides": {
+		"title": "Cybersecurity of new generation",
+		"text": "Scalable protection against the most complex cyber threats, adapted to your business requirements."
+	},
+	"tools": {
+		"title": "Tools",
+		"text": "Penetration testing allows you to answer the question of how someone with malicious intent can interfere with your network."
+	},
+	"benefits": {
+		"title": "Our products are designed to help you stay safe.",
+		"text": "We follow a simple principle in our work: to detect and block any malicious attack.",
+		"card1": "Anonymity",
+		"card2": "Threat check",
+		"card3": "Detect and prevent attack"
+	},
+	"form": {
+		"name": "What would you like to be called?",
+		"company": "What company do you represent?",
+		"email": "Your e-mail address",
+		"message": "Enter your message",
+		"personal": "I accept the handling of personal data",
+		"button": "Submit"
+	},
+	"contacts": {
+		"title": "You can contact us in a convenient way.",
+		"address": "Leningradskiy Avenue, 27с2",
+		"tel": "+7 (495) 000 - 00 - 00",
+		"email": "admin@trustcrypt.com"
+	},
+	"validationMessages": {
+		"nameMin": "Minimal length is 2 characters",
+		"nameMax": "Maximal length is 20 characters",
+		"companyMin": "Minimal length is 2 characters",
+		"companyMax": "Maximal length is 40 characters",
+		"email": "Enter the correct e-mail address",
+		"messageMin": "Minimal length is 10 characters",
+		"messageMax": "Maximal length is 300 characters",
+		"personal": "You should accept the handling of personal data",
+		"required": "Required"
+	},
+	"navigation": {
+		"home": "home",
+		"blog": "blog",
+		"products": "products"
+	},
+	"article": {
+		"popular": "Popular articles",
+		"moreBtn": "more",
+		"shareBtn": "more"
+	},
+	"products": {
+		"title": "Our products",
+		"text": "You can contact us in a convenient way."
+	}
 }

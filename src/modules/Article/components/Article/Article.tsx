@@ -4,20 +4,20 @@ import {
 	ImageContainer,
 	LabelsContainer,
 } from '@/modules/Article/components/Article/Article.styles';
-import { IArticle } from '@/types/Article';
-import { Typography } from '@/layout/Typography.styles';
-import Label from '@/components/Label/Label';
+import { IArticle } from '@/common/types/Article';
+import { Typography } from '@/common/layout/Typography.styles';
+import Label from '@/common/layout/Label/Label';
 import ViewsIcon from '@/public/assets/icons/labels/views.svg';
 import DateIcon from '@/public/assets/icons/labels/date.svg';
 import { article } from '@/mock/articles';
-import { convertViews } from '@/utils/helpers/converViews';
-import useMediaQuery from '@/hooks/breakpoints/useMediaQuery';
-import { queries } from '@/utils/constants/mediaQueries';
+import { convertViews } from '@/common/utils/helpers/converViews';
+import useMediaQuery from '@/common/hooks/breakpoints/useMediaQuery';
+import { queries } from '@/common/utils/constants/mediaQueries';
 import Fb from '@/public/assets/icons/shareBtn/Fb.svg';
 import Tw from '@/public/assets/icons/shareBtn/Tw.svg';
 import ShareButton, {
 	IIconLink,
-} from '@/components/_ui/ShareButton/ShareButton';
+} from '@/common/components/_ui/ShareButton/ShareButton';
 import Image from 'next/image';
 
 interface ArticleProps {

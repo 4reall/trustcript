@@ -1,6 +1,6 @@
 import { ThemeDecorator } from '@/common/styles/ThemeProvider';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import ZoomControls from '@/components/Map/ZoomControls/ZoomControls';
+import ZoomControls from '@/common/components/Map/ZoomControls/ZoomControls';
 
 export default {
 	title: 'ZoomControls',

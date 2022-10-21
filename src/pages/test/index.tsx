@@ -1,47 +1,23 @@
-/** @jsxImportSource @emotion/react */
-import { jsx } from '@emotion/react';
-import Image from 'next/image';
-import Carousel from '@/components/Carousel/Carousel';
-import Knight from '@/assets/images/thumbnails/knight.webp';
-import Rook from '@/assets/images/thumbnails/rook.webp';
-import Pawn from '@/assets/images/thumbnails/pawn.webp';
-import IconButton from '@/components/_ui/IconButton/IconButton';
-import ChevronRight from '@/modules/Carousel/assets/chevron-right-solid.svg';
-import ChevronLeft from '@/modules/Carousel/assets/chevron-left-solid.svg';
-import { css } from '@emotion/react';
-import Button from '@/components/_ui/Button/Button';
-import ShareButton, {
-	IIconLink,
-} from '@/components/_ui/ShareButton/ShareButton';
+import { PathsEnum } from '@/common/utils/constants/paths';
+import { GetStaticPropsContext } from 'next';
+import { INavLink } from '@/common/types/INavLink';
 
-const images = [
-	{ src: Knight, alt: 'knight images' },
-	{ src: Rook, alt: 'knight images' },
-	{ src: Pawn, alt: 'knight images' },
-];
-
-const links: IIconLink[] = [
-	{
-		href: `https://www.facebook.com/sharer/sharer.php?u=1`,
-		icon: '/assets/icons/shareBtn/Tw.svg',
-	},
-	{
-		href: `https://twitter.com/intent/tweet?url=1&text=`,
-		icon: '/assets/icons/shareBtn/Tw.svg',
-	},
+const navLinks: INavLink[] = [
+	{ title: 'home', href: PathsEnum.Main },
+	{ title: 'blog', href: PathsEnum.Blog },
+	{ title: 'products', href: PathsEnum.Products },
 ];
 
 const Index = () => {
-	return (
-		<div>
-			<ShareButton links={links} />
-			<Carousel>
-				{images.map((image, i) => (
-					<Image key={i} {...image} />
-				))}
-			</Carousel>
-		</div>
-	);
+	return <div></div>;
 };
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+	return {
+		props: {
+			messages: (await import(`public/locales/${locale}.json`)).default,
+		},
+	};
+}
 
 export default Index;

@@ -1,9 +1,9 @@
-import { Typography } from '@/layout/Typography.styles';
-import { LanguageLabelContainer } from '@/components/LanguageSwitcher/LanguageSwitcher.styles';
+import { Typography } from '@/common/layout/Typography.styles';
+import { LanguageLabelContainer } from '@/common/components/LanguageSwitcher/LanguageSwitcher.styles';
 
-import { LanguageLabelContainerProps } from '@/components/LanguageSwitcher/LanguageSwitcher.styles';
+import { LanguageLabelContainerProps } from '@/common/components/LanguageSwitcher/LanguageSwitcher.styles';
 import { ComponentProps, ElementType } from 'react';
-import { ILanguageOption } from 'src/common/components/LanguageSwitcher/LanguageSwitcher';
+import { ILanguageOption } from '@/common/components/LanguageSwitcher/LanguageSwitcher';
 import Image from 'next/image';
 
 interface LanguageLabelOwnProps<TTag extends ElementType = ElementType> {

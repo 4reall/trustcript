@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { BreakpointValuesEnum } from '@/utils/constants/breakpoints';
-import convertUnits from '@/utils/helpers/convertUnits';
+import { BreakpointValuesEnum } from '@/common/utils/constants/breakpoints';
+import convertUnits from '@/common/utils/helpers/convertUnits';
 
 export interface ContainerProps {
 	maxWidth?: keyof typeof BreakpointValuesEnum;

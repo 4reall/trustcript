@@ -1,5 +1,5 @@
-import prisma from 'src/lib/prisma';
-import { Categories, IProduct } from '@/types/Product';
+import prisma from '@/lib/prisma';
+import { Categories, IProduct } from '@/common/types/Product';
 
 export const getProducts = async (): Promise<IProduct[]> => {
 	try {

@@ -2,8 +2,8 @@ import {
 	ProductFiltersEnum,
 	ArticleFiltersEnum,
 	DateFiltersEnum,
-} from '@/utils/constants/filters';
-import { IFilter } from '@/components/Filters/Filters';
+} from '@/common/utils/constants/filters';
+import { IFilter } from '@/common/components/Filters/Filters';
 
 export const productFilters: IFilter<ProductFiltersEnum>[] = [
 	{

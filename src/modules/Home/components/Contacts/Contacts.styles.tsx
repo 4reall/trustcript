@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { mediaQueries } from '@/utils/constants/mediaQueries';
-import { Section } from '@/layout/Section.styles';
+import { mediaQueries } from '@/common/utils/constants/mediaQueries';
+import { Section } from '@/common/layout/Section.styles';
 
 export const ContactsContainer = styled(Section)`
 	width: min(100%, 60rem);
@@ -54,7 +54,7 @@ export const Link = styled.a`
 	margin-top: 1rem;
 	color: white;
 	text-decoration: none;
-	&:first-child {
+	&:first-of-type {
 		margin-top: 0;
 	}
 	& img {

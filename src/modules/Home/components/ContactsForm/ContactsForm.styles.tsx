@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const ContactsFormStyles = styled.form`
 	& > * {
 		margin-top: 0.75rem;
-		&:first-child {
+		&:first-of-type {
 			margin-top: 0;
 		}
 	}

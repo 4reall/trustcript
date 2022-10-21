@@ -6,8 +6,8 @@ import Slides from '@/modules/Home/components/Slides';
 import Benefits from '@/modules/Home/components/Benefits/Benefits';
 import Contacts from '@/modules/Home/components/Contacts/Contacts';
 
-import useMediaQuery from '@/hooks/breakpoints/useMediaQuery';
-import { queries } from '@/utils/constants/mediaQueries';
+import useMediaQuery from '@/common/hooks/breakpoints/useMediaQuery';
+import { queries } from '@/common/utils/constants/mediaQueries';
 import { ITypographyData } from '@/modules/Home/types/TypographyData.type';
 import { ILink } from '@/modules/Home/types/Link';
 

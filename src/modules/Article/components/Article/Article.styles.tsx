@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { mediaQueries } from '@/utils/constants/mediaQueries';
+import { mediaQueries } from '@/common/utils/constants/mediaQueries';
 
 export const ArticleContainer = styled.div`
 	& img {

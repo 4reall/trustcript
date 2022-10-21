@@ -1,4 +1,4 @@
-import convertUnits from '@/utils/helpers/convertUnits';
+import convertUnits from '@/common/utils/helpers/convertUnits';
 
 export type SpacingArray = Array<string | number>;
 

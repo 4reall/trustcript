@@ -1,5 +1,5 @@
 import { RefObject, useEffect } from 'react';
-import { assertIsNode } from '@/utils/helpers/assertIsNode';
+import { assertIsNode } from '@/common/utils/helpers/assertIsNode';
 
 export const useClickOutside = (ref: RefObject<any>, callback: () => void) => {
 	const handleClick = ({ target }: MouseEvent): void => {

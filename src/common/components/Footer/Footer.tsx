@@ -1,5 +1,5 @@
-import { FooterContainer } from '@/components/Footer/Footer.styles';
-import { Typography } from '@/layout/Typography.styles';
+import { FooterContainer } from '@/common/components/Footer/Footer.styles';
+import { Typography } from '@/common/layout/Typography.styles';
 
 const Footer = () => {
 	return (

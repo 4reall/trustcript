@@ -2,9 +2,9 @@ import {
 	BenefitsContainer,
 	Cards,
 } from '@/modules/Home/components/Benefits/Benefits.styles';
-import { Typography } from '@/layout/Typography.styles';
+import { Typography } from '@/common/layout/Typography.styles';
 import Card from '@/modules/Home/components/Benefits/Card';
-import { IImage } from '@/types/Image';
+import { IImage } from '@/common/types/Image';
 import { useMemo } from 'react';
 import Mask from '@/assets/icons/Mask.svg';
 import Bug from '@/assets/icons/Bug.svg';

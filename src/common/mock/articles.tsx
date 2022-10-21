@@ -1,4 +1,4 @@
-import { IArticle } from '@/types/Article';
+import { IArticle } from '@/common/types/Article';
 import DevelopmentIcon from '@/assets/icons/categories/development.svg';
 import SecurityIcon from '@/assets/icons/categories/security.svg';
 import MethodsIcon from '@/assets/icons/categories/methods.svg';
@@ -16,7 +16,7 @@ import Code from '@/assets/images/articles/code.png';
 import {
 	ArticleFiltersEnum,
 	DateFiltersEnum,
-} from 'src/common/utils/constants/filters';
+} from '@/common/utils/constants/filters';
 
 export const articles: IArticle[] = [
 	{

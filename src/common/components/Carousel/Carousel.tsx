@@ -4,7 +4,7 @@ import {
 } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import IconButton from '@/components/_ui/IconButton/IconButton';
+import IconButton from '@/common/components/_ui/IconButton/IconButton';
 import Image from 'next/image';
 import ChevronRight from '@/assets/icons/chevron-right-solid.svg';
 import ChevronLeft from '@/assets/icons/chevron-left-solid.svg';
@@ -13,7 +13,7 @@ import {
 	BtnContainer,
 	CarouselContainer,
 	ControlButton,
-} from '@/components/Carousel/Carousel.styles';
+} from '@/common/components/Carousel/Carousel.styles';
 
 interface CarouselOwnProps {}
 

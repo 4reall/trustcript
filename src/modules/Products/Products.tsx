@@ -1,14 +1,14 @@
 import { Container } from '@/modules/Products/Products.styles';
-import Cards from '@/components/Cards/Cards';
+import Cards from '@/common/layout/Cards/Cards';
 import { useState } from 'react';
-import { ProductFiltersEnum } from '@/utils/constants/filters';
-import ProductCard from '@/components/Card/ProductCard';
-import useMediaQuery from '@/hooks/breakpoints/useMediaQuery';
-import { queries } from '@/utils/constants/mediaQueries';
-import { IProduct } from '@/types/Product';
+import { ProductFiltersEnum } from '@/common/utils/constants/filters';
+import ProductCard from '@/common/layout/Card/ProductCard';
+import useMediaQuery from '@/common/hooks/breakpoints/useMediaQuery';
+import { queries } from '@/common/utils/constants/mediaQueries';
+import { IProduct } from '@/common/types/Product';
 
 interface ProductsProps {
-	products: IProduct[];
+	products?: IProduct[];
 }
 
 const Products = ({ products }: ProductsProps) => {
@@ -49,9 +49,10 @@ const Products = ({ products }: ProductsProps) => {
 			{/*	margin={[0, 0, '2rem', 0]}*/}
 			{/*/>*/}
 			<Cards>
-				{products.slice(page * 6, page * 6 + 6).map((card) => (
-					<ProductCard key={card.id} {...card} />
-				))}
+				{products &&
+					products
+						.slice(page * 6, page * 6 + 6)
+						.map((card) => <ProductCard key={card.id} {...card} />)}
 			</Cards>
 			{/*<Pagination*/}
 			{/*	activePage={page}*/}

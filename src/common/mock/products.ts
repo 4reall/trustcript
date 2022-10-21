@@ -1,9 +1,9 @@
-import { ProductFiltersEnum } from '@/utils/constants/filters';
+import { ProductFiltersEnum } from '@/common/utils/constants/filters';
 
 import Thumbnail from '@/assets/images/thumbnails/product_thumbnail.webp';
 import Thumbnail1 from '@/assets/images/thumbnails/knight.webp';
 import Thumbnail2 from '@/assets/images/thumbnails/rook.webp';
-import { IBaseProduct } from '@/types/Product';
+import { IBaseProduct } from '@/common/types/Product';
 
 export const products: IBaseProduct[] = [
 	{

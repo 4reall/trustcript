@@ -1,5 +1,5 @@
 import { ThemeDecorator } from '@/common/styles/ThemeProvider';
-import Switch from '@/components/_ui/Switch/Switch';
+import Switch from '@/common/components/_ui/Switch/Switch';
 import { ComponentMeta, ComponentStory, StoryFn } from '@storybook/react';
 import { useArgs } from '@storybook/client-api';
 

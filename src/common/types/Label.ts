@@ -1,4 +1,4 @@
-import { IImage } from '@/types/Image';
+import { IImage } from '@/common/types/Image';
 import { ReactNode } from 'react';
 
 export interface ILabel {

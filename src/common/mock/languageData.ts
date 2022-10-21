@@ -1,4 +1,4 @@
-import { KeysOfUnion } from '@/types/Keys';
+import { KeysOfUnion } from '@/common/types/Keys';
 
 export type LanguageDataKeys = keyof typeof languageData;
 
@@ -207,5 +207,3 @@ export const languageData = {
 		},
 	},
 };
-
-const a = {};

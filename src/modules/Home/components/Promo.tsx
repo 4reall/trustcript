@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 
-import Button from '@/components/_ui/Button/Button';
+import Button from '@/common/components/_ui/Button/Button';
 import ContentLayout from '@/modules/Home/components/ContentLayout/ContentLayout';
 
-import { PathsEnum } from '@/utils/constants/paths';
+import { PathsEnum } from '@/common/utils/constants/paths';
 import Glass from '@/assets/images/thumbnails/glass.webp';
 import { useTranslations } from 'next-intl';
 

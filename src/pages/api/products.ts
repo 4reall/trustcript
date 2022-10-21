@@ -1,5 +1,5 @@
-import { getProducts } from 'src/lib/api/getProducts';
-import { IProduct } from '@/types/Product';
+import { getProducts } from '@/lib/api/getProducts';
+import { IProduct } from '@/common/types/Product';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {

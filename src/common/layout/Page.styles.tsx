@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import { PropsWithChildren } from 'react';
-import { mediaQueries } from '@/utils/constants/mediaQueries';
-import { Container } from '@/layout/Container.styles';
-import { useScrollToTop } from '@/hooks/useScrollToTop';
+import { mediaQueries } from '@/common/utils/constants/mediaQueries';
+import { Container } from '@/common/layout/Container.styles';
+import { useScrollToTop } from '@/common/hooks/useScrollToTop';
 
 export const PageStyles = styled.main`
 	height: 100%;

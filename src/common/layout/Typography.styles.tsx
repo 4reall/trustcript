@@ -1,7 +1,10 @@
 import styled from '@emotion/styled';
 import { theme } from '@/common/styles/theme';
-import convertUnits from '@/utils/helpers/convertUnits';
-import { convertSpacing, SpacingArray } from '@/utils/helpers/convertSpacing';
+import convertUnits from '@/common/utils/helpers/convertUnits';
+import {
+	convertSpacing,
+	SpacingArray,
+} from '@/common/utils/helpers/convertSpacing';
 import { css } from '@emotion/react';
 
 export type TypographyVariant = keyof typeof theme.typography;
@@ -41,6 +44,6 @@ export const Typography = styled.span<TypographyProps>`
 		text-transform: ${uppercase && 'uppercase'};
 		text-decoration: ${underline && 'underline'};
 		text-align: ${align};
-		color: ${color || theme.palette.normal.normal};
+		color: ${color || ''};
 	`}
 `;

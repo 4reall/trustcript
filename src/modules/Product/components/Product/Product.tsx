@@ -3,12 +3,12 @@ import {
 	ProductContainer,
 	TextContainer,
 } from '@/modules/Product/components/Product/Product.styles';
-import { IImage } from '@/types/Image';
-import { Typography } from '@/layout/Typography.styles';
-import useMediaQuery from '@/hooks/breakpoints/useMediaQuery';
-import { queries } from '@/utils/constants/mediaQueries';
+import { IImage } from '@/common/types/Image';
+import { Typography } from '@/common/layout/Typography.styles';
+import useMediaQuery from '@/common/hooks/breakpoints/useMediaQuery';
+import { queries } from '@/common/utils/constants/mediaQueries';
 import Image from 'next/image';
-import Carousel from '@/components/Carousel/Carousel';
+import Carousel from '@/common/components/Carousel/Carousel';
 
 interface ProductProps {
 	title: string;

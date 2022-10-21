@@ -4,10 +4,10 @@ import {
 	ButtonBase,
 	DarkBtn,
 	OutlinedBtn,
-} from '@/components/_ui/Button/Button.styles';
-import Ripple from '@/components/Ripple/Ripple';
+} from '@/common/components/_ui/Button/Button.styles';
+import Ripple from '@/common/components/_ui/Ripple/Ripple';
 
-import { ButtonStylesProps } from '@/components/_ui/Button/Button.styles';
+import { ButtonStylesProps } from '@/common/components/_ui/Button/Button.styles';
 import { useTheme } from '@emotion/react';
 
 interface ButtonOwnProps {

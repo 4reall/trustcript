@@ -1,18 +1,19 @@
+import { useMemo } from 'react';
+import { useTranslations } from 'next-intl';
+
 import {
 	ContactsContainer,
 	ContentContainer,
 	MapContainer,
 } from '@/modules/Home/components/Contacts/Contacts.styles';
 import ContactsForm from '@/modules/Home/components/ContactsForm/ContactsForm';
-import { Typography } from '@/layout/Typography.styles';
-import Map from '@/components/Map/Map';
-import Links from '@/modules/Home/components/Contacts/Links';
-import { ILink } from '@/modules/Home/types/Link';
-import { useMemo } from 'react';
+import Links, { ILink } from '@/modules/Home/components/Contacts/Links';
+
+import { Typography } from '@/common/layout/Typography.styles';
+import Map from '@/common/components/Map/Map';
 import Geoposition from '@/assets/icons/contacts/Geoposition.svg';
 import Call from '@/assets/icons/contacts/Call.svg';
 import Mail from '@/assets/icons/contacts/Mail.svg';
-import { useTranslations } from 'next-intl';
 
 interface ContactsProps {
 	big: boolean;

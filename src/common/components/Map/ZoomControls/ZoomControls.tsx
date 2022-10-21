@@ -3,8 +3,8 @@ import {
 	ZoomControlsContainerProps,
 	ZoomControlsMinus,
 	ZoomControlsPlus,
-} from '@/components/Map/ZoomControls/ZoomControls.styles';
-import Ripple from '@/components/Ripple/Ripple';
+} from '@/common/components/Map/ZoomControls/ZoomControls.styles';
+import Ripple from '@/common/components/_ui/Ripple/Ripple';
 
 interface ZoomControlsProps extends ZoomControlsContainerProps {
 	handleMinusClick: () => void;

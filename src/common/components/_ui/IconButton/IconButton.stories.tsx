@@ -1,4 +1,4 @@
-import IconButton from '@/components/_ui/IconButton/IconButton';
+import IconButton from '@/common/components/_ui/IconButton/IconButton';
 import { ThemeDecorator } from '@/common/styles/ThemeProvider';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import Image from 'next/image';

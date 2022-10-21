@@ -1,4 +1,4 @@
-import Input from '@/components/_ui/Input/Input';
+import Input from '@/common/components/_ui/Input/Input';
 import { ThemeDecorator } from '@/common/styles/ThemeProvider';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 

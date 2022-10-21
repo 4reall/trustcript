@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
-import { mediaQueries } from '@/utils/constants/mediaQueries';
+import { mediaQueries } from '@/common/utils/constants/mediaQueries';
 import {
 	CardContainer,
 	ImgContainer,
 	TextContainer,
-} from '@/components/BtnCard/BtnCard.styles';
+} from '@/common/layout/BtnCard/BtnCard.styles';
 
 export const SimilarContainer = styled.article`
 	display: grid;

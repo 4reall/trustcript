@@ -10,7 +10,7 @@ export const Select = styled.div`
 	text-transform: uppercase;
 	cursor: pointer;
 	flex-grow: 0;
-	& > *:first-child {
+	& > *:first-of-type {
 		margin-right: 0.5rem;
 	}
 	z-index: ${({ theme }) => theme.zIndex.modal};

@@ -1,6 +1,6 @@
 import { useState, useEffect, useLayoutEffect } from 'react';
-import { queries } from '@/utils/constants/mediaQueries';
-import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
+import { queries } from '@/common/utils/constants/mediaQueries';
+import useIsomorphicLayoutEffect from '@/common/hooks/useIsomorphicLayoutEffect';
 
 type Query = typeof queries[keyof typeof queries];
 

@@ -2,14 +2,14 @@ import {
 	BtnCardContainer,
 	PopularContainer,
 } from '@/modules/Article/components/Popular/Popular.styles';
-import { Typography } from '@/layout/Typography.styles';
-import Filters from '@/components/Filters/Filters';
-import { DateFiltersEnum } from '@/utils/constants/filters';
+import { Typography } from '@/common/layout/Typography.styles';
+import Filters from '@/common/components/Filters/Filters';
+import { DateFiltersEnum } from '@/common/utils/constants/filters';
 import { useEffect, useState } from 'react';
 import { dateFilters } from '@/mock/filters';
-import { IArticle } from '@/types/Article';
-import BtnCard from '@/components/BtnCard/BtnCard';
-import { useLanguage } from '@/hooks/useLanguage';
+import { IArticle } from '@/common/types/Article';
+import BtnCard from '@/common/layout/BtnCard/BtnCard';
+
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { useRouter } from 'next/router';
 
@@ -18,7 +18,6 @@ interface PopularProps {
 }
 
 const Popular = ({ articles }: PopularProps) => {
-	const { text } = useLanguage('article');
 	const { push } = useRouter();
 	const [activeFilter, setActiveFilter] = useState(DateFiltersEnum.DAY);
 	const [filteredArticles, setFilteredArticles] = useState(articles);

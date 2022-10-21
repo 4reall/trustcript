@@ -1,4 +1,4 @@
-import { mediaQueries } from '@/utils/constants/mediaQueries';
+import { mediaQueries } from '@/common/utils/constants/mediaQueries';
 import Bg from '@/assets/images/thumbnails/mainBg.webp';
 import { css } from '@emotion/react';
 

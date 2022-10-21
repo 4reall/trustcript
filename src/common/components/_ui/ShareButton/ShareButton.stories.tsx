@@ -2,7 +2,7 @@ import { ThemeDecorator } from '@/common/styles/ThemeProvider';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import ShareButton, {
 	IIconLink,
-} from '@/components/_ui/ShareButton/ShareButton';
+} from '@/common/components/_ui/ShareButton/ShareButton';
 
 const links: IIconLink[] = [
 	{

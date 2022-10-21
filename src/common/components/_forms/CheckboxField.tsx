@@ -1,8 +1,8 @@
 import { Path, useController, useFormContext } from 'react-hook-form';
-import Switch from '@/components/_ui/Switch/Switch';
-import { Typography } from '@/layout/Typography.styles';
+import Switch from '@/common/components/_ui/Switch/Switch';
+import { Typography } from '@/common/layout/Typography.styles';
 import { CheckboxContainer } from '@/modules/Home/components/ContactsForm/ContactsForm.styles';
-import { ErrorMessage } from '@/layout/ErrorMessage.styles';
+import { ErrorMessage } from '@/common/layout/ErrorMessage.styles';
 import { SwitchProps } from '@radix-ui/react-switch';
 
 interface CheckboxFieldProps<TFormValues> {

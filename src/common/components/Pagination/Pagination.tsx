@@ -4,8 +4,8 @@ import {
 	PaginationButton,
 	PaginationContainer,
 	PaginationContainerProps,
-} from '@/components/Pagination/Pagination.styles';
-import { Typography } from '@/layout/Typography.styles';
+} from '@/common/components/Pagination/Pagination.styles';
+import { Typography } from '@/common/layout/Typography.styles';
 
 import { useEffect, useMemo } from 'react';
 
@@ -18,9 +18,9 @@ import RightArrow from '@/assets/icons/arrows/RightArrow.svg';
 import UpArrow from '@/assets/icons/arrows/UpArrow.svg';
 import BottomArrow from '@/assets/icons/arrows/BottomArrow.svg';
 
-import { usePagination } from '@/components/Pagination/usePagination';
+import { usePagination } from '@/common/components/Pagination/usePagination';
 import Image from 'next/image';
-import IconButton from '@/components/_ui/IconButton/IconButton';
+import IconButton from '@/common/components/_ui/IconButton/IconButton';
 
 interface PaginationProps extends PaginationContainerProps {
 	pageDisplayed: number;

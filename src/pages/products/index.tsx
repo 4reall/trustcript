@@ -1,11 +1,11 @@
-import { Typography } from '@/layout/Typography.styles';
+import { Typography } from '@/common/layout/Typography.styles';
 import Products from '@/modules/Products/Products';
-import { useLanguage } from '@/hooks/useLanguage';
+
 import { GetServerSidePropsContext } from 'next';
-import { IProduct } from '@/types/Product';
+import { IProduct } from '@/common/types/Product';
 
 interface ProductsPageProps {
-	products: IProduct[];
+	products?: IProduct[];
 }
 
 const ProductsPage = ({ products }: ProductsPageProps) => {
@@ -32,10 +32,7 @@ export const getServerSideProps = async ({
 
 	return {
 		props: {
-			// ...(await serverSideTranslations(locale || 'ru', [
-			// 	'common',
-			// 	'home',
-			// ])),
+			messages: (await import(`public/locales/${locale}.json`)).default,
 			products: productsJson,
 		},
 	};

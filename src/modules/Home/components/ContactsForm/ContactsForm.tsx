@@ -3,14 +3,13 @@ import { SubmitHandler, useForm, FormProvider } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useMemo } from 'react';
 
-import Button from '@/components/_ui/Button/Button';
-import CheckboxField from '@/components/_forms/CheckboxField';
+import Button from '@/common/components/_ui/Button/Button';
+import CheckboxField from '@/common/components/_forms/CheckboxField';
 import { ContactsFormStyles } from '@/modules/Home/components/ContactsForm/ContactsForm.styles';
-import InputField from '@/components/_forms/InputField';
+import InputField from '@/common/components/_forms/InputField';
 
-import { useLanguage } from '@/hooks/useLanguage';
-import useMediaQuery from '@/hooks/breakpoints/useMediaQuery';
-import { queries } from '@/utils/constants/mediaQueries';
+import useMediaQuery from '@/common/hooks/breakpoints/useMediaQuery';
+import { queries } from '@/common/utils/constants/mediaQueries';
 import { ITypographyData } from '@/modules/Home';
 import { useTranslations } from 'next-intl';
 

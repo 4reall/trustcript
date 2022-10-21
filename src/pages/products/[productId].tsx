@@ -1,9 +1,7 @@
-import { Page } from '@/layout/Page.styles';
-import { Typography } from '@/layout/Typography.styles';
+import { Page } from '@/common/layout/Page.styles';
+import { Typography } from '@/common/layout/Typography.styles';
 import Product from '@/modules/Product/components/Product/Product';
 import Similar from '@/modules/Product/components/Similar/Similar';
-
-import { getProductById, getRandomProducts } from '@/mock/products';
 
 import backBig from '@/assets/images/notebook/notebook-back-big.png';
 import frontBig from '@/assets/images/notebook/notebook-front-big.png';
@@ -23,11 +21,11 @@ const ProductPage = () => {
 
 	if (!query.productId) return <></>;
 
-	const { description, title } = getProductById(query.productId as string);
+	// const { description, title } = getProductById(query.productId as string);
 
 	return (
 		<>
-			<Product title={title} description={description} images={images} />
+			{/*<Product title={title} description={description} images={images} />*/}
 			<Typography
 				m={['2rem', 0, '2rem', 0]}
 				variant="h3"
@@ -36,7 +34,7 @@ const ProductPage = () => {
 			>
 				Похожие продукты
 			</Typography>
-			<Similar images={images} products={getRandomProducts(4)} />
+			{/*<Similar images={images} products={getRandomProducts(4)} />*/}
 		</>
 	);
 };

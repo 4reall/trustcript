@@ -2,8 +2,8 @@ import { ComponentPropsWithoutRef } from 'react';
 import {
 	IconButtonStyles,
 	IconButtonStylesProps,
-} from '@/components/_ui/IconButton/IconButton.styles';
-import Ripple from '@/components/Ripple/Ripple';
+} from '@/common/components/_ui/IconButton/IconButton.styles';
+import Ripple from '@/common/components/_ui/Ripple/Ripple';
 import { useTheme } from '@emotion/react';
 
 type IconButtonProps = ComponentPropsWithoutRef<'button'> &

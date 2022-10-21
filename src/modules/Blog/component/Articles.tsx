@@ -1,15 +1,13 @@
 import { Container } from '@/modules/Products/Products.styles';
-import Filters from '@/components/Filters/Filters';
-import Cards from '@/components/Cards/Cards';
-import Pagination from '@/components/Pagination/Pagination';
+import Filters from '@/common/components/Filters/Filters';
+import Cards from '@/common/layout/Cards/Cards';
+import Pagination from '@/common/components/Pagination/Pagination';
 import { useEffect, useState } from 'react';
-import { ArticleFiltersEnum } from '@/utils/constants/filters';
-import { articleFilters } from '@/mock/filters';
-import { articles } from '@/mock/articles';
-import ArticleCard from '@/components/Card/ArticleCard';
+import { ArticleFiltersEnum } from '@/common/utils/constants/filters';
+import ArticleCard from '@/common/layout/Card/ArticleCard';
 
 const Articles = () => {
-	const [filteredCard, setFilteredCards] = useState(articles);
+	const [filteredCard, setFilteredCards] = useState([]);
 	const [page, setPage] = useState(0);
 	const [filter, setFilter] = useState(ArticleFiltersEnum.ALL);
 
@@ -22,18 +20,18 @@ const Articles = () => {
 		setFilter(filter);
 	};
 
-	useEffect(() => {
-		const filtered = articles.filter(
-			(card) =>
-				card.category === filter || filter === ArticleFiltersEnum.ALL
-		);
-		setFilteredCards(filtered);
-		// eslint-disable-next-line
-	}, [filter, page]);
+	// useEffect(() => {
+	// 	const filtered = articles.filter(
+	// 		(card) =>
+	// 			card.category === filter || filter === ArticleFiltersEnum.ALL
+	// 	);
+	// 	setFilteredCards(filtered);
+	// 	// eslint-disable-next-line
+	// }, [filter, page]);
 
 	return (
 		<Container>
-			<Filters
+			{/* <Filters
 				activeFilter={filter}
 				onClick={handleFilterChange}
 				filters={articleFilters}
@@ -48,7 +46,7 @@ const Articles = () => {
 				setActivePage={handleChangeActivePage}
 				pageDisplayed={4}
 				pageCount={Math.ceil(filteredCard.length / 6)}
-			/>
+			/> */}
 		</Container>
 	);
 };

@@ -1,5 +1,8 @@
-import { Container, ContainerProps } from '@/components/Filters/Filters.styles';
-import Button from '@/components/_ui/Button/Button';
+import {
+	Container,
+	ContainerProps,
+} from '@/common/components/Filters/Filters.styles';
+import Button from '@/common/components/_ui/Button/Button';
 
 export interface IFilter<TFilters> {
 	label: string;

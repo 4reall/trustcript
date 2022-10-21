@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { mediaQueries } from '@/utils/constants/mediaQueries';
-import { Section } from '@/layout/Section.styles';
+import { mediaQueries } from '@/common/utils/constants/mediaQueries';
+import { Section } from '@/common/layout/Section.styles';
 
 export const ToolsContainer = styled(Section)`
 	position: relative;
@@ -28,7 +28,7 @@ export const ToolsLogosContainer = styled.div`
 			margin: 0.5rem auto auto;
 			max-width: unset;
 			width: 50%;
-			&:first-child {
+			&:first-of-type {
 				margin-top: 0;
 			}
 		}

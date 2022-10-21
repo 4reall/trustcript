@@ -1,8 +1,8 @@
 import { AppProps } from 'next/app';
 import { YMaps } from '@pbe/react-yandex-maps';
 
-import Layout from '@/layout/Layout/Layout';
-import { Page } from '@/layout/Page.styles';
+import Layout from '@/common/layout/Layout/Layout';
+import { Page } from '@/common/layout/Page.styles';
 
 import { GlobalStyle } from '@/common/styles/GlobalStyles';
 import { theme } from '@/common/styles/theme';

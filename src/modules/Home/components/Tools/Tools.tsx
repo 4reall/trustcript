@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { Typography } from '@/layout/Typography.styles';
+import { Typography } from '@/common/layout/Typography.styles';
 import {
 	ToolsContainer,
 	ToolsLogosContainer,

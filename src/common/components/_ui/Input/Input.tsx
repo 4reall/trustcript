@@ -4,7 +4,7 @@ import {
 	forwardRef,
 	useState,
 } from 'react';
-import { InputBase } from '@/components/_ui/Input/Input.styles';
+import { InputBase } from '@/common/components/_ui/Input/Input.styles';
 
 export interface InputProps extends ComponentPropsWithRef<'input'> {
 	textarea?: boolean;
