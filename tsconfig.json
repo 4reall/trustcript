@@ -18,10 +18,30 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "baseUrl": "src",
+    "types": ["@emotion/core"],
+    "jsx": "preserve",
+    "baseUrl": ".",
+//    "paths": {
+//      "@lib/*": [
+//        "src/lib/*"
+//      ],
+//      "@common/*": [
+//        "src/common/*"
+//      ],
+//      "@assets/*": [
+//        "public/assets/*"
+//      ],
+//      "@modules/*": [
+//        "src/modules/*"
+//      ],
+//    },
+    "incremental": true
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
+
