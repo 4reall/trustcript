@@ -1,5 +1,5 @@
 import { GetStaticPropsContext } from 'next';
-import { Home } from '@/modules/Home';
+import { Home } from 'src/modules/Home';
 
 const HomePage = () => {
 	return <Home />;

@@ -1,14 +1,14 @@
 import {
 	BtnCardContainer,
 	PopularContainer,
-} from '@/modules/Article/components/Popular/Popular.styles';
-import { Typography } from '@/common/layout/Typography.styles';
-import Filters from '@/common/components/Filters/Filters';
-import { DateFiltersEnum } from '@/common/utils/constants/filters';
+} from 'src/modules/Article/components/Popular/Popular.styles';
+import { Typography } from 'src/common/layout/Typography.styles';
+import Filters from 'src/common/components/Filters/Filters';
+import { DateFiltersEnum } from 'src/common/utils/constants/filters';
 import { useEffect, useState } from 'react';
-import { dateFilters } from '@/mock/filters';
-import { IArticle } from '@/common/types/Article';
-import BtnCard from '@/common/layout/BtnCard/BtnCard';
+import { dateFilters } from 'src/mock/filters';
+import { IArticle } from 'src/common/types/Article';
+import BtnCard from 'src/common/layout/BtnCard/BtnCard';
 
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { useRouter } from 'next/router';
@@ -44,7 +44,7 @@ const Popular = ({ articles }: PopularProps) => {
 			<Filters<DateFiltersEnum>
 				activeFilter={activeFilter}
 				filters={dateFilters}
-				onClick={handleFilterChange}
+				onFilterChange={handleFilterChange}
 			/>
 			<BtnCardContainer>
 				<TransitionGroup appear exit={false} component={null}>

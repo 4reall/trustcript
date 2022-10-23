@@ -1,5 +1,5 @@
-import { MessageContainer } from '@/modules/Page404/Page404.styles';
-import { Typography } from '@/common/layout/Typography.styles';
+import { MessageContainer } from 'src/modules/Page404/Page404.styles';
+import { Typography } from 'src/common/layout/Typography.styles';
 import { useTheme } from '@emotion/react';
 
 const Page404 = () => {

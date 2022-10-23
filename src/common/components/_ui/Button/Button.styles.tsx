@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { mediaQueries } from '@/common/utils/constants/mediaQueries';
+import { mediaQueries } from 'src/common/utils/constants/mediaQueries';
 import { css } from '@emotion/react';
 
 export interface ButtonStylesProps {
@@ -7,6 +7,7 @@ export interface ButtonStylesProps {
 	small?: boolean;
 	disabled?: boolean;
 	hide?: boolean;
+	active: boolean;
 }
 
 export const ButtonBase = styled.button<ButtonStylesProps>`
@@ -46,24 +47,29 @@ export const ButtonBase = styled.button<ButtonStylesProps>`
 			font-size: ${theme.typography.h5.fontSize};
 			line-height: ${theme.typography.h5.lineHeight};
 		`};
-
-		${mediaQueries.down.md} {
-			font-size: ${theme.typography.h5.fontSize};
-			line-height: ${theme.typography.h5.lineHeight};
-		}
 	`}
 `;
 
 export const DarkBtn = styled(ButtonBase)`
-	${({ theme }) => css`
+	${({ theme, active }) => css`
 		border: 2px solid ${theme.palette.white.extraLight};
 		background: ${theme.palette.white.light};
 		color: ${theme.palette.normal.normal};
+		transition: all 300ms;
 		&:hover:enabled {
 			border-color: ${theme.palette.white.light};
 			background: ${theme.palette.white.normal};
 			color: ${theme.palette.normal.hover};
 		}
+		${active &&
+		css`
+			background: #fff;
+			color: black;
+			&:hover:enabled {
+				color: black;
+				background: #fff;
+			}
+		`}
 	`}
 	}
 `;

@@ -1,3 +1,3 @@
-import Home from '@/modules/Home/components/Home';
+import Home from 'src/modules/Home/components/Home';
 
 export { Home };

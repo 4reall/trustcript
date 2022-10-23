@@ -1,11 +1,11 @@
-import { SimilarContainer } from '@/modules/Product/components/Similar/Similar.styles';
+import { SimilarContainer } from 'src/modules/Product/components/Similar/Similar.styles';
 
-import { IBaseProduct } from '@/common/types/Product';
-import { IImage } from '@/common/types/Image';
+import { IBaseProduct } from 'src/modules/Products/types/Product';
+import { IImage } from 'src/common/types/Image';
 
-import useMediaQuery from '@/common/hooks/breakpoints/useMediaQuery';
-import { queries } from '@/common/utils/constants/mediaQueries';
-import BtnCard from '@/common/layout/BtnCard/BtnCard';
+import useMediaQuery from 'src/common/hooks/breakpoints/useMediaQuery';
+import { queries } from 'src/common/utils/constants/mediaQueries';
+import BtnCard from 'src/common/layout/BtnCard/BtnCard';
 import { useRouter } from 'next/router';
 
 interface SimilarProps {

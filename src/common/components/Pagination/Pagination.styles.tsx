@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import {
 	convertSpacing,
 	SpacingArray,
-} from '@/common/utils/helpers/convertSpacing';
+} from 'src/common/utils/helpers/convertSpacing';
 import { css } from '@emotion/react';
 
 export interface PaginationContainerProps {

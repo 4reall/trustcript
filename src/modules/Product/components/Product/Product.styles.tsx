@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { mediaQueries } from '@/common/utils/constants/mediaQueries';
+import { mediaQueries } from 'src/common/utils/constants/mediaQueries';
 import { css } from '@emotion/react';
 
 export const ProductContainer = styled.article`

@@ -1,13 +1,14 @@
-import DropdownMenu from '@/common/components/_ui/DropdownMenu/DropdownMenu';
+import DropdownMenu from 'src/common/components/_ui/DropdownMenu/DropdownMenu';
 import { ReactNode, useState } from 'react';
 import {
-	Container,
 	List,
 	Nav,
 	NavItem,
-} from '@/common/components/NavMenu/NavMenu.styles';
-import NavLink from '@/common/layout/NavLink';
-import { INavLink } from '@/common/types/INavLink';
+} from 'src/common/components/NavMenu/NavMenu.styles';
+import NavLink from 'src/common/layout/NavLink';
+import { INavLink } from 'src/common/types/INavLink';
+import { Typography } from 'src/common/layout/Typography.styles';
+import { useRouter } from 'next/router';
 
 interface NavMenuProps {
 	navLinks: INavLink[];
@@ -16,6 +17,7 @@ interface NavMenuProps {
 
 const NavMenu = ({ navLinks, trigger }: NavMenuProps) => {
 	const [isOpen, setIsOpen] = useState(false);
+	const router = useRouter();
 
 	const handleTriggerClick = () => {
 		setIsOpen(!isOpen);
@@ -28,14 +30,19 @@ const NavMenu = ({ navLinks, trigger }: NavMenuProps) => {
 				<Nav>
 					<List>
 						{navLinks.map((link) => (
-							<NavItem key={link.href}>
+							<NavItem
+								active={router.pathname === link.href}
+								key={link.href}
+							>
 								<NavLink
 									className={(isActive) =>
 										isActive ? 'active' : ''
 									}
 									href={link.href}
 								>
-									{link.title}
+									<Typography variant="h4">
+										{link.title}
+									</Typography>
 								</NavLink>
 							</NavItem>
 						))}

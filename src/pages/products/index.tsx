@@ -1,39 +1,53 @@
-import { Typography } from '@/common/layout/Typography.styles';
-import Products from '@/modules/Products/Products';
+import { Typography } from 'src/common/layout/Typography.styles';
+import Products from 'src/modules/Products/components/Products/Products';
 
-import { GetServerSidePropsContext } from 'next';
-import { IProduct } from '@/common/types/Product';
+import { GetServerSidePropsContext, InferGetServerSidePropsType } from 'next';
+import { IProduct } from 'src/modules/Products/types/Product';
+import { getProducts } from 'src/modules/Products/services/ProductsService';
+import { IProductsResponse } from 'src/modules/Products/types/ProductsResponse';
+import { useTranslations } from 'next-intl';
+import { queryClient } from 'src/lib/queryClient';
+import { IProductsParams } from 'src/modules/Products/types/ProductsParams';
+import { dehydrate, QueryClient, useQuery } from '@tanstack/react-query';
+import product from 'src/modules/Product/components/Product/Product';
 
 interface ProductsPageProps {
-	products?: IProduct[];
+	productsResponse: IProductsResponse;
 }
 
-const ProductsPage = ({ products }: ProductsPageProps) => {
-	// const { t } = useTranslation('home');
+const ProductsPage = () => {
+	const t = useTranslations('products');
 	return (
 		<>
 			<Typography as="h2" variant="h2" bold>
-				{/*{t('promo.title')}*/}
+				{t('title')}
 			</Typography>
 			<Typography m={['2rem', 0]} as="p" variant="h4">
-				{/*{t('promo.text')}*/}
+				{t('text')}
 			</Typography>
-			<Products products={products} />
+			<Products />
 		</>
 	);
 };
 
 export const getServerSideProps = async ({
 	locale,
+	query,
 }: GetServerSidePropsContext) => {
-	const products = await fetch(`${process.env.BASE_URL}api/products`);
+	let page = 1;
 
-	const productsJson = await products.json();
+	if (query.page) {
+		page = parseInt(Array.isArray(query.page) ? query.page[0] : query.page);
+	}
+	await queryClient.prefetchQuery(
+		['products', page],
+		async () => await getProducts({ page })
+	);
 
 	return {
 		props: {
 			messages: (await import(`public/locales/${locale}.json`)).default,
-			products: productsJson,
+			dehydratedState: dehydrate(queryClient),
 		},
 	};
 };

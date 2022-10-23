@@ -1,5 +1,5 @@
-import IconButton from '@/common/components/_ui/IconButton/IconButton';
-import { ThemeDecorator } from '@/common/styles/ThemeProvider';
+import IconButton from 'src/common/components/_ui/IconButton/IconButton';
+import { ThemeDecorator } from 'src/common/styles/ThemeProvider';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import Image from 'next/image';
 

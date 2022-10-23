@@ -1,5 +1,5 @@
-import { IImage } from '@/common/types/Image';
-import { ProductFiltersEnum } from '@/common/utils/constants/filters';
+import { IImage } from 'src/common/types/Image';
+import { CategoryFilters } from 'src/common/utils/constants/filters';
 
 export interface ICard<TCategory> {
 	id: number;

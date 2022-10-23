@@ -21,20 +21,20 @@
     "types": ["@emotion/core"],
     "jsx": "preserve",
     "baseUrl": ".",
-    "paths": {
-      "@/lib/*": [
-        "src/lib/*"
-      ],
-      "@/common/*": [
-        "src/common/*"
-      ],
-      "@/assets/*": [
-        "public/assets/*"
-      ],
-      "@/modules/*": [
-        "src/modules/*"
-      ],
-    },
+//    "paths": {
+//      "@lib/*": [
+//        "src/lib/*"
+//      ],
+//      "@common/*": [
+//        "src/common/*"
+//      ],
+//      "@assets/*": [
+//        "public/assets/*"
+//      ],
+//      "@modules/*": [
+//        "src/modules/*"
+//      ],
+//    },
     "incremental": true
   },
   "include": [

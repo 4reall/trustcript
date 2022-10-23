@@ -2,7 +2,7 @@ import {
 	SpinnerContainer,
 	SpinnerSvg,
 	SpinnerSvgProps,
-} from '@/common/components/_ui/Spinner/Spinner.styles';
+} from 'src/common/components/_ui/Spinner/Spinner.styles';
 
 const Spinner = ({ small }: SpinnerSvgProps) => {
 	return (

@@ -1,5 +1,5 @@
 import { StoryFn } from '@storybook/react';
-import { theme } from '@/common/styles/theme';
+import { theme } from 'src/common/styles/theme';
 import { ThemeProvider } from '@emotion/react';
 import Head from 'next/head';
 

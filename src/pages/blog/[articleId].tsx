@@ -1,4 +1,4 @@
-import Article from '@/modules/Article/components/Article/Article';
+import Article from 'src/modules/Article/components/Article/Article';
 
 const ArticlePage = () => {
 	return <div>{/*<Article articleHeaders={} article={} />*/}</div>;

@@ -1,10 +1,15 @@
-import { getProducts } from '@/lib/api/getProducts';
-import { IProduct } from '@/common/types/Product';
+import { getProducts } from 'src/modules/Products/services/ProductsService';
 import { NextApiRequest, NextApiResponse } from 'next';
+import { IProductsParams } from 'src/modules/Products/types/ProductsParams';
 
-const handler = async (req: NextApiRequest, res: NextApiResponse) => {
+interface Request extends NextApiRequest {
+	params: IProductsParams;
+}
+
+const handler = async (req: Request, res: NextApiResponse) => {
 	try {
-		const products = await getProducts();
+		console.log(req.query);
+		const products = await getProducts({ ...req.query });
 
 		res.status(200).json(products);
 	} catch (e) {

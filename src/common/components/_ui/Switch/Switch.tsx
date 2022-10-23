@@ -8,7 +8,7 @@ import {
 import {
 	SwitchRoot,
 	SwitchThumb,
-} from '@/common/components/_ui/Switch/Switch.styles';
+} from 'src/common/components/_ui/Switch/Switch.styles';
 import { SwitchProps } from '@radix-ui/react-switch';
 
 const Switch = forwardRef<HTMLButtonElement, Omit<SwitchProps, 'asChild'>>(

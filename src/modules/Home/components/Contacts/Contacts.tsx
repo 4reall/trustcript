@@ -5,15 +5,15 @@ import {
 	ContactsContainer,
 	ContentContainer,
 	MapContainer,
-} from '@/modules/Home/components/Contacts/Contacts.styles';
-import ContactsForm from '@/modules/Home/components/ContactsForm/ContactsForm';
-import Links, { ILink } from '@/modules/Home/components/Contacts/Links';
+} from 'src/modules/Home/components/Contacts/Contacts.styles';
+import ContactsForm from 'src/modules/Home/components/ContactsForm/ContactsForm';
+import Links, { ILink } from 'src/modules/Home/components/Contacts/Links';
 
-import { Typography } from '@/common/layout/Typography.styles';
-import Map from '@/common/components/Map/Map';
-import Geoposition from '@/assets/icons/contacts/Geoposition.svg';
-import Call from '@/assets/icons/contacts/Call.svg';
-import Mail from '@/assets/icons/contacts/Mail.svg';
+import { Typography } from 'src/common/layout/Typography.styles';
+import Map from 'src/common/components/Map/Map';
+import Geoposition from 'public/assets/icons/contacts/Geoposition.svg';
+import Call from 'public/assets/icons/contacts/Call.svg';
+import Mail from 'public/assets/icons/contacts/Mail.svg';
 
 interface ContactsProps {
 	big: boolean;

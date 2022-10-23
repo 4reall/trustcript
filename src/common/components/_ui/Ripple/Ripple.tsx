@@ -1,6 +1,6 @@
 import React, { useState, MouseEvent } from 'react';
-import { RippleContainer } from '@/common/components/_ui/Ripple/Ripple.styles';
-import { useDebouncedRippleCleanUp } from '@/common/components/_ui/Ripple/useDebouncedRippleCleanUp';
+import { RippleContainer } from 'src/common/components/_ui/Ripple/Ripple.styles';
+import { useDebouncedRippleCleanUp } from 'src/common/components/_ui/Ripple/useDebouncedRippleCleanUp';
 
 export interface RippleProps {
 	duration: number;

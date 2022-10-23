@@ -1,8 +1,8 @@
 import {
 	Container,
 	ContainerProps,
-} from '@/common/components/Filters/Filters.styles';
-import Button from '@/common/components/_ui/Button/Button';
+} from 'src/common/components/Filters/Filters.styles';
+import Button from 'src/common/components/_ui/Button/Button';
 
 export interface IFilter<TFilters> {
 	label: string;
@@ -12,7 +12,7 @@ export interface IFilter<TFilters> {
 interface FiltersBaseProps<TFilter> {
 	activeFilter: TFilter;
 	filters: IFilter<TFilter>[];
-	onClick: (filter: TFilter) => void;
+	onFilterChange: (filter: TFilter) => void;
 	small?: boolean;
 }
 
@@ -20,14 +20,14 @@ type FiltersProps<TFilter> = FiltersBaseProps<TFilter> & ContainerProps;
 
 const Filters = <TFilter,>({
 	filters,
-	onClick,
+	onFilterChange,
 	activeFilter,
 	small,
 	columns,
 	margin,
 }: FiltersProps<TFilter>) => {
 	const handleClick = (filter: TFilter) => {
-		return () => onClick(filter);
+		return () => onFilterChange(filter);
 	};
 
 	return (
@@ -40,6 +40,7 @@ const Filters = <TFilter,>({
 					small={small}
 					onClick={handleClick(filter)}
 					dark
+					ripple={false}
 				>
 					{label}
 				</Button>

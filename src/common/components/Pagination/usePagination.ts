@@ -20,13 +20,6 @@ export const usePagination = ({
 	const [endShownIndex, setEndShownIndex] = useState(pageDisplayed - 1);
 	// const [activeInternalPage, setActiveInternalPage] = useState(activePage);
 
-	const reset = useCallback(() => {
-		setOffset(0);
-		setStartShownIndex(0);
-		setEndShownIndex(pageDisplayed - 1);
-		setActivePage(0);
-	}, [pageDisplayed]);
-
 	const increasePage = useCallback(() => {
 		if (activePage === pageCount) return;
 
@@ -64,8 +57,6 @@ export const usePagination = ({
 		setEndShownIndex(pageDisplayed - 1);
 		setStartShownIndex(0);
 		setActivePage(0);
-		return;
-
 		// eslint-disable-next-line
 	}, [pageDisplayed, pageCount, startShownIndex, endShownIndex, activePage]);
 
@@ -105,7 +96,6 @@ export const usePagination = ({
 			setPage,
 			setEnd,
 			setStart,
-			reset,
 		},
 	};
 };

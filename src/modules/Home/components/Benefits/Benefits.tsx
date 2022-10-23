@@ -1,14 +1,14 @@
 import {
 	BenefitsContainer,
 	Cards,
-} from '@/modules/Home/components/Benefits/Benefits.styles';
-import { Typography } from '@/common/layout/Typography.styles';
-import Card from '@/modules/Home/components/Benefits/Card';
-import { IImage } from '@/common/types/Image';
+} from 'src/modules/Home/components/Benefits/Benefits.styles';
+import { Typography } from 'src/common/layout/Typography.styles';
+import Card from 'src/modules/Home/components/Benefits/Card';
+import { IImage } from 'src/common/types/Image';
 import { useMemo } from 'react';
-import Mask from '@/assets/icons/Mask.svg';
-import Bug from '@/assets/icons/Bug.svg';
-import Scan from '@/assets/icons/Scan.svg';
+import Mask from 'public/assets/icons/Mask.svg';
+import Bug from 'public/assets/icons/Bug.svg';
+import Scan from 'public/assets/icons/Scan.svg';
 import { useTranslations } from 'next-intl';
 
 interface ICard {

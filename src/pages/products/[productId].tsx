@@ -1,12 +1,12 @@
-import { Page } from '@/common/layout/Page.styles';
-import { Typography } from '@/common/layout/Typography.styles';
-import Product from '@/modules/Product/components/Product/Product';
-import Similar from '@/modules/Product/components/Similar/Similar';
+import { Page } from 'src/common/layout/Page.styles';
+import { Typography } from 'src/common/layout/Typography.styles';
+import Product from 'src/modules/Product/components/Product/Product';
+import Similar from 'src/modules/Product/components/Similar/Similar';
 
-import backBig from '@/assets/images/notebook/notebook-back-big.png';
-import frontBig from '@/assets/images/notebook/notebook-front-big.png';
-import leftBig from '@/assets/images/notebook/notebook-left-big.png';
-import rightBig from '@/assets/images/notebook/notebook-right-big.png';
+import backBig from 'public/assets/images/notebook/notebook-back-big.png';
+import frontBig from 'public/assets/images/notebook/notebook-front-big.png';
+import leftBig from 'public/assets/images/notebook/notebook-left-big.png';
+import rightBig from 'public/assets/images/notebook/notebook-right-big.png';
 import { useRouter } from 'next/router';
 
 const images = [

@@ -1,15 +1,21 @@
-import { PathsEnum } from '@/common/utils/constants/paths';
+import { PathsEnum } from 'src/common/utils/constants/paths';
 import { GetStaticPropsContext } from 'next';
-import { INavLink } from '@/common/types/INavLink';
-
-const navLinks: INavLink[] = [
-	{ title: 'home', href: PathsEnum.Main },
-	{ title: 'blog', href: PathsEnum.Blog },
-	{ title: 'products', href: PathsEnum.Products },
-];
+import { INavLink } from 'src/common/types/INavLink';
+import CardSkeleton from 'src/common/layout/Card/CardSkeleton';
+import Cards from 'src/common/layout/Cards/Cards';
+import Card from 'src/common/layout/Card/Card';
+import Image from 'next/image';
+import Glass from 'public/assets/images/thumbnails/glass.webp';
+import Pagination from 'src/common/components/Pagination/Pagination';
+import { useState } from 'react';
+import TestComponent from 'src/modules/Test/TestComponent';
 
 const Index = () => {
-	return <div></div>;
+	return (
+		<Cards>
+			<TestComponent />
+		</Cards>
+	);
 };
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {

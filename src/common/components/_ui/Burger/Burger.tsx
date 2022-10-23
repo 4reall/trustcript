@@ -1,7 +1,7 @@
 import {
 	BurgerBar,
 	BurgerContainer,
-} from '@/common/components/_ui/Burger/Burger.styles';
+} from 'src/common/components/_ui/Burger/Burger.styles';
 import { forwardRef } from 'react';
 
 interface BurgerProps {

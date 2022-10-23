@@ -1,4 +1,5 @@
-import { PrismaClient } from '@prisma/client';
+import { Prisma, PrismaClient } from '@prisma/client';
+import { ProductCategories } from 'src/modules/Products/types/Product';
 
 declare global {
 	var prisma: PrismaClient; // This must be a `var` and not a `let / const`
@@ -14,5 +15,20 @@ if (process.env.NODE_ENV === 'production') {
 	}
 	prisma = global.prisma;
 }
+
+type ImagesOnProducts = Prisma.ImagesOnProductsGetPayload<{
+	include: {
+		Image: true;
+	};
+}>;
+type ThumbnailsOnProducts = Prisma.ThumbnailsOnProductsGetPayload<{
+	include: {
+		Image: true;
+	};
+}>;
+type Image = Prisma.ImageGetPayload<{}>;
+type ProductBase = Prisma.ProductGetPayload<{}>;
+
+export type { ImagesOnProducts, Image, ProductBase, ThumbnailsOnProducts };
 
 export default prisma;

@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
-import { Container } from '@/modules/Home/components/ContentLayout/ContentLayout.styles';
-import { Typography } from '@/common/layout/Typography.styles';
-import { Section, SectionProps } from '@/common/layout/Section.styles';
+import { Container } from 'src/modules/Home/components/ContentLayout/ContentLayout.styles';
+import { Typography } from 'src/common/layout/Typography.styles';
+import { Section, SectionProps } from 'src/common/layout/Section.styles';
 
 interface ContentLayoutProps extends SectionProps {
 	title: string;

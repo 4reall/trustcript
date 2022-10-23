@@ -1,6 +1,6 @@
 import { Path, useController, useFormContext } from 'react-hook-form';
-import Input, { InputProps } from '@/common/components/_ui/Input/Input';
-import { ErrorMessage } from '@/common/layout/ErrorMessage.styles';
+import Input, { InputProps } from 'src/common/components/_ui/Input/Input';
+import { ErrorMessage } from 'src/common/layout/ErrorMessage.styles';
 
 interface InputFieldProps<TFormValues> extends InputProps {
 	name: Path<TFormValues>;

@@ -3,20 +3,20 @@ import {
 	ContentContainer,
 	LabelsContainer,
 	TextContainer,
-} from '@/common/layout/Card/Card.styles';
-import Label from '@/common/layout/Label/Label';
-import { IArticle } from '@/common/types/Article';
+} from 'src/common/layout/Card/Card.styles';
+import Label from 'src/common/layout/Label/Label';
+import { IArticle } from 'src/common/types/Article';
 
-import ViewsIcon from '@/assets/icons/labels/views.svg';
-import DateIcon from '@/assets/icons/labels/date.svg';
-import useMediaQuery from '@/common/hooks/breakpoints/useMediaQuery';
-import { queries } from '@/common/utils/constants/mediaQueries';
-import { Typography } from '@/common/layout/Typography.styles';
-import { cutStr } from '@/common/utils/helpers/cutStr';
-import { convertViews } from '@/common/utils/helpers/converViews';
+import ViewsIcon from 'public/assets/icons/labels/views.svg';
+import DateIcon from 'public/assets/icons/labels/date.svg';
+import useMediaQuery from 'src/common/hooks/breakpoints/useMediaQuery';
+import { queries } from 'src/common/utils/constants/mediaQueries';
+import { Typography } from 'src/common/layout/Typography.styles';
+import { cutStr } from 'src/common/utils/helpers/cutStr';
+import { convertViews } from 'src/common/utils/helpers/converViews';
 import Image from 'next/image';
 import Link from 'next/link';
-import { PathsEnum } from '@/common/utils/constants/paths';
+import { PathsEnum } from 'src/common/utils/constants/paths';
 
 const ArticleCard = ({
 	categoryIcon,

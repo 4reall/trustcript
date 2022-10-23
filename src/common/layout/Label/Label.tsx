@@ -1,9 +1,9 @@
 import {
 	LabelContainer,
 	LabelContainerProps,
-} from '@/common/layout/Label/Label.styles';
-import { ILabel } from '@/common/types/Label';
-import { Typography } from '@/common/layout/Typography.styles';
+} from 'src/common/layout/Label/Label.styles';
+import { ILabel } from 'src/common/types/Label';
+import { Typography } from 'src/common/layout/Typography.styles';
 import Image from 'next/image';
 
 type LabelProps = ILabel & LabelContainerProps;

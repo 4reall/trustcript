@@ -1,4 +1,4 @@
-import { PathsEnum } from '@/common/utils/constants/paths';
+import { PathsEnum } from 'src/common/utils/constants/paths';
 
 export interface INavLink {
 	href: PathsEnum;

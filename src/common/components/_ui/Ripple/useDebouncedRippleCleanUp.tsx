@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { RippleContainerProps } from '@/common/components/_ui/Ripple/Ripple.styles';
+import { RippleContainerProps } from 'src/common/components/_ui/Ripple/Ripple.styles';
 
 export interface UseDebouncedRippleCleanUpProps extends RippleContainerProps {
 	cleanUpFunction: () => void;

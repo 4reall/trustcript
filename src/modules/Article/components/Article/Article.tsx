@@ -3,21 +3,21 @@ import {
 	ContentContainer,
 	ImageContainer,
 	LabelsContainer,
-} from '@/modules/Article/components/Article/Article.styles';
-import { IArticle } from '@/common/types/Article';
-import { Typography } from '@/common/layout/Typography.styles';
-import Label from '@/common/layout/Label/Label';
-import ViewsIcon from '@/public/assets/icons/labels/views.svg';
-import DateIcon from '@/public/assets/icons/labels/date.svg';
-import { article } from '@/mock/articles';
-import { convertViews } from '@/common/utils/helpers/converViews';
-import useMediaQuery from '@/common/hooks/breakpoints/useMediaQuery';
-import { queries } from '@/common/utils/constants/mediaQueries';
-import Fb from '@/public/assets/icons/shareBtn/Fb.svg';
-import Tw from '@/public/assets/icons/shareBtn/Tw.svg';
+} from 'src/modules/Article/components/Article/Article.styles';
+import { IArticle } from 'src/common/types/Article';
+import { Typography } from 'src/common/layout/Typography.styles';
+import Label from 'src/common/layout/Label/Label';
+import ViewsIcon from 'src/public/assets/icons/labels/views.svg';
+import DateIcon from 'src/public/assets/icons/labels/date.svg';
+import { article } from 'src/mock/articles';
+import { convertViews } from 'src/common/utils/helpers/converViews';
+import useMediaQuery from 'src/common/hooks/breakpoints/useMediaQuery';
+import { queries } from 'src/common/utils/constants/mediaQueries';
+import Fb from 'src/public/assets/icons/shareBtn/Fb.svg';
+import Tw from 'src/public/assets/icons/shareBtn/Tw.svg';
 import ShareButton, {
 	IIconLink,
-} from '@/common/components/_ui/ShareButton/ShareButton';
+} from 'src/common/components/_ui/ShareButton/ShareButton';
 import Image from 'next/image';
 
 interface ArticleProps {

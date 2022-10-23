@@ -1,19 +1,19 @@
-import { IImage } from '@/common/types/Image';
-import { Typography } from '@/common/layout/Typography.styles';
-import Button from '@/common/components/_ui/Button/Button';
-import { cutStr } from '@/common/utils/helpers/cutStr';
+import { IImage } from 'src/common/types/Image';
+import { Typography } from 'src/common/layout/Typography.styles';
+import Button from 'src/common/components/_ui/Button/Button';
+import { cutStr } from 'src/common/utils/helpers/cutStr';
 import {
 	CardContainer,
 	ImgContainer,
 	TextContainer,
-} from '@/common/layout/BtnCard/BtnCard.styles';
-import { ReactComponent as ViewsIcon } from '@/assets/icons/labels/views.svg';
-import { convertViews } from '@/common/utils/helpers/converViews';
-import { ArticleFiltersEnum } from '@/common/utils/constants/filters';
-import useMediaQuery from '@/common/hooks/breakpoints/useMediaQuery';
-import { queries } from '@/common/utils/constants/mediaQueries';
+} from 'src/common/layout/BtnCard/BtnCard.styles';
+import { ReactComponent as ViewsIcon } from 'public/assets/icons/labels/views.svg';
+import { convertViews } from 'src/common/utils/helpers/converViews';
+import { ArticleFiltersEnum } from 'src/common/utils/constants/filters';
+import useMediaQuery from 'src/common/hooks/breakpoints/useMediaQuery';
+import { queries } from 'src/common/utils/constants/mediaQueries';
 import Image from 'next/image';
-import Label from '@/common/layout/Label/Label';
+import Label from 'src/common/layout/Label/Label';
 
 export interface SimilarCardProps {
 	image: IImage;

@@ -1,6 +1,6 @@
-import { queries } from '@/common/utils/constants/mediaQueries';
-import useMediaQuery from '@/common/hooks/breakpoints/useMediaQuery';
-import { BreakpointValuesEnum } from '@/common/utils/constants/breakpoints';
+import { queries } from 'src/common/utils/constants/mediaQueries';
+import useMediaQuery from 'src/common/hooks/breakpoints/useMediaQuery';
+import { BreakpointValuesEnum } from 'src/common/utils/constants/breakpoints';
 
 const useBreakpoints = (queryVariant: 'up' | 'down' = 'up') => {
 	const breakpoints = {

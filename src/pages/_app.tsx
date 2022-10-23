@@ -1,20 +1,42 @@
 import { AppProps } from 'next/app';
 import { YMaps } from '@pbe/react-yandex-maps';
 
-import Layout from '@/common/layout/Layout/Layout';
-import { Page } from '@/common/layout/Page.styles';
+import Layout from 'src/common/layout/Layout/Layout';
+import { Page } from 'src/common/layout/Page.styles';
 
-import { GlobalStyle } from '@/common/styles/GlobalStyles';
-import { theme } from '@/common/styles/theme';
+import { GlobalStyle } from 'src/common/styles/GlobalStyles';
+import { theme } from 'src/common/styles/theme';
 import Head from 'next/head';
 import { Global, ThemeProvider } from '@emotion/react';
 import { AbstractIntlMessages, NextIntlProvider } from 'next-intl';
+import { useState } from 'react';
+import {
+	QueryClientProvider,
+	Hydrate,
+	DehydratedState,
+	QueryClient,
+} from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { queryClient } from 'src/lib/queryClient';
 
 interface CommonProps {
 	messages: AbstractIntlMessages;
+	dehydratedState: DehydratedState;
 }
 
 const App = ({ Component, pageProps }: AppProps<CommonProps>) => {
+	// const queryClient = new QueryClient({
+	// 	defaultOptions: {
+	// 		queries: {
+	// 			refetchOnWindowFocus: false,
+	// 			refetchOnMount: false,
+	// 			refetchOnReconnect: false,
+	// 			retry: 1,
+	// 			staleTime: 5 * 1000,
+	// 		},
+	// 	},
+	// });
+	const [queryClientInstance] = useState(() => queryClient);
 	return (
 		<>
 			<Head>
@@ -27,18 +49,23 @@ const App = ({ Component, pageProps }: AppProps<CommonProps>) => {
 				<title>trustcript</title>
 			</Head>
 
-			<ThemeProvider theme={theme}>
-				<NextIntlProvider messages={pageProps.messages}>
-					<YMaps>
-						<Global styles={GlobalStyle} />
-						<Layout>
-							<Page>
-								<Component {...pageProps} />
-							</Page>
-						</Layout>
-					</YMaps>
-				</NextIntlProvider>
-			</ThemeProvider>
+			<QueryClientProvider client={queryClientInstance}>
+				<Hydrate state={pageProps.dehydratedState}>
+					<ThemeProvider theme={theme}>
+						<NextIntlProvider messages={pageProps.messages}>
+							<YMaps>
+								<Global styles={GlobalStyle} />
+								<Layout>
+									<Page>
+										<Component {...pageProps} />
+									</Page>
+								</Layout>
+							</YMaps>
+						</NextIntlProvider>
+					</ThemeProvider>
+					<ReactQueryDevtools initialIsOpen={false} />
+				</Hydrate>
+			</QueryClientProvider>
 		</>
 	);
 };

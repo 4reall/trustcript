@@ -1,5 +1,5 @@
-import { Typography } from '@/common/layout/Typography.styles';
-import Articles from '@/modules/Blog/component/Articles';
+import { Typography } from 'src/common/layout/Typography.styles';
+import Articles from 'src/modules/Blog/component/Articles';
 
 const BlogPage = () => {
 	return (

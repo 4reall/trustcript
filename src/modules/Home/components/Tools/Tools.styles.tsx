@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { mediaQueries } from '@/common/utils/constants/mediaQueries';
-import { Section } from '@/common/layout/Section.styles';
+import { mediaQueries } from 'src/common/utils/constants/mediaQueries';
+import { Section } from 'src/common/layout/Section.styles';
 
 export const ToolsContainer = styled(Section)`
 	position: relative;

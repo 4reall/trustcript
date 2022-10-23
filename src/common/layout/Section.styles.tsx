@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { CSSProperties } from 'react';
-import { SpacingArray } from '@/common/utils/helpers/convertSpacing';
+import { SpacingArray } from 'src/common/utils/helpers/convertSpacing';
 
 export interface SectionProps {
 	p?: SpacingArray;

@@ -1,11 +1,11 @@
 import Image from 'next/image';
 
-import { Typography } from '@/common/layout/Typography.styles';
+import { Typography } from 'src/common/layout/Typography.styles';
 import { CardContainer, ImageContainer } from './Benefits.styles';
-import { IImage } from '@/common/types/Image';
+import { IImage } from 'src/common/types/Image';
 
-import useMediaQuery from '@/common/hooks/breakpoints/useMediaQuery';
-import { queries } from '@/common/utils/constants/mediaQueries';
+import useMediaQuery from 'src/common/hooks/breakpoints/useMediaQuery';
+import { queries } from 'src/common/utils/constants/mediaQueries';
 
 interface CardProps {
 	image: IImage;

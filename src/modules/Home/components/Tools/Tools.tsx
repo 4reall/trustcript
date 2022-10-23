@@ -1,11 +1,11 @@
 import Image from 'next/image';
 
-import { Typography } from '@/common/layout/Typography.styles';
+import { Typography } from 'src/common/layout/Typography.styles';
 import {
 	ToolsContainer,
 	ToolsLogosContainer,
-} from '@/modules/Home/components/Tools/Tools.styles';
-import Metasploit from '@/assets/icons/metasploit.svg';
+} from 'src/modules/Home/components/Tools/Tools.styles';
+import Metasploit from 'public/assets/icons/metasploit.svg';
 import { useTranslations } from 'next-intl';
 
 const logos = [

@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import {
 	DropdownMenuStyles,
 	DropdownMenuStylesProps,
-} from '@/common/components/_ui/DropdownMenu/DropdownMenu.styles';
+} from 'src/common/components/_ui/DropdownMenu/DropdownMenu.styles';
 
 interface DropdownMenuProps extends DropdownMenuStylesProps {
 	children: ReactNode;

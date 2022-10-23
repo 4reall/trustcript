@@ -2,8 +2,8 @@ import styled from '@emotion/styled';
 import {
 	convertSpacing,
 	SpacingArray,
-} from '@/common/utils/helpers/convertSpacing';
-import convertUnits from '@/common/utils/helpers/convertUnits';
+} from 'src/common/utils/helpers/convertSpacing';
+import convertUnits from 'src/common/utils/helpers/convertUnits';
 
 interface SharedProps {
 	w?: string | number;

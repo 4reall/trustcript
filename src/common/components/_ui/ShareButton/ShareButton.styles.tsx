@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Typography } from '@/common/layout/Typography.styles';
+import { Typography } from 'src/common/layout/Typography.styles';
 import { css } from '@emotion/react';
 
 const sizeMap = {

@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import Button from './Button';
-import { ThemeDecorator } from '@/common/styles/ThemeProvider';
+import { ThemeDecorator } from 'src/common/styles/ThemeProvider';
 
 export default {
 	title: 'Button',

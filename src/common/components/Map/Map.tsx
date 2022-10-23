@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react';
 import { Map as MapAPI, Placemark } from '@pbe/react-yandex-maps';
 
-import { MapContainer } from '@/common/components/Map/Map.styles';
-import ZoomControls from '@/common/components/Map/ZoomControls/ZoomControls';
+import { MapContainer } from 'src/common/components/Map/Map.styles';
+import ZoomControls from 'src/common/components/Map/ZoomControls/ZoomControls';
 
-import Bubble from '@/assets/icons/labels/Bubble.svg';
+import Bubble from 'public/assets/icons/labels/Bubble.svg';
 
 const center = [55.783939, 37.565686];
 

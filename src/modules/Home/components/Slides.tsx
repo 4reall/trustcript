@@ -1,12 +1,12 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
-import ContentLayout from '@/modules/Home/components/ContentLayout/ContentLayout';
+import ContentLayout from 'src/modules/Home/components/ContentLayout/ContentLayout';
 
-import Carousel from '@/common/components/Carousel/Carousel';
-import Knight from '@/assets/images/thumbnails/knight.webp';
-import Pawn from '@/assets/images/thumbnails/pawn.webp';
-import Rook from '@/assets/images/thumbnails/rook.webp';
+import Carousel from 'src/common/components/Carousel/Carousel';
+import Knight from 'public/assets/images/thumbnails/knight.webp';
+import Pawn from 'public/assets/images/thumbnails/pawn.webp';
+import Rook from 'public/assets/images/thumbnails/rook.webp';
 
 const images = [
 	{ src: Knight, alt: 'knight images' },

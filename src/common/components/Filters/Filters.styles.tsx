@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import {
 	convertSpacing,
 	SpacingArray,
-} from '@/common/utils/helpers/convertSpacing';
+} from 'src/common/utils/helpers/convertSpacing';
 
 export interface ContainerProps {
 	columns?: 1 | 2 | 3 | 4 | 6;

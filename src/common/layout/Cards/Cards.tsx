@@ -1,7 +1,7 @@
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { v4 as uuid } from 'uuid';
 
-import { Grid, CardsContainer } from '@/common/layout/Cards/Cards.styles';
+import { Grid, CardsContainer } from 'src/common/layout/Cards/Cards.styles';
 import { Children, PropsWithChildren } from 'react';
 
 interface TabsProps<T> {}

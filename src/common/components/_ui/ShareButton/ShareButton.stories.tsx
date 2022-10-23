@@ -1,8 +1,8 @@
-import { ThemeDecorator } from '@/common/styles/ThemeProvider';
+import { ThemeDecorator } from 'src/common/styles/ThemeProvider';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import ShareButton, {
 	IIconLink,
-} from '@/common/components/_ui/ShareButton/ShareButton';
+} from 'src/common/components/_ui/ShareButton/ShareButton';
 
 const links: IIconLink[] = [
 	{

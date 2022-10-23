@@ -1,5 +1,5 @@
-import Input from '@/common/components/_ui/Input/Input';
-import { ThemeDecorator } from '@/common/styles/ThemeProvider';
+import Input from 'src/common/components/_ui/Input/Input';
+import { ThemeDecorator } from 'src/common/styles/ThemeProvider';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 export default {

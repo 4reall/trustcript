@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { mediaQueries } from '@/common/utils/constants/mediaQueries';
-import { Section } from '@/common/layout/Section.styles';
+import { mediaQueries } from 'src/common/utils/constants/mediaQueries';
+import { Section } from 'src/common/layout/Section.styles';
 
 export const ContactsContainer = styled(Section)`
 	width: min(100%, 60rem);

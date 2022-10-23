@@ -1,22 +1,22 @@
-import { IArticle } from '@/common/types/Article';
-import DevelopmentIcon from '@/assets/icons/categories/development.svg';
-import SecurityIcon from '@/assets/icons/categories/security.svg';
-import MethodsIcon from '@/assets/icons/categories/methods.svg';
-import GamingIcon from '@/assets/icons/categories/gaming.svg';
-import TipsIcon from '@/assets/icons/categories/tips.svg';
-import FishingIcon from '@/assets/icons/categories/fishing.svg';
-import Development from '@/assets/images/articles/development.png';
-import Security from '@/assets/images/articles/security.png';
-import Methods from '@/assets/images/articles/methods.png';
-import Gaming from '@/assets/images/articles/gaming.png';
-import Tips from '@/assets/images/articles/tips.png';
-import Fishing from '@/assets/images/articles/fishing.png';
-import Code from '@/assets/images/articles/code.png';
+import { IArticle } from 'src/common/types/Article';
+import DevelopmentIcon from 'public/assets/icons/categories/development.svg';
+import SecurityIcon from 'public/assets/icons/categories/security.svg';
+import MethodsIcon from 'public/assets/icons/categories/methods.svg';
+import GamingIcon from 'public/assets/icons/categories/gaming.svg';
+import TipsIcon from 'public/assets/icons/categories/tips.svg';
+import FishingIcon from 'public/assets/icons/categories/fishing.svg';
+import Development from 'public/assets/images/articles/development.png';
+import Security from 'public/assets/images/articles/security.png';
+import Methods from 'public/assets/images/articles/methods.png';
+import Gaming from 'public/assets/images/articles/gaming.png';
+import Tips from 'public/assets/images/articles/tips.png';
+import Fishing from 'public/assets/images/articles/fishing.png';
+import Code from 'public/assets/images/articles/code.png';
 
 import {
 	ArticleFiltersEnum,
 	DateFiltersEnum,
-} from '@/common/utils/constants/filters';
+} from 'src/common/utils/constants/filters';
 
 export const articles: IArticle[] = [
 	{

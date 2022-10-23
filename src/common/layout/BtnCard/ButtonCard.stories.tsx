@@ -1,12 +1,12 @@
-import BtnCard from '@/common/layout/BtnCard/BtnCard';
+import BtnCard from 'src/common/layout/BtnCard/BtnCard';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import Development from '@/assets/images/articles/development.png';
+import Development from 'public/assets/images/articles/development.png';
 import {
 	ArticleFiltersEnum,
 	DateFiltersEnum,
-} from '@/common/utils/constants/filters';
-import DevelopmentIcon from '@/assets/icons/categories/development.svg';
-import { ThemeDecorator } from '@/common/styles/ThemeProvider';
+} from 'src/common/utils/constants/filters';
+import DevelopmentIcon from 'public/assets/icons/categories/development.svg';
+import { ThemeDecorator } from 'src/common/styles/ThemeProvider';
 
 const card = {
 	description:

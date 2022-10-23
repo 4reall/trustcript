@@ -1,10 +1,10 @@
-import { Container } from '@/modules/Products/Products.styles';
-import Filters from '@/common/components/Filters/Filters';
-import Cards from '@/common/layout/Cards/Cards';
-import Pagination from '@/common/components/Pagination/Pagination';
+import { Container } from 'src/modules/Products/components/Products/Products.styles';
+import Filters from 'src/common/components/Filters/Filters';
+import Cards from 'src/common/layout/Cards/Cards';
+import Pagination from 'src/common/components/Pagination/Pagination';
 import { useEffect, useState } from 'react';
-import { ArticleFiltersEnum } from '@/common/utils/constants/filters';
-import ArticleCard from '@/common/layout/Card/ArticleCard';
+import { ArticleFiltersEnum } from 'src/common/utils/constants/filters';
+import ArticleCard from 'src/common/layout/Card/ArticleCard';
 
 const Articles = () => {
 	const [filteredCard, setFilteredCards] = useState([]);

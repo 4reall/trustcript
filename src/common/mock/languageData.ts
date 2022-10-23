@@ -1,4 +1,4 @@
-import { KeysOfUnion } from '@/common/types/Keys';
+import { KeysOfUnion } from 'src/common/types/Keys';
 
 export type LanguageDataKeys = keyof typeof languageData;
 

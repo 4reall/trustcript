@@ -2,8 +2,8 @@ import Image from 'next/image';
 import {
 	Link,
 	LinksContainer,
-} from '@/modules/Home/components/Contacts/Contacts.styles';
-import { Typography } from '@/common/layout/Typography.styles';
+} from 'src/modules/Home/components/Contacts/Contacts.styles';
+import { Typography } from 'src/common/layout/Typography.styles';
 
 export interface ILink {
 	href: string;

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { mediaQueries } from '@/common/utils/constants/mediaQueries';
-import { CardContainer } from '@/common/layout/Card/Card.styles';
+import { mediaQueries } from 'src/common/utils/constants/mediaQueries';
+import { CardContainer } from 'src/common/layout/Card/Card.styles';
 
 export const CardsContainer = styled.div`
 	height: 100%;

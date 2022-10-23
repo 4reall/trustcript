@@ -4,23 +4,23 @@ import {
 	PaginationButton,
 	PaginationContainer,
 	PaginationContainerProps,
-} from '@/common/components/Pagination/Pagination.styles';
-import { Typography } from '@/common/layout/Typography.styles';
+} from 'src/common/components/Pagination/Pagination.styles';
+import { Typography } from 'src/common/layout/Typography.styles';
 
 import { useEffect, useMemo } from 'react';
 
-import UpDbArrow from '@/assets/icons/arrows/UpDbArrow.svg';
-import BottomDbArrow from '@/assets/icons/arrows/BottomDbArrow.svg';
-import RightDbArrow from '@/assets/icons/arrows/RightDbArrow.svg';
-import LeftDbArrow from '@/assets/icons/arrows/LeftDbArrow.svg';
-import LeftArrow from '@/assets/icons/arrows/LeftArrow.svg';
-import RightArrow from '@/assets/icons/arrows/RightArrow.svg';
-import UpArrow from '@/assets/icons/arrows/UpArrow.svg';
-import BottomArrow from '@/assets/icons/arrows/BottomArrow.svg';
+import UpDbArrow from 'public/assets/icons/arrows/UpDbArrow.svg';
+import BottomDbArrow from 'public/assets/icons/arrows/BottomDbArrow.svg';
+import RightDbArrow from 'public/assets/icons/arrows/RightDbArrow.svg';
+import LeftDbArrow from 'public/assets/icons/arrows/LeftDbArrow.svg';
+import LeftArrow from 'public/assets/icons/arrows/LeftArrow.svg';
+import RightArrow from 'public/assets/icons/arrows/RightArrow.svg';
+import UpArrow from 'public/assets/icons/arrows/UpArrow.svg';
+import BottomArrow from 'public/assets/icons/arrows/BottomArrow.svg';
 
-import { usePagination } from '@/common/components/Pagination/usePagination';
+import { usePagination } from 'src/common/components/Pagination/usePagination';
 import Image from 'next/image';
-import IconButton from '@/common/components/_ui/IconButton/IconButton';
+import IconButton from 'src/common/components/_ui/IconButton/IconButton';
 
 interface PaginationProps extends PaginationContainerProps {
 	pageDisplayed: number;

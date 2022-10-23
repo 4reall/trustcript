@@ -1,29 +1,9 @@
 import {
-	ProductFiltersEnum,
+	CategoryFilters,
 	ArticleFiltersEnum,
 	DateFiltersEnum,
-} from '@/common/utils/constants/filters';
-import { IFilter } from '@/common/components/Filters/Filters';
-
-export const productFilters: IFilter<ProductFiltersEnum>[] = [
-	{
-		label: 'Все продукты',
-		filter: ProductFiltersEnum.ALL,
-	},
-	{
-		label: '1 категория',
-		filter: ProductFiltersEnum.FIRST,
-	},
-
-	{
-		label: '2 категория',
-		filter: ProductFiltersEnum.SECOND,
-	},
-	{
-		label: '3 категория',
-		filter: ProductFiltersEnum.THIRD,
-	},
-];
+} from 'src/common/utils/constants/filters';
+import { IFilter } from 'src/common/components/Filters/Filters';
 
 export const articleFilters: IFilter<ArticleFiltersEnum>[] = [
 	{

@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
-import { theme } from '@/common/styles/theme';
-import convertUnits from '@/common/utils/helpers/convertUnits';
+import { theme } from 'src/common/styles/theme';
+import convertUnits from 'src/common/utils/helpers/convertUnits';
 import {
 	convertSpacing,
 	SpacingArray,
-} from '@/common/utils/helpers/convertSpacing';
+} from 'src/common/utils/helpers/convertSpacing';
 import { css } from '@emotion/react';
+import { CSSProperties } from 'react';
 
 export type TypographyVariant = keyof typeof theme.typography;
 
@@ -14,11 +15,11 @@ export interface TypographyProps {
 	p?: SpacingArray;
 	variant: TypographyVariant;
 	bold?: boolean;
-	color?: string;
+	color?: CSSProperties['color'];
 	uppercase?: boolean;
 	underline?: boolean;
-	align?: 'left' | 'right' | 'center';
-	display?: 'block' | 'inline-block' | 'inline';
+	align?: CSSProperties['textAlign'];
+	display?: CSSProperties['display'];
 }
 
 export const Typography = styled.span<TypographyProps>`
@@ -44,6 +45,6 @@ export const Typography = styled.span<TypographyProps>`
 		text-transform: ${uppercase && 'uppercase'};
 		text-decoration: ${underline && 'underline'};
 		text-align: ${align};
-		color: ${color || ''};
+		color: ${color || theme.palette.normal.normal};
 	`}
 `;
