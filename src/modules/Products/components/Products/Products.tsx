@@ -41,6 +41,7 @@ const Products = () => {
 					params: {
 						page: page,
 						filter,
+						limit: 6,
 					},
 				}
 			);

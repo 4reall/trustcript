@@ -40,7 +40,11 @@ export const getServerSideProps = async ({
 
 	await queryClient.prefetchQuery(
 		['products', page],
-		async () => await getProducts({ page: (query as IProductsParams).page })
+		async () =>
+			await getProducts({
+				page: (query as IProductsParams).page,
+				limit: '6',
+			})
 	);
 
 	return {
