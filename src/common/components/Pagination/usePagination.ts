@@ -1,6 +1,4 @@
-import { useCallback, useMemo, useState } from 'react';
-
-const buffPages = 1;
+import { useEffect, useState } from 'react';
 
 interface UsePaginationProps {
 	pageCount: number;
@@ -16,77 +14,63 @@ export const usePagination = ({
 	activePage,
 }: UsePaginationProps) => {
 	const [offset, setOffset] = useState(0);
-	const [startShownIndex, setStartShownIndex] = useState(0);
-	const [endShownIndex, setEndShownIndex] = useState(pageDisplayed - 1);
-	// const [activeInternalPage, setActiveInternalPage] = useState(activePage);
+	const [startShownIndex, setStartShownIndex] = useState(1);
+	const [endShownIndex, setEndShownIndex] = useState(pageDisplayed + 1);
 
-	const increasePage = useCallback(() => {
-		if (activePage === pageCount) return;
+	const increasePage = () => {
+		if (activePage < pageCount) setActivePage(activePage + 1);
+	};
 
-		if (
-			activePage === endShownIndex - buffPages &&
-			activePage !== pageCount - buffPages - 1
-		) {
+	const decreasePage = () => {
+		if (activePage > 1) setActivePage(activePage - 1);
+	};
+
+	const setStart = () => setActivePage(1);
+
+	const setEnd = () => setActivePage(pageCount);
+
+	const setPage = (index: number) => () => {
+		if (index === endShownIndex - 1 && index !== pageCount - 1) {
 			setEndShownIndex((state) => state + 1);
 			setStartShownIndex((state) => state + 1);
 			setOffset((state) => state + 1);
 		}
+		if (index === startShownIndex - 1 && index !== 0) {
+			setEndShownIndex((state) => state - 1);
+			setStartShownIndex((state) => state - 1);
+			setOffset((state) => state - 1);
+		}
+		setActivePage(index);
+	};
 
-		if (activePage < pageCount - 1)
-			// activePage((state) => state + 1);
-			setActivePage(activePage + 1);
-	}, [activePage, endShownIndex, pageCount]);
-
-	const decreasePage = useCallback(() => {
-		if (activePage === 0) return;
-
-		if (
-			activePage === startShownIndex + buffPages &&
-			activePage !== buffPages
-		) {
+	useEffect(() => {
+		if (activePage === pageCount) {
+			setOffset(pageCount - pageDisplayed + 1);
+			setEndShownIndex(pageCount);
+			setStartShownIndex(pageCount - pageDisplayed + 1);
+			return;
+		}
+		if (activePage === 1) {
+			setOffset(1);
+			setEndShownIndex(pageDisplayed);
+			setStartShownIndex(1);
+			return;
+		}
+		// if reach start boundary of shown pages
+		if (activePage === startShownIndex) {
 			setStartShownIndex((state) => state - 1);
 			setEndShownIndex((state) => state - 1);
 			setOffset((state) => state - 1);
+			return;
 		}
-
-		if (activePage > 0) setActivePage(activePage - 1);
-	}, [activePage, startShownIndex]);
-
-	const setStart = useCallback(() => {
-		setOffset(0);
-		setEndShownIndex(pageDisplayed - 1);
-		setStartShownIndex(0);
-		setActivePage(0);
-		// eslint-disable-next-line
-	}, [pageDisplayed, pageCount, startShownIndex, endShownIndex, activePage]);
-
-	const setEnd = useCallback(() => {
-		setOffset(pageCount - pageDisplayed);
-		setEndShownIndex(pageCount - 1);
-		setStartShownIndex(pageCount - pageDisplayed);
-		setActivePage(pageCount - 1);
-		// eslint-disable-next-line
-	}, [pageDisplayed, pageCount, startShownIndex, endShownIndex, activePage]);
-
-	const setPage = useCallback(
-		(index: number) => {
-			return () => {
-				if (index === endShownIndex && index !== pageCount - 1) {
-					setEndShownIndex((state) => state + buffPages);
-					setStartShownIndex((state) => state + buffPages);
-					setOffset((state) => state + buffPages);
-				}
-				if (index === startShownIndex && index !== 0) {
-					setEndShownIndex((state) => state - buffPages);
-					setStartShownIndex((state) => state - buffPages);
-					setOffset((state) => state - buffPages);
-				}
-				setActivePage(index);
-			};
-		},
-		// eslint-disable-next-line
-		[pageDisplayed, pageCount, startShownIndex, endShownIndex, activePage]
-	);
+		// if reach end boundary of shown pages
+		if (activePage === endShownIndex && activePage !== pageCount) {
+			setEndShownIndex((state) => state + 1);
+			setStartShownIndex((state) => state + 1);
+			setOffset((state) => state + 1);
+			return;
+		}
+	}, [activePage]);
 
 	return {
 		offset,

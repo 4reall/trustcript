@@ -1,6 +1,6 @@
-import { getProducts } from 'src/modules/Products/services/ProductsService';
+import { getProducts } from 'src/lib/api/products/services/getProducts/getProducts';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { IProductsParams } from 'src/modules/Products/types/ProductsParams';
+import { IProductsParams } from 'src/lib/api/products/types/ProductsParams';
 
 interface Request extends NextApiRequest {
 	params: IProductsParams;
@@ -8,7 +8,6 @@ interface Request extends NextApiRequest {
 
 const handler = async (req: Request, res: NextApiResponse) => {
 	try {
-		console.log(req.query);
 		const products = await getProducts({ ...req.query });
 
 		res.status(200).json(products);

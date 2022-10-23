@@ -44,24 +44,19 @@ const Pagination = ({
 	});
 
 	const btnList = useMemo(
-		() => new Array(pageCount).fill('').map((_, i) => i),
+		() => new Array(pageCount).fill('').map((_, i) => i + 1),
 		[pageCount]
 	);
 
-	const btns = btnList.map((page, i) => (
+	const btns = btnList.map((page) => (
 		<PaginationButton
-			key={i}
-			onClick={methods.setPage(i)}
-			active={i === activePage}
+			key={Date.now() + page}
+			onClick={methods.setPage(page)}
+			active={page === activePage}
 		>
-			<Typography variant="button">{i + 1}</Typography>
+			<Typography variant="button">{page}</Typography>
 		</PaginationButton>
 	));
-
-	useEffect(() => {
-		setActivePage(activePage);
-		// eslint-disable-next-line
-	}, [activePage, pageCount]);
 
 	return (
 		<PaginationContainer
@@ -70,14 +65,14 @@ const Pagination = ({
 		>
 			<IconButton
 				hide={pageCount <= pageDisplayed}
-				disabled={activePage === 0}
+				disabled={activePage === 1}
 				onClick={methods.setStart}
 			>
 				<Image src={vertical ? UpDbArrow : LeftDbArrow} />
 			</IconButton>
 			<IconButton
 				hide={pageCount <= pageDisplayed}
-				disabled={activePage === 0}
+				disabled={activePage === 1}
 				onClick={methods.decreasePage}
 			>
 				<Image src={vertical ? UpArrow : LeftArrow} />
@@ -86,8 +81,8 @@ const Pagination = ({
 				<PaginationBtnTruck
 					style={{
 						transform: vertical
-							? `translateY(-${offset * 25}%)`
-							: `translateX(-${offset * 25}%)`,
+							? `translateY(-${(offset - 1) * 25}%)`
+							: `translateX(-${(offset - 1) * 25}%)`,
 					}}
 				>
 					{btns}
@@ -95,14 +90,14 @@ const Pagination = ({
 			</PaginationBtnContainer>
 			<IconButton
 				hide={pageCount <= pageDisplayed}
-				disabled={activePage === pageCount - 1}
+				disabled={activePage === pageCount}
 				onClick={methods.increasePage}
 			>
 				<Image src={vertical ? BottomArrow : RightArrow} />
 			</IconButton>
 			<IconButton
 				hide={pageCount <= pageDisplayed}
-				disabled={activePage === pageCount - 1}
+				disabled={activePage === pageCount}
 				onClick={methods.setEnd}
 			>
 				<Image src={vertical ? BottomDbArrow : RightDbArrow} />

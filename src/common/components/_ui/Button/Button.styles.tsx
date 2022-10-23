@@ -7,7 +7,7 @@ export interface ButtonStylesProps {
 	small?: boolean;
 	disabled?: boolean;
 	hide?: boolean;
-	active: boolean;
+	active?: boolean;
 }
 
 export const ButtonBase = styled.button<ButtonStylesProps>`

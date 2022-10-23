@@ -1,5 +1,5 @@
 import { IFilter } from 'src/common/components/Filters/Filters';
-import { ProductFilters } from 'src/modules/Products/types/ProductsParams';
+import { ProductFilters } from 'src/lib/api/products/types/ProductFilters';
 
 export const productFilters: IFilter<ProductFilters>[] = [
 	{

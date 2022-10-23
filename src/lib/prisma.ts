@@ -1,5 +1,5 @@
 import { Prisma, PrismaClient } from '@prisma/client';
-import { ProductCategories } from 'src/modules/Products/types/Product';
+import { ProductCategories } from 'src/common/types/Product';
 
 declare global {
 	var prisma: PrismaClient; // This must be a `var` and not a `let / const`

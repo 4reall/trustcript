@@ -1,4 +1,4 @@
-import { IProduct } from 'src/modules/Products/types/Product';
+import { IProduct } from 'src/common/types/Product';
 
 export interface IProductsResponse {
 	totalCount: number;

@@ -1,6 +1,6 @@
 import { SimilarContainer } from 'src/modules/Product/components/Similar/Similar.styles';
 
-import { IBaseProduct } from 'src/modules/Products/types/Product';
+import { IBaseProduct } from 'src/common/types/Product';
 import { IImage } from 'src/common/types/Image';
 
 import useMediaQuery from 'src/common/hooks/breakpoints/useMediaQuery';

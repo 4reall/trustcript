@@ -1,10 +1,12 @@
-import Carousel from 'src/common/components/Carousel/Carousel';
+import { useRouter } from 'next/router';
 import Image from 'next/image';
+
+import { IProduct } from 'src/common/types/Product';
+
+import Carousel from 'src/common/components/Carousel/Carousel';
 import Link from 'src/common/layout/Link';
 import { Typography } from 'src/common/layout/Typography.styles';
 import Card from 'src/common/layout/Card/Card';
-import { IProduct } from 'src/modules/Products/types/Product';
-import { useRouter } from 'next/router';
 
 interface ProductCardOwnProps {
 	href: string;

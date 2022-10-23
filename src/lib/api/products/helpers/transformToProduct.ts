@@ -3,10 +3,7 @@ import {
 	ThumbnailsOnProducts,
 	ProductBase,
 } from 'src/lib/prisma';
-import {
-	ProductCategories,
-	IProduct,
-} from 'src/modules/Products/types/Product';
+import { ProductCategories, IProduct } from 'src/common/types/Product';
 
 interface TransformToProductProps {
 	thumbnails: ThumbnailsOnProducts[];
